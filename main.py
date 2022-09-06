@@ -17,6 +17,7 @@ TODO что необходимо во время работы
 [-] сделать списки более универсальными (чтобы была ссылка нмо и id)
 [-] скопировать таблицы из pdf (https://medium.com/@winston.smith.spb/python-an-easy-way-to-extract-data-from-pdf-tables-c8de22308341,
 https://github.com/jsvine/pdfplumber)
+[-] Создание многоуровнего json: https://stackoverflow.com/a/49957442
 
 TODO Что нужно сделать:
 
