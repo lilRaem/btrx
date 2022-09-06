@@ -5,7 +5,7 @@ from fast_bitrix24 import Bitrix
 from colorama import Fore, Back, Style
 
 webhook = 'https://b24-vejk6x.bitrix24.ru/rest/1/di28gta836z3xn50/'
-btrx = Bitrix(webhook=webhook)
+btrx = Bitrix(webhook=webhook,respect_velocity_policy=False)
 
 COUNT_PROGRAMS = 0
 
@@ -66,6 +66,16 @@ def get_product_list(btrx=Bitrix(webhook)) -> list:
 		print(Fore.RED + f'\nGet products error: {e}\n')
 	return list(products)
 
+def get_users_with_innerPhone(btrx=Bitrix(webhook)) -> list:
+	users = []
+	try:
+		users = btrx.get_all('user.get',{
+			'select': ['ID','ACTIVE','NAME','LAST_NAME','EMAIL','UF_DEPARTMENT','WORK_POSITION','UF_PHONE_INNER']
+		})
+		return list(users)
+	except Exception as e:
+		print(e)
+		raise TypeError('get_users_with_innerPhone error')
 
 def get_product_id(data):
 	for item in data:

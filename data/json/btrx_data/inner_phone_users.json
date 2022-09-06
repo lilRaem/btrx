@@ -1,0 +1,333 @@
+{
+    "131": {
+        "id": "28023",
+        "name": "Владислав Логунов",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "131",
+        "is_active": false
+    },
+    "null": {
+        "id": "28039",
+        "name": "Анастасия Краева",
+        "department": [
+            7
+        ],
+        "position": "Младший специалист учебно-методического отдела",
+        "inner_phone": null,
+        "is_active": false
+    },
+    "705": {
+        "id": "2519",
+        "name": "Андрей Карпиленко",
+        "department": [
+            107
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "705",
+        "is_active": false
+    },
+    "134": {
+        "id": "28035",
+        "name": "Ольга Дымнич",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "134",
+        "is_active": false
+    },
+    "113": {
+        "id": "27997",
+        "name": "Андрей Деревянкин",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "113",
+        "is_active": false
+    },
+    "105": {
+        "id": "19843",
+        "name": "Дарья Кряжева",
+        "department": [
+            7
+        ],
+        "position": null,
+        "inner_phone": "105",
+        "is_active": false
+    },
+    "701": {
+        "id": "10389",
+        "name": "Ирина Шамраева",
+        "department": [
+            1
+        ],
+        "position": "менеджер по персоналу",
+        "inner_phone": "701",
+        "is_active": false
+    },
+    "111": {
+        "id": "28071",
+        "name": "Яна Слезова",
+        "department": [
+            1
+        ],
+        "position": "менеджер по персоналу",
+        "inner_phone": "111",
+        "is_active": true
+    },
+    "708": {
+        "id": "11509",
+        "name": "Лилия Юрченко",
+        "department": [
+            107
+        ],
+        "position": null,
+        "inner_phone": "708",
+        "is_active": false
+    },
+    "142": {
+        "id": "28095",
+        "name": "Анастасия Новоселова",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "142",
+        "is_active": true
+    },
+    "139": {
+        "id": "28085",
+        "name": "Евгения Ткачева",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "139",
+        "is_active": true
+    },
+    "126": {
+        "id": "27737",
+        "name": "Светлана Грицына",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "126",
+        "is_active": false
+    },
+    "108": {
+        "id": "27337",
+        "name": "Армине Мамян",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "108",
+        "is_active": false
+    },
+    "118": {
+        "id": "27973",
+        "name": "Евгений Латоненко",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "118",
+        "is_active": false
+    },
+    "207": {
+        "id": "1497",
+        "name": "Роман Луценко",
+        "department": [
+            107
+        ],
+        "position": "Менеджер",
+        "inner_phone": "207",
+        "is_active": false
+    },
+    "107": {
+        "id": "27729",
+        "name": "Анатолий Моргунов",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "107",
+        "is_active": true
+    },
+    "210": {
+        "id": "1403",
+        "name": "Ольга Баева",
+        "department": [
+            107
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "210",
+        "is_active": false
+    },
+    "104": {
+        "id": "27027",
+        "name": "Антон Солопов",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "104",
+        "is_active": false
+    },
+    "117": {
+        "id": "28003",
+        "name": "Ольга Шаповалова",
+        "department": [
+            5
+        ],
+        "position": "Руководитель отдела продаж",
+        "inner_phone": "117",
+        "is_active": false
+    },
+    "137": {
+        "id": "28043",
+        "name": "Автоменеджер None",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "137",
+        "is_active": true
+    },
+    "120": {
+        "id": "23881",
+        "name": "Пётр Осетров",
+        "department": [
+            1
+        ],
+        "position": null,
+        "inner_phone": "120",
+        "is_active": false
+    },
+    "209": {
+        "id": "1841",
+        "name": "Анна Кисель",
+        "department": [
+            107
+        ],
+        "position": "Менеджер",
+        "inner_phone": "209",
+        "is_active": false
+    },
+    "132": {
+        "id": "28025",
+        "name": "Богдана Валковская",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "132",
+        "is_active": false
+    },
+    "119": {
+        "id": "19107",
+        "name": "Давид Кочарян",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "119",
+        "is_active": true
+    },
+    "140": {
+        "id": "28091",
+        "name": "Вячеслав Арендаренко",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "140",
+        "is_active": true
+    },
+    "100": {
+        "id": "27195",
+        "name": "Арина Надолинская",
+        "department": [
+            7
+        ],
+        "position": null,
+        "inner_phone": "100",
+        "is_active": true
+    },
+    "133": {
+        "id": "28029",
+        "name": "Светлана Слепченко",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "133",
+        "is_active": true
+    },
+    "109": {
+        "id": "27059",
+        "name": "Анжелика Восканян",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "109",
+        "is_active": false
+    },
+    "141": {
+        "id": "28093",
+        "name": "Татьяна Буренина",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "141",
+        "is_active": true
+    },
+    "122": {
+        "id": "26885",
+        "name": "Кристина Попова",
+        "department": [
+            1
+        ],
+        "position": null,
+        "inner_phone": "122",
+        "is_active": false
+    },
+    "123": {
+        "id": "27181",
+        "name": "Оксана Латоненко",
+        "department": [
+            5,
+            1
+        ],
+        "position": "Руководитель отдела продаж",
+        "inner_phone": "123",
+        "is_active": false
+    },
+    "106": {
+        "id": "2637",
+        "name": "Александра Губская",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "106",
+        "is_active": true
+    },
+    "138": {
+        "id": "28075",
+        "name": "Виктория Загорулько",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "138",
+        "is_active": true
+    }
+}
