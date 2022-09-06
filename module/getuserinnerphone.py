@@ -11,7 +11,7 @@ def checkfornull(data):
 	else:
 		return data
 
-def workwithdata(btrx):
+def workwithdata():
 	if os.path.exists('data/json/btrx_data/companyusers.json'):
 		with open('data/json/btrx_data/companyusers.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
@@ -125,4 +125,6 @@ def menu():
 
 
 if __name__ == "__main__":
-	menu()
+	# menu()
+	# load_users_from_btrx(btrx)
+	workwithdata()
