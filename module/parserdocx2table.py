@@ -52,6 +52,7 @@ def docx2csv(filename):
 
 			for j, cell in enumerate(row.cells):
 				df[i][j] = cell.text.replace('\n', ' ').strip()
+				df[i][j] = cell.text.replace(',',';')
 			if index == 0:
 				type_name = 'ВО'
 				program_path = f"{os.getcwd()}\\data\\csv\\program_{type_name}.csv"
