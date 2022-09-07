@@ -1,13 +1,13 @@
 import requests
 import json
 
-link = 'http://apk-i-pp.ru'
+link = 'https://apkipp.ru'
 
 
 def searchInSite(search_key='Онкология'):
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 	url = f'{link}/api/v1/search/?search={search_key}'
-	# 'https://apk-i-pp.ru/poisk/?search={data}'
+	# 'https://apkipp.ru/poisk/?search={data}'
 	headers = {
 		'User-Agent':
 		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36',

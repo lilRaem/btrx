@@ -52,8 +52,8 @@ datalist = []
 def main():
 
 	# name = input('Введите название программы: ')
-	name = 'Биопсийная диагностика нейрохирургической патологии'
-	price = '5800'
+	name = 'Зубной врач'
+	price = '9800'
 	print(Fore.YELLOW+'Path exists?: ', os.path.exists(f"{path}\{filename}"), f"{path}\{filename}"+Back.RESET)
 	if (os.path.exists(f"{path}\{filename}")):
 		data = load_from_jsonFile(f"{path}\{filename}", path)

@@ -180,9 +180,9 @@ def words_search(words_list=list, name=str, price=str, datalist=list) -> list:
 								# 	f'=====\nСовпадение части слова "{word}" и цены "{price}" в программе: {datalist[find_all_count]}\n====='
 								# 	+ Back.RESET + Fore.RESET)
 								words_data.append({word: datalist[find_all_count]})
-								# print(Back.RESET + Fore.RESET + Style.DIM + Fore.BLACK + Back.LIGHTGREEN_EX +
-								# 	f"^По слову '{word}' и цене {k_price}(из найденной программы) Сохранено в tmpfile.json^"
-								# 		+Style.RESET_ALL)
+								print(Back.RESET + Fore.RESET + Style.DIM + Fore.BLACK + Back.LIGHTGREEN_EX +
+									f"^По слову '{word}' и цене {k_price}(из найденной программы) Сохранено в tmpfile.json^"
+										+Style.RESET_ALL)
 								with open(f'{os.getcwd()}\\data\\json\\btrx_data\\tmpfile.json',
 									'w',
 									encoding='utf-8') as file:
@@ -201,8 +201,8 @@ def words_search(words_list=list, name=str, price=str, datalist=list) -> list:
 								try:
 									# print('find_all_count (word in k_name)',find_all_count)
 									# print(Style.RESET_ALL+f'Current word: {word} and program in search: {datalist[name_price]}')
-									print(Fore.LIGHTYELLOW_EX + f'\nпо слову {word}:',
-										datalist[find_all_count], '\n' + Fore.RESET + Style.RESET_ALL)
+									# print(Fore.LIGHTYELLOW_EX + f'\nпо слову {word}:',
+									# 	datalist[find_all_count], '\n' + Fore.RESET + Style.RESET_ALL)
 									find_word_count = find_word_count + 1
 
 								except Exception as e:
@@ -233,7 +233,7 @@ def check_product(name=str, price=str, datalist=list) -> int:
 				if name_space == 1 or name_space >= 2:
 					list_name = name.split(' ')
 					searched_words = words_search(list_name, name, price, datalist)
-					find_list_compare_words(searched_words)
+					# find_list_compare_words(searched_words)
 			else:
 				pass
 			i = 0
@@ -244,15 +244,15 @@ def check_product(name=str, price=str, datalist=list) -> int:
 				if name in k_name and price in k_price:
 					try:
 						test=0
-						# print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
-						# 	f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n=====')
+						print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
+							f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n=====')
 					except:
 						print(Fore.RED + 'ошибка')
 				else:
 					if name in k_name:
 						try:
 							test = 0
-							# print(Style.RESET_ALL + 'по названию:', datalist[i])
+							print(Style.RESET_ALL + 'по названию:', datalist[i])
 						except:
 							print(Fore.RED + 'ошибка')
 				i = i + 1
