@@ -29,6 +29,7 @@ def workwithdata():
 			js[inner_phone] = {
 				'id': id,
 				'name': user,
+				'email':data['EMAIL'],
 				'department': workdepartment,
 				'position': workposit,
 				'inner_phone': inner_phone,
@@ -45,13 +46,45 @@ def workwithdata():
 
 		for i,user in enumerate(userdata):
 			if user != None:
-				print(userdata[user])
-		# print(js)
+				co = i
+				# print(userdata[user])
+		print(f"Всего пользователей: {i+1}")
 	else:
 		users =	get_users_with_innerPhone(btrx)
 		with open('data/json/btrx_data/companyusers.json','w',encoding='utf-8') as f:
 			json_data = json.dumps(users,ensure_ascii=False,indent=4)
 			f.write(json_data)
+
+def seeallinnerphone():
+	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
+		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
+			json_data = json.loads(f.read())
+		for data in json_data:
+			if json_data[data]['inner_phone'] is not None:
+				print(f"innerphone: {json_data[data]['inner_phone']}, id: {json_data[data]['id']}, name: {json_data[data]['name']}")
+
+def seealluser():
+	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
+		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
+			json_data = json.loads(f.read())
+		for data in json_data:
+			print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']}, user active?: {json_data[data]['is_active']}")
+
+def seeallactiveuser():
+	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
+		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
+			json_data = json.loads(f.read())
+		for data in json_data:
+			if json_data[data]['is_active'] == True:
+				print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']}, user active?: {json_data[data]['is_active']}")
+
+def seeallnotactiveuser():
+	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
+		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
+			json_data = json.loads(f.read())
+		for data in json_data:
+			if json_data[data]['is_active'] == False:
+				print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']}, user active?: {json_data[data]['is_active']}")
 
 def load_users_from_btrx(b):
 	users = []
@@ -60,9 +93,11 @@ def load_users_from_btrx(b):
 			'select': ['ID','ACTIVE','NAME','LAST_NAME','EMAIL','UF_DEPARTMENT','WORK_POSITION','UF_PHONE_INNER']
 		})
 		with open('data/json/btrx_data/companyusers.json','w',encoding='utf-8') as f:
-			json_data = json.dumps(users,ensure_ascii=False,indent=4)
+			json_data = json.dumps(users,ensure_ascii=False,indent=4,sort_keys=True)
 			f.write(json_data)
 		print('Сохранено в data/json/btrx_data/companyusers.json')
+
+		workwithdata()
 		# menu()
 	except Exception as e:
 		print(f"load_users_from_btrx {e}")
@@ -70,7 +105,7 @@ def load_users_from_btrx(b):
 			'select': ['ID','ACTIVE','NAME','LAST_NAME','EMAIL','UF_DEPARTMENT','WORK_POSITION','UF_PHONE_INNER']
 		})
 		with open('data/json/btrx_data/companyusers.json','w',encoding='utf-8') as f:
-			json_data = json.dumps(users,ensure_ascii=False,indent=4)
+			json_data = json.dumps(users,ensure_ascii=False,indent=4,sort_keys=True)
 			f.write(json_data)
 		print('succes')
 		# raise TypeError('get_users_with_innerPhone error')
@@ -82,7 +117,8 @@ def print_menu():
 	print('2) Cписок активных пользователей.')
 	print('3) Cписок не активных пользователей.')
 	print('4) В меню поиска по конкретным данным ->')
-	print('5) Выгрузить пользователей из Битрикс24 заново (чето не работает).')
+	print('5) Список занятых внутренних номеров.')
+	print('6) Выгрузить пользователей из Битрикс24 заново (чето не работает).')
 	print('0) Выход.')
 
 def print_searchmenu():
@@ -115,16 +151,23 @@ def menu():
 		print_menu()
 		select_opt = int(input('Select optiopn: ').strip())
 		if select_opt == 1:
-			pass
+			seealluser()
+		elif select_opt == 2:
+			seeallactiveuser()
+		elif select_opt == 3:
+			seeallnotactiveuser()
 		elif select_opt == 4:
 			search_menu()
 		elif select_opt == 5:
-			get_users_with_innerPhone(btrx)
+			seeallinnerphone()
+		elif select_opt == 0:
+			print('Выход')
+			break
 		else:
 			print('input correct num')
 
 
 if __name__ == "__main__":
-	# menu()
-	# load_users_from_btrx(btrx)
-	workwithdata()
+	load_users_from_btrx(btrx)
+	# seeallactiveuser()
+	menu()
