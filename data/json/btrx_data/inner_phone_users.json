@@ -1,68 +1,30 @@
 {
-    "null": {
-        "id": "27969",
-        "name": "Сергей Каханчик",
+    "111": {
+        "id": "28007",
+        "name": "- -",
+        "email": "v.chernichenko@apkipp.ru",
         "department": [
             5
         ],
         "position": "менеджер по продажам",
-        "inner_phone": null,
-        "is_active": false
-    },
-    "111": {
-        "id": "13003",
-        "name": "Дарья Федярова",
-        "department": [
-            107
-        ],
-        "position": null,
         "inner_phone": "111",
         "is_active": false
     },
-    "132": {
-        "id": "28025",
-        "name": "Богдана Валковская",
+    "null": {
+        "id": "27075",
+        "name": "Inessa Dracheva",
+        "email": "i.dracheva@bot24.su",
         "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "132",
-        "is_active": false
-    },
-    "123": {
-        "id": "27181",
-        "name": "Оксана Латоненко",
-        "department": [
-            5,
             1
         ],
-        "position": "Руководитель отдела продаж",
-        "inner_phone": "123",
-        "is_active": false
-    },
-    "133": {
-        "id": "28029",
-        "name": "Светлана Слепченко",
-        "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "133",
-        "is_active": true
-    },
-    "118": {
-        "id": "27973",
-        "name": "Евгений Латоненко",
-        "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "118",
+        "position": null,
+        "inner_phone": null,
         "is_active": false
     },
     "105": {
         "id": "19843",
         "name": "Дарья Кряжева",
+        "email": "d.kryazheva@apkipp.ru",
         "department": [
             7
         ],
@@ -70,39 +32,10 @@
         "inner_phone": "105",
         "is_active": false
     },
-    "107": {
-        "id": "27729",
-        "name": "Анатолий Моргунов",
-        "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "107",
-        "is_active": true
-    },
-    "117": {
-        "id": "28003",
-        "name": "Ольга Шаповалова",
-        "department": [
-            5
-        ],
-        "position": "Руководитель отдела продаж",
-        "inner_phone": "117",
-        "is_active": false
-    },
-    "701": {
-        "id": "10389",
-        "name": "Ирина Шамраева",
-        "department": [
-            1
-        ],
-        "position": "менеджер по персоналу",
-        "inner_phone": "701",
-        "is_active": false
-    },
     "108": {
         "id": "28087",
         "name": "Эмилья Якубова",
+        "email": "e.yakubova@apkipp.ru",
         "department": [
             5
         ],
@@ -110,59 +43,10 @@
         "inner_phone": "108",
         "is_active": true
     },
-    "119": {
-        "id": "19107",
-        "name": "Давид Кочарян",
-        "department": [
-            5
-        ],
-        "position": "Менеджер по продажам",
-        "inner_phone": "119",
-        "is_active": true
-    },
-    "210": {
-        "id": "1403",
-        "name": "Ольга Баева",
-        "department": [
-            107
-        ],
-        "position": "Менеджер по продажам",
-        "inner_phone": "210",
-        "is_active": false
-    },
-    "104": {
-        "id": "28065",
-        "name": "Анна Ермилова",
-        "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "104",
-        "is_active": false
-    },
-    "106": {
-        "id": "2637",
-        "name": "Александра Губская",
-        "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "106",
-        "is_active": true
-    },
-    "207": {
-        "id": "1497",
-        "name": "Роман Луценко",
-        "department": [
-            107
-        ],
-        "position": "Менеджер",
-        "inner_phone": "207",
-        "is_active": false
-    },
     "209": {
         "id": "1841",
         "name": "Анна Кисель",
+        "email": "kisel@apkipp.ru",
         "department": [
             107
         ],
@@ -170,89 +54,21 @@
         "inner_phone": "209",
         "is_active": false
     },
-    "120": {
-        "id": "23881",
-        "name": "Пётр Осетров",
+    "117": {
+        "id": "28003",
+        "name": "Ольга Шаповалова",
+        "email": "o.shapovalova@apkipp.ru",
         "department": [
-            1
+            5
         ],
-        "position": null,
-        "inner_phone": "120",
+        "position": "Руководитель отдела продаж",
+        "inner_phone": "117",
         "is_active": false
-    },
-    "134": {
-        "id": "28035",
-        "name": "Ольга Дымнич",
-        "department": [
-            5
-        ],
-        "position": "Менеджер по продажам",
-        "inner_phone": "134",
-        "is_active": false
-    },
-    "131": {
-        "id": "28023",
-        "name": "Владислав Логунов",
-        "department": [
-            5
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "131",
-        "is_active": false
-    },
-    "100": {
-        "id": "27195",
-        "name": "Арина Надолинская",
-        "department": [
-            7
-        ],
-        "position": null,
-        "inner_phone": "100",
-        "is_active": true
-    },
-    "705": {
-        "id": "2519",
-        "name": "Андрей Карпиленко",
-        "department": [
-            107
-        ],
-        "position": "менеджер по продажам",
-        "inner_phone": "705",
-        "is_active": false
-    },
-    "141": {
-        "id": "28093",
-        "name": "Татьяна Буренина",
-        "department": [
-            5
-        ],
-        "position": "Менеджер по продажам",
-        "inner_phone": "141",
-        "is_active": true
-    },
-    "138": {
-        "id": "28075",
-        "name": "Виктория Загорулько",
-        "department": [
-            5
-        ],
-        "position": "Менеджер по продажам",
-        "inner_phone": "138",
-        "is_active": true
-    },
-    "139": {
-        "id": "28085",
-        "name": "Евгения Ткачева",
-        "department": [
-            5
-        ],
-        "position": "Менеджер по продажам",
-        "inner_phone": "139",
-        "is_active": true
     },
     "122": {
         "id": "26885",
         "name": "Кристина Попова",
+        "email": "k.popova@apkipp.ru",
         "department": [
             1
         ],
@@ -260,29 +76,98 @@
         "inner_phone": "122",
         "is_active": false
     },
-    "109": {
-        "id": "27059",
-        "name": "Анжелика Восканян",
+    "210": {
+        "id": "1403",
+        "name": "Ольга Баева",
+        "email": "olbaeva84@mail.ru",
+        "department": [
+            107
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "210",
+        "is_active": false
+    },
+    "120": {
+        "id": "23881",
+        "name": "Пётр Осетров",
+        "email": "mng2@apkipp.ru",
+        "department": [
+            1
+        ],
+        "position": null,
+        "inner_phone": "120",
+        "is_active": false
+    },
+    "131": {
+        "id": "28031",
+        "name": "Мария Копейка",
+        "email": "m.kopeyka@apkipp.ru",
+        "department": [
+            1
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "131",
+        "is_active": false
+    },
+    "207": {
+        "id": "1497",
+        "name": "Роман Луценко",
+        "email": "lucenko@apkipp.ru",
+        "department": [
+            107
+        ],
+        "position": "Менеджер",
+        "inner_phone": "207",
+        "is_active": false
+    },
+    "705": {
+        "id": "2519",
+        "name": "Андрей Карпиленко",
+        "email": "karpilenko@apkipp.ru",
+        "department": [
+            107
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "705",
+        "is_active": false
+    },
+    "119": {
+        "id": "19107",
+        "name": "Давид Кочарян",
+        "email": "d.kocharyan@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "119",
+        "is_active": true
+    },
+    "133": {
+        "id": "28029",
+        "name": "Светлана Слепченко",
+        "email": "s.slepchenko@apkipp.ru",
         "department": [
             5
         ],
         "position": "менеджер по продажам",
-        "inner_phone": "109",
-        "is_active": false
+        "inner_phone": "133",
+        "is_active": true
     },
-    "708": {
-        "id": "11509",
-        "name": "Лилия Юрченко",
+    "104": {
+        "id": "27027",
+        "name": "Антон Солопов",
+        "email": "a.solopov@apkipp.ru",
         "department": [
-            107
+            5
         ],
-        "position": null,
-        "inner_phone": "708",
+        "position": "менеджер по продажам",
+        "inner_phone": "104",
         "is_active": false
     },
     "137": {
         "id": "28043",
         "name": "Автоменеджер None",
+        "email": "automanager@apkipp.ru",
         "department": [
             5
         ],
@@ -293,6 +178,7 @@
     "126": {
         "id": "27737",
         "name": "Светлана Грицына",
+        "email": "s.gricyna@apkipp.ru",
         "department": [
             5
         ],
@@ -300,19 +186,21 @@
         "inner_phone": "126",
         "is_active": false
     },
-    "140": {
-        "id": "28091",
-        "name": "Вячеслав Арендаренко",
+    "139": {
+        "id": "28085",
+        "name": "Евгения Ткачева",
+        "email": "e.tkacheva@apkipp.ru",
         "department": [
             5
         ],
         "position": "Менеджер по продажам",
-        "inner_phone": "140",
+        "inner_phone": "139",
         "is_active": true
     },
     "113": {
         "id": "27997",
         "name": "Андрей Деревянкин",
+        "email": "a.derevyankin@apkipp.ru",
         "department": [
             5
         ],
@@ -320,14 +208,159 @@
         "inner_phone": "113",
         "is_active": false
     },
-    "142": {
+    "138": {
+        "id": "28075",
+        "name": "Виктория Загорулько",
+        "email": "v.zalorulko@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "138",
+        "is_active": true
+    },
+    "708": {
+        "id": "11509",
+        "name": "Лилия Юрченко",
+        "email": "yurchenko@apkipp.ru",
+        "department": [
+            107
+        ],
+        "position": null,
+        "inner_phone": "708",
+        "is_active": false
+    },
+    "132": {
+        "id": "28025",
+        "name": "Богдана Валковская",
+        "email": "b.valkovskaya@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "132",
+        "is_active": false
+    },
+    "106": {
+        "id": "2637",
+        "name": "Александра Губская",
+        "email": "gubskaya@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "106",
+        "is_active": true
+    },
+    "141": {
         "id": "28095",
         "name": "Анастасия Новоселова",
+        "email": "a.novoselova@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "141",
+        "is_active": true
+    },
+    "140": {
+        "id": "28093",
+        "name": "Татьяна Буренина",
+        "email": "t.burenina@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "140",
+        "is_active": true
+    },
+    "142": {
+        "id": "28091",
+        "name": "Вячеслав Арендаренко",
+        "email": "v.arendarenko@apkipp.ru",
         "department": [
             5
         ],
         "position": "Менеджер по продажам",
         "inner_phone": "142",
         "is_active": true
+    },
+    "701": {
+        "id": "10389",
+        "name": "Ирина Шамраева",
+        "email": "hr@apkipp.ru",
+        "department": [
+            1
+        ],
+        "position": "менеджер по персоналу",
+        "inner_phone": "701",
+        "is_active": false
+    },
+    "100": {
+        "id": "27195",
+        "name": "Арина Надолинская",
+        "email": "a.firsova@apkipp.ru",
+        "department": [
+            7
+        ],
+        "position": null,
+        "inner_phone": "100",
+        "is_active": true
+    },
+    "123": {
+        "id": "27181",
+        "name": "Оксана Латоненко",
+        "email": "o.latonenko@apkipp.ru",
+        "department": [
+            5,
+            1
+        ],
+        "position": "Руководитель отдела продаж",
+        "inner_phone": "123",
+        "is_active": false
+    },
+    "107": {
+        "id": "27729",
+        "name": "Анатолий Моргунов",
+        "email": "a.morgunov@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "107",
+        "is_active": true
+    },
+    "109": {
+        "id": "27059",
+        "name": "Анжелика Восканян",
+        "email": "a.voskanyan@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "109",
+        "is_active": false
+    },
+    "134": {
+        "id": "28035",
+        "name": "Ольга Дымнич",
+        "email": "o.dymnich@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "Менеджер по продажам",
+        "inner_phone": "134",
+        "is_active": false
+    },
+    "118": {
+        "id": "27973",
+        "name": "Евгений Латоненко",
+        "email": "e.latonenko@apkipp.ru",
+        "department": [
+            5
+        ],
+        "position": "менеджер по продажам",
+        "inner_phone": "118",
+        "is_active": false
     }
 }

@@ -1,2 +1,5 @@
 data/csv/.~lock.program_ВО.csv#
 data/csv/.~lock.program_СПО.csv#
+data/csv/program_СПО.csv
+data/json/btrx_data/companyusers.json
+data/json/btrx_data/inner_phone_users.json
