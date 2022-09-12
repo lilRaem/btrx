@@ -18,7 +18,7 @@ table.columns[1].cells[0].text = 'title_program'
 table.columns[2].cells[0].text = 'hour'
 table.columns[3].cells[0].text = 'price'
 table.columns[4].cells[0].text = 'date'
-table.columns[5].cells[0].text = 'link'
+table.columns[5].cells[0].text = 'linkNmo'
 
 
 def iter_hyperlink_rels(rels):

@@ -51,8 +51,10 @@ def docx2csv(filename):
 		for i, row in enumerate(table.rows):
 
 			for j, cell in enumerate(row.cells):
-				df[i][j] = cell.text.replace('\n', ' ').strip()
+				df[i][j] = cell.text.replace('\n', ' ')
+				df[i][j] = cell.text.strip()
 				df[i][j] = cell.text.replace(',',';')
+				df[i][j] = cell.text.strip()
 			if index == 0:
 				type_name = 'ВО'
 				program_path = f"{os.getcwd()}\\data\\csv\\program_{type_name}.csv"
@@ -72,9 +74,9 @@ def docx2csv(filename):
 				try:
 					os.makedirs(f'{os.getcwd()}\\data\\csv')
 				except:
-					if printed == False and not printed:
+					if printed == True and not printed:
 						print(f'Сохранено в: {program_path}')
-						printed = True
+						printed = False
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
 				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
 				count = count + 1

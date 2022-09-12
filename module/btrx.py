@@ -232,7 +232,7 @@ def check_product(name=str, price=str, datalist=list) -> int:
 				name_space = name.count(' ')
 				if name_space == 1 or name_space >= 2:
 					list_name = name.split(' ')
-					searched_words = words_search(list_name, name, price, datalist)
+					# searched_words = words_search(list_name, name, price, datalist)
 					# find_list_compare_words(searched_words)
 			else:
 				pass
@@ -246,6 +246,7 @@ def check_product(name=str, price=str, datalist=list) -> int:
 						test=0
 						print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
 							f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n=====')
+
 					except:
 						print(Fore.RED + 'ошибка')
 				else:
