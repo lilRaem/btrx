@@ -52,7 +52,7 @@ datalist = []
 def main():
 
 	# name = input('Введите название программы: ')
-	name = 'Зубной врач'
+	name = 'Современные требования к оформлению заключительного клинического и  патологоанатомического диагнозов. Порядок оформления медицинского свидетельства о смерти'
 	price = '9800'
 	print(Fore.YELLOW+'Path exists?: ', os.path.exists(f"{path}\{filename}"), f"{path}\{filename}"+Back.RESET)
 	if (os.path.exists(f"{path}\{filename}")):

@@ -74,9 +74,9 @@ def docx2csv(filename):
 				try:
 					os.makedirs(f'{os.getcwd()}\\data\\csv')
 				except:
-					if printed == True and not printed:
+					if printed == False and printed:
 						print(f'Сохранено в: {program_path}')
-						printed = False
+						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
 				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
 				count = count + 1
