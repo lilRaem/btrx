@@ -44,8 +44,14 @@ def docx2csv(filename):
 		if index == 0:
 			type_name = 'ВО'
 			print(f'Current index:{index} type:{type_name}')
-		if index == 1:
+		elif index == 1:
 			type_name = 'СПО'
+			print(f'Current index:{index} type:{type_name}')
+		elif index == 2:
+			type_name = 'НМП'
+			print(f'Current index:{index} type:{type_name}')
+		else:
+			type_name = 'none'
 			print(f'Current index:{index} type:{type_name}')
 		count = 0
 		for i, row in enumerate(table.rows):
@@ -70,6 +76,18 @@ def docx2csv(filename):
 				count = count + 1
 			if index == 1:
 				type_name = 'СПО'
+				program_path = f"{os.getcwd()}\data\\csv\\program_{type_name}.csv"
+				try:
+					os.makedirs(f'{os.getcwd()}\\data\\csv')
+				except:
+					if printed == False and printed:
+						print(f'Сохранено в: {program_path}')
+						printed = True
+				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
+				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
+				count = count + 1
+			if index == 2:
+				type_name = 'НМП'
 				program_path = f"{os.getcwd()}\data\\csv\\program_{type_name}.csv"
 				try:
 					os.makedirs(f'{os.getcwd()}\\data\\csv')
