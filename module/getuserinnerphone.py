@@ -3,7 +3,7 @@ from fast_bitrix24 import Bitrix
 from btrx import get_users_with_innerPhone, btrx,webhook
 import json,os
 loop_while = False
-
+clear = lambda: os.system('cls')
 def checkfornull(data):
 	if data == '' or data is None or data == 'null':
 		data = 'empty'
@@ -56,6 +56,7 @@ def workwithdata():
 			f.write(json_data)
 
 def seeallinnerphone():
+	clear()
 	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
 		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
@@ -64,6 +65,7 @@ def seeallinnerphone():
 				print(f"innerphone: {json_data[data]['inner_phone']}, id: {json_data[data]['id']}, name: {json_data[data]['name']}")
 
 def seealluser():
+	clear()
 	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
 		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
@@ -71,6 +73,7 @@ def seealluser():
 			print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']}, user active?: {json_data[data]['is_active']}")
 
 def seeallactiveuser():
+	clear()
 	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
 		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
@@ -79,6 +82,7 @@ def seeallactiveuser():
 				print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']}, user active?: {json_data[data]['is_active']}")
 
 def seeallnotactiveuser():
+	clear()
 	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
 		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
@@ -112,7 +116,7 @@ def load_users_from_btrx(b):
 
 
 def print_menu():
-	os.environ.clear()
+
 	print('1) Весь список пользователей.')
 	print('2) Cписок активных пользователей.')
 	print('3) Cписок не активных пользователей.')
@@ -122,7 +126,6 @@ def print_menu():
 	print('0) Выход.')
 
 def print_searchmenu():
-	os.environ.clear()
 	print('1) Поиск по ID.')
 	print('2) Поиск по Имени.')
 	print('3) Поиск по Фамилии.')
