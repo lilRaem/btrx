@@ -97,6 +97,15 @@ def get_product_hour(data):
 		i = item['PROPERTY_213']
 		yield i['value']
 
+def set_product_price(btrx=Bitrix(webhook),id=str(),price=0):
+	try:
+		params = {"ID": id, "fields":{
+			'PRICE': price
+		}}
+		res = btrx.call('crm.product.update',params)
+		print(f'Price {price} for {id} is SET {res}'+Style.RESET_ALL+"\n")
+	except Exception as e:
+		print(e)
 
 def get_all_data(data, datalist=list()):
 	"""Get all data	(id, name, price, hours) with hours\n
