@@ -25,7 +25,7 @@ def searchInSite(search_key='Онкология'):
 	count = 0
 	count_word_programm = 0
 	for k in jdata['course_list']:
-		if search_key.lower() in k['name']:
+		if search_key.lower() in k['name'].lower():
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
@@ -39,7 +39,7 @@ def getProgramUrl(search_key='Онкология'):
 		local_data = json.load(f)
 
 	for k, v in enumerate(local_data):
-		if search_key.lower() in local_data[k]['name']:
+		if search_key.lower() in local_data[k]['name'].lower():
 			print('\n' + f"{local_data[k]['name']}\n{k+1} {link}{local_data[k]['url']}")
 			program_url = local_data[k]['url']
 			find_url_list.append(f'{k+1} ' + link + program_url)
