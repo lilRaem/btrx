@@ -43,26 +43,41 @@ TODO Что минимально нужно чтобы получить id то�
 test on work
 [+] Имя программы, цена
 '''
-today = date.today()
-cur_date = today.strftime("%d.%m.%Y")
-filename = f'{cur_date}_file.json'
-path = os.getcwd() + "\\data\\json\\btrx_data"
+
+
+def makefileWdateName() -> str:
+	"""
+	[0] = str(fileNameWithPath)
+	[1] = str(filename)
+
+	Returns:
+		tuple: [fileNameWithPath,filename]
+	"""
+	today = date.today()
+	cur_date = today.strftime("%d.%m.%Y")
+	filename = f'{cur_date}_file.json'
+	path = os.getcwd() + "\\data\\json\\btrx_data"
+	filenameWcurDate = f"{path}\{filename}"
+	return str(filenameWcurDate), str(filename)
+
+
 datalist = []
 
 def main():
 
 	# name = input('Введите название программы: ')
+	path = os.getcwd() + "\\data\\json\\btrx_data"
 	name = 'Современные требования к оформлению заключительного клинического и  патологоанатомического диагнозов. Порядок оформления медицинского свидетельства о смерти'
 	price = '9800'
-	print(Fore.YELLOW+'Path exists?: ', os.path.exists(f"{path}\{filename}"), f"{path}\{filename}"+Back.RESET)
-	if (os.path.exists(f"{path}\{filename}")):
-		data = load_from_jsonFile(f"{path}\{filename}", path)
+	print(Fore.YELLOW+'Path exists?: ', os.path.exists(makefileWdateName()[0]), makefileWdateName()[0]+Back.RESET)
+	if (os.path.exists(makefileWdateName()[0])):
+		data = load_from_jsonFile(makefileWdateName()[0], path)
 		check_product(name, price, get_all_data(data,datalist))
 		searchInSite(name)
 		getProgramUrl(name)
 	else:
-		save_to_json(get_product_list(),filename,path)
-		data = load_from_jsonFile(f"{path}\{filename}", path)
+		save_to_json(get_product_list(),makefileWdateName()[1],path)
+		data = load_from_jsonFile(makefileWdateName()[0], path)
 		check_product(name, price,
 			get_all_data(data, datalist))
 
