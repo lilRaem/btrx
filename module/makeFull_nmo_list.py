@@ -52,7 +52,6 @@ def loadJsonfile():
 	# 	for it,progt in enumerate(programNMP):
 	# 		tit_spect = progt['title_spec']
 
-
 	# 		if  tit_spec == tit_spect:
 	# 			temper_list.append({
 	# 				"title_spec": progt['title_spec'],
@@ -78,6 +77,7 @@ def print_menu():
 
 	print('1) Поиск новой программы в битрикс.')
 	print('2) Поиск новой программы в новом прайсе.')
+	print('3) Поиск программы на сайте.')
 	print('0) Выход.')
 
 
@@ -142,13 +142,18 @@ def menu(f,program):
 			name = input('name: ')
 			hour = input('hour: ')
 			funcfind(program,name,hour)
-		if select_opt == '2':
+		elif select_opt == '2':
 			name = input('name: ')
 			hour = input('hour: ')
 			funcfind_f(program,f,name,hour)
+		elif select_opt == '3':
+			name = input('name: ')
+			searchInSite(name)
+			getProgramUrl(name)
 		elif select_opt == '0':
 			print('Выход')
 			break
+
 		else:
 			print('input correct num')
 
