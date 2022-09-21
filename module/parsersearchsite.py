@@ -15,7 +15,7 @@ def searchInSite(search_key='Онкология'):
 
 	param = {"course_list": ''}
 	a = 0
-	data = requests.get(url, headers=headers,verify=False)
+	data = requests.get(url, headers=headers)
 	jdata = data.json()
 	dict = []
 
