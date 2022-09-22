@@ -53,7 +53,9 @@ def docx2csv(filename):
 		else:
 			type_name = 'none'
 			print(f'Current index:{index} type:{type_name}')
-		count = 0
+		count_vo = 0
+		count_spo = 0
+		count_nmp = 0
 		for i, row in enumerate(table.rows):
 
 			for j, cell in enumerate(row.cells):
@@ -73,7 +75,8 @@ def docx2csv(filename):
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
 				csv_to_json(program_path, f'{os.getcwd()}\\data\\json\\program_{type_name}.json')
-				count = count + 1
+				count_vo = count_vo + 1
+
 			if index == 1:
 				type_name = 'СПО'
 				program_path = f"{os.getcwd()}\data\\csv\\program_{type_name}.csv"
@@ -85,7 +88,7 @@ def docx2csv(filename):
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
 				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
-				count = count + 1
+				count_spo = count_spo + 1
 			if index == 2:
 				type_name = 'НМП'
 				program_path = f"{os.getcwd()}\data\\csv\\program_{type_name}.csv"
@@ -97,9 +100,9 @@ def docx2csv(filename):
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
 				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
-				count = count + 1
+				count_nmp = count_nmp + 1
 
-
+		print(f"VO_items: {count_vo}, SPO_items: {count_spo}, NMP_items: {count_nmp}")
 if __name__ == "__main__":
 	docx2csv(filename)
 	# os.makedirs(f'{os.getcwd()}\\data\\csv')
