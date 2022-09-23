@@ -1,0 +1,1830 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>HTML Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		[style*="Open Sans"] {font-family: 'Open Sans', arial, sans-serif !important;}
+
+		img {
+			outline: none;
+			text-decoration: none;
+			border:none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100%!important;
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+
+		table td {
+			border-collapse: collapse;
+		}
+
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+		.header-td{
+			padding-top: 13px;
+			padding-bottom: 11px;
+			background-color: #F3F6FF;
+		}
+		.first-section .bg-img{
+			background-image: url('https://web-apkipp.ru/Content/img/html-mail/girl-with-docs.png');
+			background-repeat: no-repeat;
+			background-position: 350px 40px;
+			background-size: 400px;
+			padding-bottom: 100px;
+		}
+		.second-section{
+			padding-top: 13px;
+			padding-bottom: 11px;
+			background-color: #F3F6FF;
+		}
+		.second-section .text-block p{
+			color: #262626;
+		}
+		.courses .courses-block p{
+			color: #262626;
+		}
+		.choice img{
+			width: 60%;
+			margin-left: 20px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			vertical-align: middle;
+		}
+		.footer-td{
+			padding-top: 43px;
+			background-color: #649dff;
+
+		}
+		.footer-td .f-text{
+			margin-left: 35px;
+			margin-right: 35px;
+		}
+		.footer-td .f-text a{
+			color:#ffffff;
+			font-size: 14px;
+			line-height: 24px;
+		}
+		.f-mes img{
+			border-radius: 50px;
+			width: 70%;
+		}
+		.docs{
+			padding-bottom: 40px;
+		}
+		.docs img{
+			width: 300px;
+		}
+		@media (max-width: 1100px){
+			.table-850{
+				width: 600px !important;
+			}
+			.table-600{
+				width: 550px !important;
+			}
+			.header-td td{
+				font-size: 11px !important;
+			}
+			.header-td td img{
+				width: 90%;
+			}
+			.first-section .bg-img{
+				background-size: 300px !important;
+				background-position: 200px 60px;
+				padding-bottom: 150px !important;
+			}
+			.first-section .bg-img b{
+				font-size: 30px !important;
+				line-height: 30px !important;
+			}
+			.first-section .bg-img p{
+				font-size: 12px !important;
+				line-height: 20px !important;
+			}
+			.courses .courses-block .headtext{
+				font-size: 26px !important;
+			}
+			.courses .courses-block .subtext{
+				font-size: 22px !important;
+			}
+			.courses .courses-block .infotext{
+				font-size: 16px !important;
+			}
+			.courses .courses-block .button{
+				font-size: 18px !important;
+			}
+			.gift img{
+				width: 80% !important;
+			}
+			.footer-td .f-text{
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			.footer-td .f-text a{
+				font-size: 12px !important;
+			}
+			.footer-td img{
+				width: 60% !important;
+			}
+			.f-mes img{
+				width: 90% !important;
+			}
+			.reviews .table-850 .r-td{
+				display: block !important;
+				padding-bottom: 20px !important;
+			}
+			.docs img{
+			width: 200px;
+		}
+		}
+		@media (max-width: 800px){
+			.table-850{
+				width: 400px !important;
+			}
+			.table-600{
+				width: 320px !important;
+				font-size: 14px;
+			}
+			.docs .images td{
+				display: block !important;
+			}
+			.choice img{
+				width: 90px !important;
+			}
+			.choice b{
+				font-size: 26px !important;
+				line-height: 30px !important;
+			}
+			.headline{
+				font-size: 26px !important;
+				line-height: 30px !important;
+			}
+			.reviews .headline{
+				font-size: 26px !important;
+				line-height: 30px !important;
+			}
+			.reviews b{
+				font-size: 14px !important;
+			}
+			.reviews p{
+				font-size: 12px !important;
+			}
+			.reviews .table-850 .r-td{
+				display: block !important;
+				padding-bottom: 20px !important;
+			}
+			.header-td .text-block{
+				display: block !important;
+			}
+			.header-td td img{
+				width: 90% !important;
+			}
+			.subline{
+				font-size: 20px !important;
+				line-height: 18px !important;
+			}
+			.first-section .bg-img{
+				background-size: 250px !important;
+				padding-bottom: 100px !important;
+				padding-top: 0px;
+				background-position: 100px 100px;
+			}
+			.first-section .bg-img b{
+				font-size: 28px !important;
+				line-height: 30px !important;
+			}
+			.first-section .bg-img p{
+				font-size: 12px !important;
+				line-height: 18px !important;
+			}
+			.second-section .text-block p{
+				font-size: 18px !important;
+				line-height: 20px !important;
+			}
+			.second-section .text-block .text2{
+				padding-bottom: 20px !important;
+			}
+			.second-section .text-block .text3{
+				padding-bottom: 58px !important;
+			}
+			.courses .courses-block .courses-td{
+				display: block !important;
+				width: 100px !important;
+				height: 100px !important;
+			}
+			.courses .courses-block img{
+				width: 90px !important;
+				height: 90px !important;
+			}
+			.courses .courses-block .headtext{
+				margin-top: -4px !important;
+				line-height: 22px !important;
+				font-size: 20px !important;
+			}
+			.courses .courses-block .subtext{
+				font-size: 16px !important;
+			}
+			.courses .courses-block .infotext{
+				font-size: 14px !important;
+			}
+			.courses .courses-block .button{
+				font-size: 12px !important;
+			}
+			.gift img{
+				width: 70% !important;
+			}
+			.docs .headline{
+				font-size: 26px !important;
+				line-height: 30px !important;
+			}
+			.footer-td .f-td{
+				display: block !important;
+			}
+			.footer-td img{
+				width: 50% !important;
+			}
+			.footer-td .f-td a img{
+				width: 70% !important;
+			}
+			.f-mes{
+				display: block !important;
+			}
+			.f-mes p{
+				padding-right: 0px !important;
+			}
+			.f-mes img{
+				width: 50% !important;
+			}
+			.docs .images td{
+				display: block !important;
+			}
+			.second-section .text-block{
+				display: block !important;
+			}
+			.second-section .text-block div{
+				width: 100% !important;
+				height: 100% !important;
+				margin-bottom: 20px !important;
+			}
+		}
+		@media (max-width: 520px){
+			.table-850{
+				width: 320px !important;
+			}
+			.table-600{
+				width: 280px !important;
+				font-size: 12px;
+			}
+			.header-td .text-block{
+				display: block !important;
+			}
+			.choice img{
+				width: 70px !important;
+			}
+			.f-mes-link img{
+				width: 100% !important;
+			}
+			.first-section .bg-img p b{
+				font-size: 20px !important;
+				line-height: 15px !important;
+			}
+			.first-section .bg-img{
+				background-position: 30px 60px !important;
+				padding-bottom: 160px !important;
+			}
+			.first-section img{
+				width: 50px !important;
+			}
+			.second-section .text-block p{
+				font-size: 16px !important;
+				line-height: 18px !important;
+			}
+			.second-section .text-block{
+				display: block !important;
+			}
+			.subline{
+				font-size: 16px !important;
+				line-height: 14px !important;
+			}
+			.courses .courses-block .courses-td{
+				display: block !important;
+				width: 100px !important;
+				height: 100px !important;
+			}
+			.courses .courses-block img{
+				width: 90px !important;
+				height: 90px !important;
+			}
+			.courses .courses-block .headtext{
+				margin-top: -8px !important;
+				line-height: 18px !important;
+				font-size: 16px !important;
+			}
+			.courses .courses-block .subtext{
+				font-size: 14px !important;
+			}
+			.courses .courses-block .infotext{
+				font-size: 14px !important;
+			}
+			.courses .courses-block .button{
+				font-size: 14px !important;
+			}
+		}
+	</style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+	<div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое письмо</div>
+	<table cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+            <td>
+                <table class="main table-100p" cellpadding="0" cellspacing="0" width="100%" align="center">
+                    <tr>
+						<td class="header-td" align="center">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td class="text-block" align="center" style="font-style:'Open Sans'; padding-right: 12px;">
+										<a href="https://apkipp.ru/media/documents/Licen_21.5.18.pdf" target="_blank" style="color:#262626;">Лицензия</a>
+									</td>
+									<td class="text-block" align="center" style="font-style:'Open Sans';">
+										<a href="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/" target="_blank" style="color:#262626;">Все курсы</a>
+									</td>
+									<td class="text-block" align="center" style="font-style:'Open Sans'; padding-right: 22px;">
+										<table>
+											<tr>
+												<td><img src="https://web-apkipp.ru/Content/img/html-mail/icons/mail.png" alt="alt_text"></td>
+												<td><a href="mailto:apkipprf@yandex.ru" target="_blank" style="color: #262626;">apkipprf@yandex.ru</a></td>
+											</tr>
+										</table>
+									</td>
+									<td class="text-block" align="center" style="font-style:'Open Sans'; padding-right: 22px;">
+										<table>
+											<tr>
+												<td><img src="https://web-apkipp.ru/Content/img/html-mail/icons/phone.png" alt="alt_text"></td>
+												<td><a href="tel:88007005407" target="_blank" style="color: #262626;">8 800 700 54 07</a></td>
+											</tr>
+										</table>
+									</td>
+									<td class="text-block" align="center" style="font-style:'Open Sans';">
+										<table>
+											<tr>
+												<td><img src="https://web-apkipp.ru/Content/img/html-mail/icons/whatsapp.png" alt="alt_text"></td>
+												<td><a href="https://wa.me/79613084929" target="_blank" style="color: #262626;">8 961 308 49 29</a></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="first-section">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td valign="top"><img src="https://web-apkipp.ru/Content/img/html-mail/icons/new_logo1.png" alt="alt_text" style="padding-top: 15px;"></td>
+									<td class="bg-img" align="left">
+										<p style="font-family:sans-serif, 'Open Sans'; color: #262626; font-size: 38px; line-height: 40px;">
+											<b>Академия <br> повышения квалификации <br> и профессиональной <br> переподготовки</b>
+										</p>
+										<p style="color: #666666; font-family:sans-serif, 'Open Sans'; font-size: 16px;">
+											Топ-3 ВУЗов ДПО России
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="second-section">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td class="text-block" >
+										<div style="font-family:sans-serif, 'Open Sans'; background-color: #FFFFFF; border: 5px solid #FFF; margin: 0 5px; border-radius: 20px; padding-bottom: 10px;">
+											<table align="center" style="width: 90%;">
+												<tr>
+													<td class="text1" align="center" valign="top" style="padding-bottom: 10px;">
+														<p style="font-size: 20px; line-height: 22px; text-align: center;">Уважаемые коллеги!</p>
+														<p style="text-indent: 18px; font-size: 20px; line-height: 22px; text-align: left;">В соответствии с Министерства здравоохранения РФ N 83н "Об утверждении Квалификационных требований к медицинским и фармацевтическим работникам со средним медицинским и фармацевтическим образованием" в Академии проводится набор  <span style="color:#fd3977;">на программы первичной профессиональной переподготовки среднего медицинского персонала</span>. <p style="text-indent: 15px;text-align:justify;">Обучение дистанционное. По итогам выдаются дипломы с присвоением квалификации и с правом ведения   деятельности.</p>
+
+													</td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top: 10px;"></td></tr>
+
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-top: 20px;"></td>
+					</tr>
+					<!--Начало блока-->
+					<tr>
+						<td align="center">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td align="left">
+										<p class="headline" style="font-size: 38px; line-height: 36px; font-family:sans-serif, 'Open Sans'; color:#262626; padding-top: 20px;"><b>Учебные курсы</b></p>
+									</td>
+								</tr>
+
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="courses">
+							<table class="table-600" cellpadding="0" cellspacing="0" width="600" align="center">
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/aacc20a2-d419-4a9c-965c-1bdb95c5b46f__186__0__5894__4249__crop_WBdA6nv/60f080870ca88921f1f5fe28eae89a21.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Акушерское дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Акушерское дело&header=Курс Акушерское дело&cost=20000&tovar=4313" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/adc73386-46db-4713-8caa-c7858d442038__30__0__891__641__crop_5rdVZpQ/1b12ade7b517cd377ded869e2c150793.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Анестезиология и реаниматология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Анестезиология и реаниматология&header=Курс Анестезиология и реаниматология&cost=20000&tovar=15519" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/74ba0db7-953f-4ec0-ad6c-d4c72f8f3dce__14__16__1024__768__crop_qHZffE3/700e1d6b9a42ee9fc5b05b8c0a949de6.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Бактериология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Бактериология&header=Курс Бактериология&cost=20000&tovar=4317" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/e6677227-8c40-40db-8ea9-294a900f8634__39__0__2547__1867__crop_7qdHtJc/8b96d08effa1ef28607a137fcaf60fb7.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Гигиеническое воспитание</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Гигиеническое воспитание&header=Курс Гигиеническое воспитание&cost=20000&tovar=4321" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/b418ee6d-9f9f-4d8b-80f3-3d65cca450a1__190__2__2875__2001__crop_7J5q7JN/a71d83022b98ec81e0c33aac1957a52d.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Гигиена и санитария</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Гигиена и санитария&header=Курс Гигиена и санитария&cost=20000&tovar=15601" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/9ce3ccb2-bf2e-4cd8-ace0-4dbfab3451ec__105__0__1024__684__crop_TSDyWTj/b66c938f60859152906ed11227717f4e.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Гистология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Гистология&header=Курс Гистология&cost=20000&tovar=15613" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/a553fe1e-3500-4e84-b47a-ed69f01d1c8e__185__0__701__384__crop_5IzgJdM/8ce8b9c4fb9314bebc0ba043dbb79604.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Дезинфекционное дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Дезинфекционное дело&header=Курс Дезинфекционное дело&cost=20000&tovar=4327" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/14b92b89-a0cf-4e9d-9ac6-cb921d768665__197__0__2436__1667__crop_BdrFiaq/92fcad10b6bb7f6c44f0d693dced98ba.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Диетология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Диетология&header=Курс Диетология&cost=20000&tovar=15985" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/9fb1042a-a318-421d-8d86-b7d281747184__524__0__5167__3456__crop_KBbTE8P/cc64ce310837600b39dffd4a975cff85.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Лабораторное дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Лабораторное дело&header=Курс Лабораторное дело&cost=20000&tovar=4335" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/5b0648c5-677b-484d-a039-14199d89ffb9__32__0__1107__800__crop_ps60l6Y/04e7835d6cb227e5d9b7e12603e49bd9.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Лабораторная диагностика</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>Лабораторная диагностика
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=ЙЙЙ&header=Курс Лабораторная диагностика&cost=20000&tovar=4329" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/iStock-670826012/8ec35504f8e1378fa76374dc52105a85.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Лечебное дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Лечебное дело&header=Курс Лечебное дело&cost=20000&tovar=4333" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/f7679b8e-f77c-4621-9a27-722ea53ddb0f__159__0__1878__1280__crop_Jxnov6E/736fb30d8e0b8ff9fc22aabb4da4d889.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Лечебная физкультура</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Лечебная физкультура&header=Курс Лечебная физкультура&cost=20000&tovar=4331" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/e2ff2695-9efa-4c1a-844f-779b80e0d2a7__220__0__1671__1080__crop_GzRLJSb/95ced80f08a987aebf760f48f1d3ad9f.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Медицинский массаж</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Медицинский массаж&header=Курс Медицинский массаж&cost=20000&tovar=4341" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/ca6a860d-31a3-42b3-a69f-c570d4616e87__87__0__983__667__crop_ehuDaFa/f545939e4b050f5dcfd49a19e2f9f7d9.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Медицинская оптика</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Медицинская оптика&header=Курс Медицинская оптика&cost=20000&tovar=4389" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/888d5145-778b-4fea-b023-0586dbc175f6__723__0__5258__3376__crop_5L0ps8b/0252fcb9a4d8c244c861e3cbe2740a66.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Медицинская статистика</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Медицинская статистика&header=Курс Медицинская статистика&cost=20000&tovar=4339" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/7185cbe7-17fc-44c7-baa9-97bc529d6c26__0__0__967__720__crop_kkan59S/821a726715ceea8ab85cf91c07737985.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Медико-профилактическое дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Медико-профилактическое дело&header=Курс Медико-профилактическое дело&cost=20000&tovar=4571" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/7c204e5d-c823-4095-ab56-2d09b05ef534__621__0__6016__4016__crop_BIgvp2y/a3d2a1b42ca72ef862359427c6a7a295.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Медико-социальная помощь</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Медико-социальная помощь&header=Курс Медико-социальная помощь&cost=20000&tovar=4337" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/1aa0c8ac-7eb4-4e70-b812-10365b5f1220__209__0__846__474__crop_yESTOPm/ca6064a1c0a000e1441cd76d7eaa1b15.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Наркология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Наркология&header=Курс Наркология&cost=20000&tovar=4343" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/a5a9102a-7b95-4389-8363-25d01d650f44__93__138__3323__2542__crop_BngUN3T/953e91a365d6eeab2c3bc9db078ca5c8.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Общая практика</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Общая практика&header=Курс Общая практика&cost=20000&tovar=4345" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/4b5c92ef-bcb1-4832-9c40-cf38ec3d429d__173__0__3683__2613__crop_UW1hTav/9d68dc019c50506a6550c5ec4bbb7806.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Операционное дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Операционное дело&header=Курс Операционное дело&cost=20000&tovar=4347" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/6f20a196-8022-4c02-847d-538995a32531__89__0__1608__1131__crop_v5WH57Y/9405066fc1116fc791a0becacb7fdd57.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Организация сестринского дела</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Организация сестринского дела&header=Курс Организация сестринского дела&cost=20000&tovar=4349" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/cfc6b4f9-546b-435e-90b5-e87263c4a4cf__414__0__1865__1080__crop_dA8jqyL/df944f233c73529e84a5d6b28f44e1ae.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Реабилитационное сестринское дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Реабилитационное сестринское дело&header=Курс Реабилитационное сестринское дело&cost=20000&tovar=4351" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/fluorogr/a148ac388ce5674ec15075c33d8ed1b4.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Рентгенология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Рентгенология&header=Курс Рентгенология&cost=20000&tovar=16541" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/1f6d8c90-ec05-4cca-be75-cfc043249be7__31__0__1106__800__crop_e2Ghgcr/fb0387f4bd77409130c71911fc3a8bbb.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Сестринское дело</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Сестринское дело&header=Курс Сестринское дело&cost=20000&tovar=17781" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/ea325330-d69f-4247-bacd-4bc198552760__285__0__6884__4912__crop_0tzSmTK/830dac16aae08b15ef7e5547bf4a7f42.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Сестринское дело в педиатрии</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Сестринское дело в педиатрии&header=Курс Сестринское дело в педиатрии&cost=20000&tovar=16589" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/2143141e-7bd1-4b62-b808-abcd2ae9bc08__415__0__1758__1000__crop_7T712qC/bb92723920d5b8a5a402f337577670b8.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Сестринское дело в косметологии</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Сестринское дело в косметологии&header=Курс Сестринское дело в косметологии&cost=20000&tovar=4357" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/1730d4dc-ae58-43a1-8f7e-b1102eed3889__15__0__564__409__crop_Lr8Sjkk/8ea0026d7a18b1c40b7d95e8026d3a59.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Скорая и неотложная помощь</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Скорая и неотложная помощь&header=Курс Скорая и неотложная помощь&cost=20000&tovar=16609" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/211eee17-9f84-4bc7-814c-8f670ab4286d__430__0__3665__2408__crop_BYjNBNZ/59d4d57524d685f83ba67d5050c25747.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Стоматология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Стоматология&header=Курс Стоматология&cost=20000&tovar=18293" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/524592e5-825e-4362-b611-01f75a217764__70__0__742__500__crop_Ema1mIi/27686ba79ea1d508c1c52192b301aa44.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Стоматология профилактическая</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Стоматология профилактическая&header=Курс Стоматология профилактическая&cost=20000&tovar=16483" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/96ac5c7c-581f-44a9-858e-d7a1ec6a6e60__103__0__1746__1223__crop_LvNtuMl/ce1298470069b5fc2671ca66355355b2.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Стоматология ортопедическая</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Стоматология ортопедическая&header=Курс Стоматология ортопедическая&cost=20000&tovar=4363" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/e844a20f-47a8-443a-853f-ffe829c16e6f__0__16__617__475__crop_Zh26CWq/85b7099fbf6fff698150ba05c25e80fd.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Судебно-медицинская экспертиза</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Судебно-медицинская экспертиза&header=Курс Судебно-медицинская экспертиза&cost=20000&tovar=4369" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/c4f76c4e-8192-40af-b873-2edab57aaa8e__145__0__1936__1333__crop_SdGmg7R/4743bf252f3fd3923552db949ec1f50d.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Фармация</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Фармация&header=Курс Фармация&cost=20000&tovar=17151" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/fa3b0f97-8dd0-42ee-ab16-700e5f7bb074__124__0__1650__1136__crop_xa0uu2e/0ae3c34c7ce008e574ec7675ca534a2f.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Физиотерапия</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Физиотерапия&header=Курс Физиотерапия&cost=20000&tovar=4375" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/90d72810-4bd3-4680-b55c-9e8185033235__0__0__787__586__crop_DbdqFBU/879853d594940451fa065acd6d0a511b.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Функциональная диагностика</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Функциональная диагностика&header=Курс Функциональная диагностика&cost=20000&tovar=4377" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/32b4817c-5881-4f8c-99f8-7001a0adb9ad__175__0__1966__1333__crop_rjSYysO/bc25a7b692ec9545ef7c6daacb19fc5a.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Эпидемиология (паразитология)</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Эпидемиология (паразитология)&header=Курс Эпидемиология (паразитология)&cost=20000&tovar=4387" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+								<!--Начало-->
+								<tr>
+									<td class="courses-block">
+										<div style="font-family:sans-serif, 'Open Sans'; margin: 0 5px; padding-bottom: 10px;">
+											<table align="">
+												<tr>
+													<td rowspan="3" valign="top" class="courses-td" style=" width: 165px; height: 150px;">
+														<img style="width: 150px; height: 150px; object-fit: cover; border-radius: 20px; margin-right: 40px;" src="https://apkipp.ru/media/CACHE/images/images/education/course/e974750b-84a4-4e3f-921e-9b30906628c3__101__0__959__639__crop_GJnoGf4/b813e40af78c5ee4a218c8a382f3a591.jpg" alt="alt_text">
+													</td>
+													<td colspan="3">
+														<p class="headtext" style="font-size: 30px; line-height: 32px;"><b>Энтомология</b></p>
+														<p class="subtext" style="font-size: 20px; color:#878787;">Профессиональная переподготовка</p>
+													</td>
+													<td></td>
+												</tr>
+												<tr>
+												</tr>
+												<tr>
+													<td><p class="prog_hour infotext" style="font-size: 18px;">300 часов</p></td>
+													<td><p class="infotext" style="font-size: 18px;">3 месяца</p></td>
+													<td><p class="prog_price infotext" style="font-size: 18px; margin-left: 40px; color:#fd3977;"><b>20 000 руб.</b></p></td>
+												</tr>
+												<tr><td style="padding-top: 5px;"></td></tr>
+												<tr>
+													<td colspan="4" align="center" width="580"><a class="button" href="https://web-apkipp.ru/leadform/?program=Энтомология&header=Курс Энтомология&cost=20000&tovar=4379" target="_blank" style="background-color: #215FFF; color:#FFF; border:#215FFF solid 10px; border-radius: 20px; padding: 2px 60px; font-size:20px;">О программе</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top:20px ;"></td></tr>
+								<!--Конец-->
+							</table>
+						</td>
+					</tr>
+					<!--Конец блока-->
+
+
+
+					<tr>
+						<td class="choice">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td align="left">
+										<p style="font-size: 38px; font-family:sans-serif, 'Open Sans'; color:#262626; padding-top: 20px;"><b>У нас обучаются лучшие</b></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center" style="background-color: #ffffff; border-radius: 10px;">
+											<tr>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l21.jpg" alt="image">
+												</td>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l5.jpg" alt="image">
+												</td>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l24.jpg" alt="image">
+												</td>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l7.jpg" alt="image">
+												</td>
+											</tr>
+											<tr>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l2.jpg" alt="image">
+												</td>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l13.jpg" alt="image">
+												</td>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l19.jpg" alt="image">
+												</td>
+												<td align="center" valign="middle">
+													<img src="https://apkipp.ru/media/images/front/clients/l1.jpg" alt="image">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="reviews">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td align="left">
+										<p style="font-size: 38px; font-family:sans-serif, 'Open Sans'; color:#262626;"><b  class="headline">Отзывы наших клиентов</b></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+											<tr>
+												<td class="r-td">
+													<div style="border: solid 20px; border-radius: 20px; border-color: #F3F6FF; background-color: #F3F6FF; margin-left: 15px; margin-right: 15px;">
+														<table>
+															<tr>
+																<td>
+																	<img src="https://web-apkipp.ru/Content/img/html-mail/rewiew_avatar1.png" alt="alt_text">
+																</td>
+																<td valign="top">
+																	<p style="font-size: 18px; font-family:sans-serif, 'Open Sans'; margin-left: 10px; color: #262626;"><b>Светлана</b><br><span style="font-size: 14px; color: #666666;">38 лет, Краснодар</span></p>
+																</td>
+															</tr>
+														</table>
+														<p style="font-size: 14px; font-family:sans-serif, 'Open Sans'; margin-left: 10px; color: #262626;">Проходила курс по рентгенологии. Получила диплом и все необходимые для работы документы. Спасибо большое. </p>
+													</div>
+												</td>
+												<td class="r-td">
+													<div style="border: solid 20px; border-radius: 20px; border-color: #F3F6FF; background-color: #F3F6FF; margin-left: 15px; margin-right: 15px;">
+														<table>
+															<tr>
+																<td>
+																	<img src="https://web-apkipp.ru/Content/img/html-mail/rewiew_avatar2.png" alt="alt_text">
+																</td>
+																<td valign="top">
+																	<p style="font-size: 18px; font-family:sans-serif, 'Open Sans'; margin-left: 10px; color: #262626;"><b>Наталья</b><br><span style="font-size: 14px; color: #666666;">29 лет, Новороссийск</span></p>
+																</td>
+															</tr>
+														</table>
+														<p style="font-size: 14px; font-family:sans-serif, 'Open Sans'; margin-left: 10px; color: #262626;">Спасибо, что сразу внесли в ФРДО. Я Вашим документом
+															прошла аттестацию! Обучение было очень полезно<br><br><br></p>
+													</div>
+												</td>
+												<td class="r-td">
+													<div style="border: solid 20px; border-radius: 20px; border-color: #F3F6FF; background-color: #F3F6FF; margin-left: 15px; margin-right: 15px;">
+														<table>
+															<tr>
+																<td>
+																	<img src="https://web-apkipp.ru/Content/img/html-mail/rewiew_avatar3.png" alt="alt_text">
+																</td>
+																<td valign="top">
+																	<p style="font-size: 18px; font-family:sans-serif, 'Open Sans'; margin-left: 10px; color: #262626;"><b>Игорь</b><br><span style="font-size: 14px; color: #666666;">46 лет, Ростов-на-Дону</span></p>
+																</td>
+															</tr>
+														</table>
+														<p style="font-size: 14px; font-family:sans-serif, 'Open Sans'; margin-left: 10px; color: #262626;">Большое спасибо учебному отделу и лично Оксане Викторовне. Оперативно отвечали на все вопросы, помогали. Спасибо, буду рекомендовать<br></p>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="docs">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<td align="left">
+										<p style="font-size: 38px; font-family:sans-serif, 'Open Sans'; color:#262626;"><b  class="headline">Выдаваемые документы</b></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table class="table-850 images" cellpadding="0" cellspacing="0" width="850" align="center">
+											<tr style="font-family: sans-serif, 'Open Sans';">
+												<td align="center" valign="top">
+													<p><strong>ДИПЛОМ</strong></p>
+													<br />
+													<img src="https://apkipp.ru/media/images/education/portfolioimage/original/007b54c3-d330-49d1-9d6c-7459c0e579e9_original.jpg" alt="alt_text">
+												</td>
+												<td align="center" valign="top">
+													<p><strong>УДОСТОВЕРЕНИЕ</strong></p>
+													<br />
+													<img src="https://apkipp.ru/media/images/education/portfolioimage/original/45ebf9cf-73be-41c2-90f9-46e41b2448e5_original.jpg" alt="alt_text">
+												</td>
+												<td align="center" valign="top">
+													<p><strong>СВИДЕТЕЛЬСТВО</strong></p>
+													<br />
+													<img src="https://web-apkipp.ru/Content/img/html-mail/svid.jpg" alt="alt_text">
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="gift" align="center">
+							<img src="https://web-apkipp.ru/Content/img/html-mail/gift.png" alt="alt_text">
+						</td>
+					</tr>
+					<tr>
+						<td class="footer-td">
+							<table class="table-850" cellpadding="0" cellspacing="0" width="850" align="center">
+								<tr>
+									<table align="center">
+										<tr>
+											<td class="f-td" align="center">
+												<img src="https://web-apkipp.ru/Content/img/html-mail/icons/new_logo1.png" alt="alt_text">
+											</td>
+											<td class="f-td" align="left">
+												<p class="f-text">
+													<a href="https://apkipp.ru/o-proekte/" target="_blank" style="font-family: sans-serif, 'Open Sans';">О проекте</a><br>
+													<a href="https://apkipp.ru/svedenia-ob-obrazovatelnoi-organizacii/" target="_blank" style="font-family: sans-serif, 'Open Sans';">Сведения об обр. организации</a>
+												</p>
+											</td>
+											<td class="f-td" align="left">
+												<p class="f-text">
+													<a href="https://apkipp.ru/novosti/" target="_blank" style="font-family: sans-serif, 'Open Sans';">Новости</a><br>
+													<a href="https://apkipp.ru/docus/" target="_blank" style="font-family: sans-serif, 'Open Sans';">Документы</a>
+												</p>
+											</td>
+											<td class="f-td" align="left">
+												<p class="f-text">
+													<a href="https://apkipp.ru/katalog/" target="_blank" style="font-family: sans-serif, 'Open Sans';">Программы</a><br>
+													<a href="https://apkipp.ru/kontakty/" target="_blank" style="font-family: sans-serif, 'Open Sans';">Контакты</a>
+												</p>
+											</td>
+											<td class="f-td">
+												<a href="tel:88007005407" target="_blank"><img src="https://web-apkipp.ru/Content/img/html-mail/icons/phone-blue.png" alt="alt_text" style="margin-right: 10px; width:150px;"></a>
+											</td>
+											<td class="f-td">
+												<a href="https://wa.me/79613084929" target="_blank"><img src="https://web-apkipp.ru/Content/img/html-mail/icons/whatsapp-green.png" alt="alt_text" style="margin-right: 10px; width:150px;"></a>
+											</td>
+										</tr>
+									</table>
+								</tr>
+								<tr>
+									<td>
+										<table width="100%" bgcolor="#649dff">
+											<tr>
+												<td>
+													<table class="table-850" align="center" width="850">
+														<tr>
+															<td align="center" class="f-mes">
+																<p style="font-family: sans-serif, 'Open Sans'; font-size: 12px; color: #FFFFFF; opacity: 0.4; padding-right: 20px; text-align: left;">Copyright © 2019 Академия повышения квалификации и профессиональной переподготовки
+																	apkipprf@yandex.ru</p>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+                </table>
+            </td>
+        </tr>
+	</table>
+</body>
+
+</html>
