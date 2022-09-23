@@ -1,6 +1,8 @@
 import requests
 import json
 
+from module.html.parserhtml import parseSiteUrl
+
 link = 'https://apkipp.ru'
 
 
@@ -43,4 +45,6 @@ def getProgramUrl(search_key='Онкология'):
 			print('\n' + f"{local_data[k]['name']}\n{k+1} {link}{local_data[k]['url']}")
 			program_url = local_data[k]['url']
 			find_url_list.append(f'{k+1} ' + link + program_url)
-	return find_url_list
+			main_url = link + program_url
+			parseSiteUrl(main_url)
+	return main_url
