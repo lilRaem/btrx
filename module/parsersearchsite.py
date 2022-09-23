@@ -47,4 +47,3 @@ def getProgramUrl(search_key='Онкология',price='2600'):
 			find_url_list.append(f'{k+1} ' + link + program_url)
 			main_url = link + program_url
 			parseSiteUrl(main_url,price)
-	return main_url
