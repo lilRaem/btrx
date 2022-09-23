@@ -35,16 +35,16 @@ def searchInSite(search_key='Онкология'):
 	)
 
 
-def getProgramUrl(search_key='Онкология'):
+def getProgramUrl(search_key='Онкология',price='2600'):
 	find_url_list = []
 	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
 		local_data = json.load(f)
 
 	for k, v in enumerate(local_data):
 		if search_key.lower() in local_data[k]['name'].lower():
-			print('\n' + f"{local_data[k]['name']}\n{k+1} {link}{local_data[k]['url']}")
+			# print('\n' + f"{local_data[k]['name']}\n{k+1} {link}{local_data[k]['url']}")
 			program_url = local_data[k]['url']
 			find_url_list.append(f'{k+1} ' + link + program_url)
 			main_url = link + program_url
-			parseSiteUrl(main_url)
+			parseSiteUrl(main_url,price)
 	return main_url
