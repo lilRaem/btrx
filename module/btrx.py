@@ -245,12 +245,12 @@ def check_product(name=str, price=str, datalist=list) -> int:
 					# find_list_compare_words(searched_words)
 			else:
 				pass
-			i = 0
-			for k in datalist:
-				k_name = k['name']
-				k_price = k['price']
+			# i = 0
+			for i,v in enumerate(datalist):
+				k_name = v['name']
+				k_price = v['price']
 				k_name = k_name.lower()
-				if name in k_name and price in k_price:
+				if name.lower() in k_name.lower() and price in k_price:
 					try:
 						test=0
 						print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
@@ -265,7 +265,7 @@ def check_product(name=str, price=str, datalist=list) -> int:
 							print(Style.RESET_ALL + 'по названию:', datalist[i])
 						except:
 							print(Fore.RED + 'ошибка')
-				i = i + 1
+				# i = i + 1
 			print(Style.RESET_ALL + f'Всего программ: {i}')
 			COUNT_PROGRAMS = i
 		else:

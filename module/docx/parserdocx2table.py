@@ -74,7 +74,7 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				csv_to_json(program_path, f'{os.getcwd()}\\data\\json\\program_{type_name}.json')
+				# csv_to_json(program_path, f'{os.getcwd()}\\data\\json\\program_{type_name}.json')
 				count_vo = count_vo + 1
 
 			if index == 1:
@@ -87,7 +87,7 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
+				# csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
 				count_spo = count_spo + 1
 			if index == 2:
 				type_name = 'НМП'
@@ -99,7 +99,7 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
+				# csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
 				count_nmp = count_nmp + 1
 
 		print(f"VO_items: {count_vo}, SPO_items: {count_spo}, NMP_items: {count_nmp}")
