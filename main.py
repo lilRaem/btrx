@@ -67,14 +67,14 @@ def main():
 
 	# name = input('Введите название программы: ')
 	path = os.getcwd() + "\\data\\json\\btrx_data"
-	name = 'Современные требования к оформлению заключительного клинического и  патологоанатомического диагнозов. Порядок оформления медицинского свидетельства о смерти'
-	price = '9800'
+	name = 'Тренер'
+	price = '6400'
 	print(Fore.YELLOW+'Path exists?: ', os.path.exists(makefileWdateName()[0]), makefileWdateName()[0]+Back.RESET)
 	if (os.path.exists(makefileWdateName()[0])):
 		data = load_from_jsonFile(makefileWdateName()[0], path)
 		check_product(name, price, get_all_data(data,datalist))
 		searchInSite(name)
-		getProgramUrl(name)
+		getProgramUrl(name,price)
 	else:
 		save_to_json(get_product_list(),makefileWdateName()[1],path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)

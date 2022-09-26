@@ -1,7 +1,7 @@
 import requests
 import json
 
-from module.html.parserhtml import parseSiteUrl
+import module.html.parserhtml as Phtml
 
 link = 'https://apkipp.ru'
 
@@ -39,11 +39,14 @@ def getProgramUrl(search_key='Онкология',price='2600'):
 	find_url_list = []
 	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
 		local_data = json.load(f)
-
+	print('getProgramUrl()')
 	for k, v in enumerate(local_data):
-		if search_key.lower() in local_data[k]['name'].lower():
-			# print('\n' + f"{local_data[k]['name']}\n{k+1} {link}{local_data[k]['url']}")
-			program_url = local_data[k]['url']
+		if search_key in v['name']:
+			# print('\n' + f"{v['name']}\n{k+1} {link}{v['url']}")
+			program_url = v['url']
 			find_url_list.append(f'{k+1} ' + link + program_url)
 			main_url = link + program_url
-			parseSiteUrl(main_url,price)
+			Phtml.parseSiteUrl(main_url,price)
+
+if __name__ == "__main__":
+	getProgramUrl()
