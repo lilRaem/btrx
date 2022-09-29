@@ -20,7 +20,7 @@ def save_to_json(datalist=list(), filename='file', path=str()) -> list:
 	try:
 		if (os.path.exists(path)):
 			with open(os.path.join(path, f"{filename}"), 'w', encoding='utf-8') as file:
-				sleep(1)
+				# sleep(1)
 				try:
 					data = json.dumps(datalist, ensure_ascii=False, indent=4)
 					file.write(data)
@@ -34,7 +34,7 @@ def save_to_json(datalist=list(), filename='file', path=str()) -> list:
 
 
 def load_from_jsonFile(filename='*.json', path=str()) -> list:
-	sleep(2)
+	# sleep(2)
 	data_from_file = []
 	if type(filename) != str:
 		raise TypeError('тип filename должен быть str')
@@ -230,45 +230,82 @@ def find_list_compare_words(searched_wrods):
 		print("list_one=",k)
 	print(f'find wrods compare: {searched_wrods}')
 
-def check_product(name=str, price=str, datalist=list) -> int:
+def check_product(name=str, price=str, datalist=list) -> list:
 	global COUNT_PROGRAMS
 	try:
 		if name != None and name != '':
-			print(Back.YELLOW + Fore.BLACK + 'Start check')
+			print(Back.YELLOW + Fore.BLACK + 'Start check' + Style.RESET_ALL)
+
 			name = name.strip()
 			name = name.lower()
-			if ' ' in name:
-				name_space = name.count(' ')
-				if name_space == 1 or name_space >= 2:
-					list_name = name.split(' ')
+			# if ' ' in name:
+			# 	name_space = name.count(' ')
+			# 	if name_space == 1 or name_space >= 2:
+			# 		list_name = name.split(' ')
 					# searched_words = words_search(list_name, name, price, datalist)
 					# find_list_compare_words(searched_words)
-			else:
-				pass
-			# i = 0
-			for i,v in enumerate(datalist):
-				k_name = v['name']
-				k_price = v['price']
-				k_name = k_name.lower()
-				if name.lower() in k_name.lower() and price in k_price:
-					try:
-						test=0
-						print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
-							f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n=====')
+			count_name_price = 0
+			count_name = 0
+			found_data_by_name_price = []
+			found_data_by_name = []
+			try:
+				for i,v in enumerate(datalist):
 
-					except:
-						print(Fore.RED + 'ошибка')
-				else:
-					if name in k_name:
+					k_name = v['name']
+					k_price = v['price']
+					k_name = k_name.lower()
+					if name in k_name and price == k_price and price != '':
+						count_name_price = count_name_price + 1
+					else:
+						if name in k_name:
+							count_name = count_name + 1
+				print(f'Найдено:\nИмя/цена: {count_name_price}шт\nИмя: {count_name}шт')
+			except Exception as e:
+				print(e)
+			try:
+				for i,v in enumerate(datalist):
+
+					k_name = v['name']
+					k_price = v['price']
+					k_name = k_name.lower()
+					if name in k_name and price == k_price and price != '':
 						try:
-							test = 0
-							print(Style.RESET_ALL + 'по названию:', datalist[i])
+							if count_name_price == 1 and price != '':
+								print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
+									f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
+								found_data_by_name_price = datalist[i]
+							else:
+								print(Back.LIGHTMAGENTA_EX + Fore.BLACK + Style.DIM +
+									f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
+
 						except:
-							print(Fore.RED + 'ошибка')
-				# i = i + 1
+							print(Fore.RED + 'Ошибка при поиске названия и цены')
+					else:
+						if name in k_name:
+							try:
+								# print(Style.RESET_ALL + Fore.LIGHTBLACK_EX + f'[{Back.GREEN + v["id"] + Back.RESET}] "{k_name}"\n')
+
+								if count_name == 1:
+									print(Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"\n')
+									found_data_by_name = datalist[i]
+								else:
+									print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{k_name} {v["price"]}"\n')
+
+							except:
+								print(Fore.RED + 'Ошибка при поиске названия')
+			except Exception as e:
+				print(e)
 			print(Style.RESET_ALL + f'Всего программ: {i}')
-			COUNT_PROGRAMS = i
+
+			if found_data_by_name != []:
+				return found_data_by_name
+			elif found_data_by_name_price != []:
+				return found_data_by_name_price
+			else:
+				return None
+			# if
 		else:
 			print(Fore.RED+f'Проверте правильность введенных данных. Скорее всего имя не ЗАДАНО (это текст исключения на пустоту переменной "name": {type(name)}={name})')
+
 	except Exception as e:
 		print(Fore.RED+f'{e}')
