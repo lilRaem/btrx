@@ -1,11 +1,10 @@
 import requests
 import json
 
-import module.html.parserhtml as Phtml
 
 link = 'https://apkipp.ru'
 
-
+import module.html_pars.parserhtml as phtml
 def searchInSite(search_key='Онкология'):
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 	url = f'{link}/api/v1/search/?search={search_key}'
@@ -31,22 +30,24 @@ def searchInSite(search_key='Онкология'):
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
-		f'Всего на сайте({link}) найдено: {count} программ. Фактически по точному содержанию слова в программе: {count_word_programm}'
+		f'Всего на сайте({link}) найдено: {count} программ. Фактически по точному содержанию слова в программе: {count_word_programm}\n'
 	)
+	# return count_word_programm
 
-
-def getProgramUrl(search_key='Онкология',price='2600'):
+def getProgramUrl(search_key='Онкология',price='6400'):
+	data = []
 	find_url_list = []
 	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
 		local_data = json.load(f)
-	print('getProgramUrl()')
 	for k, v in enumerate(local_data):
+		search_key = search_key.lower()
 		if search_key in v['name']:
 			# print('\n' + f"{v['name']}\n{k+1} {link}{v['url']}")
 			program_url = v['url']
 			find_url_list.append(f'{k+1} ' + link + program_url)
 			main_url = link + program_url
-			Phtml.parseSiteUrl(main_url,price)
-
+			if phtml.parseSiteUrl(main_url,price) != None:
+				data.append(phtml.parseSiteUrl(main_url,price))
+	return data
 if __name__ == "__main__":
 	getProgramUrl()
