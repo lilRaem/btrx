@@ -1,0 +1,5 @@
+setup.py
+btrxfinder.egg-info/PKG-INFO
+btrxfinder.egg-info/SOURCES.txt
+btrxfinder.egg-info/dependency_links.txt
+btrxfinder.egg-info/top_level.txt
