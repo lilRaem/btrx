@@ -94,26 +94,46 @@ def parseSiteUrl(url="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-s
     }
 	req = requests.get(url, headers)
 	soup = BeautifulSoup(req.content,'lxml')
+
+	site_title = soup.find('h1','main-title').text
+	if site_title == '' or site_title == None:
+		site_hour='None'
 	site_hour = soup.find('div','items-box-block__element-type-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
+	if site_hour == '' or site_hour == None:
+		site_hour='None'
 	site_price = soup.find('div','course-info-block__action-buy-price').findChildren('span')[0].text.strip()
+	if site_price == '' or site_price == None:
+		site_price='None'
+	if url == '' or url == None:
+		url='None'
 	site_data_dict = {
-			"title": soup.find('h1','main-title').text,
+			"title": site_title,
 			"price":site_price,
 			"hour":site_hour,
 			"url": url
 		}
+
+	site_data_dict_data = {}
 	site_data_list = []
+
 	count = 0
 	if site_price == price:
 		count = count + 1
 	if site_price == price:
-		# print(Fore.GREEN+f'{site_data_dict}'+Style.RESET_ALL)
 		site_data_list.append(site_data_dict)
 		if count == 1:
-			return site_data_dict
+			print(Fore.GREEN+f'{site_data_dict}'+Style.RESET_ALL)
+			site_data_dict_data = site_data_dict
+		# else:
+		# 	print(Fore.LIGHTYELLOW_EX+f'{site_data_dict}'+Style.RESET_ALL)
 	# else:
 	# 	print(Fore.LIGHTBLACK_EX+f'no match price {site_data_dict}'+Style.RESET_ALL)
+	# print(site_data_dict_data)
 
+	return site_data_dict_data
+	# if site_data_dict_data != {}:
+	# 	print(site_data_dict_data)
+		# return site_data_dict_data
 def main():
 	bs4pars()
 
