@@ -97,6 +97,9 @@ def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsins
 	id = ''
 	if id == '' or id == None:
 		id = None
+	site_spec = ''
+	if site_spec == '' or site_spec == None:
+		site_spec = None
 	site_title = soup.find('h1','main-title').text
 	if site_title == '' or site_title == None:
 		site_hour = None
@@ -115,6 +118,7 @@ def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsins
 
 	site_data_dict = {
 			"id": id,
+			"spec": site_spec,
 			"name": site_title,
 			"price":site_price,
 			"hour":site_hour,
@@ -128,13 +132,22 @@ def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsins
 	count = 0
 	if site_price == price:
 		site_data_list.append(site_data_dict)
+	else:
+		site_data_list.append(site_data_dict)
 	for data in site_data_list:
 		count = count + 1
-	if site_price == price:
-		site_data_list.append(site_data_dict)
+		if site_price == price:
+			site_data_list.append(site_data_dict)
 		if count == 1:
-			site_data_dict_data = site_data_dict
-			return site_data_dict_data
+			return site_data_list[0]
+		else:
+			try:
+				if count == 1:
+					return site_data_list[0]
+				else:
+					return site_data_list
+			except:
+				print('fail parse too many programs')
 		# else:
 		# 	print(Fore.LIGHTYELLOW_EX+f'{site_data_dict}'+Style.RESET_ALL)
 	# else:
