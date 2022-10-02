@@ -1,6 +1,4 @@
 import json, os
-from time import sleep
-from turtle import back
 from fast_bitrix24 import Bitrix
 from colorama import Fore, Back, Style
 
@@ -32,7 +30,6 @@ def save_to_json(datalist=list(), filename='file', path=str()) -> list:
 	except Exception as e:
 		raise TypeError(f'{e}')
 
-
 def load_from_jsonFile(filename='*.json', path=str()) -> list:
 	# sleep(2)
 	data_from_file = []
@@ -52,7 +49,6 @@ def load_from_jsonFile(filename='*.json', path=str()) -> list:
 	except Exception as e:
 		print(Fore.RED + f'Error in load_from_jsonFile {e}')
 		raise TypeError(f'Error in load_from_jsonFile')
-
 
 def get_product_list(btrx=Bitrix(webhook)) -> list:
 	"""Load	from btrx24	all	data (id, name,	price, hours)\n
@@ -81,22 +77,18 @@ def get_product_id(data):
 	for item in data:
 		yield item['ID']
 
-
 def get_product_name(data):
 	for item in data:
 		yield item['NAME']
-
-
-def get_product_price(data):
-	for item in data:
-		yield item['PRICE']
-
 
 def get_product_hour(data):
 	for item in data:
 		i = item['PROPERTY_213']
 		yield i['value']
 
+def get_product_price(data):
+	for item in data:
+		yield item['PRICE']
 def set_product_price(btrx=Bitrix(webhook),id=str(),price=0):
 	try:
 		params = {"ID": id, "fields":{
@@ -120,45 +112,62 @@ def get_all_data(data, datalist=list()):
 	woh = 0
 	try:
 		for item in data:
-			hours = item['PROPERTY_213']
-			if (hours != None):
-				hour = hours.get('value')
+
+			id = item['ID']
+			name = item['NAME']
+			price = item['PRICE']
+			hour = item['PROPERTY_213']
+			linkNmo = ''
+			url = ''
+
+			if id != '' or id != None:
 				id = item['ID']
+			else:
+				id = None
+			if name == '' or name == None:
+				name = None
+			else:
 				name = item['NAME']
-				price = item['PRICE']
-				if (price != None):
-					price = price.replace('.00', '')
-				datadict = {
-					'id': id,
-					'name': name,
-					'price': price,
-					'hour': hour,
-				}
-				datalist.append(datadict)
+			if price == '' or price == None:
+				price = None
+			else:
+				price = price = item['PRICE']
+				price = price.replace('.00', '')
+			if hour == '' or hour == None:
+				hour = None
+			else:
+				hour = hour.get('value')
+			if linkNmo == '' or linkNmo == None:
+				linkNmo = None
+			else:
+				linkNmo = 'linkNmo'
+			if url == '' or url == None:
+				url = None
+			else:
+				url = 'url'
+
+			datadict = {
+				'id': id,
+				'name': name,
+				'price': price,
+				'hour': hour,
+				'linkNmo': linkNmo,
+				'url': url
+			}
+			datalist.append(datadict)
+
+			if (hour != None):
 				wh = wh + 1
 			else:
-				id = item['ID']
-				name = item['NAME']
-				price = item['PRICE']
-				if (price != None):
-					price = price.replace('.00', '')
-				datadict = {
-					'id': id,
-					'name': name,
-					'price': price,
-				}
-				datalist.append(datadict)
 				woh = woh + 1
 
 		print(Fore.LIGHTCYAN_EX +  f'\n####\n{Back.CYAN}Find{Style.RESET_ALL} {wh} {Back.CYAN}items{Style.RESET_ALL} {Back.GREEN+Fore.BLACK}with hours' + Style.RESET_ALL)
 		print(Fore.BLUE + f'\nFind {woh} items without hours')
 		print(Fore.CYAN + f'\nFind {wh+woh} items all\n####\n')
-		COUNT_PROGRAMS = wh+woh
 		return list(datalist)
 	except Exception as e:
 		print(Fore.RED + f'get_all_data error {e}')
 		raise TypeError(f'Ошибка в get_all_data. type of data({type(data)}), datalist({type(datalist)}), expect data(list) and datalist(list)' )
-
 
 def words_search(words_list=list, name=str, price=str, datalist=list) -> list:
 	words_data = []
@@ -231,7 +240,6 @@ def find_list_compare_words(searched_wrods):
 	print(f'find wrods compare: {searched_wrods}')
 
 def check_product(name=str, price=str, datalist=list) -> list:
-	global COUNT_PROGRAMS
 	try:
 		if name != None and name != '':
 			print(Back.YELLOW + Fore.BLACK + 'Start check' + Style.RESET_ALL)
@@ -259,7 +267,7 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					else:
 						if name in k_name:
 							count_name = count_name + 1
-				print(f'Найдено:\nИмя/цена: {count_name_price}шт\nИмя: {count_name}шт')
+				print(f'Найдено:\nИмя/цена: {count_name_price} шт\nИмя: {count_name} шт')
 			except Exception as e:
 				print(e)
 			try:
@@ -268,42 +276,63 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					k_name = v['name']
 					k_price = v['price']
 					k_name = k_name.lower()
+
 					if name in k_name and price == k_price and price != '':
+
 						try:
 							if count_name_price == 1 and price != '':
 								print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
 									f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
-								found_data_by_name_price = datalist[i]
+								found_data_by_name_price.append(datalist[i])
 							else:
 								print(Back.LIGHTMAGENTA_EX + Fore.BLACK + Style.DIM +
 									f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
-
+								found_data_by_name_price.append(datalist[i])
 						except:
 							print(Fore.RED + 'Ошибка при поиске названия и цены')
+
 					else:
+
 						if name in k_name:
 							try:
 								# print(Style.RESET_ALL + Fore.LIGHTBLACK_EX + f'[{Back.GREEN + v["id"] + Back.RESET}] "{k_name}"\n')
 
 								if count_name == 1:
-									print(Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"\n')
-									found_data_by_name = datalist[i]
+									print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"')
+									found_data_by_name.append(datalist[i])
 								else:
-									print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{k_name} {v["price"]}"\n')
-
+									print("\n"+Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{k_name} {v["price"]}"')
+									found_data_by_name.append(datalist[i])
 							except:
 								print(Fore.RED + 'Ошибка при поиске названия')
+
 			except Exception as e:
 				print(e)
 			print(Style.RESET_ALL + f'Всего программ: {i}')
 
-			if found_data_by_name != []:
-				return found_data_by_name
-			elif found_data_by_name_price != []:
-				return found_data_by_name_price
+			if found_data_by_name_price != []:
+				count_fdbnp = 0
+				for data in found_data_by_name_price:
+					count_fdbnp = count_fdbnp + 1
+				if count_fdbnp == 1:
+					return found_data_by_name_price[0]
+				else:
+					print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
+					\n(или содержания слова в названии и цена)\
+					{found_data_by_name_price}")
+			elif found_data_by_name != []:
+				count_dbn = 0
+				for data in found_data_by_name:
+					count_dbn = count_dbn + 1
+				if count_dbn == 1:
+					return found_data_by_name[0]
+				else:
+					print(f"Найдено {count_dbn} программ с одинаковым названием\
+					\n(или содержания слова в названии)\
+					{found_data_by_name}")
 			else:
+				print('Not found')
 				return None
-			# if
 		else:
 			print(Fore.RED+f'Проверте правильность введенных данных. Скорее всего имя не ЗАДАНО (это текст исключения на пустоту переменной "name": {type(name)}={name})')
 
