@@ -84,7 +84,7 @@ def bs4pars():
 		json.dump(pars_list,fp,ensure_ascii=False,indent=4)
 
 
-def parseSiteUrl(url="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-sudebnyij-ekspert-ekspert-biohimik-ekspert-genetik-ekspert-himik/?program=%D0%A1%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9%20%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&header=%D0%9A%D1%83%D1%80%D1%81%20%D0%9F%D0%9F%20%D0%A1%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9%20%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&cost=49800&tovar=19197&sendsay_email=[%%20anketa.member.email%20%]&utm_source=sendsay&utm_medium=basket&utm_campaign=lostbasket&utm_content=lostbasket&utm_term=lostbasket",price='49800'):
+def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-sudebnyij-ekspert-ekspert-biohimik-ekspert-genetik-ekspert-himik/?program=%D0%A1%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9%20%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&header=%D0%9A%D1%83%D1%80%D1%81%20%D0%9F%D0%9F%20%D0%A1%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D1%8B%D0%B9%20%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82&cost=49800&tovar=19197&sendsay_email=[%%20anketa.member.email%20%]&utm_source=sendsay&utm_medium=basket&utm_campaign=lostbasket&utm_content=lostbasket&utm_term=lostbasket",price='49800'):
 	headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET',
@@ -92,24 +92,33 @@ def parseSiteUrl(url="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-s
     'Access-Control-Max-Age': '3600',
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/51.0'
     }
-	req = requests.get(url, headers)
+	req = requests.get(parseurl, headers)
 	soup = BeautifulSoup(req.content,'lxml')
-
+	id = ''
+	if id == '' or id == None:
+		id = None
 	site_title = soup.find('h1','main-title').text
 	if site_title == '' or site_title == None:
-		site_hour='None'
+		site_hour = None
 	site_hour = soup.find('div','items-box-block__element-type-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 	if site_hour == '' or site_hour == None:
-		site_hour='None'
+		site_hour = None
 	site_price = soup.find('div','course-info-block__action-buy-price').findChildren('span')[0].text.strip()
 	if site_price == '' or site_price == None:
-		site_price='None'
+		site_price = None
+	linkNmo = ''
+	if linkNmo == '' or linkNmo == None:
+		linkNmo = None
+	url = parseurl
 	if url == '' or url == None:
-		url='None'
+		url = None
+
 	site_data_dict = {
-			"title": site_title,
+			"id": id,
+			"name": site_title,
 			"price":site_price,
 			"hour":site_hour,
+			"linkNmo": linkNmo,
 			"url": url
 		}
 
@@ -118,19 +127,21 @@ def parseSiteUrl(url="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-s
 
 	count = 0
 	if site_price == price:
+		site_data_list.append(site_data_dict)
+	for data in site_data_list:
 		count = count + 1
 	if site_price == price:
 		site_data_list.append(site_data_dict)
 		if count == 1:
-			print(Fore.GREEN+f'{site_data_dict}'+Style.RESET_ALL)
 			site_data_dict_data = site_data_dict
+			return site_data_dict_data
 		# else:
 		# 	print(Fore.LIGHTYELLOW_EX+f'{site_data_dict}'+Style.RESET_ALL)
 	# else:
 	# 	print(Fore.LIGHTBLACK_EX+f'no match price {site_data_dict}'+Style.RESET_ALL)
 	# print(site_data_dict_data)
 
-	return site_data_dict_data
+
 	# if site_data_dict_data != {}:
 	# 	print(site_data_dict_data)
 		# return site_data_dict_data
