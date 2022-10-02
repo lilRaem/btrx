@@ -2,7 +2,6 @@ import os
 from unicodedata import name
 from colorama import Fore,Back,Style
 from datetime import date
-from jinja2 import Environment, FileSystemLoader, Template
 
 from module.btrx import (get_all_data, check_product, get_product_list, load_from_jsonFile, save_to_json)
 from module.parsersearchsite import searchInSite, getProgramUrl
@@ -63,37 +62,49 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-def main(name = 'Государственное и муниципальное управление в сфере физической культуры и спорта',
-			price = '18800'):
+def main(search_name = 'Тренер-преподаватель по корэшу',
+		search_price = '15000'):
 
-	name = name.strip()
-	name = name.replace('\n','')
-	name = name.replace('  ',' ')
-	print(name)
+	search_name = search_name.strip()
+	search_name = search_name.replace('\n','')
+	search_name = search_name.replace('  ',' ')
 	# name = input('Введите название программы: ')
 	path = os.getcwd() + "\\data\\json\\btrx_data"
-
 
 	print(Fore.YELLOW+'Path exists?: ', os.path.exists(makefileWdateName()[0]), makefileWdateName()[0]+Back.RESET)
 	if (os.path.exists(makefileWdateName()[0])):
 		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_data = check_product(name, price, get_all_data(data,datalist))
-		searchInSite(name)
-		progUrl_data = getProgramUrl(check_data['name'],price)
+		check_data = check_product(search_name, search_price, get_all_data(data,datalist))
+		searchInSite(search_name)
 		if check_data != None:
-
+			progUrl_data = getProgramUrl(search_name,search_price)
+			id = check_data['id']
+			if id == None or id == '':
+				id = None
+			name = check_data['name']
+			if name == None or name == '':
+				name = None
+			price = check_data['price']
+			if price == None or price == '':
+				price = None
+			hour = check_data['hour']
+			if hour == None or hour == '':
+				hour = None
+			linkNmo = check_data['linkNmo']
+			if linkNmo == None or linkNmo == '':
+				linkNmo = None
+			url = progUrl_data['url']
+			if url == None or url == '':
+				url = None
 			d_dict = {
-				'id': check_data['id'],
-				'name': check_data['name'],
-				'price': check_data['price'],
-				'hour': progUrl_data['hour'],
-				'url': progUrl_data['url']
+				'id': id,
+				'name': name,
+				'price': price,
+				'hour': hour,
+				'linkNmo': linkNmo,
+				'url': url
 			}
-			print(d_dict)
-		# print(progUrl_data)
-		# searchInSite(name)
-		# getProgramUrl(name,price)
-
+			print("\n"+Fore.GREEN+f'{d_dict}')
 	else:
 		save_to_json(get_product_list(),makefileWdateName()[1],path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
@@ -103,4 +114,4 @@ def main(name = 'Государственное и муниципальное у
 
 if __name__ == "__main__":
 	main()
-	# print(datalist)
+	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
