@@ -1,10 +1,11 @@
 import requests
 import json
-
+from colorama import Fore,Back,Style
 
 link = 'https://apkipp.ru'
 
 import module.html_pars.parserhtml as phtml
+
 def searchInSite(search_key='Онкология'):
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 	url = f'{link}/api/v1/search/?search={search_key}'
@@ -30,24 +31,36 @@ def searchInSite(search_key='Онкология'):
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
-		f'Всего на сайте({link}) найдено: {count} программ. Фактически по точному содержанию слова в программе: {count_word_programm}\n'
+		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова в программе: {count_word_programm}\n'
 	)
 	return count_word_programm
 
 def getProgramUrl(search_key='Онкология',price='6400'):
-	data = {}
+	data_url = {}
 	find_url_list = []
 	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
 		local_data = json.load(f)
 	for k, v in enumerate(local_data):
 		search_key = search_key.lower()
 		if search_key in v['name'].lower():
-			# print('\n' + f"{v['name']}\n{k+1} {link}{v['url']}")
 			program_url = v['url']
-			find_url_list.append(f'{k+1} ' + link + program_url)
 			main_url = link + program_url
 			pSiteUrl = phtml.parseSiteUrl(main_url,price)
-
-	return pSiteUrl
+			if pSiteUrl != None:
+				find_url_list.append(pSiteUrl)
+				# print(Fore.GREEN+f'{pSiteUrl}'+Style.RESET_ALL)
+			else:
+				# find_url_list.append(pSiteUrl)
+				print(f"{Fore.LIGHTWHITE_EX+v['name']+' '+Fore.RESET+Fore.LIGHTBLACK_EX}\n[{str(k+1)}] {link}{v['url']}"+Fore.RESET)
+	if find_url_list != []:
+		count_find_url = 0
+		for data in find_url_list:
+			count_find_url = count_find_url + 1
+		if count_find_url == 1:
+			return find_url_list[0]
+		else:
+			print(f'Найденно {count_find_url} страниц:\n{find_url_list}')
+	else:
+		print('Url not found')
 if __name__ == "__main__":
 	getProgramUrl()
