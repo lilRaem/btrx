@@ -4,16 +4,17 @@ from colorama import Fore,Back,Style
 from datetime import date
 
 from module.btrx import (get_all_data, check_product, get_product_list, load_from_jsonFile, save_to_json)
+from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 '''
 TODO что необходимо во время работы
-[-] подставлять id товара автоматически
+[+] подставлять id товара автоматически
 [-] Поиск товара автоматически
 [-] Добавить колличество программ в название файла
 [+] Во временно tmpfile.json ищет по словам которых по факту в программе нет (теперь все работает)
 [-] Добавить порядковые цифры к выводу по словам и слову
 [+] поиск по словам и цене работает не корректно
-[?] сделать списки более универсальными (чтобы была ссылка нмо и id)
+[+] сделать списки более универсальными (чтобы была ссылка нмо и id)
 [-] скопировать таблицы из pdf (https://medium.com/@winston.smith.spb/python-an-easy-way-to-extract-data-from-pdf-tables-c8de22308341,
 https://github.com/jsvine/pdfplumber)
 [-] Создание многоуровнего json: https://stackoverflow.com/a/49957442
@@ -38,8 +39,6 @@ TODO Сделать тесты:
 [-]	parserhtml.py
 
 TODO Что минимально нужно чтобы получить id товара?
-[-] test git
-test on work
 [+] Имя программы, цена
 '''
 
@@ -113,5 +112,7 @@ def main(search_name = 'Тренер-преподаватель по корэш�
 
 
 if __name__ == "__main__":
-	main()
+	# main()
+
+	buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
