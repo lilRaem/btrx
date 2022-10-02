@@ -4,7 +4,7 @@ from colorama import Fore,Back,Style
 
 link = 'https://apkipp.ru'
 
-import module.html_pars.parserhtml as phtml
+import html_pars.parserhtml as phtml
 
 def searchInSite(search_key='Онкология'):
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
