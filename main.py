@@ -4,7 +4,7 @@ from colorama import Fore,Back,Style
 from datetime import date
 
 from module.btrx import (get_all_data, check_product, get_product_list, load_from_jsonFile, save_to_json)
-# from module.build_btrx_data import buildjsondata
+from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 '''
 TODO что необходимо во время работы
@@ -119,7 +119,7 @@ def main(search_name = 'Ультразвуковая диагностика',
 
 
 if __name__ == "__main__":
-	main()
+	# main()
 
-	# buildjsondata()
+	buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
