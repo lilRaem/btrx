@@ -3,7 +3,8 @@ import json
 from colorama import Fore,Back,Style
 
 link = 'https://apkipp.ru'
-
+import sys
+sys.path.append('/')
 import html_pars.parserhtml as phtml
 
 def searchInSite(search_key='Онкология'):
@@ -31,7 +32,7 @@ def searchInSite(search_key='Онкология'):
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
-		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова в программе: {count_word_programm}\n'
+		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова {search_key} в программе: {count_word_programm}\n'
 	)
 	return count_word_programm
 
@@ -41,8 +42,7 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
 		local_data = json.load(f)
 	for k, v in enumerate(local_data):
-		search_key = search_key.lower()
-		if search_key in v['name'].lower():
+		if search_key.lower() in v['name'].lower():
 			program_url = v['url']
 			main_url = link + program_url
 			pSiteUrl = phtml.parseSiteUrl(main_url,price)
@@ -59,7 +59,21 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 		if count_find_url == 1:
 			return find_url_list[0]
 		else:
-			print(f'Найденно {count_find_url} страниц:\n{find_url_list}')
+			print(f'Найдено {count_find_url} страниц с названием: {search_key}')
+			el_c = 0
+			for i,data in enumerate(find_url_list):
+				data['name']
+				data['price']
+				if search_key.lower() in data['name'].lower():
+					if price == data['price']:
+						el_c = el_c + 1
+						if el_c == 1:
+							print(f'Найдено {el_c} страниц:\n{find_url_list[i]["name"]}|{find_url_list[i]["hour"]}|{find_url_list[i]["price"]}')
+							return find_url_list[i]
+						else:
+							print(f'Найдено {el_c} страниц:\n{find_url_list}')
+				else:
+					print(f'Найденно {el_c} страниц:\n{find_url_list}')
 	else:
 		print('Url not found')
 if __name__ == "__main__":

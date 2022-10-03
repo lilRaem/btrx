@@ -1,5 +1,7 @@
 from datetime import date
 import os
+import sys
+sys.path.append('/')
 from btrx import get_all_data,check_product,get_product_list,save_to_json,load_from_jsonFile
 from parsersearchsite import searchInSite, getProgramUrl
 from html_pars import parserhtml
@@ -36,7 +38,7 @@ def getBtrxData():
 	if os.path.exists(makefileWdateName()[0]):
 		loaded_data = load_from_jsonFile(makefileWdateName()[0],path)
 		loaded_hour = None
-		for data in loaded_data[15:25]:
+		for data in loaded_data[2:5]:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -47,13 +49,16 @@ def getBtrxData():
 				product_name = None
 			if data['PRICE'] != '' or data['PRICE'] != None:
 				product_price = data['PRICE']
-
-				if '.00' in product_price:
-					product_price = product_price.replace('.00','')
-				elif '.000' in product_price:
-					product_price = product_price.replace('.000','')
-				else:
+				try:
+					if '.00' in product_price:
+						product_price = product_price.replace('.00','')
+					elif '.000' in product_price:
+						product_price = product_price.replace('.000','')
+					else:
+						product_price = data['PRICE']
+				except Exception as e:
 					product_price = data['PRICE']
+					print(e)
 			else:
 				product_price = None
 
@@ -79,7 +84,7 @@ def getBtrxData():
 	else:
 		saved_data = save_to_json(get_product_list(),makefileWdateName()[1],path)
 		loaded_hour = None
-		for data in saved_data[15:25]:
+		for data in saved_data[2:5]:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -127,8 +132,8 @@ def buildjsondata():
 	product_linkNmo,product_url
 	btrx_data = getBtrxData()
 	site_list = []
-	print(Back.WHITE+Fore.BLUE+f'{btrx_data[:2]}'+Fore.RESET+Back.RESET)
-	for data_btrx in btrx_data[:2]:
+	print(Back.WHITE+Fore.BLUE+f'{btrx_data}'+Fore.RESET+Back.RESET)
+	for data_btrx in btrx_data[2:5]:
 		product_id = data_btrx['id']
 		if product_id == '' or product_id == None:
 			product_id == None

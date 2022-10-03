@@ -242,10 +242,9 @@ def find_list_compare_words(searched_wrods):
 def check_product(name=str, price=str, datalist=list) -> list:
 	try:
 		if name != None and name != '':
-			print(Back.YELLOW + Fore.BLACK + 'Start check' + Style.RESET_ALL)
+			print(Back.YELLOW + Fore.BLACK + 'Start check')
 
 			name = name.strip()
-			name = name.lower()
 			# if ' ' in name:
 			# 	name_space = name.count(' ')
 			# 	if name_space == 1 or name_space >= 2:
@@ -262,12 +261,12 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					k_name = v['name']
 					k_price = v['price']
 					k_name = k_name.lower()
-					if name in k_name and price == k_price and price != '':
+					if name.lower() in k_name and price == k_price and price != '':
 						count_name_price = count_name_price + 1
 					else:
-						if name in k_name:
+						if name.lower() in k_name:
 							count_name = count_name + 1
-				print(f'Найдено:\nИмя/цена: {count_name_price} шт\nИмя: {count_name} шт')
+				print(f'Найдено:\nИмя/цена: {count_name_price} шт\nИмя: {count_name} шт'+ Style.RESET_ALL)
 			except Exception as e:
 				print(e)
 			try:
@@ -277,13 +276,18 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					k_price = v['price']
 					k_name = k_name.lower()
 
-					if name in k_name and price == k_price and price != '':
+					if name.lower() in k_name and price == k_price and price != '':
 
 						try:
 							if count_name_price == 1 and price != '':
-								print(Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
-									f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
-								found_data_by_name_price.append(datalist[i])
+								if name.lower() == k_name:
+									print("\n"+Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
+										f'=====\nПо названию {name} и цене {price}:\n{datalist[i]}\n====='+Style.RESET_ALL+"\n")
+									found_data_by_name_price.append(datalist[i])
+								else:
+									print("\n"+Back.CYAN + Fore.BLACK + Style.DIM +
+										f'=====\nПо содержанию названия {name} и цене {price}:\n{datalist[i]}\n====='+Style.RESET_ALL+"\n")
+									found_data_by_name_price.append(datalist[i])
 							else:
 								print(Back.LIGHTMAGENTA_EX + Fore.BLACK + Style.DIM +
 									f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
@@ -293,7 +297,7 @@ def check_product(name=str, price=str, datalist=list) -> list:
 
 					else:
 
-						if name in k_name:
+						if name.lower() in k_name:
 							try:
 								# print(Style.RESET_ALL + Fore.LIGHTBLACK_EX + f'[{Back.GREEN + v["id"] + Back.RESET}] "{k_name}"\n')
 
@@ -301,7 +305,7 @@ def check_product(name=str, price=str, datalist=list) -> list:
 									print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"')
 									found_data_by_name.append(datalist[i])
 								else:
-									print("\n"+Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{k_name} {v["price"]}"')
+									print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{v["name"]}|{v["hour"]}|{v["price"]}"')
 									found_data_by_name.append(datalist[i])
 							except:
 								print(Fore.RED + 'Ошибка при поиске названия')
@@ -320,6 +324,11 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
 					\n(или содержания слова в названии и цена)\
 					{found_data_by_name_price}")
+					for data in found_data_by_name_price:
+						if name.lower() in data['name'].lower():
+							if name.lower() in data['name'].lower():
+								if price == data['price'].lower():
+									return found_data_by_name_price[0]
 			elif found_data_by_name != []:
 				count_dbn = 0
 				for data in found_data_by_name:
