@@ -2,9 +2,9 @@ from datetime import date
 import os
 import sys
 sys.path.append('/')
-from btrx import get_all_data,check_product,get_product_list,save_to_json,load_from_jsonFile
-from parsersearchsite import searchInSite, getProgramUrl
-from html_pars import parserhtml
+from module.btrx import get_all_data,check_product,get_product_list,save_to_json,load_from_jsonFile
+from module.parsersearchsite import searchInSite, getProgramUrl
+from module.html_pars import parserhtml
 from colorama import Fore,Back,Style
 product_id = 'empty'
 product_spec = 'empty'
@@ -38,7 +38,7 @@ def getBtrxData():
 	if os.path.exists(makefileWdateName()[0]):
 		loaded_data = load_from_jsonFile(makefileWdateName()[0],path)
 		loaded_hour = None
-		for data in loaded_data[2:5]:
+		for data in loaded_data[:1011]:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -84,7 +84,7 @@ def getBtrxData():
 	else:
 		saved_data = save_to_json(get_product_list(),makefileWdateName()[1],path)
 		loaded_hour = None
-		for data in saved_data[2:5]:
+		for data in saved_data[:1011]:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -133,7 +133,7 @@ def buildjsondata():
 	btrx_data = getBtrxData()
 	site_list = []
 	print(Back.WHITE+Fore.BLUE+f'{btrx_data}'+Fore.RESET+Back.RESET)
-	for data_btrx in btrx_data[2:5]:
+	for data_btrx in btrx_data[:1011]:
 		product_id = data_btrx['id']
 		if product_id == '' or product_id == None:
 			product_id == None
@@ -166,7 +166,7 @@ def buildjsondata():
 			product_linkNmo == None
 		else:
 			product_linkNmo = data_btrx['linkNmo']
-		site_dictData = {
+		btrx_dictDataWurl = {
 						'id': product_id,
 						'spec': product_spec,
 						'name': product_name,
@@ -175,34 +175,52 @@ def buildjsondata():
 						'linkNmo': product_linkNmo,
 						'url': product_url
 				}
-		searchInSite(product_name)
-		program_url_data = getProgramUrl(product_name,product_price)
-		program_url_name = program_url_data['name']
-		program_url_name = program_url_name.lower()
-		program_url_price = program_url_data["price"]
-		program_url_url = program_url_data['url']
+		count_site_items = searchInSite(product_name)
+		if count_site_items == 0:
+			print(f'нет/не найдена программа на сайте: {data_btrx}')
+		else:
+			program_url_data = getProgramUrl(product_name,product_price)
+			program_url_name = program_url_data['name']
+			program_url_name = program_url_name.lower()
 
-		if product_name in program_url_name:
-			if product_price in program_url_price or program_url_price in product_price:
-				if product_price == program_url_price:
-					print(program_url_data['name'], product_name)
-					if program_url_url != '' or program_url_url != None:
-						if program_url_data['hour'] == product_hour:
-							print(program_url_data['hour'], product_hour)
+			program_url_price = program_url_data["price"]
+			program_url_hour = program_url_data["hour"]
+			program_url_url = program_url_data['url']
+
+			if product_name.lower() in program_url_name.lower():
+				if product_price in program_url_price or program_url_price in product_price and \
+					product_hour == program_url_hour or program_url_hour == product_hour:
+						if product_price == program_url_price and program_url_price == product_price:
+							if product_hour == None or product_hour == 'empty':
+								product_hour = program_url_hour
+							else:
+								product_hour = product_hour
+							if program_url_hour == None or program_url_hour == 'empty':
+								program_url_hour = product_hour
+							else:
+								program_url_hour = program_url_hour
 							product_url = program_url_url
 						else:
-							print(f'hour not match: site:{program_url_data["hour"]} btrx:{product_hour}')
-							print(site_dictData)
+							product_url = None
+								# print(f'PRICE: btrx: {btrx_dictDataWurl} | s:{program_url_data}')
+								# print(f'hour not match: site:{program_url_data["hour"]} btrx:{product_hour}')
+								# print(Fore.LIGHTBLACK_EX+f'{site_dictData}'+Fore.RESET)
 				else:
-					print('Error with price')
-		site_dictData = {
-						'id': product_id,
-						'spec': product_spec,
-						'name': product_name,
-						'price': product_price,
-						'hour': product_hour,
-						'linkNmo': product_linkNmo,
-						'url': product_url
-				}
+					product_hour = None
+					product_price = None
+			else:
+				product_url = None
+
+			btrx_dictDataWurl = {
+							'id': product_id,
+							'spec': product_spec,
+							'name': product_name,
+							'price': product_price,
+							'hour': product_hour,
+							'linkNmo': product_linkNmo,
+							'url': product_url
+					}
+			print(Fore.GREEN+f'{btrx_dictDataWurl}'+Fore.RESET)
+
 if __name__ == "__main__":
 	buildjsondata()
