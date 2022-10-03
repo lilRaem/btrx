@@ -5,10 +5,22 @@ from colorama import Fore,Back,Style
 link = 'https://apkipp.ru'
 import sys
 sys.path.append('/')
-import html_pars.parserhtml as phtml
+import module.html_pars.parserhtml as phtml
+
+product_id = 'empty'
+product_spec = 'empty'
+product_name = 'empty'
+product_price = 'empty'
+product_hour = 'empty'
+product_linkNmo = 'empty'
+product_url = 'empty'
 
 def searchInSite(search_key='Онкология'):
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
+	global product_id,product_spec,\
+	product_name,product_price,product_hour,\
+	product_linkNmo,product_url
+
 	url = f'{link}/api/v1/search/?search={search_key}'
 	# 'https://apkipp.ru/poisk/?search={data}'
 	headers = {
@@ -16,11 +28,9 @@ def searchInSite(search_key='Онкология'):
 		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36',
 	}
 
-	param = {"course_list": ''}
-	a = 0
 	data = requests.get(url, headers=headers)
 	jdata = data.json()
-	dict = []
+	dict = {}
 
 	with open('data/json/site_search.json', 'w', encoding='utf-8') as f:
 		d = json.dumps(jdata['course_list'], ensure_ascii=False, indent=4)
@@ -45,6 +55,8 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 		if search_key.lower() in v['name'].lower():
 			program_url = v['url']
 			main_url = link + program_url
+
+
 			pSiteUrl = phtml.parseSiteUrl(main_url,price)
 			if pSiteUrl != None:
 				find_url_list.append(pSiteUrl)
@@ -62,8 +74,6 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 			print(f'Найдено {count_find_url} страниц с названием: {search_key}')
 			el_c = 0
 			for i,data in enumerate(find_url_list):
-				data['name']
-				data['price']
 				if search_key.lower() in data['name'].lower():
 					if price == data['price']:
 						el_c = el_c + 1
