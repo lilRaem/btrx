@@ -5,7 +5,10 @@ from colorama import Fore,Back,Style
 link = 'https://apkipp.ru'
 import sys
 sys.path.append('/')
-import module.html_pars.parserhtml as phtml
+try:
+	import html_pars.parserhtml as phtml
+except:
+	import module.html_pars.parserhtml as phtml
 
 product_id = 'empty'
 product_spec = 'empty'
@@ -87,4 +90,6 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 	else:
 		print('Url not found')
 if __name__ == "__main__":
-	getProgramUrl()
+
+	searchInSite('Фитнес')
+	getProgramUrl('Фитнес','')
