@@ -322,9 +322,9 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					return found_data_by_name_price[0]
 				else:
 					print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
-					\n(или содержания слова в названии и цена)\
-					{found_data_by_name_price}")
+					\n(или содержания слова в названии и цена)")
 					for data in found_data_by_name_price:
+						print(Fore.YELLOW+f'{data}'+Fore.RESET)
 						if name.lower() in data['name'].lower():
 							if name.lower() in data['name'].lower():
 								if price == data['price'].lower():
@@ -336,9 +336,36 @@ def check_product(name=str, price=str, datalist=list) -> list:
 				if count_dbn == 1:
 					return found_data_by_name[0]
 				else:
+					list_by_name = []
 					print(f"Найдено {count_dbn} программ с одинаковым названием\
-					\n(или содержания слова в названии)\
-					{found_data_by_name}")
+					\n(или содержания слова в названии)")
+
+					count_by_name = 0
+					for data_ in found_data_by_name:
+						count_by_name = count_by_name + 1
+					if count_by_name != 0:
+						for data in found_data_by_name:
+							print(Fore.LIGHTYELLOW_EX+f'\n{data}'+Fore.RESET)
+							product_id = data['id']
+
+							product_spec = None
+							product_name = data['name']
+							product_price = data['price']
+							product_hour = data['hour']
+							product_linkNmo = data['linkNmo']
+							product_url = data['url']
+
+							dictData = {
+								'id': product_id,
+								'spec': product_spec,
+								'name': product_name,
+								'price': product_price,
+								'hour': product_hour,
+								'linkNmo': product_linkNmo,
+								'url': product_url
+							}
+							list_by_name.append(dictData)
+						return list_by_name
 			else:
 				print('Not found')
 				return None
