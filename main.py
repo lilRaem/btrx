@@ -61,8 +61,8 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-def main(search_name = 'Ультразвуковая диагностика',
-		search_price = '49800'):
+def main(search_name = 'Фитнес',
+		search_price = ''):
 
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n','')
@@ -75,7 +75,10 @@ def main(search_name = 'Ультразвуковая диагностика',
 		data = load_from_jsonFile(makefileWdateName()[0], path)
 		check_data = check_product(search_name, search_price, get_all_data(data,datalist))
 		searchInSite(search_name)
-		if check_data != None:
+		count_check_data = 0
+		for chck_data in check_data:
+			count_check_data = count_check_data + 1
+		if check_data != None and count_check_data == 1:
 			progUrl_data = getProgramUrl(search_name,search_price)
 			id = check_data['id']
 			if id == None or id == '':
@@ -111,6 +114,51 @@ def main(search_name = 'Ультразвуковая диагностика',
 				'url': url
 			}
 			print("\n"+Fore.GREEN+f'{d_dict}')
+		else:
+			for chck_data in check_data:
+				if check_data != None:
+
+					id = chck_data['id']
+					if id == None or id == '':
+						id = None
+					name = chck_data['name']
+					if name == None or name == '':
+						name = None
+					price = chck_data['price']
+					if price == None or price == '':
+						price = None
+					hour = chck_data['hour']
+					if hour == None or hour == '':
+						hour = None
+					linkNmo = chck_data['linkNmo']
+
+					if linkNmo == None or linkNmo == '':
+						linkNmo = None
+					progUrl_data = getProgramUrl(chck_data['name'],chck_data['price'])
+					try:
+						url = progUrl_data['url']
+						if url == None or url == '':
+							url = None
+						else:
+							url = progUrl_data['url']
+					except:
+						url = None
+					if hour == None or hour == '':
+						site_hour = progUrl_data['hour']
+						if site_hour != None or site_hour != '':
+							hour = site_hour
+						else:
+							hour = None
+
+					d_dict = {
+						'id': id,
+						'name': name,
+						'price': price,
+						'hour': hour,
+						'linkNmo': linkNmo,
+						'url': url
+					}
+				print("\n"+Fore.GREEN+f'{d_dict}'+Fore.RESET)
 	else:
 		save_to_json(get_product_list(),makefileWdateName()[1],path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
@@ -119,7 +167,7 @@ def main(search_name = 'Ультразвуковая диагностика',
 
 
 if __name__ == "__main__":
-	# main()
+	main()
 
-	buildjsondata()
+	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
