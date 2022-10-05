@@ -2,9 +2,18 @@ from datetime import date
 import os
 import sys
 sys.path.append('/')
-from module.btrx import get_all_data,check_product,get_product_list,save_to_json,load_from_jsonFile
-from module.parsersearchsite import searchInSite, getProgramUrl
-from module.html_pars import parserhtml
+try:
+	from module.btrx import get_all_data,check_product,get_product_list,save_to_json,load_from_jsonFile
+except:
+	from btrx import get_all_data,check_product,get_product_list,save_to_json,load_from_jsonFile
+try:
+	from module.parsersearchsite import searchInSite, getProgramUrl
+except:
+	from parsersearchsite import searchInSite, getProgramUrl
+try:
+	from module.html_pars import parserhtml
+except:
+	from html_pars import parserhtml
 from colorama import Fore,Back,Style
 product_id = 'empty'
 product_spec = 'empty'
