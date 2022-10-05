@@ -91,5 +91,5 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 		print('Url not found')
 if __name__ == "__main__":
 
-	searchInSite('Фитнес')
-	getProgramUrl('Фитнес','')
+	searchInSite('Нейрохирургия')
+	print(getProgramUrl('Нейрохирургия','2900'))
