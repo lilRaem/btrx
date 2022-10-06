@@ -37,7 +37,7 @@ def makefileWdateName() -> str:
 	cur_date = today.strftime("%d.%m.%Y")
 	filename = f'{cur_date}_file.json'
 	path = os.getcwd() + "\\data\\json\\btrx_data"
-	filenameWcurDate = f"{path}\{filename}"
+	filenameWcurDate = f"{path}\\{filename}"
 	return str(filenameWcurDate), str(filename)
 
 def getBtrxData():
@@ -49,7 +49,7 @@ def getBtrxData():
 	if os.path.exists(makefileWdateName()[0]):
 		loaded_data = load_from_jsonFile(makefileWdateName()[0],path)
 		loaded_hour = None
-		for data in loaded_data[10:11]:
+		for data in loaded_data:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -201,12 +201,8 @@ def buildjsondata():
 		else:
 			program_url_data = getProgramUrl(product_name,product_price)
 			if program_url_data != None:
-				program_url_name = None
-				program_url_price = None
-
 				program_url_name = program_url_data['name']
 				program_url_name = program_url_name.lower()
-
 				program_url_price = program_url_data["price"]
 				program_url_hour = program_url_data["hour"]
 				program_url_url = program_url_data['url']
