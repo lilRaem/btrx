@@ -1,4 +1,6 @@
 from datetime import date
+import json
+from math import e
 import os
 import sys
 sys.path.append('/')
@@ -47,7 +49,7 @@ def getBtrxData():
 	if os.path.exists(makefileWdateName()[0]):
 		loaded_data = load_from_jsonFile(makefileWdateName()[0],path)
 		loaded_hour = None
-		for data in loaded_data[:1011]:
+		for data in loaded_data[10:11]:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -93,7 +95,7 @@ def getBtrxData():
 	else:
 		saved_data = save_to_json(get_product_list(),makefileWdateName()[1],path)
 		loaded_hour = None
-		for data in saved_data[:1011]:
+		for data in saved_data:
 			if data['ID'] != '' or data['ID'] != None:
 				product_id = data['ID']
 			else:
@@ -142,12 +144,15 @@ def buildjsondata():
 	btrx_data = getBtrxData()
 	site_list = []
 	print(Back.WHITE+Fore.BLUE+f'{btrx_data}'+Fore.RESET+Back.RESET)
-	for data_btrx in btrx_data[:1011]:
+	for data_btrx in btrx_data:
+		# Set variables
+		# Id
 		product_id = data_btrx['id']
 		if product_id == '' or product_id == None:
 			product_id == None
 		else:
 			product_id = data_btrx['id']
+		# Name
 		product_name = data_btrx['name']
 		product_name = product_name.lower()
 		if product_name == '' or product_name == None:
@@ -155,71 +160,33 @@ def buildjsondata():
 		else:
 			product_name = data_btrx['name']
 			product_name = product_name.lower()
+		# Spec
 		product_spec = data_btrx['spec']
 		if product_spec == '' or product_spec == None:
 			product_spec == None
 		else:
 			product_spec = data_btrx['spec']
+		# Price
 		product_price = data_btrx['price']
 		if product_price == '' or product_price == None:
 			product_price == None
 		else:
 			product_price = data_btrx['price']
+		# Hour
 		product_hour = data_btrx['hour']
 		if product_hour == '' or product_hour == None:
 			product_hour == None
 		else:
 			product_hour = data_btrx['hour']
+		# LinkNmo
 		product_linkNmo = data_btrx['linkNmo']
 		if product_linkNmo == '' or product_linkNmo == None:
 			product_linkNmo == None
 		else:
 			product_linkNmo = data_btrx['linkNmo']
-		btrx_dictDataWurl = {
-						'id': product_id,
-						'spec': product_spec,
-						'name': product_name,
-						'price': product_price,
-						'hour': product_hour,
-						'linkNmo': product_linkNmo,
-						'url': product_url
-				}
 		count_site_items = searchInSite(product_name)
 		if count_site_items == 0:
-			print(f'нет/не найдена программа на сайте: {data_btrx}')
-		else:
-			program_url_data = getProgramUrl(product_name,product_price)
-			program_url_name = program_url_data['name']
-			program_url_name = program_url_name.lower()
-
-			program_url_price = program_url_data["price"]
-			program_url_hour = program_url_data["hour"]
-			program_url_url = program_url_data['url']
-
-			if product_name.lower() in program_url_name.lower():
-				if product_price in program_url_price or program_url_price in product_price and \
-					product_hour == program_url_hour or program_url_hour == product_hour:
-						if product_price == program_url_price and program_url_price == product_price:
-							if product_hour == None or product_hour == 'empty':
-								product_hour = program_url_hour
-							else:
-								product_hour = product_hour
-							if program_url_hour == None or program_url_hour == 'empty':
-								program_url_hour = product_hour
-							else:
-								program_url_hour = program_url_hour
-							product_url = program_url_url
-						else:
-							product_url = None
-								# print(f'PRICE: btrx: {btrx_dictDataWurl} | s:{program_url_data}')
-								# print(f'hour not match: site:{program_url_data["hour"]} btrx:{product_hour}')
-								# print(Fore.LIGHTBLACK_EX+f'{site_dictData}'+Fore.RESET)
-				else:
-					product_hour = None
-					product_price = None
-			else:
-				product_url = None
-
+			product_url = None
 			btrx_dictDataWurl = {
 							'id': product_id,
 							'spec': product_spec,
@@ -229,7 +196,62 @@ def buildjsondata():
 							'linkNmo': product_linkNmo,
 							'url': product_url
 					}
-			print(Fore.GREEN+f'{btrx_dictDataWurl}'+Fore.RESET)
+			print(f'нет/не найдена программа на сайте: {btrx_dictDataWurl}')
+			site_list.append(btrx_dictDataWurl)
+		else:
+			program_url_data = getProgramUrl(product_name,product_price)
+			if program_url_data != None:
+				program_url_name = None
+				program_url_price = None
 
+				program_url_name = program_url_data['name']
+				program_url_name = program_url_name.lower()
+
+				program_url_price = program_url_data["price"]
+				program_url_hour = program_url_data["hour"]
+				program_url_url = program_url_data['url']
+
+				if product_name.lower() in program_url_name.lower():
+					if product_price in program_url_price or program_url_price in product_price and \
+						product_hour == program_url_hour or program_url_hour == product_hour:
+							if product_price == program_url_price and program_url_price == product_price:
+								# Check HOURS in Site and in BTRX
+								if product_hour == None or product_hour == 'empty':
+									product_hour = program_url_hour
+								else:
+									product_hour = product_hour
+								if program_url_hour == None or program_url_hour == 'empty':
+									program_url_hour = product_hour
+								else:
+									program_url_hour = program_url_hour
+								product_url = program_url_url
+							else:
+								product_url = None
+					else:
+						product_hour = None
+						product_price = None
+				else:
+					product_url = None
+			else:
+				product_url = None
+			btrx_dictDataWurl = {
+							'id': product_id,
+							'spec': product_spec,
+							'name': product_name,
+							'price': product_price,
+							'hour': product_hour,
+							'linkNmo': product_linkNmo,
+							'url': product_url
+					}
+
+			print(Fore.GREEN+f'{btrx_dictDataWurl}'+Fore.RESET)
+			site_list.append(btrx_dictDataWurl)
+	return site_list
 if __name__ == "__main__":
-	buildjsondata()
+	data = buildjsondata()
+	cont = 0
+	for d in data:
+		cont = cont + 1
+	print(f'Всего найдено {cont} программ')
+	with open('G:\\Web-Develop\\projects\\my\\python_project\\btrx\\data\\json\\btrxUrl_builder_data.json','w',encoding='utf-8') as f:
+		json.dump(data,f,indent=4,ensure_ascii=False)
