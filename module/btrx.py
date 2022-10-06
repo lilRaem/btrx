@@ -319,6 +319,7 @@ def check_product(name=str, price=str, datalist=list) -> list:
 				for data in found_data_by_name_price:
 					count_fdbnp = count_fdbnp + 1
 				if count_fdbnp == 1:
+					print(found_data_by_name_price)
 					return found_data_by_name_price[0]
 				else:
 					print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
@@ -365,7 +366,31 @@ def check_product(name=str, price=str, datalist=list) -> list:
 								'url': product_url
 							}
 							list_by_name.append(dictData)
-						return list_by_name
+						count_list_data_by_name = 0
+						for data in list_by_name:
+							count_list_data_by_name = count_list_data_by_name + 1
+						if count_list_data_by_name == 1:
+							dictData = {
+								'id': None,
+								'spec': None,
+								'name': product_name,
+								'price': None,
+								'hour': None,
+								'linkNmo': None,
+								'url': None
+							}
+							return dictData
+						else:
+							dictData = {
+								'id': None,
+								'spec': None,
+								'name': product_name,
+								'price': None,
+								'hour': None,
+								'linkNmo': None,
+								'url': None
+							}
+							return dictData
 			else:
 				print('Not found')
 				return None
