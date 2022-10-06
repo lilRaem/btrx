@@ -61,8 +61,8 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-def main(search_name = 'Акушерство и гинекология',
-		search_price = '19600'):
+def main(search_name = 'сестринское дело',
+		search_price = ''):
 
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n','')
@@ -115,50 +115,51 @@ def main(search_name = 'Акушерство и гинекология',
 			}
 			print("\n"+Fore.GREEN+f'{d_dict}')
 		else:
-			for chck_data in check_data:
-				if check_data != None:
+			if check_data != None:
+				id = check_data['id']
+				if id == None or id == '':
+					id = None
+				name = check_data['name']
+				if name == None or name == '':
+					name = None
+				price = check_data['price']
+				if price == None or price == '':
+					price = None
+				hour = check_data['hour']
+				if hour == None or hour == '':
+					hour = None
+				linkNmo = check_data['linkNmo']
 
-					id = chck_data['id']
-					if id == None or id == '':
-						id = None
-					name = chck_data['name']
-					if name == None or name == '':
-						name = None
-					price = chck_data['price']
-					if price == None or price == '':
-						price = None
-					hour = chck_data['hour']
-					if hour == None or hour == '':
-						hour = None
-					linkNmo = chck_data['linkNmo']
-
-					if linkNmo == None or linkNmo == '':
-						linkNmo = None
-					progUrl_data = getProgramUrl(chck_data['name'],chck_data['price'])
-					try:
-						url = progUrl_data['url']
-						if url == None or url == '':
-							url = None
-						else:
-							url = progUrl_data['url']
-					except:
+				if linkNmo == None or linkNmo == '':
+					linkNmo = None
+				progUrl_data = getProgramUrl(check_data['name'],check_data['price'])
+				try:
+					url = progUrl_data['url']
+					if url == None or url == '':
 						url = None
-					if hour == None or hour == '':
+					else:
+						url = progUrl_data['url']
+				except:
+					url = None
+				if hour == None or hour == '':
+					try:
 						site_hour = progUrl_data['hour']
-						if site_hour != None or site_hour != '':
-							hour = site_hour
-						else:
-							hour = None
+					except:
+						site_hour = None
+					if site_hour != None or site_hour != '':
+						hour = site_hour
+					else:
+						hour = None
 
-					d_dict = {
-						'id': id,
-						'name': name,
-						'price': price,
-						'hour': hour,
-						'linkNmo': linkNmo,
-						'url': url
-					}
-				print("\n"+Fore.GREEN+f'{d_dict}'+Fore.RESET)
+				d_dict = {
+					'id': id,
+					'name': name,
+					'price': price,
+					'hour': hour,
+					'linkNmo': linkNmo,
+					'url': url
+				}
+			print("\n"+Fore.GREEN+f'{d_dict}'+Fore.RESET)
 	else:
 		save_to_json(get_product_list(),makefileWdateName()[1],path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
