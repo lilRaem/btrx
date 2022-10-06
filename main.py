@@ -1,9 +1,11 @@
 import os
 from unicodedata import name
-from colorama import Fore,Back,Style
+from colorama import Fore, Back, Style
 from datetime import date
-
-from module.btrx import (get_all_data, check_product, get_product_list, load_from_jsonFile, save_to_json)
+from pydantic import BaseModel, validator , StrictStr ,Field
+from typing import Optional
+from module.btrx import (get_all_data, check_product, get_product_list, load_from_jsonFile,
+	save_to_json)
 from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 '''
@@ -12,12 +14,11 @@ TODO что необходимо во время работы
 [-] Поиск товара автоматически
 [-] Добавить колличество программ в название файла
 [+] Во временно tmpfile.json ищет по словам которых по факту в программе нет (теперь все работает)
-[-] Добавить порядковые цифры к выводу по словам и слову
 [+] поиск по словам и цене работает не корректно
 [+] сделать списки более универсальными (чтобы была ссылка нмо и id)
 [-] скопировать таблицы из pdf (https://medium.com/@winston.smith.spb/python-an-easy-way-to-extract-data-from-pdf-tables-c8de22308341,
 https://github.com/jsvine/pdfplumber)
-[-] Создание многоуровнего json: https://stackoverflow.com/a/49957442
+[+] Создание многоуровнего json: https://stackoverflow.com/a/49957442
 
 TODO Что нужно сделать:
 
@@ -40,6 +41,8 @@ TODO Сделать тесты:
 
 TODO Что минимально нужно чтобы получить id товара?
 [+] Имя программы, цена
+
+TODO Интересные ссылки
 '''
 
 
@@ -61,25 +64,26 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-def main(search_name = 'сестринское дело',
-		search_price = ''):
+
+def main(search_name='сестринское дело', search_price=''):
 
 	search_name = search_name.strip()
-	search_name = search_name.replace('\n','')
-	search_name = search_name.replace('  ',' ')
+	search_name = search_name.replace('\n', '')
+	search_name = search_name.replace('  ', ' ')
 	# name = input('Введите название программы: ')
 	path = os.getcwd() + "\\data\\json\\btrx_data"
 
-	print(Fore.YELLOW+'Path exists?: ', os.path.exists(makefileWdateName()[0]), makefileWdateName()[0]+Back.RESET)
+	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName()[0]),
+		makefileWdateName()[0] + Back.RESET)
 	if (os.path.exists(makefileWdateName()[0])):
 		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_data = check_product(search_name, search_price, get_all_data(data,datalist))
+		check_data = check_product(search_name, search_price, get_all_data(data, datalist))
 		searchInSite(search_name)
 		count_check_data = 0
 		for chck_data in check_data:
 			count_check_data = count_check_data + 1
 		if check_data != None and count_check_data == 1:
-			progUrl_data = getProgramUrl(search_name,search_price)
+			progUrl_data = getProgramUrl(search_name, search_price)
 			id = check_data['id']
 			if id == None or id == '':
 				id = None
@@ -113,7 +117,7 @@ def main(search_name = 'сестринское дело',
 				'linkNmo': linkNmo,
 				'url': url
 			}
-			print("\n"+Fore.GREEN+f'{d_dict}')
+			print("\n" + Fore.GREEN + f'{d_dict}')
 		else:
 			if check_data != None:
 				id = check_data['id']
@@ -132,7 +136,7 @@ def main(search_name = 'сестринское дело',
 
 				if linkNmo == None or linkNmo == '':
 					linkNmo = None
-				progUrl_data = getProgramUrl(check_data['name'],check_data['price'])
+				progUrl_data = getProgramUrl(check_data['name'], check_data['price'])
 				try:
 					url = progUrl_data['url']
 					if url == None or url == '':
@@ -159,12 +163,11 @@ def main(search_name = 'сестринское дело',
 					'linkNmo': linkNmo,
 					'url': url
 				}
-			print("\n"+Fore.GREEN+f'{d_dict}'+Fore.RESET)
+			print("\n" + Fore.GREEN + f'{d_dict}' + Fore.RESET)
 	else:
-		save_to_json(get_product_list(),makefileWdateName()[1],path)
+		save_to_json(get_product_list(), makefileWdateName()[1], path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_product(name, price,
-			get_all_data(data, datalist))
+		check_product(name, price, get_all_data(data, datalist))
 
 
 if __name__ == "__main__":
@@ -172,3 +175,10 @@ if __name__ == "__main__":
 
 	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
+
+	# class DataData(BaseModel):
+	# 	id: Optional[StrictStr] = None
+	# data_data = DataData()
+	# id = data_data.id
+	# id = 'ss'
+	# print(data_data)
