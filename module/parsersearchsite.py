@@ -45,7 +45,7 @@ def searchInSite(search_key='Онкология'):
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
-		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова {search_key} в программе: {count_word_programm}\n'
+		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова "{search_key}" в программе: {count_word_programm}\n'
 	)
 	return count_word_programm
 
@@ -77,14 +77,16 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 			print(f'Найдено {count_find_url} страниц с названием: {search_key}')
 			el_c = 0
 			for i,data in enumerate(find_url_list):
+				print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
 				if search_key.lower() in data['name'].lower():
 					if price == data['price']:
 						el_c = el_c + 1
 						if el_c == 1:
-							print(f'Найдено {el_c} страниц:\n{find_url_list[i]["name"]}|{find_url_list[i]["hour"]}|{find_url_list[i]["price"]}')
+							print(f'Найдена {el_c} страница:\n{find_url_list[i]["name"]}|{find_url_list[i]["hour"]}|{find_url_list[i]["price"]}')
 							return find_url_list[i]
 						else:
 							print(f'Найдено {el_c} страниц:\n{find_url_list}')
+							return find_url_list
 				else:
 					print(f'Найденно {el_c} страниц:\n{find_url_list}')
 	else:
