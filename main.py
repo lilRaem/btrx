@@ -1,4 +1,5 @@
 import os
+import time
 from unicodedata import name
 from colorama import Fore, Back, Style
 from datetime import date
@@ -65,8 +66,8 @@ def makefileWdateName() -> str:
 datalist = []
 
 
-def main(search_name='сестринское дело', search_price=''):
-
+def main(search_name='Деятельность тренера по морскому многоборью в условиях реализации требований ФССП', search_price='3000'):
+	start = time.time()
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', '')
 	search_name = search_name.replace('  ', ' ')
@@ -80,8 +81,11 @@ def main(search_name='сестринское дело', search_price=''):
 		check_data = check_product(search_name, search_price, get_all_data(data, datalist))
 		searchInSite(search_name)
 		count_check_data = 0
-		for chck_data in check_data:
-			count_check_data = count_check_data + 1
+		if check_data != None:
+			for chck_data in check_data:
+				count_check_data = count_check_data + 1
+		else:
+			print('item not exist')
 		if check_data != None and count_check_data == 1:
 			progUrl_data = getProgramUrl(search_name, search_price)
 			id = check_data['id']
@@ -163,12 +167,12 @@ def main(search_name='сестринское дело', search_price=''):
 					'linkNmo': linkNmo,
 					'url': url
 				}
-			print("\n" + Fore.GREEN + f'{d_dict}' + Fore.RESET)
+				print("\n" + Fore.GREEN + f'{d_dict}' + Fore.RESET)
 	else:
 		save_to_json(get_product_list(), makefileWdateName()[1], path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
 		check_product(name, price, get_all_data(data, datalist))
-
+	print(f"(main.py) Search time: {time.time()-start} sec")
 
 if __name__ == "__main__":
 	main()
