@@ -1,5 +1,7 @@
+import json
 import os
 import time
+from module.config import FinalData
 from unicodedata import name
 from colorama import Fore, Back, Style
 from datetime import date
@@ -65,7 +67,6 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-
 def main(search_name='Деятельность тренера по морскому многоборью в условиях реализации требований ФССП', search_price='3000'):
 	start = time.time()
 	search_name = search_name.strip()
@@ -73,110 +74,54 @@ def main(search_name='Деятельность тренера по морско�
 	search_name = search_name.replace('  ', ' ')
 	# name = input('Введите название программы: ')
 	path = os.getcwd() + "\\data\\json\\btrx_data"
-
+	final_data = FinalData()
 	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName()[0]),
 		makefileWdateName()[0] + Back.RESET)
 	if (os.path.exists(makefileWdateName()[0])):
 		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_data = check_product(search_name, search_price, get_all_data(data, datalist))
+		check_data = check_product(search_name, search_price, get_all_data(data))
+		json_check_data=json.loads(check_data)
 		searchInSite(search_name)
 		count_check_data = 0
 		if check_data != None:
-			for chck_data in check_data:
+			for chck_data in json_check_data:
 				count_check_data = count_check_data + 1
 		else:
 			print('item not exist')
 		if check_data != None and count_check_data == 1:
 			progUrl_data = getProgramUrl(search_name, search_price)
-			id = check_data['id']
-			if id == None or id == '':
-				id = None
-			name = check_data['name']
-			if name == None or name == '':
-				name = None
-			price = check_data['price']
-			if price == None or price == '':
-				price = None
-			hour = check_data['hour']
-			if hour == None or hour == '':
-				hour = None
-			linkNmo = check_data['linkNmo']
-			if linkNmo == None or linkNmo == '':
-				linkNmo = None
-			url = progUrl_data['url']
-			if url == None or url == '':
-				url = None
-			if hour == None or hour == '':
-				site_hour = progUrl_data['hour']
-				if site_hour != None or site_hour != '':
-					hour = site_hour
-				else:
-					hour = None
+			final_data.id = json_check_data['id']
+			final_data.name = json_check_data['name']
+			final_data.price = json_check_data['price']
+			final_data.hour = json_check_data['hour']
+			final_data.linkNmo = json_check_data['linkNmo']
+			final_data.url = progUrl_data['url']
+			print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
 
-			d_dict = {
-				'id': id,
-				'name': name,
-				'price': price,
-				'hour': hour,
-				'linkNmo': linkNmo,
-				'url': url
-			}
-			print("\n" + Fore.GREEN + f'{d_dict}')
 		else:
 			if check_data != None:
-				id = check_data['id']
-				if id == None or id == '':
-					id = None
-				name = check_data['name']
-				if name == None or name == '':
-					name = None
-				price = check_data['price']
-				if price == None or price == '':
-					price = None
-				hour = check_data['hour']
-				if hour == None or hour == '':
-					hour = None
-				linkNmo = check_data['linkNmo']
-
-				if linkNmo == None or linkNmo == '':
-					linkNmo = None
-				progUrl_data = getProgramUrl(check_data['name'], check_data['price'])
+				final_data.id = json_check_data['id']
+				final_data.name = json_check_data['name']
+				final_data.price = json_check_data['price']
+				final_data.linkNmo = json_check_data['linkNmo']
+				progUrl_data = getProgramUrl(json_check_data['name'], json_check_data['price'])
+				json_progUrl_data = json.loads(progUrl_data)
+				final_data.url = json_progUrl_data['url']
 				try:
-					url = progUrl_data['url']
-					if url == None or url == '':
-						url = None
-					else:
-						url = progUrl_data['url']
+					final_data.hour = json_check_data['hour']
 				except:
-					url = None
-				if hour == None or hour == '':
-					try:
-						site_hour = progUrl_data['hour']
-					except:
-						site_hour = None
-					if site_hour != None or site_hour != '':
-						hour = site_hour
-					else:
-						hour = None
-
-				d_dict = {
-					'id': id,
-					'name': name,
-					'price': price,
-					'hour': hour,
-					'linkNmo': linkNmo,
-					'url': url
-				}
-				print("\n" + Fore.GREEN + f'{d_dict}' + Fore.RESET)
+					final_data.hour = json_progUrl_data['hour']
+				print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}' + Fore.RESET)
 	else:
 		save_to_json(get_product_list(), makefileWdateName()[1], path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_product(name, price, get_all_data(data, datalist))
-	print(f"(main.py) Search time: {time.time()-start} sec")
+		check_product(name, final_data.price, get_all_data(data))
+	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {time.time()-start} sec"+ Fore.RESET)
 
 if __name__ == "__main__":
+	start = time.time()
 	main()
-
+	print(Fore.MAGENTA+f'Main time: {time.time()-start} sec'+ Fore.RESET)
 	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
 
