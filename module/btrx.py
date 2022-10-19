@@ -1,7 +1,12 @@
 import json, os
+from typing import Optional
+from pydantic import BaseModel, StrictStr
 from fast_bitrix24 import Bitrix
 from colorama import Fore, Back, Style
-
+try:
+	from config import FinalData
+except:
+	from module.config import FinalData
 webhook = 'https://b24-vejk6x.bitrix24.ru/rest/1/di28gta836z3xn50/'
 btrx = Bitrix(webhook=webhook,respect_velocity_policy=False)
 
@@ -99,15 +104,13 @@ def set_product_price(btrx=Bitrix(webhook),id=str(),price=0):
 	except Exception as e:
 		print(e)
 
-def get_all_data(data, datalist=list()):
+def get_all_data(data):
 	"""Get all data	(id, name, price, hours) with hours\n
 		in description and exclude ['PROPERTY_213']	= None"""
 	if (data == None or type(data) != list):
 		raise TypeError(f'expect type of data = list')
-	if (datalist == None or type(datalist) != list):
-		raise TypeError(f'expect type of datalist = list')
-
-	datadict = dict()
+	datalist=list()
+	final_data = FinalData()
 	wh = 0
 	woh = 0
 	try:
@@ -146,21 +149,15 @@ def get_all_data(data, datalist=list()):
 			else:
 				url = 'url'
 
-			datadict = {
-				'id': id,
-				'name': name,
-				'price': price,
-				'hour': hour,
-				'linkNmo': linkNmo,
-				'url': url
-			}
-			datalist.append(datadict)
-
+			final_data.id = id
+			final_data.name = name
+			final_data.price = price
+			final_data.hour = hour
+			datalist.append(final_data.json(encoder='utf-8',ensure_ascii=False))
 			if (hour != None):
 				wh = wh + 1
 			else:
 				woh = woh + 1
-
 		print(Fore.LIGHTCYAN_EX +  f'\n####\n{Back.CYAN}Find{Style.RESET_ALL} {wh} {Back.CYAN}items{Style.RESET_ALL} {Back.GREEN+Fore.BLACK}with hours' + Style.RESET_ALL)
 		print(Fore.BLUE + f'\nFind {woh} items without hours')
 		print(Fore.CYAN + f'\nFind {wh+woh} items all\n####\n')
@@ -240,6 +237,7 @@ def find_list_compare_words(searched_wrods):
 	print(f'find wrods compare: {searched_wrods}')
 
 def check_product(name=str, price=str, datalist=list) -> list:
+	final_data = FinalData()
 	try:
 		if name != None and name != '':
 			print(Back.YELLOW + Fore.BLACK + 'Start check')
@@ -258,8 +256,9 @@ def check_product(name=str, price=str, datalist=list) -> list:
 			try:
 				for i,v in enumerate(datalist):
 
-					k_name = v['name']
-					k_price = v['price']
+					data_list = json.loads(v)
+					k_name = data_list['name']
+					k_price = data_list['price']
 					k_name = k_name.lower()
 					if name.lower() in k_name and price == k_price and price != '':
 						count_name_price = count_name_price + 1
@@ -271,9 +270,9 @@ def check_product(name=str, price=str, datalist=list) -> list:
 				print(e)
 			try:
 				for i,v in enumerate(datalist):
-
-					k_name = v['name']
-					k_price = v['price']
+					data_list = json.loads(v)
+					k_name = data_list['name']
+					k_price = data_list['price']
 					k_name = k_name.lower()
 
 					if name.lower() in k_name and price == k_price and price != '':
@@ -319,7 +318,6 @@ def check_product(name=str, price=str, datalist=list) -> list:
 				for data in found_data_by_name_price:
 					count_fdbnp = count_fdbnp + 1
 				if count_fdbnp == 1:
-					print(found_data_by_name_price)
 					return found_data_by_name_price[0]
 				else:
 					print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
@@ -346,6 +344,7 @@ def check_product(name=str, price=str, datalist=list) -> list:
 						count_by_name = count_by_name + 1
 					if count_by_name != 0:
 						for data in found_data_by_name:
+							# final_data here. i think...
 							print(Fore.LIGHTYELLOW_EX+f'\n{data}'+Fore.RESET)
 							product_id = data['id']
 
