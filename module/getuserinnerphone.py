@@ -1,9 +1,9 @@
 from datetime import datetime
+from colorama import Fore,Back,Style
 from time import sleep
-from fast_bitrix24 import Bitrix
-from btrx import get_users_with_innerPhone, btrx,webhook
+from btrx import btrx
 from pydantic import BaseModel,StrictInt,StrictStr,StrictBool
-from typing import Optional,Dict,List
+from typing import Optional
 import json,os
 loop_while = False
 clear = lambda: os.system('cls')
@@ -77,9 +77,10 @@ def seeallinnerphone():
 	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
 		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
-		for data in json_data:
-			if json_data[data]['inner_phone']['inner_phone'] is not None:
-				print(f"in_ph: {json_data[data]['inner_phone']['inner_phone']}, id: {json_data[data]['id']}, name: {json_data[data]['name']}")
+		for i,data in enumerate(json_data):
+			if data['inner_phone']['inner_phone'] is not None:
+				print(Fore.YELLOW+'*'*15+Fore.RESET)
+				print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}")
 
 def seealluser():
 	clear()
@@ -87,7 +88,7 @@ def seealluser():
 		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
 			json_data = json.loads(f.read())
 		for i,data in enumerate(json_data):
-			print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']['inner_phone']}, user_block: {json_data[data]['is_active']}")
+			print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}")
 		print(f'Всего показано: {i}')
 
 def seeallactiveuser():
@@ -98,8 +99,9 @@ def seeallactiveuser():
 		for i,data in enumerate(json_data):
 
 			if data['is_active'] == True:
-				print(data['inner_phone'])
-			# 	print(f"name: {json_data[i]['name']}, id: {i[data]['id']}, in_ph: {i[data]['inner_phone']['inner_phone']}, user active?: {json_data[i]['is_active']}")
+				print(Fore.GREEN+'*'*15+Fore.RESET)
+				print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}")
+
 
 def seeallnotactiveuser():
 	clear()
@@ -108,9 +110,31 @@ def seeallnotactiveuser():
 			json_data = json.loads(f.read())
 		for i,data in enumerate(json_data):
 			if data['is_active'] == False:
-				print(data['inner_phone'])
-				# print(f"name: {json_data[data]['name']}, id: {json_data[data]['id']}, innerphone: {json_data[data]['inner_phone']['inner_phone']}, user active?: {json_data[data]['is_active']}")
+				print(Fore.LIGHTBLACK_EX+'-'*15+Fore.RESET)
+				print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}")
 
+def changevaluebyID():
+	clear()
+	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
+		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
+			json_data = json.loads(f.read())
+	id= input('Select ID: ')
+	old_name = '-'
+	new_name = '+'
+	old_js = json_data
+	for i,datas in enumerate(old_js):
+		if datas['id'] == id:
+			old_name = datas['email']
+	for i,data in enumerate(json_data):
+		if data['id'] == id:
+			json_data[i]['email']['password'] = input('New password: ')
+			new_name = data['email']
+	print(f"old: {old_name}\nnew: {new_name}")
+	try:
+		with open('data/json/btrx_data/inner_phone_users.json','w',encoding='utf-8') as f:
+			json.dump(json_data,f,indent=4,ensure_ascii=False)
+	except Exception as e:
+		print(e)
 def load_users_from_btrx(b):
 	users = []
 	try:
@@ -127,6 +151,7 @@ def load_users_from_btrx(b):
 			json.dump(users,f,ensure_ascii=False,indent=4,sort_keys=True)
 		print('succes on second')
 		# raise TypeError('get_users_with_innerPhone error')
+
 
 
 def print_menu():
@@ -192,5 +217,6 @@ def menu():
 if __name__ == "__main__":
 	# load_users_from_btrx(btrx)
 	# seeallactiveuser()
-	menu()
+	# menu()
 	# workwithdata()
+	changevaluebyID()
