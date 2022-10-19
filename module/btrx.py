@@ -70,8 +70,8 @@ def get_product_list(btrx=Bitrix(webhook)) -> list:
 def get_users_with_innerPhone(btrx=Bitrix(webhook)) -> list:
 	users = []
 	try:
-		users = btrx.get_all('user.get',{
-			'select': ['ID','ACTIVE','NAME','LAST_NAME','EMAIL','UF_DEPARTMENT','WORK_POSITION','UF_PHONE_INNER']
+		users = btrx.get_all('user.get',params={
+			'select': ['*']
 		})
 		return list(users)
 	except Exception as e:
