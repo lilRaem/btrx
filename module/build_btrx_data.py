@@ -200,6 +200,8 @@ def buildjsondata():
 			site_list.append(btrx_dictDataWurl)
 		else:
 			program_url_data = getProgramUrl(product_name,product_price)
+			print(program_url_data)
+			program_url_data = json.loads(program_url_data)
 			if program_url_data != None:
 				program_url_name = program_url_data['name']
 				program_url_name = program_url_name.lower()
