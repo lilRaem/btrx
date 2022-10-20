@@ -1,14 +1,12 @@
-import json
 import os
 import time
+import json
 from module.config import FinalData
-from unicodedata import name
 from colorama import Fore, Back, Style
 from datetime import date
 from pydantic import BaseModel, validator , StrictStr ,Field
 from typing import Optional
-from module.btrx import (get_all_data, check_product, get_product_list, load_from_jsonFile,
-	save_to_json)
+from module.btrx import (get_all_data, check_product, get_product_list,load_from_jsonFile, save_to_json)
 from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 '''
@@ -61,7 +59,7 @@ def makefileWdateName() -> str:
 	cur_date = today.strftime("%d.%m.%Y")
 	filename = f'{cur_date}_file.json'
 	path = os.getcwd() + "\\data\\json\\btrx_data"
-	filenameWcurDate = f"{path}\{filename}"
+	filenameWcurDate = f"{path}\\{filename}"
 	return str(filenameWcurDate), str(filename)
 
 
@@ -115,7 +113,7 @@ def main(search_name='Деятельность тренера по морско�
 	else:
 		save_to_json(get_product_list(), makefileWdateName()[1], path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_product(name, final_data.price, get_all_data(data))
+		check_product(search_name, final_data.price, get_all_data(data))
 	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {time.time()-start} sec"+ Fore.RESET)
 
 if __name__ == "__main__":
