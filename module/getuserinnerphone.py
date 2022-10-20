@@ -11,6 +11,7 @@ clear = lambda: os.system('cls')
 def workwithdata():
 	class UserInnerPhoneData(BaseModel):
 		inner_phone: Optional[StrictInt] = None
+		zdr_phone: Optional[StrictStr] = None
 		password: Optional[StrictStr] = None
 	user_inner_phone_data = UserInnerPhoneData()
 	class UserEmailData(BaseModel):
@@ -135,6 +136,18 @@ def changevaluebyID():
 			json.dump(json_data,f,indent=4,ensure_ascii=False)
 	except Exception as e:
 		print(e)
+def searchByID():
+	clear()
+	if os.path.exists('data/json/btrx_data/inner_phone_users.json'):
+		with open('data/json/btrx_data/inner_phone_users.json','r',encoding='utf-8') as f:
+			json_data = json.loads(f.read())
+	id= input('Select ID: ')
+
+	for i,data in enumerate(json_data):
+		if data['id'] == id:
+			print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}")
+	opt_menu()
+
 def load_users_from_btrx(b):
 	users = []
 	try:
@@ -142,7 +155,7 @@ def load_users_from_btrx(b):
 		with open('data/json/btrx_data/companyusers.json','w',encoding='utf-8') as f:
 			json.dump(users,f,ensure_ascii=False,indent=4,sort_keys=True)
 		print('Сохранено в data/json/btrx_data/companyusers.json')
-		# workwithdata()
+		workwithdata()
 		# menu()
 	except Exception as e:
 		print(f"load_users_from_btrx {e}")
@@ -151,8 +164,6 @@ def load_users_from_btrx(b):
 			json.dump(users,f,ensure_ascii=False,indent=4,sort_keys=True)
 		print('succes on second')
 		# raise TypeError('get_users_with_innerPhone error')
-
-
 
 def print_menu():
 	print('1) Весь список пользователей.')
@@ -164,23 +175,40 @@ def print_menu():
 	print('0) Выход.')
 
 def print_searchmenu():
-	clear()
 	print('1) Поиск по ID.')
 	print('2) Поиск по Имени.')
 	print('3) Поиск по Фамилии.')
 	print('4) Поиск по Внутреннему телефону.')
 	print('5) Поиск по Должности.')
 	print('6) Поиск по Отделу.')
-	print('#) Поиск по Номеру телефона.')
+	print('7) Поиск по Номеру телефона.')
 	print('9) Назад.')
 	print('0) Выход.')
+
+def print_selectOptMenu():
+	print('1) Изменить пароль.')
+	print('2) Изменить номер телефона (zdr).')
+	print('9) Назад.')
+	print('0) Выход.')
+
+def opt_menu():
+
+	while True:
+		print_selectOptMenu()
+		select_opt = int(input('Select optiopn: ').strip())
+		if select_opt == 1:
+			changevaluebyID()
+		elif select_opt == 9:
+			menu()
+		elif select_opt == 0:
+			exit()
 
 def search_menu():
 	while True:
 		print_searchmenu()
 		select_opt = int(input('Select optiopn: ').strip())
 		if select_opt == 1:
-			pass
+			searchByID()
 		elif select_opt == 9:
 			menu()
 		elif select_opt == 0:
@@ -213,10 +241,9 @@ def menu():
 		else:
 			print('input correct num')
 
-
 if __name__ == "__main__":
 	# load_users_from_btrx(btrx)
 	# seeallactiveuser()
-	# menu()
+	menu()
 	# workwithdata()
-	changevaluebyID()
+	# changevaluebyID()
