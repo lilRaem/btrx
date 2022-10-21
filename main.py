@@ -65,7 +65,7 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-def main(search_name='Деятельность тренера по морскому многоборью в условиях реализации требований ФССП', search_price='3000'):
+def main(search_name='Ультразвуковая диагностика', search_price='99000'):
 	start = time.time()
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', '')
