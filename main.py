@@ -65,7 +65,7 @@ def makefileWdateName() -> str:
 
 datalist = []
 
-def main(search_name='Деятельность тренера по морскому многоборью в условиях реализации требований ФССП', search_price='3000'):
+def main(search_name='Онкология', search_price='19600'):
 	start = time.time()
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', '')
@@ -95,15 +95,14 @@ def main(search_name='Деятельность тренера по морско�
 			final_data.linkNmo = json_check_data['linkNmo']
 			final_data.url = progUrl_data['url']
 			print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
-
 		else:
 			if check_data != None:
 				final_data.id = json_check_data['id']
 				final_data.name = json_check_data['name']
 				final_data.price = json_check_data['price']
 				final_data.linkNmo = json_check_data['linkNmo']
-				progUrl_data = getProgramUrl(json_check_data['name'], json_check_data['price'])
-				json_progUrl_data = json.loads(progUrl_data)
+				progUrl_data = getProgramUrl(final_data.name, final_data.price)
+				json_progUrl_data = json.dumps(progUrl_data)
 				final_data.url = json_progUrl_data['url']
 				try:
 					final_data.hour = json_check_data['hour']
