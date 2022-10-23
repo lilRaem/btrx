@@ -1,3 +1,4 @@
+from datetime import date
 import json, os
 from typing import Optional
 from pydantic import BaseModel, StrictStr
@@ -257,10 +258,10 @@ def check_product(name=str, price=str, datalist=list) -> list:
 				for i,v in enumerate(datalist):
 
 					data_list = json.loads(v)
-					k_name = data_list['name']
-					k_price = data_list['price']
-					k_name = k_name.lower()
-					if name.lower() in k_name and price == k_price and price != '':
+					final_data.name = data_list['name']
+					final_data.price = data_list['price']
+					k_name = final_data.name.lower()
+					if name.lower() in k_name and price == final_data.price and price != '':
 						count_name_price = count_name_price + 1
 					else:
 						if name.lower() in k_name:
@@ -271,11 +272,11 @@ def check_product(name=str, price=str, datalist=list) -> list:
 			try:
 				for i,v in enumerate(datalist):
 					data_list = json.loads(v)
-					k_name = data_list['name']
-					k_price = data_list['price']
-					k_name = k_name.lower()
+					final_data.name = data_list['name']
+					final_data.price = data_list['price']
+					k_name = final_data.name.lower()
 
-					if name.lower() in k_name and price == k_price and price != '':
+					if name.lower() in k_name and price == final_data.price and price != '':
 
 						try:
 							if count_name_price == 1 and price != '':
@@ -295,7 +296,6 @@ def check_product(name=str, price=str, datalist=list) -> list:
 							print(Fore.RED + 'Ошибка при поиске названия и цены')
 
 					else:
-
 						if name.lower() in k_name:
 							try:
 								# print(Style.RESET_ALL + Fore.LIGHTBLACK_EX + f'[{Back.GREEN + v["id"] + Back.RESET}] "{k_name}"\n')
@@ -304,10 +304,11 @@ def check_product(name=str, price=str, datalist=list) -> list:
 									print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"')
 									found_data_by_name.append(datalist[i])
 								else:
-									print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{v["name"]}|{v["hour"]}|{v["price"]}"')
+									v_j=json.loads(v)
+									print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v_j["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{v_j["name"]}|{v_j["hour"]}|{v_j["price"]}"')
 									found_data_by_name.append(datalist[i])
-							except:
-								print(Fore.RED + 'Ошибка при поиске названия')
+							except Exception as e:
+								print(Fore.RED + 'Ошибка при поиске названия\n'+Fore.RED+f'{e}')
 
 			except Exception as e:
 				print(e)
@@ -345,51 +346,24 @@ def check_product(name=str, price=str, datalist=list) -> list:
 					if count_by_name != 0:
 						for data in found_data_by_name:
 							# final_data here. i think...
-							print(Fore.LIGHTYELLOW_EX+f'\n{data}'+Fore.RESET)
-							product_id = data['id']
+							json_data=json.loads(data)
+							print(Fore.LIGHTYELLOW_EX+f'\n{json_data}'+Fore.RESET)
 
-							product_spec = None
-							product_name = data['name']
-							product_price = data['price']
-							product_hour = data['hour']
-							product_linkNmo = data['linkNmo']
-							product_url = data['url']
-
-							dictData = {
-								'id': product_id,
-								'spec': product_spec,
-								'name': product_name,
-								'price': product_price,
-								'hour': product_hour,
-								'linkNmo': product_linkNmo,
-								'url': product_url
-							}
-							list_by_name.append(dictData)
+							final_data.id = json_data['id']
+							final_data.spec = json_data['spec']
+							final_data.name = json_data['name']
+							final_data.price = json_data['price']
+							final_data.hour = json_data['hour']
+							final_data.linkNmo = json_data['linkNmo']
+							final_data.url = json_data['url']
+							list_by_name.append(final_data)
 						count_list_data_by_name = 0
 						for data in list_by_name:
 							count_list_data_by_name = count_list_data_by_name + 1
 						if count_list_data_by_name == 1:
-							dictData = {
-								'id': None,
-								'spec': None,
-								'name': product_name,
-								'price': None,
-								'hour': None,
-								'linkNmo': None,
-								'url': None
-							}
-							return dictData
+							return final_data.json()
 						else:
-							dictData = {
-								'id': None,
-								'spec': None,
-								'name': product_name,
-								'price': None,
-								'hour': None,
-								'linkNmo': None,
-								'url': None
-							}
-							return dictData
+							return list_by_name
 			else:
 				print('Not found')
 				return None
@@ -398,3 +372,23 @@ def check_product(name=str, price=str, datalist=list) -> list:
 
 	except Exception as e:
 		print(Fore.RED+f'{e}')
+		
+def makefileWdateName() -> str:
+	"""
+	[0] = str(fileNameWithPath)
+	[1] = str(filename)
+
+	Returns:
+		tuple: [fileNameWithPath,filename]
+	"""
+	today = date.today()
+	cur_date = today.strftime("%d.%m.%Y")
+	filename = f'{cur_date}_file.json'
+	path = os.getcwd() + "\\data\\json\\btrx_data"
+	filenameWcurDate = f"{path}\\{filename}"
+	return str(filenameWcurDate), str(filename), path
+
+if __name__ == '__main__':
+	data = []
+	data = load_from_jsonFile(makefileWdateName()[0], makefileWdateName()[2])
+	check_product('Онкология','3000', get_all_data(data))
