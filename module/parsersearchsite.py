@@ -16,6 +16,8 @@ except:
 
 link = 'https://apkipp.ru'
 
+#FIXME возвращает неверную информацию 0 и list с 9ю элементами
+
 def searchInSite(search_key='Онкология'):
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 
@@ -44,7 +46,6 @@ def searchInSite(search_key='Онкология'):
 	return count_word_programm
 
 def getProgramUrl(search_key='Онкология',price='6400'):
-	data_url = {}
 	find_url_list = []
 	start = time()
 	final_data = FinalData()
@@ -63,8 +64,8 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 			else:
 				# find_url_list.append(pSiteUrl)
 				print(f"\
-				{Fore.LIGHTWHITE_EX+v['name']+' '+Fore.RESET+Fore.LIGHTBLACK_EX}\n\
-				[{str(k+1)}] {link}{v['url']}"+Fore.RESET)
+				{Fore.LIGHTWHITE_EX+final_data.url+' '+Fore.RESET+Fore.LIGHTBLACK_EX}\n\
+				[{str(k+1)}] {link}{final_data.url}"+Fore.RESET)
 	if find_url_list != []:
 		count_find_url = 0
 		for data in find_url_list:
@@ -83,6 +84,7 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 						el_c = el_c + 1
 				else:
 					print(f'Найденно {el_c} страниц:\n{find_url_list}')
+					return json.dumps(find_url_list)
 	else:
 		print('Url not found')
 
@@ -95,8 +97,11 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 						return find_url_list[i]
 	else:
 		print(f'Найдено {el_c} страниц:\n{find_url_list}')
-		return find_url_list
+		if el_c == 0:
+			return 0
+		else:
+			return json.dumps(find_url_list)
 if __name__ == "__main__":
 
-	searchInSite('Тренер')
-	print(getProgramUrl('Тренер-преподаватель','3000'))
+	searchInSite('Онкология')
+	print(getProgramUrl('Онкология','3000'))
