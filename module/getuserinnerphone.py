@@ -112,7 +112,7 @@ def seeallnotactiveuser():
 		for i,data in enumerate(json_data):
 			if data['is_active'] == False:
 				print(Fore.LIGHTBLACK_EX+'-'*15+Fore.RESET)
-				print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}")
+				print(f"ID: {data['id']}\nName: {data['name']}\nEmail: {data['email']['email']}\nInner_ph: {data['inner_phone']['inner_phone']}\nIs_active: {data['is_active']}")
 
 def changevaluebyID():
 	clear()
