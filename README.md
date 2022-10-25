@@ -1,15 +1,15 @@
 # Программа для генерации и парсинга товаров, ссылок APKIPP.ru
 
 ## Библиотеки проекта:
+
 [fast_bitrix24](https://github.com/leshchenko1979/fast_bitrix24 "fast_bitrix24") - API wrapper для Питона для быстрого получения данных от Битрикс24 через REST API.
+[Pydantic](https://pydantic-docs.helpmanual.io/ "Pydantic") - работа с JSON данными
 
 ## Интересные ссылки и API:
-[Pydantic](https://pydantic-docs.helpmanual.io/ "Pydantic") - работа с JSON данными
 
 [FastAPI](https://fastapi.tiangolo.com/ "FastAPI") - Фреймворк
 
 # TODO
-
 - [ ] Сделать поиск по фильтру на сайте 
       `https://apkipp.ru/katalog/ajax/filter/` и  `https://apkipp.ru/katalog/ajax/`
 
@@ -24,8 +24,7 @@
 - [ ] скопировать таблицы из pdf (https://medium.com/@winston.smith.spb/python-an-easy-way-to-extract-data-from-pdf-tables-c8de22308341, https://github.com/jsvine/pdfplumber)
 - [x] Создание многоуровнего json: https://stackoverflow.com/a/49957442
 
-TODO Что нужно сделать:
-
+# TODO Что нужно сделать:
 Разбросать важные функции по отдельным модулям python (отдельно выгрузка с битрикс, отдельно генератор шаблона, отдельно поиск и сравнение элементов)
 Отдельным файлом:
 
@@ -42,5 +41,5 @@ TODO Сделать тесты:
 - [ ] parserhtml.py
 
 
-TODO Что минимально нужно чтобы получить id товара?
+# TODO Что минимально нужно чтобы получить id товара?
 - [x] Имя программы, цена
