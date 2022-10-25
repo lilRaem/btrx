@@ -8,3 +8,9 @@
 
 [FastAPI](https://fastapi.tiangolo.com/ "FastAPI") - Фреймворк
 
+# TODO
+
+- [ ] Сделать поиск по фильтру на сайте
+`https://apkipp.ru/katalog/ajax/filter/`
+и
+`https://apkipp.ru/katalog/ajax/`
