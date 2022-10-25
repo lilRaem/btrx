@@ -1,5 +1,5 @@
 import os
-import time
+from time import time
 import json
 from module.config import FinalData
 from colorama import Fore, Back, Style
@@ -10,40 +10,7 @@ from module.btrx import (get_all_data, check_product, get_product_list,load_from
 from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 '''
-TODO что необходимо во время работы
-[+] подставлять id товара автоматически
-[-] Поиск товара автоматически
-[-] Добавить колличество программ в название файла
-[+] Во временно tmpfile.json ищет по словам которых по факту в программе нет (теперь все работает)
-[+] поиск по словам и цене работает не корректно
-[+] сделать списки более универсальными (чтобы была ссылка нмо и id)
-[-] скопировать таблицы из pdf (https://medium.com/@winston.smith.spb/python-an-easy-way-to-extract-data-from-pdf-tables-c8de22308341,
-https://github.com/jsvine/pdfplumber)
-[+] Создание многоуровнего json: https://stackoverflow.com/a/49957442
 
-TODO Что нужно сделать:
-
-Разбросать важные функции по отдельным модулям python (отдельно выгрузка с битрикс, отдельно генератор шаблона, отдельно поиск и сравнение элементов)
-Отдельным файлом:
-
-[+] выгрузка с битрикс
-[-] генератор шаблона
-[-] поиск и сравнение c таблицами
-[-] поиск по файлу tmpfile.json (на дынный момент разбивает на отдельные слова и ищет по ним,
-	сохраняет в tmpfile.json) btrx.py check_product(*,*,*) line 145
-[+] производить поиск по сайту через python
-
-TODO Сделать тесты:
-[-] main.py
-[-] parserdocx.py
-[+] btrx.py (можно доработать очень маленькое покрытие)
-[-] parserdocx2table.py
-[-]	parserhtml.py
-
-TODO Что минимально нужно чтобы получить id товара?
-[+] Имя программы, цена
-
-TODO Интересные ссылки
 '''
 
 
@@ -67,7 +34,7 @@ datalist = []
 
 
 def main(search_name='Ультразвуковая диагностика', search_price='99000'):
-	start = time.time()
+	start = time()
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', '')
 	search_name = search_name.replace('  ', ' ')
@@ -103,7 +70,7 @@ def main(search_name='Ультразвуковая диагностика', sear
 				final_data.price = json_check_data['price']
 				final_data.linkNmo = json_check_data['linkNmo']
 				progUrl_data = getProgramUrl(final_data.name, final_data.price)
-				json_progUrl_data = json.dumps(progUrl_data)
+				json_progUrl_data = progUrl_data
 				final_data.url = json_progUrl_data['url']
 				try:
 					final_data.hour = json_check_data['hour']
@@ -114,12 +81,12 @@ def main(search_name='Ультразвуковая диагностика', sear
 		save_to_json(get_product_list(), makefileWdateName()[1], path)
 		data = load_from_jsonFile(makefileWdateName()[0], path)
 		check_product(search_name, final_data.price, get_all_data(data))
-	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {time.time()-start} sec"+ Fore.RESET)
+	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {round(time()-start,2)} sec"+ Fore.RESET)
 
 if __name__ == "__main__":
-	start = time.time()
+	start = time()
 	main()
-	print(Fore.MAGENTA+f'Main time: {time.time()-start} sec'+ Fore.RESET)
+	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
 	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
 
