@@ -35,8 +35,8 @@ TODO Что нужно сделать:
 - [x] производить поиск по сайту через python
 
 TODO Сделать тесты:
-- [-] main.py
-- [-] parserdocx.py
+- [ ] main.py
+- [ ] parserdocx.py
 - [x] btrx.py (можно доработать очень маленькое покрытие)
 - [ ] parserdocx2table.py
 - [ ] parserhtml.py
