@@ -5,7 +5,10 @@ from pydantic import BaseModel, StrictStr
 from bs4 import BeautifulSoup
 import requests
 import os, json
-
+# try:
+# 	from module.config import FinalData
+# except:
+# 	from config import FinalData
 from typing import Optional
 from pydantic import BaseModel, StrictStr
 
@@ -20,49 +23,12 @@ class FinalData(BaseModel):
 	url: Optional[StrictStr] = None
 
 def bs4pars():
-	with open(f"{os.getcwd()}/module/html/templates/source/pp_spo.html",'r',encoding='utf-8') as f:
+	with open(f"{os.getcwd()}\\module\\html\\templates\\source\\pp_spo.html",'r',encoding='utf-8') as f:
 		html = f.read()
 
 	soup = BeautifulSoup(html,'lxml')
 	pars_list = []
 	pars_dict = {}
-	# НМО старый шаблон
-	# for el in soup.find_all(class_='text-block'):
-	# 	# print("==={el.find('i','prog_altspecial').text}===")
-
-	# 	if el.find('b','prog_special').text != '':
-	# 		prog_special = el.find('b','prog_special').text.strip()
-	# 	else:
-	# 		prog_special = None
-	# 	if el.find('i','prog_altspecial').text != '':
-	# 		prog_altspecial = el.find('i','prog_altspecial').text.strip()
-	# 		prog_altspecial = prog_altspecial.replace('\n','')
-	# 		prog_altspecial = prog_altspecial.replace('\t','')
-	# 	else:
-	# 		prog_altspecial = None
-	# 	if el.find('a','prog_title').text != '':
-	# 		prog_title = el.find('a','prog_title').text.replace('\t','').replace('\n','')
-	# 	else:
-	# 		prog_title = None
-	# 	if el.find('span').next_element != '':
-	# 		prog_hour = el.find('span').next_element
-	# 	else:
-	# 		prog_hour = None
-	# 	if el.find('span').next_element.next_element.next_element.next_element.text != '':
-	# 		prog_price = el.find('span').next_element.next_element.next_element.next_element.text.replace('руб','').replace('\n','').replace('\t','').strip()
-	# 	else:
-	# 		prog_price = None
-
-	# 	pars_dict = {
-	# 		'prog_special': prog_special,
-	# 		'prog_altspecial': prog_altspecial,
-	# 		'prog_title': prog_title,
-	# 		'prog_hour': prog_hour,
-	# 		'prog_price': prog_price,
-	# 		'url': el.find('a','prog_title').get('href')
-	# 	}
-
-	# 	pars_list.append(pars_dict)
 	for el in soup.find_all(class_='courses-block'):
 		print(el.find('p','headtext').text)
 		if el.find('p','headtext').text != '':
@@ -99,7 +65,7 @@ def bs4pars():
 	with open(f'{os.getcwd()}/module/html/templates/data.json','w',encoding='utf-8') as fp:
 		json.dump(pars_list,fp,ensure_ascii=False,indent=4)
 
-def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-sudebnyij-ekspert-ekspert-biohimik-ekspert-genetik-ekspert-himik/",price='49800'):
+def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-sudebnyij-ekspert-ekspert-biohimik-ekspert-genetik-ekspert-himik/",price: str='49800'):
 	start = time()
 	headers = {
     'Access-Control-Allow-Origin': '*',
@@ -113,13 +79,10 @@ def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsins
 	req = requests.get(parseurl, headers,timeout=None)
 	soup = BeautifulSoup(req.content,'lxml')
 
-
-
 	final_data.name = soup.find('h1','main-title').text
 	final_data.hour = soup.find('div','items-box-block__element-type-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 	final_data.price = soup.find('div','course-info-block__action-buy-price').findChildren('span')[0].text.strip()
 	final_data.url = parseurl
-
 
 	count = 0
 	if final_data.price == price:
@@ -134,7 +97,7 @@ def parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-nemeditsins
 		count = count + 1
 	if count == 1:
 		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
-		return json.loads(final_data.json(ensure_ascii=False))
+		return site_data_list
 	else:
 		print('fail parse too many programs')
 		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count > 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)

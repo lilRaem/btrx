@@ -18,7 +18,7 @@ class Btrx(Bitrix):
 		super().__init__(webhook=self.webhook,respect_velocity_policy=False)
 	COUNT_PROGRAMS = 0
 
-	def save_to_json(datalist=list(), filename='file', path=str()) -> list:
+	def save_to_json(datalist:list, filename: str, path: str) -> list:
 		data = []
 		if datalist == None or type(datalist) != list:
 			raise TypeError(f'тип datalist({type(datalist)}) должен быть list')
@@ -41,7 +41,7 @@ class Btrx(Bitrix):
 		except Exception as e:
 			raise TypeError(f'{e}')
 
-	def load_from_jsonFile(filename='*.json', path=str()) -> list:
+	def load_from_jsonFile(self,filename:str = "file.json", path: str = str()) -> list:
 		# sleep(2)
 		data_from_file = []
 		if type(filename) != str:
@@ -50,33 +50,32 @@ class Btrx(Bitrix):
 			raise TypeError('тип path должен быть str')
 		try:
 			if (os.path.exists(path)):
-				with open(filename, 'r', encoding='utf-8') as file:
+				with open(path+filename, 'r', encoding='utf-8') as file:
 					data_from_file = json.load(file)
 					print(Style.RESET_ALL + Fore.BLACK + f'\nLoad from {filename}' + Style.RESET_ALL)
 				return list(data_from_file)
 			else:
 				os.mkdir(path)
-			return list(data_from_file)
 		except Exception as e:
-			print(Fore.RED + f'Error in load_from_jsonFile {e}')
-			raise TypeError(f'Error in load_from_jsonFile')
+			raise TypeError(Fore.RED + f'Error in load_from_jsonFile {e}'+ Fore.RESET)
 
 	def get_product_list(self) -> list:
 		"""Load	from btrx24	all	data (id, name,	price, hours)\n
 			hours data in field: ['PROPERTY_213'] => ['value']"""
-		products = []
 		try:
+			products = []
 			products = self.get_all('crm.product.list',
 				params={'select': ['ID', 'NAME', 'PRICE', 'PROPERTY_213']})
 			return list(products)
 		except Exception as e:
 			print(Fore.RED + f'\nGet products error: {e}\n')
-		return list(products)
+		finally:
+			return products
 
 	def get_users_with_innerPhone(self) -> list:
 		users = []
 		try:
-			users = btrx.get_all('user.get',params={
+			users = self.get_all('user.get',params={
 				'select': ['*']
 			})
 			return list(users)
@@ -89,18 +88,18 @@ class Btrx(Bitrix):
 			params = {"ID": id, "fields":{
 				'PRICE': price
 			}}
-			res = btrx.call('crm.product.update',params)
+			res = self.call('crm.product.update',params)
 			print(f'Price {price} for {id} is SET {res}'+Style.RESET_ALL+"\n")
 		except Exception as e:
 			print(e)
 
-	def get_all_data(data: list) -> list:
+	def get_all_data(self,data: list) -> list:
 
 		"""
 		Get all data (id, name, price, hours) with hours
 		"""
 		if (data == None or type(data) != list):
-			raise TypeError(f'expect type of data = list')
+			raise TypeError(f'expect type of data = list.\nNow: {type(data)}')
 		datalist=list()
 		final_data = FinalData()
 		wh = 0
@@ -108,37 +107,22 @@ class Btrx(Bitrix):
 		try:
 			for item in data:
 				id = item['ID']
+				id = check_null(id,item['ID'])
 				name = item['NAME']
+				name = check_null(name,item['NAME'])
 				price = item['PRICE']
 				hour = item['PROPERTY_213']
-				linkNmo = ''
-				url = ''
 
-				if id != '' or id != None:
-					id = item['ID']
-				else:
-					id = None
-				if name == '' or name == None:
-					name = None
-				else:
-					name = item['NAME']
 				if price == '' or price == None:
 					price = None
 				else:
-					price = price = item['PRICE']
+					price = item['PRICE']
 					price = price.replace('.00', '')
+
 				if hour == '' or hour == None:
 					hour = None
 				else:
 					hour = hour.get('value')
-				if linkNmo == '' or linkNmo == None:
-					linkNmo = None
-				else:
-					linkNmo = 'linkNmo'
-				if url == '' or url == None:
-					url = None
-				else:
-					url = 'url'
 
 				final_data.id = id
 				final_data.name = name
@@ -157,7 +141,7 @@ class Btrx(Bitrix):
 			print(Fore.RED + f'get_all_data error {e}')
 			raise TypeError(f'Ошибка в get_all_data. type of data({type(data)}), datalist({type(datalist)}), expect data(list) and datalist(list)' )
 
-	def words_search(words_list=list, name=str, price=str, datalist=list) -> list:
+	def words_search(self, words_list=list, name=str, price=str, datalist=list) -> list:
 		words_data = []
 		find_name_price_count = 0
 		find_word_count = 0
@@ -218,7 +202,7 @@ class Btrx(Bitrix):
 			print(Style.RESET_ALL + f'\nВсего по словам из названия которые есть в др. программах {find_word_count+find_name_price_count},по слову {find_word_count} , по слову и цене {find_name_price_count}.\n')
 		return data_list
 
-	def find_list_compare_words(searched_wrods):
+	def find_list_compare_words(self,searched_wrods):
 		list_one = searched_wrods
 		list_two = searched_wrods
 		print(enumerate(list_one))
@@ -227,7 +211,7 @@ class Btrx(Bitrix):
 			print("list_one=",k)
 		print(f'find wrods compare: {searched_wrods}')
 
-	def check_product(name=str, price=str, datalist=list) -> list:
+	def check_product(self, name: str, price: str, datalist: list):
 		final_data = FinalData()
 		try:
 			if name != None and name != '':
@@ -265,9 +249,7 @@ class Btrx(Bitrix):
 						final_data.name = data_list['name']
 						final_data.price = data_list['price']
 						k_name = final_data.name.lower()
-
 						if name.lower() in k_name and price == final_data.price and price != '':
-
 							try:
 								if count_name_price == 1 and price != '':
 									if name.lower() == k_name:
@@ -280,7 +262,7 @@ class Btrx(Bitrix):
 										found_data_by_name_price.append(datalist[i])
 								else:
 									print(Back.LIGHTMAGENTA_EX + Fore.BLACK + Style.DIM +
-										f'\n=====\nПо названию {name} и цене {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
+										f'\n=====\nПо названию {name} цена по поиску {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
 									found_data_by_name_price.append(datalist[i])
 							except:
 								print(Fore.RED + 'Ошибка при поиске названия и цены')
@@ -309,22 +291,29 @@ class Btrx(Bitrix):
 					for data in found_data_by_name_price:
 						count_fdbnp = count_fdbnp + 1
 					if count_fdbnp == 1:
-						return found_data_by_name_price[0]
+						print(Fore.YELLOW+f'{found_data_by_name_price}'+Fore.RESET)
+						return found_data_by_name_price
 					else:
 						print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
-						\n(или содержания слова в названии и цена)")
-						for data in found_data_by_name_price:
-							print(Fore.YELLOW+f'{data}'+Fore.RESET)
-							if name.lower() in data['name'].lower():
-								if name.lower() in data['name'].lower():
-									if price == data['price'].lower():
-										return found_data_by_name_price[0]
+						\n(или содержания слова в названии и цена)\n")
+						similar_list = []
+						for i,dta in enumerate(found_data_by_name_price):
+							data = dict(json.loads(dta))
+							if name.lower() == data['name'].lower() and price in data['price']:
+								print("\n"+Fore.GREEN+f'{i+1} {data}'+Fore.RESET+"\n")
+								similar_list.append(data)
+							else:
+								print(Fore.YELLOW+f'{i+1} {data}'+Fore.RESET+"\n")
+						if similar_list != []:
+							return similar_list
+						else:
+							return found_data_by_name_price
 				elif found_data_by_name != []:
 					count_dbn = 0
 					for data in found_data_by_name:
 						count_dbn = count_dbn + 1
 					if count_dbn == 1:
-						return found_data_by_name[0]
+						return found_data_by_name
 					else:
 						list_by_name = []
 						print(f"Найдено {count_dbn} программ с одинаковым названием\
@@ -335,10 +324,9 @@ class Btrx(Bitrix):
 							count_by_name = count_by_name + 1
 						if count_by_name != 0:
 							for data in found_data_by_name:
-								# final_data here. i think...
+								final_data = FinalData()
 								json_data=json.loads(data)
 								print(Fore.LIGHTYELLOW_EX+f'\n{json_data}'+Fore.RESET)
-
 								final_data.id = json_data['id']
 								final_data.spec = json_data['spec']
 								final_data.name = json_data['name']
@@ -346,24 +334,17 @@ class Btrx(Bitrix):
 								final_data.hour = json_data['hour']
 								final_data.linkNmo = json_data['linkNmo']
 								final_data.url = json_data['url']
-								list_by_name.append(final_data)
-							count_list_data_by_name = 0
-							for data in list_by_name:
-								count_list_data_by_name = count_list_data_by_name + 1
-							if count_list_data_by_name == 1:
-								return final_data.json()
-							else:
-								return list_by_name
+								list_by_name.append(final_data.dict())
+							return list_by_name
 				else:
 					print('Not found')
 					return None
 			else:
 				print(Fore.RED+f'Проверьте правильность введенных данных. Скорее всего имя не ЗАДАНО (это текст исключения на пустоту переменной "name": {type(name)}={name})')
-
 		except Exception as e:
 			print(Fore.RED+f'{e}')
 
-	def makefileWdateName() -> str:
+	def makefileWdateName(self) -> tuple:
 		"""
 		[0] = str(fileNameWithPath)
 		[1] = str(filename)
@@ -378,10 +359,14 @@ class Btrx(Bitrix):
 		filenameWcurDate = f"{path}\\{filename}"
 		return str(filenameWcurDate), str(filename), path
 
+def check_null(variable, iter):
+	if variable != '' or variable != None:
+		variable = iter
+	else:
+		variable = None
+	return variable
+
 if __name__ == '__main__':
 		btrx = Btrx()
 		data = []
-		print(btrx.get_product_list())
-		# data = []
-		# data = load_from_jsonFile(makefileWdateName()[0], makefileWdateName()[2])
-		# check_product('Онкология','3000', get_all_data(data))
+		print(btrx.check_product('Онкология','39', btrx.get_all_data(btrx.get_product_list())))
