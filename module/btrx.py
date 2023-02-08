@@ -18,10 +18,10 @@ class Btrx(Bitrix):
 		super().__init__(webhook=self.webhook,respect_velocity_policy=False)
 	COUNT_PROGRAMS = 0
 
-	def save_to_json(datalist:list, filename: str, path: str) -> list:
+	def save_to_json(self, datalist:list, filename: str, path: str) -> list:
 		data = []
 		if datalist == None or type(datalist) != list:
-			raise TypeError(f'тип datalist({type(datalist)}) должен быть list')
+			raise TypeError(f'тип datalist({type(datalist)}) должен быть {list}')
 		elif filename == None or type(filename) != str:
 			raise TypeError(f'тип filename({type(filename)}) должен быть str')
 		elif path == None or type(path) != str:
@@ -50,7 +50,8 @@ class Btrx(Bitrix):
 			raise TypeError('тип path должен быть str')
 		try:
 			if (os.path.exists(path)):
-				with open(path+filename, 'r', encoding='utf-8') as file:
+				print(f"current path: {path}")
+				with open(os.getcwd()+"\\"+path+"\\"+filename, 'r', encoding='utf-8') as file:
 					data_from_file = json.load(file)
 					print(Style.RESET_ALL + Fore.BLACK + f'\nLoad from {filename}' + Style.RESET_ALL)
 				return list(data_from_file)
@@ -184,16 +185,9 @@ class Btrx(Bitrix):
 									return 'ошибка'
 
 							else:
-
 								if word in k_name:
-
 									try:
-										# print('find_all_count (word in k_name)',find_all_count)
-										# print(Style.RESET_ALL+f'Current word: {word} and program in search: {datalist[name_price]}')
-										# print(Fore.LIGHTYELLOW_EX + f'\nпо слову {word}:',
-										# 	datalist[find_all_count], '\n' + Fore.RESET + Style.RESET_ALL)
 										find_word_count = find_word_count + 1
-
 									except Exception as e:
 										print(Fore.RED + f'ошибка {e}')
 										return 'ошибка'
@@ -255,15 +249,15 @@ class Btrx(Bitrix):
 									if name.lower() == k_name:
 										print("\n"+Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
 											f'=====\nПо названию {name} и цене {price}:\n{datalist[i]}\n====='+Style.RESET_ALL+"\n")
-										found_data_by_name_price.append(datalist[i])
+										found_data_by_name_price.append(json.loads(datalist[i]))
 									else:
 										print("\n"+Back.CYAN + Fore.BLACK + Style.DIM +
 											f'=====\nПо содержанию названия {name} и цене {price}:\n{datalist[i]}\n====='+Style.RESET_ALL+"\n")
-										found_data_by_name_price.append(datalist[i])
+										found_data_by_name_price.append(json.loads(datalist[i]))
 								else:
 									print(Back.LIGHTMAGENTA_EX + Fore.BLACK + Style.DIM +
 										f'\n=====\nПо названию {name} цена по поиску {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
-									found_data_by_name_price.append(datalist[i])
+									found_data_by_name_price.append(json.loads(datalist[i]))
 							except:
 								print(Fore.RED + 'Ошибка при поиске названия и цены')
 
@@ -274,11 +268,11 @@ class Btrx(Bitrix):
 
 									if count_name == 1:
 										print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"')
-										found_data_by_name.append(datalist[i])
+										found_data_by_name.append(json.loads(datalist[i]))
 									else:
 										v_j=json.loads(v)
 										print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v_j["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{v_j["name"]}|{v_j["hour"]}|{v_j["price"]}"')
-										found_data_by_name.append(datalist[i])
+										found_data_by_name.append(json.loads(datalist[i]))
 								except Exception as e:
 									print(Fore.RED + 'Ошибка при поиске названия\n'+Fore.RED+f'{e}')
 
@@ -298,7 +292,7 @@ class Btrx(Bitrix):
 						\n(или содержания слова в названии и цена)\n")
 						similar_list = []
 						for i,dta in enumerate(found_data_by_name_price):
-							data = dict(json.loads(dta))
+							data = dict(dta)
 							if name.lower() == data['name'].lower() and price in data['price']:
 								print("\n"+Fore.GREEN+f'{i+1} {data}'+Fore.RESET+"\n")
 								similar_list.append(data)
@@ -325,7 +319,7 @@ class Btrx(Bitrix):
 						if count_by_name != 0:
 							for data in found_data_by_name:
 								final_data = FinalData()
-								json_data=json.loads(data)
+								json_data=data
 								print(Fore.LIGHTYELLOW_EX+f'\n{json_data}'+Fore.RESET)
 								final_data.id = json_data['id']
 								final_data.spec = json_data['spec']

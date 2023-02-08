@@ -44,7 +44,7 @@ def searchInSite(search_key: str ='Онкология') -> int|list:
 	)
 	return int(count_word_programm), list(item_list)
 
-def getProgramUrl(search_key:str='Онкология',price: str ='6400'):
+def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list:
 	find_url_list = []
 	start = time()
 	if type(price) != str:
@@ -82,8 +82,7 @@ def getProgramUrl(search_key:str='Онкология',price: str ='6400'):
 						# count_find_url = count_find_url + 1
 	else:
 		print('Url not found')
-
-	if count_find_url == 1:
+	if count_find_url == 1 and count_find_url != None:
 		for i,data in enumerate(find_url_list):
 				if search_key.lower() in data['name'].lower():
 					if price == data['price']:

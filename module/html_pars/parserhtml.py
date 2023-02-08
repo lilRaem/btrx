@@ -61,11 +61,11 @@ def bs4pars():
 			'url': el.find('a','button').get('href')
 		}
 		pars_list.append(pars_dict)
-	print(pars_list)
+	# print(pars_list)
 	with open(f'{os.getcwd()}/module/html/templates/data.json','w',encoding='utf-8') as fp:
 		json.dump(pars_list,fp,ensure_ascii=False,indent=4)
 
-def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-sudebnyij-ekspert-ekspert-biohimik-ekspert-genetik-ekspert-himik/",price: str='49800'):
+def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price: str='99000'):
 	start = time()
 	headers = {
     'Access-Control-Allow-Origin': '*',
@@ -81,17 +81,35 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie-nemedi
 
 	final_data.name = soup.find('h1','main-title').text
 	final_data.hour = soup.find('div','items-box-block__element-type-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
-	final_data.price = soup.find('div','course-info-block__action-buy-price').findChildren('span')[0].text.strip()
+	_price = soup.find('div','course-info-block__action-buy-price').findChildren('span')
+	if _price != []:
+		for i,d in enumerate(_price):
+			if d.get("class") != None and d.get("class")[i] == "old-price":
+				pass
+			else:
+				if price == d.text:
+					final_data.price = d.text
+					print(f"Price with oldprice: {final_data.price}")
+	else:
+		try:
+			final_data,price = soup.find('div','course-info-block__action-buy-price').findChildren('span')[0].text.strip()
+			print(f"(try) Price without oldprice: {final_data.price}")
+		except:
+			final_data.price = price
+			print(f"(except) Price without oldprice: {final_data.price}")
 	final_data.url = parseurl
-
+	# print(final_data.price)
 	count = 0
 	if final_data.price == price:
 		site_data_list.append(json.loads(final_data.json(ensure_ascii=False)))
 		print(site_data_list[0]['price'])
 	else:
-		final_data.hour = None
-		final_data.price = None
-		final_data.url = None
+		# final_data.hour = None
+		# final_data.price = None
+		# final_data.url = None
+		if final_data.price:
+			if "₽" in final_data.price:
+				final_data.price = final_data.price.replace("₽","").strip()
 		site_data_list.append(json.loads(final_data.json(ensure_ascii=False)))
 	for data in site_data_list:
 		count = count + 1
@@ -101,7 +119,7 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie-nemedi
 	else:
 		print('fail parse too many programs')
 		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count > 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
-		print(site_data_list[0])
+		# print(site_data_list[0])
 		return site_data_list
 
 def main():
@@ -110,4 +128,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	print(parseSiteUrl())
+	print(parseSiteUrl(price='0'))
