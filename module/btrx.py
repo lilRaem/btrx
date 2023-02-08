@@ -361,6 +361,6 @@ def check_null(variable, iter):
 	return variable
 
 if __name__ == '__main__':
-		btrx = Btrx()
-		data = []
-		print(btrx.check_product('Онкология','39', btrx.get_all_data(btrx.get_product_list())))
+	btrx = Btrx()
+	data = []
+	print(btrx.check_product('Онкология','39', btrx.get_all_data(btrx.get_product_list())))
