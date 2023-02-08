@@ -85,7 +85,7 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	if _price != []:
 		for i,d in enumerate(_price):
 			if d.get("class") != None and d.get("class")[i] == "old-price":
-				pass
+				print(f"Price with oldprice in site: {d.get('class')[i]}")
 			else:
 				if price == d.text:
 					final_data.price = d.text
