@@ -4,8 +4,8 @@
 
 # TODO
 
-- [ ] Сделать поиск по фильтру на сайте 
-  
+- [ ] Сделать поиск по фильтру на сайте
+
       `https://apkipp.ru/katalog/ajax/filter/` и  `https://apkipp.ru/katalog/ajax/`
 
 # TODO что необходимо во время работы
@@ -31,11 +31,11 @@
 
 # TODO Сделать тесты:
 
-- [ ] main.py
-- [ ] parserdocx.py
+- [?] main.py
+- [?] parserdocx.py
 - [x] btrx.py (можно доработать очень маленькое покрытие)
 - [ ] parserdocx2table.py
-- [ ] parserhtml.py
+- [x] parserhtml.py
 
 # TODO Что минимально нужно чтобы получить id товара?
 

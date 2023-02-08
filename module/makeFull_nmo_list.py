@@ -6,13 +6,14 @@ from time import sleep
 
 from colorama import Fore,Back,Style
 
-from btrx import set_product_price
+from btrx import Btrx
 from parsersearchsite import searchInSite,getProgramUrl
 temp_price = ""
 
 def loadJsonfile():
 	with open(f'{os.getcwd()}\\data\\json\\program_СПО.json','r',encoding='utf-8') as file:
 		programNMP = json.load(file)
+
 	today = date.today()
 	cur_date = today.strftime("%d.%m.%Y")
 	filename = f'{cur_date}_file.json'
@@ -85,6 +86,7 @@ def funcfind(program,name,hour):
 	global temp_price
 	count_program = 0
 	temp_id = ""
+	btrx = Btrx()
 	for i,data in enumerate(program):
 		if data['PROPERTY_213'] != None:
 			if name.lower() in data['NAME'].lower() and hour in data['PROPERTY_213']['value']:
@@ -101,11 +103,11 @@ def funcfind(program,name,hour):
 		id = temp_id
 		print(Back.LIGHTMAGENTA_EX)
 		# price = input(Back.RESET + Fore.RESET + Style.DIM + Fore.BLACK + Back.LIGHTMAGENTA_EX +'\nPrice: ')
-		set_product_price(id=id,price=temp_price)
+		btrx.set_product_price(id=id,price=temp_price)
 	if count_program >= 2:
 		id = input('id: ')
 		price = temp_price
-		set_product_price(id=id,price=price)
+		btrx.set_product_price(id=id,price=price)
 
 def funcfind_f(program,f,name,hour):
 	global temp_price

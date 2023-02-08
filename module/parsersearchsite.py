@@ -5,7 +5,7 @@ from colorama import Fore,Back,Style
 try:
 	from config import FinalData
 except:
-	from module.config import FinalData
+	from module import config
 import requests
 import json
 
@@ -16,10 +16,10 @@ except:
 
 link = 'https://apkipp.ru'
 
-def searchInSite(search_key='Онкология'):
+def searchInSite(search_key: str ='Онкология') -> int|list:
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 
-	url = f'{link}/api/v1/search/?search={search_key}'
+	url = f'{link}/api/v1/search/?search={search_key}&as_phrase=true'
 	# 'https://apkipp.ru/poisk/?search={data}'
 	headers = {
 		'User-Agent':
@@ -28,43 +28,43 @@ def searchInSite(search_key='Онкология'):
 
 	data = requests.get(url, headers=headers)
 	jdata = data.json()
-	dict = {}
 
 	with open('data/json/site_search.json', 'w', encoding='utf-8') as f:
 		json.dump(jdata['course_list'],f, ensure_ascii=False, indent=4)
 	count = 0
 	count_word_programm = 0
+	item_list = []
 	for k in jdata['course_list']:
 		if search_key.lower() in k['name'].lower():
+			item_list.append(k)
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
 		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова "{search_key}" в программе: {count_word_programm}\n'
 	)
-	return count_word_programm
+	return int(count_word_programm), list(item_list)
 
-def getProgramUrl(search_key='Онкология',price='6400'):
+def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list:
 	find_url_list = []
 	start = time()
-	final_data = FinalData()
+	if type(price) != str:
+		raise TypeError(f"price type == str, now: {type(price)}")
 	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
 		local_data = json.load(f)
 	for k, v in enumerate(local_data):
+		try:
+			final_data = config.FinalData()
+		except:
+			final_data = FinalData()
 		final_data.name = v['name']
 		final_data.price = price
 		if search_key.lower() in final_data.name.lower():
 			final_data.url = v['url']
 			main_url = link + final_data.url
-			pSiteUrl = phtml.parseSiteUrl(main_url,price)
-			if pSiteUrl != None:
-				find_url_list.append(pSiteUrl)
+			pSiteUrl = phtml.parseSiteUrl(main_url,final_data.price)
+			for data in pSiteUrl:
+				find_url_list.append(data)
 				# print(Fore.GREEN+f'{pSiteUrl}'+Style.RESET_ALL)
-			else:
-				find_url_list.append(pSiteUrl)
-				print(f"\
-				{Fore.LIGHTWHITE_EX+final_data.url+' '+Fore.RESET+Fore.LIGHTBLACK_EX}\n\
-				[{str(k+1)}] {link}{final_data.url}"+Fore.RESET)
-
 	if find_url_list != []:
 		count_find_url = 0
 		count_find_by_word = 0
@@ -73,33 +73,26 @@ def getProgramUrl(search_key='Онкология',price='6400'):
 		else:
 			for d in find_url_list:
 				count_find_by_word = count_find_by_word + 1
-			print(f'Найдено {count_find_by_word} страниц с названием: {search_key}')
+			print(f'1. Найдено {count_find_by_word} страниц с названием: {search_key}')
 			for i,data in enumerate(find_url_list):
 				if search_key.lower() in data['name'].lower():
+					count_find_url = count_find_url + 1
 					if final_data.price == data['price']:
 						print("\n"+Fore.CYAN+f'{find_url_list[i]}'+Fore.RESET)
-						count_find_url = count_find_url + 1
-				else:
-					print(f'Найденно {count_find_url} страниц:\n{find_url_list}')
-					return find_url_list
+						# count_find_url = count_find_url + 1
 	else:
 		print('Url not found')
-
-	if count_find_url == 1:
+	if count_find_url == 1 and count_find_url != None:
 		for i,data in enumerate(find_url_list):
-
 				if search_key.lower() in data['name'].lower():
-
 					if price == data['price']:
-						print(f'Найдена {count_find_url} страница:\n{data["name"]}|{data["hour"]}|{data["price"]}')
-						return find_url_list[i]
+						print(f'3. Найдена {count_find_url} страница:\n{data["name"]}|{data["hour"]}|{data["price"]}')
+						return find_url_list
 	else:
-		print(f'Найдено {count_find_url} страниц:\n{find_url_list}')
-		if count_find_url == 0:
-			return find_url_list
-		else:
-			return json.loads(find_url_list)
-if __name__ == "__main__":
+		print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
+		return find_url_list
 
-	searchInSite('Онкология')
-	print(getProgramUrl('Онкология','3000'))
+if __name__ == "__main__":
+	# for v in searchInSite('Онкология')[1]:
+	# 	print(dict(v)['name'])
+	getProgramUrl(search_key="Онкология",price="19600")

@@ -4,49 +4,48 @@ import json
 from module.config import FinalData
 from colorama import Fore, Back, Style
 from datetime import date
-from pydantic import BaseModel, validator , StrictStr ,Field
-from typing import Optional
-from module.btrx import (get_all_data, check_product, get_product_list,load_from_jsonFile, save_to_json)
-from module.build_btrx_data import buildjsondata
+from module.btrx import Btrx
+# from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
-'''
+"""
+#TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
+[ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
+[ ] ошибка При поиске несуществующей программы final_data.id = json_check_data['id'] TypeError: list indices must be integers or slices, not str line 80
+"""
 
-'''
-
-
-def makefileWdateName() -> str:
+def makefileWdateName(path:str) -> str:
 	"""
 	[0] = str(fileNameWithPath)
 	[1] = str(filename)
 
 	Returns:
-		tuple: [fileNameWithPath,filename]
+		tuple(fileNameWithPath,filename)
 	"""
 	today = date.today()
 	cur_date = today.strftime("%d.%m.%Y")
 	filename = f'{cur_date}_file.json'
-	path = os.getcwd() + "\\data\\json\\btrx_data"
-	filenameWcurDate = f"{path}\\{filename}"
-	return str(filenameWcurDate), str(filename)
+	filenameWcurDate = f"{filename}"
+	return str(path+"\\"+filenameWcurDate), str(filename)
 
 
 datalist = []
 
 
-def main(search_name='Ультразвуковая диагностика', search_price='99000'):
+def main(search_name='Онкология', search_price='6400'):
 	start = time()
+	btrx = Btrx()
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', '')
 	search_name = search_name.replace('  ', ' ')
 	# name = input('Введите название программы: ')
-	path = os.getcwd() + "\\data\\json\\btrx_data"
+	path = "data\\json\\btrx_data"
 	final_data = FinalData()
-	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName()[0]),
-		makefileWdateName()[0] + Back.RESET)
-	if (os.path.exists(makefileWdateName()[0])):
-		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_data = check_product(search_name, search_price, get_all_data(data))
-		json_check_data=json.loads(check_data)
+	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName(path)[0]),
+		makefileWdateName(path)[0] + Back.RESET)
+	if (os.path.exists(makefileWdateName(path)[0])):
+		data = btrx.load_from_jsonFile(makefileWdateName(path)[1], path)
+		check_data = btrx.check_product(search_name, search_price, btrx.get_all_data(data))
+		json_check_data=check_data
 		searchInSite(search_name)
 		count_check_data = 0
 		if check_data != None:
@@ -56,31 +55,48 @@ def main(search_name='Ультразвуковая диагностика', sear
 			print('item not exist')
 		if check_data != None and count_check_data == 1:
 			progUrl_data = getProgramUrl(search_name, search_price)
-			final_data.id = json_check_data['id']
-			final_data.name = json_check_data['name']
-			final_data.price = json_check_data['price']
-			final_data.hour = json_check_data['hour']
-			final_data.linkNmo = json_check_data['linkNmo']
-			final_data.url = progUrl_data['url']
+			count_getProgramUrl = 0
+			# for d in progUrl_data:
+			# 	count_getProgramUrl += 1
+
+			print(f"Length of url_list: {progUrl_data.__len__()}")
+			for i,_final_data in enumerate(json_check_data):
+				final_data = FinalData()
+				final_data.id = _final_data['id']
+				final_data.name = _final_data['name']
+				final_data.price = _final_data['price']
+				final_data.hour = _final_data['hour']
+				final_data.linkNmo = _final_data['linkNmo']
+				if count_getProgramUrl == 1:
+					final_data.url = progUrl_data[0]['url']
+				else:
+					for d in progUrl_data:
+						if final_data.name.lower() == d['name'].replace("Курс ","").lower():
+							if final_data.price == d['price']:
+								final_data.url = d['url']
 			print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
 		else:
 			if check_data != None:
-				final_data.id = json_check_data['id']
-				final_data.name = json_check_data['name']
-				final_data.price = json_check_data['price']
-				final_data.linkNmo = json_check_data['linkNmo']
-				progUrl_data = getProgramUrl(final_data.name, final_data.price)
-				json_progUrl_data = progUrl_data
-				final_data.url = json_progUrl_data['url']
-				try:
-					final_data.hour = json_check_data['hour']
-				except:
-					final_data.hour = json_progUrl_data['hour']
-				print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}' + Fore.RESET)
+				for iter_data, val_data in enumerate(json_check_data):
+					final_data.id = json_check_data[iter_data]['id']
+					final_data.name = json_check_data[iter_data]['name']
+					final_data.price = json_check_data[iter_data]['price']
+					final_data.linkNmo = json_check_data[iter_data]['linkNmo']
+					progUrl_data = getProgramUrl(final_data.name, final_data.price)
+					json_progUrl_data = progUrl_data
+					for i,v  in enumerate(json_progUrl_data):
+						if v['price']:
+							final_data.url = v['url']
+							print(v['name'],v['price'],v['url'])
+					try:
+						final_data.hour = json_check_data[iter_data]['hour']
+					except:
+						final_data.hour = json_progUrl_data['hour']
+					print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}' + Fore.RESET)
 	else:
-		save_to_json(get_product_list(), makefileWdateName()[1], path)
-		data = load_from_jsonFile(makefileWdateName()[0], path)
-		check_product(search_name, final_data.price, get_all_data(data))
+		btrx.save_to_json(btrx.get_product_list(), makefileWdateName(path)[1], path)
+		data = btrx.load_from_jsonFile(makefileWdateName(path)[1],path)
+		btrx.check_product(search_name, final_data.price, btrx.get_all_data(data))
 	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {round(time()-start,2)} sec"+ Fore.RESET)
 
 if __name__ == "__main__":
