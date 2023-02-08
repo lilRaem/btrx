@@ -84,7 +84,10 @@ def main(search_name='Онкология', search_price='6400'):
 					final_data.linkNmo = json_check_data[iter_data]['linkNmo']
 					progUrl_data = getProgramUrl(final_data.name, final_data.price)
 					json_progUrl_data = progUrl_data
-					final_data.url = json_progUrl_data['url']
+					for i,v  in enumerate(json_progUrl_data):
+						if v['price']:
+							final_data.url = v['url']
+							print(v['name'],v['price'],v['url'])
 					try:
 						final_data.hour = json_check_data[iter_data]['hour']
 					except:

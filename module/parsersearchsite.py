@@ -61,7 +61,7 @@ def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> lis
 		if search_key.lower() in final_data.name.lower():
 			final_data.url = v['url']
 			main_url = link + final_data.url
-			pSiteUrl = phtml.parseSiteUrl(main_url,price)
+			pSiteUrl = phtml.parseSiteUrl(main_url,final_data.price)
 			for data in pSiteUrl:
 				find_url_list.append(data)
 				# print(Fore.GREEN+f'{pSiteUrl}'+Style.RESET_ALL)
