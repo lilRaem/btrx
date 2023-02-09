@@ -16,7 +16,7 @@ from module.parsersearchsite import searchInSite, getProgramUrl
 datalist = []
 
 
-def main(search_name='Онкология', search_price='9800'):
+def main(search_name='Онкология', search_price='0'):
 	fdata = []
 	start = time()
 	btrx = Btrx()
