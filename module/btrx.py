@@ -259,7 +259,7 @@ class Btrx(Bitrix):
 										f'\n=====\nПо названию {name} цена по поиску {price}: {datalist[i]}\n====='+Style.RESET_ALL+"\n")
 									found_data_by_name_price.append(json.loads(datalist[i]))
 							except:
-								print(Fore.RED + 'Ошибка при поиске названия и цены')
+								print(Fore.RED + '1. Ошибка при поиске названия и цены')
 
 						else:
 							if name.lower() in k_name:
@@ -267,14 +267,15 @@ class Btrx(Bitrix):
 									# print(Style.RESET_ALL + Fore.LIGHTBLACK_EX + f'[{Back.GREEN + v["id"] + Back.RESET}] "{k_name}"\n')
 
 									if count_name == 1:
-										print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v["id"] + Back.RESET}]' + f' {Fore.RESET}"{k_name}"')
+										v_j=json.loads(v)
+										print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + v_j["id"] + Back.RESET}]' + f' {Fore.RESET}{v_j["name"]}|{v_j["hour"]}|{v_j["price"]}')
 										found_data_by_name.append(json.loads(datalist[i]))
 									else:
 										v_j=json.loads(v)
 										print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + v_j["id"] + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{v_j["name"]}|{v_j["hour"]}|{v_j["price"]}"')
 										found_data_by_name.append(json.loads(datalist[i]))
 								except Exception as e:
-									print(Fore.RED + 'Ошибка при поиске названия\n'+Fore.RED+f'{e}')
+									print(Fore.RED + '2. Ошибка при поиске названия\n'+Fore.RED+f'{e}')
 
 				except Exception as e:
 					print(e)
