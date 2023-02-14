@@ -44,7 +44,7 @@ def searchInSite(search_key: str ='Онкология') -> int|list:
 	)
 	return int(count_word_programm), list(item_list)
 
-def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list:
+def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list[dict]:
 	find_url_list = []
 	start = time()
 	if type(price) != str:

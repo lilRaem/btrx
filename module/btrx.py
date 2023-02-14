@@ -154,7 +154,6 @@ class Btrx(Bitrix):
 
 				if char_count != 1:
 					find_all_count = 0
-
 					for k in datalist:
 						k_name = k['name']
 						k_price = k['price']
@@ -205,7 +204,7 @@ class Btrx(Bitrix):
 			print("list_one=",k)
 		print(f'find wrods compare: {searched_wrods}')
 
-	def check_product(self, name: str, price: str, datalist: list):
+	def check_product(self, name: str, price: str, datalist: list[dict]):
 		final_data = FinalData()
 		try:
 			if name != None and name != '':
