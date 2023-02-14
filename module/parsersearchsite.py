@@ -44,7 +44,7 @@ def searchInSite(search_key: str ='Онкология') -> int|list:
 	)
 	return int(count_word_programm), list(item_list)
 
-def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list:
+def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list[dict]:
 	find_url_list = []
 	start = time()
 	if type(price) != str:
@@ -78,6 +78,8 @@ def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> lis
 				if search_key.lower() in data['name'].lower():
 					count_find_url = count_find_url + 1
 					if final_data.price == data['price']:
+						print("\n"+Fore.LIGHTCYAN_EX+f'{find_url_list[i]}'+Fore.RESET)
+					else:
 						print("\n"+Fore.CYAN+f'{find_url_list[i]}'+Fore.RESET)
 						# count_find_url = count_find_url + 1
 	else:
@@ -89,7 +91,8 @@ def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> lis
 						print(f'3. Найдена {count_find_url} страница:\n{data["name"]}|{data["hour"]}|{data["price"]}')
 						return find_url_list
 	else:
-		print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
+		if count_find_url < 3:
+			print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
 		return find_url_list
 
 if __name__ == "__main__":
