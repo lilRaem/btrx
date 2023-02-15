@@ -1,35 +1,21 @@
 from time import time
-from typing import Optional
 from colorama import Fore,Back,Style
-from pydantic import BaseModel, StrictStr
 from bs4 import BeautifulSoup
 import requests
 import os, json
-# try:
-# 	from module.config import FinalData
-# except:
-# 	from config import FinalData
-from typing import Optional
-from pydantic import BaseModel, StrictStr
-
-class FinalData(BaseModel):
-	id: Optional[StrictStr] = None
-	spec: Optional[StrictStr] = None
-	name: Optional[StrictStr] = None
-	price: Optional[StrictStr] = None
-	hour: Optional[StrictStr] = None
-	nmoSpec: Optional[StrictStr] = None
-	linkNmo: Optional[StrictStr] = None
-	url: Optional[StrictStr] = None
+try:
+	from module.config import FinalData, ParseSiteConfig
+except:
+	from config import FinalData, ParseSiteConfig
 
 def bs4pars():
 	with open(f"{os.getcwd()}\\module\\html\\templates\\source\\pp_spo.html",'r',encoding='utf-8') as f:
 		html = f.read()
-
+	bs4conf = ParseSiteConfig()
 	soup = BeautifulSoup(html,'lxml')
 	pars_list = []
 	pars_dict = {}
-	for el in soup.find_all(class_='courses-block'):
+	for el in soup.find_all(class_=f'{bs4conf.soupMainBlock}'):
 		print(el.find('p','headtext').text)
 		if el.find('p','headtext').text != '':
 			prog_special = el.find('p','headtext').text.strip()
@@ -67,21 +53,16 @@ def bs4pars():
 
 def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price: str='99000'):
 	start = time()
-	headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Max-Age': '3600',
-    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/51.0'
-    }
+	psUrlconf = ParseSiteConfig()
+	headers = psUrlconf.headers
 	final_data = FinalData()
 	site_data_list = []
 	req = requests.get(parseurl, headers,timeout=None)
 	soup = BeautifulSoup(req.content,'lxml')
 
-	final_data.name = soup.find('h1','main-title').text
-	final_data.hour = soup.find('div','items-box-block__element-type-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
-	_price = soup.find('div','course-info-block__action-buy-price').findChildren('span')
+	final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
+	final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
+	_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
 	if _price != []:
 		for i,d in enumerate(_price):
 			if d.get("class") != None and d.get("class")[i] == "old-price":
@@ -92,7 +73,7 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 					print(f"Price with oldprice: {final_data.price}")
 	else:
 		try:
-			final_data,price = soup.find('div','course-info-block__action-buy-price').findChildren('span')[0].text.strip()
+			final_data,price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.strip()
 			print(f"(try) Price without oldprice: {final_data.price}")
 		except:
 			final_data.price = price

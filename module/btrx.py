@@ -1,20 +1,17 @@
 from datetime import date
 import json, os
-from typing import Optional
-from pydantic import BaseModel, StrictStr
 from fast_bitrix24 import Bitrix
 from colorama import Fore, Back, Style
 try:
-	from config import FinalData
+	from module.config import FinalData, BtrxConfig
 except:
-	from module.config import FinalData
-
+	from config import FinalData, BtrxConfig
 
 # webhook = 'https://b24-vejk6x.bitrix24.ru/rest/1/di28gta836z3xn50/'
 # btrx = Bitrix(webhook=webhook,respect_velocity_policy=False)
 class Btrx(Bitrix):
 	def __init__(self):
-		self.webhook = 'https://b24-vejk6x.bitrix24.ru/rest/1/di28gta836z3xn50/'
+		self.webhook = f'https://b24-vejk6x.bitrix24.ru/rest/1/{BtrxConfig.id}/'
 		super().__init__(webhook=self.webhook,respect_velocity_policy=False)
 	COUNT_PROGRAMS = 0
 
@@ -143,6 +140,7 @@ class Btrx(Bitrix):
 			raise TypeError(f'Ошибка в get_all_data. type of data({type(data)}), datalist({type(datalist)}), expect data(list) and datalist(list)' )
 
 	def words_search(self, words_list=list, name=str, price=str, datalist=list) -> list:
+
 		words_data = []
 		find_name_price_count = 0
 		find_word_count = 0
@@ -337,21 +335,6 @@ class Btrx(Bitrix):
 				print(Fore.RED+f'Проверьте правильность введенных данных. Скорее всего имя не ЗАДАНО (это текст исключения на пустоту переменной "name": {type(name)}={name})')
 		except Exception as e:
 			print(Fore.RED+f'{e}')
-
-	def makefileWdateName(self) -> tuple:
-		"""
-		[0] = str(fileNameWithPath)
-		[1] = str(filename)
-
-		Returns:
-			tuple: [fileNameWithPath,filename]
-		"""
-		today = date.today()
-		cur_date = today.strftime("%d.%m.%Y")
-		filename = f'{cur_date}_file.json'
-		path = os.getcwd() + "\\data\\json\\btrx_data"
-		filenameWcurDate = f"{path}\\{filename}"
-		return str(filenameWcurDate), str(filename), path
 
 def check_null(variable, iter):
 	if variable != '' or variable != None:
