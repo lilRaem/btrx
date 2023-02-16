@@ -1,34 +1,21 @@
+import json,os
 from datetime import datetime
-import re
 from colorama import Fore,Back,Style
 from time import sleep
 from btrx import btrx
-from pydantic import BaseModel,StrictInt,StrictStr,StrictBool
-from typing import Optional
-import json,os
+try:
+	from module.config import UserInnerPhoneData,UserEmailData,LastCheckDatetimeData,UserData
+except:
+	from config import UserInnerPhoneData,UserEmailData,LastCheckDatetimeData,UserData
+
+
 loop_while = False
 clear = lambda: os.system('cls')
-
-class UserInnerPhoneData(BaseModel):
-	inner_phone: Optional[StrictInt] = None
-	zdr_phone: Optional[StrictStr] = None
-	password: Optional[StrictStr] = None
-class UserEmailData(BaseModel):
-	email: Optional[StrictStr] = None
-	password: Optional[StrictStr] = None
-class LastCheckDatetimeData(BaseModel):
-	date: Optional[StrictStr] = None
-	time: Optional[StrictStr] = None
 
 def workwithdata():
 	"""
 		Build main data [list] of Pydantic {dict}
 	"""
-
-	"Data to append for main Pydantic Data() class"
-	user_inner_phone_data = UserInnerPhoneData()
-	user_email_data = UserEmailData()
-	last_check_datetime_data = LastCheckDatetimeData()
 
 	if os.path.exists('data/json/btrx_data/companyusers.json'):
 		print('path data/json/btrx_data/companyusers.json exists')
@@ -37,6 +24,9 @@ def workwithdata():
 		main_js_data_list = []
 		user_count = 1
 		for data in json_data:
+			user_inner_phone_data = UserInnerPhoneData()
+			user_email_data = UserEmailData()
+			last_check_datetime_data = LastCheckDatetimeData()
 			# print(f"{data['NAME']} {data['LAST_NAME']} \ {data['UF_PHONE_INNER']}")
 			# print(user_count,user,id,workposit)
 			now = datetime.now()
@@ -47,22 +37,17 @@ def workwithdata():
 			last_check_datetime_data.date = last_date
 			last_check_datetime_data.time = last_time
 
-			"Main Pydantic Data() model class"
-			class Data(BaseModel):
-				id: Optional[StrictInt] = None
-				name: Optional[StrictStr] = None
-				email: dict = user_email_data.dict()
-				department: Optional[StrictStr] = None
-				position: Optional[StrictStr] = None
-				inner_phone: dict = user_inner_phone_data.dict()
-				is_active: Optional[StrictBool] = None
-				last_check_datetime: dict = last_check_datetime_data.dict()
-			js_data = Data()
+			"Main Pydantic UserData() model class"
+
+			js_data = UserData()
 			js_data.id = data['ID']
-			js_data.name = user = f"{data['NAME']} {data['LAST_NAME']}"
+			js_data.name = f"{data['NAME']} {data['LAST_NAME']}"
+			js_data.email = user_email_data.dict()
 			js_data.department = data['UF_DEPARTMENT']
 			js_data.position = data['WORK_POSITION']
+			js_data.inner_phone = user_inner_phone_data.dict()
 			js_data.is_active = data['ACTIVE']
+			js_data.last_check_datetime = last_check_datetime_data.dict()
 
 			main_js_data_dict = js_data.dict()
 			main_js_data_list.append(main_js_data_dict)
