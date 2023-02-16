@@ -81,7 +81,7 @@ def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> lis
 						print("\n"+Fore.LIGHTCYAN_EX+f'{find_url_list[i]}'+Fore.RESET)
 					else:
 						print("\n"+Fore.CYAN+f'{find_url_list[i]}'+Fore.RESET)
-						# count_find_url = count_find_url + 1
+						return find_url_list
 	else:
 		print('Url not found')
 	if count_find_url == 1 and count_find_url != None:
@@ -91,9 +91,12 @@ def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> lis
 						print(f'3. Найдена {count_find_url} страница:\n{data["name"]}|{data["hour"]}|{data["price"]}')
 						return find_url_list
 	else:
-		if count_find_url < 3:
-			print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
-		return find_url_list
+		for i,data in enumerate(find_url_list):
+				if search_key.lower() in data['name'].lower():
+					if price == data['price']:
+						if count_find_url < 3:
+							print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
+						return find_url_list
 
 if __name__ == "__main__":
 	# for v in searchInSite('Онкология')[1]:
