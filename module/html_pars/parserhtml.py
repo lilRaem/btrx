@@ -1,5 +1,6 @@
 from time import time
 from colorama import Fore,Back,Style
+from random import choice
 from bs4 import BeautifulSoup
 import requests
 import os, json
@@ -51,56 +52,51 @@ def bs4pars():
 	with open(f'{os.getcwd()}/module/html/templates/data.json','w',encoding='utf-8') as fp:
 		json.dump(pars_list,fp,ensure_ascii=False,indent=4)
 
-def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price: str='99000'):
+def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price: int = 99000) -> list[dict[str,str|int|None]]:
 	start = time()
 	psUrlconf = ParseSiteConfig()
-	headers = psUrlconf.headers
 	final_data = FinalData()
-	site_data_list = []
-	req = requests.get(parseurl, headers,timeout=None)
+	site_data_list: list[dict[str,str|int|None]] = list()
+	header = choice(psUrlconf.headers)
+	req = requests.get(parseurl, headers=header,timeout=None)
+	print(f"\n{Fore.LIGHTYELLOW_EX}request time: {round(time()-start,2)} sec{Fore.RESET}")
 	soup = BeautifulSoup(req.content,'lxml')
 
 	final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 	final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 	_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
-	if _price != []:
+	if _price:
 		for i,d in enumerate(_price):
-			if d.get("class") != None and d.get("class")[i] == "old-price":
+			if d.get("class") != None and "old-price"in d.get("class")[i]:
 				print(f"Price with oldprice in site: {d.get('class')[i]}")
 			else:
-				if price == d.text:
-					final_data.price = d.text
-					print(f"Price with oldprice: {final_data.price}")
+				if d.text != "₽":
+					final_data.price = int(d.text)
+					if price == int(d.text):
+						final_data.price = int(d.text)
+						print(f"Price without oldprice: {final_data.price}")
 	else:
 		try:
-			final_data,price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.strip()
+			final_data.price = int(soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.strip())
 			print(f"(try) Price without oldprice: {final_data.price}")
 		except:
 			final_data.price = price
 			print(f"(except) Price without oldprice: {final_data.price}")
 	final_data.url = parseurl
-	# print(final_data.price)
-	count = 0
 	if final_data.price == price:
-		site_data_list.append(json.loads(final_data.json(ensure_ascii=False)))
-		print(site_data_list[0]['price'])
+		site_data_list.append(final_data.dict())
+		print(Fore.YELLOW+f"found price: {site_data_list[0]['price']}"+Fore.RESET)
 	else:
 		# final_data.hour = None
 		# final_data.price = None
 		# final_data.url = None
-		if final_data.price:
-			if "₽" in final_data.price:
-				final_data.price = final_data.price.replace("₽","").strip()
-		site_data_list.append(json.loads(final_data.json(ensure_ascii=False)))
-	for data in site_data_list:
-		count = count + 1
-	if count == 1:
+		site_data_list.append(final_data.dict())
+	if site_data_list.__len__() == 1:
 		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
 		return site_data_list
 	else:
 		print('fail parse too many programs')
 		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count > 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
-		# print(site_data_list[0])
 		return site_data_list
 
 def main():

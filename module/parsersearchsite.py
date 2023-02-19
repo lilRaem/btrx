@@ -3,9 +3,9 @@ from typing import Optional
 from pydantic import BaseModel,StrictStr
 from colorama import Fore,Back,Style
 try:
-	from config import FinalData
+	from config import FinalData, ParseSiteConfig
 except:
-	from module import config
+	from module.config import FinalData, ParseSiteConfig
 import requests
 import json
 
@@ -14,91 +14,90 @@ try:
 except:
 	import module.html_pars.parserhtml as phtml
 
-link = 'https://apkipp.ru'
+parse_site_config = ParseSiteConfig()
 
-def searchInSite(search_key: str ='Онкология') -> int|list:
+def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]]:
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
-
-	url = f'{link}/api/v1/search/?search={search_key}&as_phrase=true'
+	url = parse_site_config.get_ApiUrl(search_key)
 	# 'https://apkipp.ru/poisk/?search={data}'
-	headers = {
-		'User-Agent':
-		'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36',
-	}
+	data = requests.get(url, headers=parse_site_config.get_headers())
+	jdata: list[dict] = data.json()
 
-	data = requests.get(url, headers=headers)
-	jdata = data.json()
+	# with open('data/json/site_search.json', 'w', encoding='utf-8') as f:
+	# 	json.dump(jdata['course_list'],f, ensure_ascii=False, indent=4)
 
-	with open('data/json/site_search.json', 'w', encoding='utf-8') as f:
-		json.dump(jdata['course_list'],f, ensure_ascii=False, indent=4)
 	count = 0
 	count_word_programm = 0
-	item_list = []
+	item_list: list[dict] = list()
 	for k in jdata['course_list']:
 		if search_key.lower() in k['name'].lower():
-			item_list.append(k)
+			item_list.append(dict(k))
 			count_word_programm = count_word_programm + 1
 		count = count + 1
 	print(
-		f'Всего на сайте ({link}) найдено: {count} программ. Фактически по точному содержанию слова "{search_key}" в программе: {count_word_programm}\n'
+		f'Всего на сайте ({parse_site_config.link}) найдено: {count} программ. Фактически по точному содержанию слова "{search_key}" в программе: {count_word_programm}\n'
 	)
-	return int(count_word_programm), list(item_list)
+	return count_word_programm, item_list
 
-def getProgramUrl(search_key:str='Онкология',price: str ='6400') -> list[dict]:
-	find_url_list = []
+def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list[dict[str,str|int|None]]|None:
+	find_url_list: list[dict[str,str|int|None]] = list()
 	start = time()
-	if type(price) != str:
-		raise TypeError(f"price type == str, now: {type(price)}")
-	with open('data/json/site_search.json', 'r', encoding='utf-8') as f:
-		local_data = json.load(f)
-	for k, v in enumerate(local_data):
+	if type(price) != int:
+		raise TypeError(f"price type == int, now: {type(price)}")
+	for k, v in enumerate(searchInSite(search_key)[1]):
 		try:
-			final_data = config.FinalData()
-		except:
 			final_data = FinalData()
-		final_data.name = v['name']
+		except Exception as e:
+			# final_data = FinalData()
+			raise TypeError(f"error: {e}")
+		final_data.name = v.get("name")
 		final_data.price = price
 		if search_key.lower() in final_data.name.lower():
-			final_data.url = v['url']
-			main_url = link + final_data.url
+			final_data.url = str(v.get("url"))
+			main_url = parse_site_config.link + final_data.url
 			pSiteUrl = phtml.parseSiteUrl(main_url,final_data.price)
-			for data in pSiteUrl:
-				find_url_list.append(data)
-				# print(Fore.GREEN+f'{pSiteUrl}'+Style.RESET_ALL)
-	if find_url_list != []:
-		count_find_url = 0
-		count_find_by_word = 0
+			for data in pSiteUrl: find_url_list.append(data) # print(Fore.GREEN+f'{pSiteUrl}'+Style.RESET_ALL)
+
+	if find_url_list:
+		count_find_url = find_url_list.__len__()
 		if count_find_url == 1:
 			print(Fore.MAGENTA+f'(parsersearchsite.py|getProgramUrl(): count_find_url = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
 		else:
-			for d in find_url_list:
-				count_find_by_word = count_find_by_word + 1
-			print(f'1. Найдено {count_find_by_word} страниц с названием: {search_key}')
+			print(f'1. Найдено {count_find_url} страниц с названием: {search_key}')
 			for i,data in enumerate(find_url_list):
-				if search_key.lower() in data['name'].lower():
-					count_find_url = count_find_url + 1
-					if final_data.price == data['price']:
-						print("\n"+Fore.LIGHTCYAN_EX+f'{find_url_list[i]}'+Fore.RESET)
-					else:
-						print("\n"+Fore.CYAN+f'{find_url_list[i]}'+Fore.RESET)
-						return find_url_list
+				if search_key.lower() in data.get("name").lower():
+					if data.get("price"):
+						if final_data.price == int(data.get("price")):
+							print("\n"+Fore.LIGHTCYAN_EX+f'{data}'+Fore.RESET)
+							# return find_url_list
+						else:
+							print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
+							# return find_url_list
 	else:
 		print('Url not found')
-	if count_find_url == 1 and count_find_url != None:
-		for i,data in enumerate(find_url_list):
-				if search_key.lower() in data['name'].lower():
-					if price == data['price']:
-						print(f'3. Найдена {count_find_url} страница:\n{data["name"]}|{data["hour"]}|{data["price"]}')
-						return find_url_list
-	else:
-		for i,data in enumerate(find_url_list):
-				if search_key.lower() in data['name'].lower():
-					if price == data['price']:
-						if count_find_url < 3:
-							print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
-						return find_url_list
+	try:
+		if count_find_url == 1 and count_find_url != None:
+			for i,data in enumerate(find_url_list):
+					if search_key.lower() in data.get("name").lower():
+						if data.get("price"):
+							if price == int(data.get("price")):
+								final_data.url=data.get("url")
+								print(f'3. Найдена {count_find_url} страница:\n{data.get("name")}|{data.get("hour")}|{data.get("price")}')
+								return find_url_list
+		else:
+			for i,data in enumerate(find_url_list):
+					if search_key.lower() in data.get("name").lower():
+						if data.get("price"):
+							if price == int(data.get("price")):
+								if count_find_url < 5:
+									print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
+								final_data.url=data.get("url")
+								return find_url_list
+	except Exception as e:
+		print(e)
+		pass
+	print("\nReturn without parsed data")
+	return find_url_list
 
 if __name__ == "__main__":
-	# for v in searchInSite('Онкология')[1]:
-	# 	print(dict(v)['name'])
-	getProgramUrl(search_key="Онкология",price="19600")
+	getProgramUrl(search_key="Онкология",price=19600)

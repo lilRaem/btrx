@@ -1,29 +1,21 @@
 from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr, StrictInt, StrictBool
-
+from random import choice
 # Main types of search data Program:
 class FinalData(BaseModel):
-	id: Optional[StrictStr] = None
+	id: Optional[StrictInt] = None
 	spec: Optional[StrictStr] = None
 	name: Optional[StrictStr] = None
-	price: Optional[StrictStr] = None
-	hour: Optional[StrictStr] = None
+	price: Optional[StrictInt] = None
+	hour: Optional[StrictInt] = None
 	nmoSpec: Optional[StrictStr] = None
 	linkNmo: Optional[StrictStr] = None
 	url: Optional[StrictStr] = None
 
-# Main types of search data UserData:
-class UserData(BaseModel):
-	id: Optional[StrictInt] = None
-	name: Optional[StrictStr] = None
-	email: dict
-	department: Optional[StrictStr] = None
-	position: Optional[StrictStr] = None
-	inner_phone: dict
-	is_active: Optional[StrictBool] = None
-	last_check_datetime: dict
 
+
+# Main types of search data UserData:
 class UserInnerPhoneData(BaseModel):
 	inner_phone: Optional[StrictInt] = None
 	zdr_phone: Optional[StrictStr] = None
@@ -37,6 +29,16 @@ class LastCheckDatetimeData(BaseModel):
 	date: Optional[StrictStr] = None
 	time: Optional[StrictStr] = None
 
+class UserData(BaseModel):
+	id: Optional[StrictInt] = None
+	name: Optional[StrictStr] = None
+	email: UserEmailData()
+	department: Optional[StrictStr] = None
+	position: Optional[StrictStr] = None
+	inner_phone: UserInnerPhoneData()
+	is_active: Optional[StrictBool] = None
+	last_check_datetime: LastCheckDatetimeData()
+
 # Main Bitrix config:
 class BtrxConfig():
 	id = "di28gta836z3xn50"
@@ -44,18 +46,35 @@ class BtrxConfig():
 # Parse soup config:
 class ParseSiteConfig():
 
+	link = "https://apkipp.ru"
+
 	soupMainBlock = "courses-block"
 	soupName = ("h1", "main-title")
 	soupHour = ("div", "items-box-block__element-type-item")
 	soupPrice = ("div", "course-info-block__action-buy-price")
 
-	headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Max-Age': '3600',
-    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/51.0'
-    }
+	headers = [
+	{"User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"},
+	{"User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"},
+	{"User-agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15'},
+	{"User-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0'},
+	{"User-agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'},
+	{"User-agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:77.0) Gecko/20100101 Firefox/77.0'},
+	{"User-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'},
+	]
+
+	def get_headers(self) -> dict[str,str]: return choice(self.headers)
+
+	def get_ApiUrl(self,search_key:str):
+		"""get url with set link and search_key
+
+		Args:
+			search_key (str): word of search programm
+
+		Returns:
+			str: url with set link and word arg
+		"""
+		return f'{self.link}/api/v1/search/?search={search_key}&as_phrase=true'
 
 def makefileWdateName(path:str) -> tuple[str,str]:
 	"""
