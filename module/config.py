@@ -6,7 +6,7 @@ from random import choice
 class FinalData(BaseModel):
 	id: Optional[StrictInt] = None
 	spec: Optional[StrictStr] = None
-	name: Optional[StrictStr] = None
+	name: str|Optional[StrictStr] = None
 	price: Optional[StrictInt] = None
 	hour: Optional[StrictInt] = None
 	nmoSpec: Optional[StrictStr] = None

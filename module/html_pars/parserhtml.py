@@ -61,20 +61,17 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	req = requests.get(parseurl, headers=header,timeout=None)
 	print(f"\n{Fore.LIGHTYELLOW_EX}request time: {round(time()-start,2)} sec{Fore.RESET}")
 	soup = BeautifulSoup(req.content,'lxml')
-
+	final_data.url = parseurl
 	final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 	final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 	_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
 	if _price:
 		for i,d in enumerate(_price):
-			if d.get("class") != None and "old-price"in d.get("class")[i]:
-				print(f"Price with oldprice in site: {d.get('class')[i]}")
+			if d.get("class") != None and "old-price"in d.get("class")[i]: print(f"Price with oldprice in site: {d.get('class')[i]}")
 			else:
 				if d.text != "₽":
 					final_data.price = int(d.text)
-					if price == int(d.text):
-						final_data.price = int(d.text)
-						print(f"Price without oldprice: {final_data.price}")
+					if price == int(d.text): print(f"Price without oldprice: {final_data.price}")
 	else:
 		try:
 			final_data.price = int(soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.strip())
@@ -82,26 +79,22 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		except:
 			final_data.price = price
 			print(f"(except) Price without oldprice: {final_data.price}")
-	final_data.url = parseurl
+
 	if final_data.price == price:
 		site_data_list.append(final_data.dict())
-		print(Fore.YELLOW+f"found price: {site_data_list[0]['price']}"+Fore.RESET)
-	else:
-		# final_data.hour = None
-		# final_data.price = None
-		# final_data.url = None
-		site_data_list.append(final_data.dict())
+		print(Fore.GREEN+f"Found price: {site_data_list[0].get('price')}"+Fore.RESET)
+	else: site_data_list.append(final_data.dict())
+
 	if site_data_list.__len__() == 1:
 		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
 		return site_data_list
 	else:
-		print('fail parse too many programs')
-		print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count > 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
+		print(Fore.RED+'fail parse too many programs'+Fore.RESET)
+		print(Fore.RED+f'(parserhtml.py|parseSiteUrl(): count > 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
 		return site_data_list
 
 def main():
 	bs4pars()
-
 
 if __name__ == "__main__":
 	# main()

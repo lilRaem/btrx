@@ -20,11 +20,10 @@ def search(search_name:str, search_price:int) -> list|None:
 	start = time()
 	btrx = Btrx()
 	search_name = search_name.strip()
-	search_name = search_name.replace('\n', '')
+	search_name = search_name.replace('\n', ' ')
 	search_name = search_name.replace('  ', ' ')
 	# name = input('Введите название программы: ')
 	path = "data\\json\\btrx_data"
-	final_data = FinalData()
 	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName(path)[0]),
 		makefileWdateName(path)[0] + Back.RESET)
 	if (os.path.exists(makefileWdateName(path)[0])):
@@ -36,46 +35,32 @@ def search(search_name:str, search_price:int) -> list|None:
 			count_check_data = json_check_data.__len__()
 		else:
 			print('item not exist')
-
 		if count_check_data == 1:
-
-
-			# for d in progUrl_data:
-			# 	count_getProgramUrl += 1
-
 			for _final_data in json_check_data:
+
 				final_data = FinalData()
-				final_data.id = int(_final_data.get('id'))
-				final_data.name = _final_data.get('name')
-				if _final_data.get('price'):
-					final_data.price = int(_final_data.get('price'))
-				else:
-					final_data.price = None
-				if _final_data.get('hour'):
-					final_data.hour = int(_final_data.get('hour'))
-				else:
-					final_data.hour = None
-				final_data.linkNmo = _final_data.get('linkNmo')
-				try:
+
+				if _final_data.get('id'): final_data.id = int(_final_data.get('id'))
+				if _final_data.get('name'): final_data.name = _final_data.get('name')
+				if _final_data.get('price'): final_data.price = int(_final_data.get('price'))
+				if _final_data.get('hour'): final_data.hour = int(_final_data.get('hour'))
+
+				if final_data.name and final_data.price:
 					progUrl_data = getProgramUrl(final_data.name, final_data.price)
-					count_getProgramUrl = progUrl_data.__len__()
-					if progUrl_data: print(f"Length of url_list: {count_getProgramUrl}")
-					if count_getProgramUrl == 1:
+
+					if progUrl_data: print(f"Length of progUrl_data: {progUrl_data.__len__()}")
+					else: print(f"Length of progUrl_data: {None}")
+
+					if progUrl_data.__len__() == 1:
 						final_data.url = progUrl_data[0].get('url')
-						if not _final_data.get('hour'):
-							final_data.hour = int(progUrl_data[0].get('hour'))
+						if not final_data.hour: final_data.hour = int(progUrl_data[0].get('hour'))
 					else:
 						if progUrl_data:
-							for d in progUrl_data:
-								if final_data.name.lower() == d.get("name").replace("Курс ","").lower():
-									if d.get('price'):
-										if final_data.price == int(d.get('price')):
-											final_data.url = d.get('url')
-									if not final_data.hour:
-										final_data.hour = int(d.get('hour'))
-				except Exception as e:
-					progUrl_data = None
-					print(Fore.RED+f"get progUrl_data() error:\n{e}"+Fore.RESET)
+							for data in progUrl_data:
+								if final_data.name.lower() == data.get("name").replace("Курс ","").lower():
+									if data.get('price'):
+										if int(data.get('price')) == final_data.price: final_data.url = data.get('url')
+									if not final_data.hour: final_data.hour = int(data.get('hour'))
 
 			print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
 			fdata.append(final_data.dict())
@@ -135,11 +120,11 @@ if __name__ == "__main__":
 	# p = Btrx()
 	# path = "data\\json\\btrx_data"
 	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
-	try:
-		prgog = searchInSite(search_key="Онкология",price=None)
-	except:
-		prgog = 0
-	print("\nmain_search: "+f"{prgog.__len__()}")
+	a = 1
+	b = None
+
+	if not b:
+		print(a,b)
 	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
 	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html

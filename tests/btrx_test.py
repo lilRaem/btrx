@@ -6,7 +6,7 @@ from module.btrx import Btrx
 class BtrxTest(TestCase):
 	path = os.getcwd()
 	filename = "file.json"
-	datalist = list()
+	datalist: list[dict[str,str|int|None]] = list()
 
 	def test_save_to_json(self):
 		self.assertEqual(type(Btrx.save_to_json(self,self.datalist,self.filename,f"{os.getcwd()}\\tests\\btrx_save_test")),type(self.datalist))

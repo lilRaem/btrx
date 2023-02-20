@@ -16,16 +16,13 @@ class Btrx(Bitrix):
 	def __init__(self):
 		self.webhook = f'https://b24-vejk6x.bitrix24.ru/rest/1/{BtrxConfig.id}/'
 		super().__init__(webhook=self.webhook,respect_velocity_policy=False)
-	COUNT_PROGRAMS = 0
 
 	def save_to_json(self, datalist:list[dict[str,str|int|None]], filename: str, path: str):
-		print(datalist)
-		if datalist == None or type(datalist) != list:
-			raise TypeError(f'тип datalist({type(datalist)}) должен быть {list}')
-		elif filename == None or type(filename) != str:
-			raise TypeError(f'тип filename({type(filename)}) должен быть str')
-		elif path == None or type(path) != str:
-			raise TypeError(f'тип path({type(path)}) должен быть str')
+
+		if datalist == None or type(datalist) != list: raise TypeError(f'тип datalist({type(datalist)}) должен быть {list}')
+		elif filename == None or type(filename) != str: raise TypeError(f'тип filename({type(filename)}) должен быть str')
+		elif path == None or type(path) != str: raise TypeError(f'тип path({type(path)}) должен быть str')
+
 		try:
 			if (os.path.exists(path)):
 				with open(os.path.join(path, f"{filename}"), 'w', encoding='utf-8') as file:
@@ -39,11 +36,8 @@ class Btrx(Bitrix):
 			raise TypeError(f'{e}')
 
 	def load_from_jsonFile(self,filename:str = "file.json", path: str = str()) -> list[dict[str,str|int|None]]:
-		# sleep(2)
-		if type(filename) != str:
-			raise TypeError('тип filename должен быть str')
-		elif type(path) != str:
-			raise TypeError('тип path должен быть str')
+		if type(filename) != str: raise TypeError('тип filename должен быть str')
+		elif type(path) != str: raise TypeError('тип path должен быть str')
 		try:
 			data_from_file = list([dict[str,str|int|None]])
 			if (os.path.exists(path)):
@@ -61,24 +55,21 @@ class Btrx(Bitrix):
 		"""Load	from btrx24	all	data (id, name,	price, hours)\n
 			hours data in field: ['PROPERTY_213'] => ['value']"""
 		try:
-			products = []
+			products = list()
 			products = self.get_all('crm.product.list',
 				params={'select': ['ID', 'NAME', 'PRICE', 'PROPERTY_213']})
 			return products
-		except Exception as e:
-			raise TypeError(Fore.RED + f'\nGet products error: {e}\n')
-		finally:
-			return products
+		except Exception as e: raise TypeError(Fore.RED + f'\nGet products error: {e}\n')
+		finally: return products
 
 	def get_users_with_innerPhone(self) -> list:
-		users = []
 		try:
+			users = list()
 			users = self.get_all('user.get',params={
 				'select': ['*']
 			})
 			return list(users)
-		except Exception as e:
-			raise TypeError(f'get_users_with_innerPhone error {e}')
+		except Exception as e: raise TypeError(f'get_users_with_innerPhone error {e}')
 
 	def set_product_price(self,id=str(),price=0):
 		try:
@@ -87,15 +78,13 @@ class Btrx(Bitrix):
 			}}
 			res = self.call('crm.product.update',params)
 			print(f'Price {price} for {id} is SET {res}'+Style.RESET_ALL+"\n")
-		except Exception as e:
-			raise TypeError(Fore.RED+f"Error in set_product_price(): {e}"+Fore.RESET)
+		except Exception as e: raise TypeError(Fore.RED+f"Error in set_product_price(): {e}"+Fore.RESET)
 
 	def get_all_data(self,data: list[dict[str,str|int|None]]) -> list[dict[str,str|int|None]]:
 		"""
 		Get all data (id, name, price, hours) with hours
 		"""
-		if (data == None or type(data) != list):
-			raise TypeError(f'expect type of data = list.\nNow: {type(data)}')
+		if (data == None or type(data) != list): raise TypeError(f'expect type data == list.\nNow: {type(data)}')
 
 		with_hour = 0
 		without_hour = 0
@@ -105,31 +94,20 @@ class Btrx(Bitrix):
 			for item in data:
 				final_data = FinalData()
 
-				id = int(item.get("ID"))
-				id = check_null(id,item.get("ID"))
-				final_data.id = int(id)
-
-				name = item.get("NAME")
-				name = check_null(name,item.get("NAME"))
-				final_data.name = name
+				if item.get("ID"): final_data.id = int(item.get("ID"))
+				if item.get("NAME"): final_data.name = item.get("NAME")
 
 				if item.get("PRICE"): price = int(item.get("PRICE").replace(".00",""))
 				else: price = None
-				if price == 0 or price == None: price = None
-				else: price = int(item.get("PRICE").replace('.00', ''))
 				if price: final_data.price = int(price)
-				else: final_data.price = None
 
-				if item.get('PROPERTY_213'): hour = item.get('PROPERTY_213')
-				else: hour = None
-				if not hour: hour = None
-				else: hour = int(hour.get('value'))
-				if hour: final_data.hour = int(hour)
-				else: final_data.hour = None
+				if item.get('PROPERTY_213'):
+					hour = item.get('PROPERTY_213')
+					final_data.hour = int(hour.get('value'))
 
 				datalist.append(final_data.dict())
 
-				if hour: with_hour = with_hour + 1
+				if final_data.hour: with_hour = with_hour + 1
 				else: without_hour = without_hour + 1
 			print(Fore.LIGHTCYAN_EX +  f'\n####\n{Back.CYAN}Find{Style.RESET_ALL} {with_hour} {Back.CYAN}items{Style.RESET_ALL} {Back.GREEN+Fore.BLACK}with hours' + Style.RESET_ALL)
 			print(Fore.BLUE + f'\nFind {without_hour} items without hours')
@@ -198,9 +176,8 @@ class Btrx(Bitrix):
 
 	def check_product(self, name: str, price: int, datalist: list[dict[str,str|int|None]]) -> list[dict[str,str|int|None]]:
 
-		if type(name) != str or type(price) != int:
-			raise TypeError(f"Type name == {type(name)}\nType price == {type(price)}\n except (str,int)")
-
+		if type(name) != str or type(price) != int: raise TypeError(f"Type name == {type(name)}\n\
+							      Type price == {type(price)}\n except (str,int)")
 		try:
 			final_data = FinalData()
 			if name:
@@ -217,70 +194,64 @@ class Btrx(Bitrix):
 				count_name = 0
 				found_data_by_name_price: list[dict[str,str|int|None]] = list()
 				found_data_by_name: list[dict[str,str|int|None]] = list()
+
 				try:
-					for i,v in enumerate(datalist):
-						final_data.name = v.get("name")
-						final_data.price = v.get("price")
-						k_name = final_data.name.lower()
-						if name.lower() in k_name and price == final_data.price and price != 0:
+					for data in datalist:
+						if data.get("name"): final_data.name = data.get("name")
+						if data.get("price"): final_data.price = data.get("price")
+						if name.lower() in final_data.name.lower() and price == final_data.price and price != 0:
 							count_name_price = count_name_price + 1
 						else:
-							if name.lower() in k_name:
-								count_name = count_name + 1
+							if name.lower() in final_data.name.lower(): count_name = count_name + 1
 					print(f'Найдено:\nИмя/цена: {count_name_price} шт\nИмя: {count_name} шт'+ Style.RESET_ALL)
-				except Exception as e:
-					raise TypeError(Fore.RED+f"On start check error: \n\nExeption:\n{e}")
+				except Exception as e: raise TypeError(Fore.RED+f"On start check error: \n\nExeption:\n{e}")
+
 				try:
-					for i,v in enumerate(datalist):
-						final_data.name = v.get("name")
-						final_data.price = v.get("price")
-						k_name = final_data.name.lower()
-						if name.lower() in k_name and price == final_data.price and price != 0:
+					for data in datalist:
+						if data.get("name"): final_data.name = data.get("name")
+						if data.get("price"): final_data.price = data.get("price")
+
+						if name.lower() in final_data.name.lower() and price == final_data.price and price != 0:
 							try:
 								if count_name_price == 1 and price != 0:
-									if name.lower() == k_name:
+									if name.lower() == final_data.name.lower():
 										print("\n"+Back.LIGHTCYAN_EX + Fore.BLACK + Style.DIM +
-											f'=====\nПо названию {name} и цене {price}:\n{v}\n====='+Style.RESET_ALL+"\n")
-										found_data_by_name_price.append(v)
+											f'=====\nПо названию {name} и цене {price}:\n{data}\n====='+Style.RESET_ALL+"\n")
+										found_data_by_name_price.append(data)
 									else:
 										print("\n"+Back.CYAN + Fore.BLACK + Style.DIM +
-											f'=====\nПо содержанию названия {name} и цене {price}:\n{v}\n====='+Style.RESET_ALL+"\n")
-										found_data_by_name_price.append(v)
+											f'=====\nПо содержанию названия {name} и цене {price}:\n{data}\n====='+Style.RESET_ALL+"\n")
+										found_data_by_name_price.append(data)
 								else:
 									print(Back.LIGHTMAGENTA_EX + Fore.BLACK + Style.DIM +
-										f'\n=====\nПо названию {name} цена по поиску {price}: {v}\n====='+Style.RESET_ALL+"\n")
-									found_data_by_name_price.append(v)
+										f'\n=====\nПо названию {name} цена по поиску {price}: {data}\n====='+Style.RESET_ALL+"\n")
+									found_data_by_name_price.append(data)
 							except Exception as e:
 								print(Fore.RED + f'1. Ошибка при поиске названия и цены {e}')
 						else:
-							if name.lower() in k_name:
+							if name.lower() in final_data.name.lower():
 								try:
-									# print(Style.RESET_ALL + Fore.LIGHTBLACK_EX + f'[{Back.GREEN + v["id"] + Back.RESET}] "{k_name}"\n')
-
 									if count_name == 1:
-										print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + str(v["id"]) + Back.RESET}]' + f' {Fore.RESET}{v["name"]}|{v["hour"]}|{v["price"]}')
-										found_data_by_name.append(v)
+										print("\n"+Style.RESET_ALL + Fore.BLACK + f'[{Back.LIGHTGREEN_EX + Fore.BLACK  + str(data.get("id")) + Back.RESET}]' + f' {Fore.RESET}{data.get("name")}|{data.get("hour")}|{data.get("price")}')
+										found_data_by_name.append(data)
 									else:
-										print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + str(v["id"]) + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{v["name"]}|{v["hour"]}|{v["price"]}"')
-										found_data_by_name.append(v)
-								except Exception as e:
-									print(Fore.RED + '2. Ошибка при поиске названия\n'+Fore.RED+f'{e}')
+										print(Style.RESET_ALL + Fore.BLACK + f'[ {Back.GREEN + Fore.BLACK  + str(data.get("id")) + Back.RESET} ]' + f' {Fore.LIGHTBLACK_EX}"{data.get("name")}|{data.get("hour")}|{data.get("price")}"')
+										found_data_by_name.append(data)
+								except Exception as e: print(Fore.RED + '2. Ошибка при поиске названия\n'+Fore.RED+f'{e}')
+				except Exception as e: raise TypeError(e)
 
-				except Exception as e:
-					raise TypeError(e)
-				print(Style.RESET_ALL + f'Всего программ: {i}')
+				print(Style.RESET_ALL + f'Всего программ: {datalist.__len__()}')
 
 				if found_data_by_name_price:
-					count_fdbnp = found_data_by_name_price.__len__()
-					if count_fdbnp == 1:
+					if found_data_by_name_price.__len__() == 1:
 						print(Fore.YELLOW+f'{found_data_by_name_price}'+Fore.RESET)
 						return found_data_by_name_price
 					else:
-						print(f"Найдено {count_fdbnp} программ с одинаковым названием и ценой\
+						print(f"Найдено {found_data_by_name_price.__len__()} программ с одинаковым названием и ценой\
 						\n(или содержания слова в названии и цена)\n")
 						similar_list: list[dict[str,str|int|None]] = list()
 						for i,data in enumerate(found_data_by_name_price):
-							if name.lower() == data['name'].lower() and price == int(data['price']):
+							if name.lower() == data.get('name').lower() and price == int(data.get('price')):
 								print("\n"+Fore.GREEN+f'{i+1} {data}'+Fore.RESET+"\n")
 								similar_list.append(data)
 							else:
@@ -290,35 +261,20 @@ class Btrx(Bitrix):
 						else:
 							return found_data_by_name_price
 				elif found_data_by_name:
-					count_dbn = found_data_by_name.__len__()
-					if count_dbn == 1:
+					if found_data_by_name.__len__() == 1:
 						return found_data_by_name
 					else:
 						list_by_name: list[dict[str,str|int|None]] = list()
-						print(f"Найдено {count_dbn} программ с одинаковым названием\
+						print(f"Найдено {found_data_by_name.__len__()} программ с одинаковым названием\
 						\n(или содержания слова в названии)")
-
-						count_by_name = found_data_by_name.__len__()
-						if count_by_name != 0:
+						if found_data_by_name:
 							for data in found_data_by_name:
 								final_data = FinalData()
 								print(Fore.LIGHTYELLOW_EX+f'\n{data}'+Fore.RESET)
-								if data.get("id"):
-									final_data.id = int(data.get("id"))
-								else:
-									final_data.id = None
-								final_data.spec = data.get("spec")
-								final_data.name = data.get("name")
-								if data.get("price"):
-									final_data.price = int(data.get("price"))
-								else:
-									final_data.price = None
-								if data.get("hour"):
-									final_data.hour = int(data.get("hour"))
-								else:
-									final_data.hour = None
-								final_data.linkNmo = data.get("linkNmo")
-								final_data.url = data.get("url")
+								if data.get("id"): final_data.id = int(data.get("id"))
+								if data.get("name"): final_data.name = data.get("name")
+								if data.get("price"): final_data.price = int(data.get("price"))
+								if data.get("hour"): final_data.hour = int(data.get("hour"))
 								list_by_name.append(final_data.dict())
 							return list_by_name
 				else:

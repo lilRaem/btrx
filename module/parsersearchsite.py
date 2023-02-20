@@ -44,58 +44,51 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 	start = time()
 	if type(price) != int:
 		raise TypeError(f"price type == int, now: {type(price)}")
-	for k, v in enumerate(searchInSite(search_key)[1]):
-		try:
-			final_data = FinalData()
-		except Exception as e:
-			# final_data = FinalData()
-			raise TypeError(f"error: {e}")
-		final_data.name = v.get("name")
+	for data in searchInSite(search_key)[1]:
+		final_data = FinalData()
+
+		if data.get("name"): final_data.name = data.get("name")
 		final_data.price = price
 		if search_key.lower() in final_data.name.lower():
-			final_data.url = str(v.get("url"))
+			final_data.url = data.get("url")
 			main_url = parse_site_config.link + final_data.url
 			pSiteUrl = phtml.parseSiteUrl(main_url,final_data.price)
-			for data in pSiteUrl: find_url_list.append(data) # print(Fore.GREEN+f'{pSiteUrl}'+Style.RESET_ALL)
-
+			for data in pSiteUrl:
+				find_url_list.append(data)
+				if data.get('price') == price: print(Fore.GREEN+f'{data}'+Style.RESET_ALL)
 	if find_url_list:
-		count_find_url = find_url_list.__len__()
-		if count_find_url == 1:
+		if find_url_list.__len__() == 1:
 			print(Fore.MAGENTA+f'(parsersearchsite.py|getProgramUrl(): count_find_url = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
 		else:
-			print(f'1. Найдено {count_find_url} страниц с названием: {search_key}')
-			for i,data in enumerate(find_url_list):
+			print(f'1. Найдено {find_url_list.__len__()} страниц с названием: {search_key}')
+			for data in find_url_list:
 				if search_key.lower() in data.get("name").lower():
 					if data.get("price"):
 						if final_data.price == int(data.get("price")):
-							print("\n"+Fore.LIGHTCYAN_EX+f'{data}'+Fore.RESET)
-							# return find_url_list
+							print("\n"+Style.BRIGHT+Fore.LIGHTCYAN_EX+f'{data}'+Style.RESET_ALL)
 						else:
 							print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
-							# return find_url_list
 	else:
 		print('Url not found')
 	try:
-		if count_find_url == 1 and count_find_url != None:
-			for i,data in enumerate(find_url_list):
-					if search_key.lower() in data.get("name").lower():
-						if data.get("price"):
-							if price == int(data.get("price")):
-								final_data.url=data.get("url")
-								print(f'3. Найдена {count_find_url} страница:\n{data.get("name")}|{data.get("hour")}|{data.get("price")}')
-								return find_url_list
-		else:
-			for i,data in enumerate(find_url_list):
-					if search_key.lower() in data.get("name").lower():
-						if data.get("price"):
-							if price == int(data.get("price")):
-								if count_find_url < 5:
-									print(f'4. Найдено {count_find_url} страниц:\n{find_url_list}')
-								final_data.url=data.get("url")
-								return find_url_list
+		if find_url_list:
+			if find_url_list.__len__() == 1:
+				for data in find_url_list:
+						if search_key.lower() in data.get("name").lower():
+							if data.get("price"):
+								if price == int(data.get("price")):
+									print(f'3. Найдена {find_url_list.__len__()} страница:\n{data.get("name")}|{data.get("hour")}|{data.get("price")}')
+									return find_url_list
+			else:
+				for data in find_url_list:
+						if search_key.lower() in data.get("name").lower():
+							if data.get("price"):
+								if price == int(data.get("price")):
+									if find_url_list.__len__() < 5:
+										print(f'4. Найдено {find_url_list.__len__()} страниц:\n{find_url_list}')
+									return find_url_list
 	except Exception as e:
-		print(e)
-		pass
+		print(Fore.RED+e+Fore.RESET)
 	print("\nReturn without parsed data")
 	return find_url_list
 
