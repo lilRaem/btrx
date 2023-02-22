@@ -1,12 +1,222 @@
 [
     {
-        "hour": 144,
-        "id": 17945,
-        "linkNmo": null,
-        "name": "Онкология",
+        "id": 18325,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Детская онкология-гематология",
+        "price": 49800,
+        "hour": 600,
         "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 15597,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Гериатрическая онкология",
         "price": 9800,
-        "spec": null,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-geriatricheskaya-onkologiya/"
+    },
+    {
+        "id": 4839,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Сестринская помощь онкологическим больным",
+        "price": 9792,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskaya-pomosch-onkologicheskim-bolnyim/"
+    },
+    {
+        "id": 18391,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Онконастороженность и ранняя диагностика онкологических заболеваний в практике врачей",
+        "price": 9800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkonastorozhennost-i-rannyaya-diagnostika-onkologicheskih-zabolevanij-v-praktike-vra/"
+    },
+    {
+        "id": 17945,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Онкология",
+        "price": 9800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
+    },
+    {
+        "id": 19961,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Курс детская онкология-гематология",
+        "price": 2900,
+        "hour": 36,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 15265,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Ранняя диагностика и скрининг в современной онкологии",
+        "price": 5900,
+        "hour": 36,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-rannyaya-diagnostika-i-skrining-v-sovremennoj-onkologii/"
+    },
+    {
+        "id": 17189,
+        "spec": "Повышение квалификации",
+        "name": "Химиотерапия в онкологии",
+        "price": 8500,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-himioterapiya-v-onkologii/"
+    },
+    {
+        "id": 19981,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Детская онкология-гематология: актуальные вопросы и инновационные решения",
+        "price": 6400,
+        "hour": 74,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 18377,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Онкология",
+        "price": 19600,
+        "hour": 288,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
+    },
+    {
+        "id": 16275,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Онкология",
+        "price": 18800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
+    },
+    {
+        "id": 15643,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Детская онкология",
+        "price": 18800,
+        "hour": 152,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 15641,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Детская онкология",
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 19977,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Детская онкология-гематология",
+        "price": 19600,
+        "hour": 288,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 20093,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "car t-клеточная терапия в онкологии",
+        "price": 2900,
+        "hour": 36,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-car-t-kletochnaya-terapiya-v-onkologii/"
+    },
+    {
+        "id": 18889,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Диетологическая поддержка онкобольного",
+        "price": 9800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-dietologicheskaya-podderzhka-onkobolnogo/"
+    },
+    {
+        "id": 19973,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Детская онкология-гематология",
+        "price": 9800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya-gematologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/"
+    },
+    {
+        "id": 15333,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Ранняя диагностика и скрининг в современной детской онкологии",
+        "price": 5900,
+        "hour": 36,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-rannyaya-diagnostika-i-skrining-v-sovremennoj-detskoj-onkologii/"
+    },
+    {
+        "id": 19997,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Дерматоонкологии: профилактика, диагностика, лечение",
+        "price": 9800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-dermatoonkologii-profilaktika-diagnostika-lechenie/"
+    },
+    {
+        "id": 4473,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Дефекты коронковой части зубов",
+        "price": 5000,
+        "hour": 36,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-defektyi-koronkovoj-chasti-zubov/"
+    },
+    {
+        "id": 17947,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Онкология",
+        "price": 6400,
+        "hour": 74,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
+    },
+    {
+        "id": 4673,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Онкология",
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
         "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
     }
 ]
