@@ -65,6 +65,17 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 	final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 	_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
+	_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
+
+	if "профессиональной переподготовки" in _spec or "профессиональной переподготовке" in _spec:
+		_spec = "Профессиональная переподготовка"
+	elif "повышения квалификации" in _spec or "повышении квалификации" in _spec and "НМО" not in _spec:
+		_spec = "Повышение квалификации"
+	elif "НМО" in _spec and "повышении квалификации" in _spec or "цикл НМО" in _spec:
+		_spec = "Повышение квалификации (НМО)"
+	else:
+		_spec = None
+	if _spec: final_data.spec = _spec
 	if _price:
 		for i,d in enumerate(_price):
 			if d.get("class") != None and "old-price"in d.get("class")[i]: print(f"Price with oldprice in site: {d.get('class')[i]}")
