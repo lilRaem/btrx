@@ -13,7 +13,7 @@ from module.parsersearchsite import searchInSite, getProgramUrl
 
 datalist = []
 
-def search(search_name:str, search_price:int) -> list|None:
+def search(search_name:str, search_price:int, type_c:str) -> list|None:
 	if type(search_price) != int:
 		TypeError(f"Type of search_price == int\n now: {type(search_price)}")
 	fdata: list[dict[str,str|int|None]] = list()
@@ -101,7 +101,7 @@ def search(search_name:str, search_price:int) -> list|None:
 			for vv in fdata:
 				if vv.get('price') == search_price:
 					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
+					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_c} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
 				else:
 					print(Fore.WHITE+f"\n{Back.LIGHTGREEN_EX}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
 					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
