@@ -207,7 +207,7 @@ class Btrx(Bitrix):
 
 				try:
 					for data in datalist:
-						if data.get("name"): final_data.name = data.get("name")
+						if data.get("name"): final_data.name = data.get("name").strip()
 						if data.get("price"): final_data.price = data.get("price")
 						if name.lower() in final_data.name.lower() and price == final_data.price and price != 0:
 							count_name_price = count_name_price + 1

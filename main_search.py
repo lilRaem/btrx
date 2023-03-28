@@ -7,7 +7,7 @@ from module.btrx import Btrx
 from module.parsersearchsite import searchInSite, getProgramUrl
 from module.html_pars.parserhtml import parseSiteUrl
 """
-#TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
+# TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
 - [ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
 """
 
@@ -41,7 +41,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 				final_data = FinalData()
 
 				if _final_data.get('id'): final_data.id = int(_final_data.get('id'))
-				if _final_data.get('name'): final_data.name = _final_data.get('name')
+				if _final_data.get('name'): final_data.name = _final_data.get('name').strip()
 
 				if _final_data.get('price'): final_data.price = int(_final_data.get('price'))
 				if _final_data.get('hour'): final_data.hour = int(_final_data.get('hour'))
@@ -78,7 +78,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 				for val_data in json_check_data:
 					final_data = FinalData()
 					final_data.id = int(val_data.get('id'))
-					final_data.name = val_data.get('name')
+					final_data.name = val_data.get('name').strip()
 					final_data.spec = val_data.get('spec')
 					if val_data.get('price'):
 						final_data.price = int(val_data.get('price'))
@@ -156,7 +156,7 @@ if __name__ == "__main__":
 	# path = "data\\json\\btrx_data"
 	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
 	a = 1
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/")
+	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/")
 
 	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
 	# buildjsondata()

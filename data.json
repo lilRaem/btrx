@@ -1,12 +1,12 @@
 [
     {
-        "id": 4331,
-        "spec": "Профессиональная переподготовка",
-        "name": "Лечебная физкультура",
-        "price": 20000,
-        "hour": 300,
+        "id": 18841,
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
+        "price": 9792,
+        "hour": 144,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnaya-fizkultura/"
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/"
     }
 ]

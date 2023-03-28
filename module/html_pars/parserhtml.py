@@ -112,4 +112,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	print(parseSiteUrl(price='0'))
+	print(parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/",price='9792'))

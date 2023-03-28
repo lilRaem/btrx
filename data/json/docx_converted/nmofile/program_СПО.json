@@ -1,0 +1,2170 @@
+[
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Акушерское дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337PN3"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PP3"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Акушерское дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337PQH"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Акушерское дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337PR4"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PPN"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
+        "hour": "288",
+        "price": "19584",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337PPi"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Акушерское дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337PRN"
+    },
+    {
+        "title_spec": "Акушерское дело",
+        "title_program": "Охрана здоровья женщины",
+        "hour": "144",
+        "price": "9792",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337PRi"
+    },
+    {
+        "title_spec": "Анестезиология и реаниматология",
+        "title_program": "Анестезиология и реаниматология",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337PSf"
+    },
+    {
+        "title_spec": "Анестезиология и реаниматология",
+        "title_program": "Сестринское дело в анестезиологии и реаниматологии",
+        "hour": "72",
+        "price": "4896",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PUh"
+    },
+    {
+        "title_spec": "Анестезиология и реаниматология",
+        "title_program": "Анестезиология и реаниматология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PT7"
+    },
+    {
+        "title_spec": "Анестезиология и реаниматология",
+        "title_program": "Анестезиология и реаниматология",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PTn"
+    },
+    {
+        "title_spec": "Анестезиология и реаниматология",
+        "title_program": "Анестезиология и реаниматология",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337PTu"
+    },
+    {
+        "title_spec": "Анестезиология и реаниматология\n(Сестринское дело)",
+        "title_program": "Сестринское дело в анестезиологии и реаниматологии",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Pez"
+    },
+    {
+        "title_spec": "Бактериология\n(Лабораторная диагностика)",
+        "title_program": "Бактериология: актуальные проблемы и инновационные решения",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PgH"
+    },
+    {
+        "title_spec": "Бактериология",
+        "title_program": "Бактериология",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337Pgf"
+    },
+    {
+        "title_spec": "Бактериология",
+        "title_program": "Бактериология",
+        "hour": "144",
+        "price": "9792",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337Ph6"
+    },
+    {
+        "title_spec": "Бактериология",
+        "title_program": "Бактериология",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337PhS"
+    },
+    {
+        "title_spec": "Бактериология",
+        "title_program": "Бактериология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "14.09.2022",
+        "linkNmo": "https://clck.ru/337Pht"
+    },
+    {
+        "title_spec": "Гигиеническое воспитание",
+        "title_program": "Организация санитарного просвещения",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337PiS"
+    },
+    {
+        "title_spec": "Гигиеническое воспитание",
+        "title_program": "Гигиеническое воспитание",
+        "hour": "36",
+        "price": "2448",
+        "date": "31.03.2022",
+        "linkNmo": "https://clck.ru/337Pj9"
+    },
+    {
+        "title_spec": "Гигиеническое воспитание",
+        "title_program": "Гигиеническое воспитание: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "31.03.2022",
+        "linkNmo": "https://clck.ru/337Pjj"
+    },
+    {
+        "title_spec": "Гигиеническое воспитание",
+        "title_program": "Гигиеническое воспитание",
+        "hour": "288",
+        "price": "19584",
+        "date": "31.03.2022",
+        "linkNmo": "https://clck.ru/337Pkj"
+    },
+    {
+        "title_spec": "Гигиена и санитария",
+        "title_program": "Современные вопросы гигиены труда",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Pmo"
+    },
+    {
+        "title_spec": "Гигиена и санитария",
+        "title_program": "Пищевые токсикоинфекции и их профилактика",
+        "hour": "144",
+        "price": "9792",
+        "date": "12.08.2022",
+        "linkNmo": "https://clck.ru/337PnN"
+    },
+    {
+        "title_spec": "Гигиена и санитария",
+        "title_program": "Гигиена и санитария: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337Pnw"
+    },
+    {
+        "title_spec": "Гигиена и санитария",
+        "title_program": "Гигиена и санитария",
+        "hour": "144",
+        "price": "9792",
+        "date": "21.03.2022",
+        "linkNmo": "https://clck.ru/337PoY"
+    },
+    {
+        "title_spec": "Гигиена и санитария",
+        "title_program": "Гигиена и санитария",
+        "hour": "288",
+        "price": "19584",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337Pok"
+    },
+    {
+        "title_spec": "Гигиена и санитария\n(Медико-профилактическое дело)",
+        "title_program": "Гигиена и санитария",
+        "hour": "36",
+        "price": "2448",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337Pp3"
+    },
+    {
+        "title_spec": "Гистология",
+        "title_program": "Гистология",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337Ppr"
+    },
+    {
+        "title_spec": "Гистология",
+        "title_program": "Гистология",
+        "hour": "144",
+        "price": "9792",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337PqC"
+    },
+    {
+        "title_spec": "Гистология",
+        "title_program": "Гистология",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337PqV"
+    },
+    {
+        "title_spec": "Гистология",
+        "title_program": "Гистология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337PrG"
+    },
+    {
+        "title_spec": "Дезинфекционное дело",
+        "title_program": "Дезинфекционное дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337Pst"
+    },
+    {
+        "title_spec": "Дезинфекционное дело",
+        "title_program": "Организация дезинфекционного дела",
+        "hour": "36",
+        "price": "2448",
+        "date": "16.03.2021",
+        "linkNmo": "https://clck.ru/337Pup"
+    },
+    {
+        "title_spec": "Дезинфекционное дело",
+        "title_program": "Дезинфекционное дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337PtL"
+    },
+    {
+        "title_spec": "Дезинфекционное дело",
+        "title_program": "Дезинфекционное дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337Pti"
+    },
+    {
+        "title_spec": "Дезинфекционное дело",
+        "title_program": "Дезинфекционное дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337PuJ"
+    },
+    {
+        "title_spec": "Дезинфекционное дело",
+        "title_program": "Дезинфекционное дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "12.05.2022",
+        "linkNmo": ""
+    },
+    {
+        "title_spec": "Диетология",
+        "title_program": "Диетология",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Pvj"
+    },
+    {
+        "title_spec": "Диетология",
+        "title_program": "Диетология",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Pwj"
+    },
+    {
+        "title_spec": "Диетология",
+        "title_program": "Диетология",
+        "hour": "144",
+        "price": "9792",
+        "date": "08.09.2022",
+        "linkNmo": "https://clck.ru/337PwS"
+    },
+    {
+        "title_spec": "Диетология",
+        "title_program": "Диетология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "08.092022",
+        "linkNmo": "https://clck.ru/337Px4"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Лабораторная диагностика",
+        "hour": "36",
+        "price": "2448",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337Pxt"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Современные методы клинических исследований в лабораторной диагностике",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Pzh"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Лабораторная диагностика: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Q2N"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Лабораторное дело в гигиене труда",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Q37"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Современные физико-химические методы",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Q6Q"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Современные методы клинических исследований в лабораторной диагностике",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Q7n"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Гистологические методы исследований в патологоанатомических отделениях и прозекторских",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Q8Y"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Лабораторная диагностика",
+        "hour": "144",
+        "price": "9792",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337Pz8"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Лабораторная диагностика",
+        "hour": "288",
+        "price": "19584",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337QAA"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Лабораторная диагностика особо опасных инфекций: чума, холера, брюшной тиф",
+        "hour": "144",
+        "price": "9792",
+        "date": "27.07.2022",
+        "linkNmo": "https://clck.ru/337Pz8"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Методология отбора проб в санитарно-химических исследованиях",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337QBB"
+    },
+    {
+        "title_spec": "Лабораторная диагностика",
+        "title_program": "Методы микробиологической диагностики острых кишечных инфекций",
+        "hour": "144",
+        "price": "9792",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337QBx"
+    },
+    {
+        "title_spec": "Лабораторное дело (Медико-профилактическое дело)",
+        "title_program": "Лабораторное дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "07.09.2022",
+        "linkNmo": "https://clck.ru/337QEk"
+    },
+    {
+        "title_spec": "Лабораторное дело (Медико-профилактическое дело)",
+        "title_program": "Лабораторное дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "07.09.2022",
+        "linkNmo": "https://clck.ru/337QFb"
+    },
+    {
+        "title_spec": "Лабораторное дело (Медико-профилактическое дело)",
+        "title_program": "Лабораторное дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "07.09.2022",
+        "linkNmo": "https://clck.ru/337QJV"
+    },
+    {
+        "title_spec": "Лабораторное дело (Медико-профилактическое дело)",
+        "title_program": "Лабораторное дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "07.09.2022",
+        "linkNmo": "https://clck.ru/337QK3"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Современные аспекты управления экономики здравоохранения",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337QL8"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Скорая и неотложная помощь",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337QMR"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Лечебное дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QPA"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Лечебное дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "07.04.2022",
+        "linkNmo": "https://clck.ru/337QPx"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Современные аспекты управления экономики здравоохранения",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337QQW"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Лечебное дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QR2"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Лечебное дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QRE"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Организационно-правовые основы работы фельдшерских здравпунктов на предприятиях",
+        "hour": "144",
+        "price": "9792",
+        "date": "09.08.2022",
+        "linkNmo": "https://clck.ru/337QRa"
+    },
+    {
+        "title_spec": "Лечебное дело",
+        "title_program": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
+        "hour": "74",
+        "price": "5032",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337QS9"
+    },
+    {
+        "title_spec": "Лечебное дело\n(Акушерское дело, Сестринское дело, Сестринское дело в педиатрии)",
+        "title_program": "Охрана здоровья детей",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.07.2022",
+        "linkNmo": "https://clck.ru/337QSo"
+    },
+    {
+        "title_spec": "Лечебное дело\n(Акушерское дело, Медико-социальная помощь, Сестринское дело)",
+        "title_program": "Медико-социальная помощь",
+        "hour": "288",
+        "price": "19584",
+        "date": "30.08.2022",
+        "linkNmo": "https://clck.ru/337QTZ"
+    },
+    {
+        "title_spec": "Лечебное дело\n(Акушерское дело, Медико-социальная помощь, Сестринское дело)",
+        "title_program": "Медико-социальная помощь: актуальные проблемы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "30.08.2022",
+        "linkNmo": "https://clck.ru/337QTs"
+    },
+    {
+        "title_spec": "Лечебная физкультура",
+        "title_program": "Лечебная физкультура",
+        "hour": "36",
+        "price": "2448",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QW6"
+    },
+    {
+        "title_spec": "Лечебная физкультура",
+        "title_program": "Лечебная физкультура: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QWV"
+    },
+    {
+        "title_spec": "Лечебная физкультура",
+        "title_program": "Лечебная физкультура",
+        "hour": "144",
+        "price": "9792",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QWv"
+    },
+    {
+        "title_spec": "Лечебная физкультура",
+        "title_program": "Лечебная физкультура",
+        "hour": "288",
+        "price": "19584",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337QXB"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Медико-профилактическое дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337QYb"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Актуальные аспекты профилактики инфекционных заболеваний в медицинских учреждениях",
+        "hour": "36",
+        "price": "2448",
+        "date": "30.11.21",
+        "linkNmo": "https://clck.ru/337Qcg"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Медико-профилактическое дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337QZh"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Организация санитарного просвещения",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337QdR"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Современные аспекты эпиднадзора",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qe6"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Современные вопросы гигиены труда",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qfq"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Современные аспекты эпиднадзора",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.02.22",
+        "linkNmo": "https://clck.ru/337Qe6"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Организация дезинфекционного дела",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qph"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Иммунопрофилактика инфекционных заболеваний",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qqc"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Медико-профилактическое дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337QbE"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Медико-профилактическое дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337Qay"
+    },
+    {
+        "title_spec": "Медико-профилактическое дело",
+        "title_program": "Инфекционная безопасность. Профилактика ИСМП",
+        "hour": "36",
+        "price": "2448",
+        "date": "12.08.2022",
+        "linkNmo": "https://clck.ru/337Qr6"
+    },
+    {
+        "title_spec": "Медико-социальная помощь",
+        "title_program": "Современные аспекты медико-социальной помощи",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qt6"
+    },
+    {
+        "title_spec": "Медико-социальная помощь",
+        "title_program": "Медико-социальная помощь",
+        "hour": "144",
+        "price": "9792",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337QvF"
+    },
+    {
+        "title_spec": "Медико-социальная помощь\n(Акушерское дело, Сестринское дело)",
+        "title_program": "Медико-социальная помощь",
+        "hour": "36",
+        "price": "2448",
+        "date": "20.04.2022",
+        "linkNmo": "https://clck.ru/337Qvm"
+    },
+    {
+        "title_spec": "Медико-социальная помощь\n(Акушерское дело, Сестринское дело)",
+        "title_program": "Медико-социальная помощь",
+        "hour": "36",
+        "price": "2448",
+        "date": "02.06.2022",
+        "linkNmo": "https://clck.ru/337Qvm"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Организация работы предприятий \"Оптика\"",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qxw"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Медицинская оптика: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Qyp"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Организация работы предприятий \"Оптика\"",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337QyF"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Медицинская оптика",
+        "hour": "36",
+        "price": "2448",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337R29"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Медицинская оптика",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337R3B"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Медицинская оптика",
+        "hour": "288",
+        "price": "19584",
+        "date": "03.08.2022",
+        "linkNmo": "https://clck.ru/337R58"
+    },
+    {
+        "title_spec": "Медицинская оптика",
+        "title_program": "Алгоритм подбора очков и коррекция зрения",
+        "hour": "144",
+        "price": "9792",
+        "date": "03.11.2022",
+        "linkNmo": "https://clck.ru/337R5g"
+    },
+    {
+        "title_spec": "Медицинская статистика",
+        "title_program": "Медицинская статистика",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337R6U"
+    },
+    {
+        "title_spec": "Медицинская статистика",
+        "title_program": "Медицинская статистика",
+        "hour": "36",
+        "price": "2448",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337RCB"
+    },
+    {
+        "title_spec": "Медицинская статистика",
+        "title_program": "Медицинская статистика",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RCa"
+    },
+    {
+        "title_spec": "Медицинская статистика",
+        "title_program": "Медицинская статистика",
+        "hour": "144",
+        "price": "9792",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337RCx"
+    },
+    {
+        "title_spec": "Медицинская статистика",
+        "title_program": "Медицинская статистика",
+        "hour": "288",
+        "price": "19584",
+        "date": "28.04.2022",
+        "linkNmo": "https://clck.ru/337RD8"
+    },
+    {
+        "title_spec": "Медицинская статистика",
+        "title_program": "Медицинская статистика: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "16.11.2022",
+        "linkNmo": "https://clck.ru/337RDc"
+    },
+    {
+        "title_spec": "Медицинский массаж (Лечебная физкультура)",
+        "title_program": "Медицинский массаж",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RFE"
+    },
+    {
+        "title_spec": "Медицинский массаж (Лечебная физкультура)",
+        "title_program": "Медицинский массаж",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": ""
+    },
+    {
+        "title_spec": "Медицинский массаж",
+        "title_program": "Медицинский массаж",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337REU"
+    },
+    {
+        "title_spec": "Медицинский массаж",
+        "title_program": "Медицинский массаж: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "21.02.2022",
+        "linkNmo": "https://clck.ru/337RG6"
+    },
+    {
+        "title_spec": "Медицинский массаж",
+        "title_program": "Медицинский массаж",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RFb"
+    },
+    {
+        "title_spec": "Медицинский массаж",
+        "title_program": "Детский массаж",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RGd"
+    },
+    {
+        "title_spec": "Медицинский массаж",
+        "title_program": "Медицинский массаж",
+        "hour": "144",
+        "price": "9792",
+        "date": "21.02.22",
+        "linkNmo": "https://clck.ru/337RFE"
+    },
+    {
+        "title_spec": "Медицинский массаж",
+        "title_program": "Медицинский массаж",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337RJN"
+    },
+    {
+        "title_spec": "Младший медицинский персонал",
+        "title_program": "Медицинский уход за пациентами с осложнениями новой коронавирусной инфекции",
+        "hour": "36",
+        "price": "2448",
+        "date": "27.05.2022",
+        "linkNmo": "https://clck.ru/337RKE"
+    },
+    {
+        "title_spec": "Младший медицинский персонал",
+        "title_program": "Медицинский уход за пациентами с осложнениями новой коронавирусной инфекции",
+        "hour": "74",
+        "price": "5032",
+        "date": "27.05.2022",
+        "linkNmo": "https://clck.ru/337RKk"
+    },
+    {
+        "title_spec": "Младший медицинский персонал",
+        "title_program": "Медицинский уход за пациентами с осложнениями новой коронавирусной инфекции",
+        "hour": "144",
+        "price": "9792",
+        "date": "27.05.2022",
+        "linkNmo": "https://clck.ru/337RLr"
+    },
+    {
+        "title_spec": "Младший медицинский персонал",
+        "title_program": "Медицинский уход за пациентами с осложнениями новой коронавирусной инфекции",
+        "hour": "288",
+        "price": "19584",
+        "date": "27.05.2022",
+        "linkNmo": "https://clck.ru/337RLA"
+    },
+    {
+        "title_spec": "Наркология\n(Лечебное дело)",
+        "title_program": "Наркология",
+        "hour": "36",
+        "price": "2448",
+        "date": "14.04.2022",
+        "linkNmo": "https://clck.ru/337RM9"
+    },
+    {
+        "title_spec": "Наркология\n(Лечебное дело)",
+        "title_program": "Наркология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "15.04.2022",
+        "linkNmo": "https://clck.ru/337RMp"
+    },
+    {
+        "title_spec": "Наркология\n(Лечебное дело)",
+        "title_program": "Наркология",
+        "hour": "144",
+        "price": "9792",
+        "date": "15.04.2022",
+        "linkNmo": "https://clck.ru/337RNK"
+    },
+    {
+        "title_spec": "Наркология\n(Лечебное дело)",
+        "title_program": "Наркология",
+        "hour": "288",
+        "price": "19584",
+        "date": "15.04.2022",
+        "linkNmo": "https://clck.ru/337RNa"
+    },
+    {
+        "title_spec": "Общая практика",
+        "title_program": "Первичная медико-санитарная помощь взрослому населению",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RPm"
+    },
+    {
+        "title_spec": "Общая практика",
+        "title_program": "Общая практика",
+        "hour": "36",
+        "price": "2448",
+        "date": "15.08.2022",
+        "linkNmo": "https://clck.ru/337RQW"
+    },
+    {
+        "title_spec": "Общая практика",
+        "title_program": "Общая практика: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "01.08.2022",
+        "linkNmo": "https://clck.ru/337RQu"
+    },
+    {
+        "title_spec": "Общая практика",
+        "title_program": "Общая практика",
+        "hour": "144",
+        "price": "9792",
+        "date": "01.08.2022",
+        "linkNmo": "https://clck.ru/337RRD"
+    },
+    {
+        "title_spec": "Общая практика",
+        "title_program": "Общая практика",
+        "hour": "288",
+        "price": "19584",
+        "date": "01.08.2022",
+        "linkNmo": "https://clck.ru/337RRQ"
+    },
+    {
+        "title_spec": "Операционное дело",
+        "title_program": "Сестринское операционное дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RS2"
+    },
+    {
+        "title_spec": "Операционное дело",
+        "title_program": "Сестринское операционное дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RSR"
+    },
+    {
+        "title_spec": "Операционное дело",
+        "title_program": "Деятельность медицинской сестры в операционном отделении",
+        "hour": "74",
+        "price": "5032",
+        "date": "05.09.2022",
+        "linkNmo": "https://clck.ru/337RTb"
+    },
+    {
+        "title_spec": "Операционное дело",
+        "title_program": "Деятельность медицинской сестры в операционном отделении",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337RTJ"
+    },
+    {
+        "title_spec": "Операционное дело",
+        "title_program": "Деятельность медицинской сестры в операционном отделении",
+        "hour": "144",
+        "price": "9792",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337RTu"
+    },
+    {
+        "title_spec": "Операционное дело",
+        "title_program": "Деятельность медицинской сестры в операционном отделении",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337RUC"
+    },
+    {
+        "title_spec": "Организация сестринского дела",
+        "title_program": "Управление и экономика в здравоохранении",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RV7"
+    },
+    {
+        "title_spec": "Организация сестринского дела",
+        "title_program": "Организация сестринского дела",
+        "hour": "36",
+        "price": "2448",
+        "date": "14.04.2022",
+        "linkNmo": "https://clck.ru/337RWe"
+    },
+    {
+        "title_spec": "Организация сестринского дела",
+        "title_program": "Организация сестринского дела: вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "14.04.2022",
+        "linkNmo": "https://clck.ru/337RW2"
+    },
+    {
+        "title_spec": "Организация сестринского дела",
+        "title_program": "Организация сестринского дела",
+        "hour": "144",
+        "price": "9792",
+        "date": "14.04.2022",
+        "linkNmo": "https://clck.ru/337RVa"
+    },
+    {
+        "title_spec": "Организация сестринского дела",
+        "title_program": "Организация сестринского дела",
+        "hour": "288",
+        "price": "19584",
+        "date": "14.04.2022",
+        "linkNmo": "https://clck.ru/337RWp"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Рентгенология",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337RXh"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Лабораторное дело в рентгенологии",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RZY"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Рентгенология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "14.02.2022",
+        "linkNmo": "https://clck.ru/337RYC"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Монтаж, ремонт и техническое обслуживание рентгеновской аппаратуры",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RaE"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Лабораторное дело в рентгенологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RbA"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Рентгенология",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RYU"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Рентгенология",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337Rbj"
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Рентгенология",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": ""
+    },
+    {
+        "title_spec": "Рентгенология",
+        "title_program": "Выполнение рентгенологических снимков, исследований КТ и МРТ",
+        "hour": "36",
+        "price": "2448",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337RcD"
+    },
+    {
+        "title_spec": "Реабилитационное сестринское дело",
+        "title_program": "Лечебная физкультура: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "24.02.22",
+        "linkNmo": "https://clck.ru/337Rcy"
+    },
+    {
+        "title_spec": "Реабилитационное сестринское дело",
+        "title_program": "Реабилитационное сестринское дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337RdR"
+    },
+    {
+        "title_spec": "Реабилитационное сестринское дело",
+        "title_program": "Реабилитационное сестринское дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "19.08.2022",
+        "linkNmo": "https://clck.ru/337Rdt"
+    },
+    {
+        "title_spec": "Реабилитационное сестринское дело",
+        "title_program": "Реабилитационное сестринское дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337ReU"
+    },
+    {
+        "title_spec": "Реабилитационное сестринское дело",
+        "title_program": "Реабилитационное сестринское дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337Rf2"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Профилактика, диагностика и лечение новой коронавирусной инфекции (COVID-19) в деятельности медицинской сестры",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rfo"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Актуальные вопросы новой коронавирусной инфекции COVID-19",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rg9"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Актуальные вопросы новой коронавирусной инфекции COVID-19",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RgN"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело",
+        "hour": "36",
+        "price": "2448",
+        "date": "07.04.2022",
+        "linkNmo": "https://clck.ru/337RhC"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в кардиологии",
+        "hour": "36",
+        "price": "2448",
+        "date": "09.03.2022",
+        "linkNmo": "https://clck.ru/337Ri3"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в терапии. Общее усовершенствование",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RiK"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Первичная медико-санитарная помощь детям",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rir"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Управление и экономика в здравоохранении",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rja"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "28.02.2022",
+        "linkNmo": "https://clck.ru/337Rjp"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в гастроэнтерологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rk7"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в аллергологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "23.05.2022",
+        "linkNmo": "https://clck.ru/337Rkx"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в неврологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "23.05.2022",
+        "linkNmo": "https://clck.ru/337RmU"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в пульмонологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "23.05.2022",
+        "linkNmo": "https://clck.ru/337Rmi"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в эндокринологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "23.05.2022",
+        "linkNmo": "https://clck.ru/337RnA"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело при инфекциях",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RnR"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело во фтизиатрии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RoW"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в хирургии. Общее усовершенствование",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RpD"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в терапии. Общее усовершенствование",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rpi"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в урологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RqB"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в стоматологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rqu"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в психиатрии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RrM"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в офтальмологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rro"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в оториноларингологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RsK"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в курортологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rsd"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в кардиологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rsu"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская помощь онкологическим больным",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RtW"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская помощь больным с доброкачественными и злокачественными опухолями",
+        "hour": "144",
+        "price": "9792",
+        "date": "03.11.2022",
+        "linkNmo": "https://clck.ru/337Rts"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская помощь ожоговым больным",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rua"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская помощь гинекологическим больным",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Ruz"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская помощь больным с кожными и венерическими заболеваниями",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RvC"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская социальная помощь",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rvn"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Первичная медико-санитарная помощь взрослому населению",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rw6"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Первичная медико-профилактическая помощь населению",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RwK"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Социальная помощь лицам пожилого и старческого возраста",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rwo"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Управление и экономика в здравоохранении",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RxL"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Ультразвуковая диагностика",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RyG"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринская косметология",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Ryk"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Радиоизотопная диагностика, лучевая терапия",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337RzC"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Реабилитационное сестринское дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Rzd"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело",
+        "hour": "144",
+        "price": "9792",
+        "date": "21.02.2022",
+        "linkNmo": "https://clck.ru/337S7n"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Вопросы паллиативной помощи в деятельности специалиста сестринского дела",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337S8Y"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Гемодиализ",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337S8v"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Трансфузиология",
+        "hour": "216",
+        "price": "14688",
+        "date": "",
+        "linkNmo": "https://clck.ru/337S9N"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело",
+        "hour": "288",
+        "price": "19584",
+        "date": "04.04.2022",
+        "linkNmo": "https://clck.ru/337SAs"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Социальная помощь детям и подросткам",
+        "hour": "144",
+        "price": "9792",
+        "date": "29.08.2022",
+        "linkNmo": "https://clck.ru/337SBe"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Актуальные вопросы в деятельности среднего медицинского персонала в условиях риска распространения особо опасных инфекций (чума, холера, брюшной тиф)",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337SCA"
+    },
+    {
+        "title_spec": "Сестринское дело",
+        "title_program": "Сестринское дело в косметологии. Общее усовершенствование",
+        "hour": "74",
+        "price": "5032",
+        "date": "24.10.2022",
+        "linkNmo": "https://clck.ru/337SCZ"
+    },
+    {
+        "title_spec": "Сестринское дело\n(Акушерское дело, Лабораторная диагностика, Медико-профилактическое дело, Медицинский масcаж, Стоматология ортопедическая, Стоматология профилактическая, Фармация)",
+        "title_program": "Оказание первой помощи",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337SCu"
+    },
+    {
+        "title_spec": "Сестринское дело\n(Акушерское дело, Лечебное дело)",
+        "title_program": "Медицинская помощь пациентам с новой коронавирусной инфекцией (COVID-19)",
+        "hour": "36",
+        "price": "2448",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337SDA"
+    },
+    {
+        "title_spec": "Сестринское дело\n(Сестринское дело в педиатрии)",
+        "title_program": "Сестринский уход за новорожденными",
+        "hour": "36",
+        "price": "2448",
+        "date": "17.05.2022",
+        "linkNmo": "https://clck.ru/337SDi"
+    },
+    {
+        "title_spec": "Сестринское дело\n(Сестринское дело в педиатрии)",
+        "title_program": "Сестринский уход за новорожденными",
+        "hour": "74",
+        "price": "5032",
+        "date": "17.05.2022",
+        "linkNmo": "https://clck.ru/337SDz"
+    },
+    {
+        "title_spec": "Сестринское дело\n(Сестринское дело в педиатрии)",
+        "title_program": "Сестринский уход за новорожденными",
+        "hour": "144",
+        "price": "9792",
+        "date": "17.05.2022",
+        "linkNmo": "https://clck.ru/337SEU"
+    },
+    {
+        "title_spec": "Сестринское дело\n(Сестринское дело в педиатрии)",
+        "title_program": "Сестринский уход за новорожденными",
+        "hour": "288",
+        "price": "19584",
+        "date": "17.05.2022",
+        "linkNmo": "https://clck.ru/337SEo"
+    },
+    {
+        "title_spec": "Сестринское дело в косметологии",
+        "title_program": "Сестринское дело в косметологии",
+        "hour": "36",
+        "price": "2448",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337SFx"
+    },
+    {
+        "title_spec": "Сестринское дело в косметологии",
+        "title_program": "Сестринское дело в косметологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337SGT"
+    },
+    {
+        "title_spec": "Сестринское дело в косметологии",
+        "title_program": "Сестринское дело в косметологии",
+        "hour": "288",
+        "price": "19584",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337SGt"
+    },
+    {
+        "title_spec": "Сестринское дело в косметологии",
+        "title_program": "Сестринское дело в косметологии: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "18.08.2022",
+        "linkNmo": "https://clck.ru/337SHd"
+    },
+    {
+        "title_spec": "Сестринское дело в педиатрии\n(Сестринское дело)",
+        "title_program": "Сестринская помощь детям",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SJm"
+    },
+    {
+        "title_spec": "Сестринское дело в педиатрии",
+        "title_program": "Сестринское дело в педиатрии",
+        "hour": "36",
+        "price": "2448",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337SKH"
+    },
+    {
+        "title_spec": "Сестринское дело в педиатрии",
+        "title_program": "Сестринское дело в педиатрии: актуальные проблемы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SKb"
+    },
+    {
+        "title_spec": "Сестринское дело в педиатрии",
+        "title_program": "Сестринское дело в педиатрии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SKs"
+    },
+    {
+        "title_spec": "Сестринское дело в педиатрии",
+        "title_program": "Первичная медико-санитарная помощь детям",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SLR"
+    },
+    {
+        "title_spec": "Сестринское дело в педиатрии",
+        "title_program": "Сестринское дело в педиатрии",
+        "hour": "288",
+        "price": "19584",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337SLv"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Сестринское дело в стоматологии",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SMR"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Стоматология",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SNa"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Стоматология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "07.04.2022",
+        "linkNmo": "https://clck.ru/337SNq"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Стоматология",
+        "hour": "144",
+        "price": "9792",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SPG"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Стоматология",
+        "hour": "288",
+        "price": "19584",
+        "date": "12.05.2022",
+        "linkNmo": "https://clck.ru/337SPS"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Стоматологическая помощь населению",
+        "hour": "144",
+        "price": "5800",
+        "date": "",
+        "linkNmo": "https://clck.ru/hcSSu"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Зубной врач: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "01.09.2022",
+        "linkNmo": "https://clck.ru/337SRD"
+    },
+    {
+        "title_spec": "Стоматология",
+        "title_program": "Зубной врач",
+        "hour": "144",
+        "price": "9792",
+        "date": "01.09.2022",
+        "linkNmo": "https://clck.ru/337SRV"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая\n(Стоматология)",
+        "title_program": "Стоматология ортопедическая",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SN7"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая",
+        "title_program": "Стоматология ортопедическая",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SSn"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая",
+        "title_program": "Стоматология ортопедическая: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "04.04.22",
+        "linkNmo": "https://clck.ru/337STY"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая",
+        "title_program": "Современные аспекты ортопедической помощи населению",
+        "hour": "144",
+        "price": "9792",
+        "date": "18.02.22",
+        "linkNmo": "https://clck.ru/337SV6"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая",
+        "title_program": "Стоматология ортопедическая",
+        "hour": "144",
+        "price": "9792",
+        "date": "05.04.2022",
+        "linkNmo": "https://clck.ru/337STp"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая",
+        "title_program": "Стоматология ортопедическая",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SUC"
+    },
+    {
+        "title_spec": "Стоматология ортопедическая\n(Стоматология профилактическая)",
+        "title_program": "Скорая неотложная помощь в стоматологии с использованием автоматического наружного дефибриллятора",
+        "hour": "74",
+        "price": "5032",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337SVi"
+    },
+    {
+        "title_spec": "Стоматология профилактическая",
+        "title_program": "Стоматология профилактическая",
+        "hour": "36",
+        "price": "2448",
+        "date": "04.04.2022",
+        "linkNmo": "https://clck.ru/337SWV"
+    },
+    {
+        "title_spec": "Стоматология профилактическая",
+        "title_program": "Стоматология профилактическая: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SXz"
+    },
+    {
+        "title_spec": "Стоматология профилактическая",
+        "title_program": "Стоматология профилактическая",
+        "hour": "144",
+        "price": "9792",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SYR"
+    },
+    {
+        "title_spec": "Стоматология профилактическая",
+        "title_program": "Современные аспекты профилактической стоматологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SZ5"
+    },
+    {
+        "title_spec": "Стоматология профилактическая",
+        "title_program": "Стоматология профилактическая",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SaT"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь",
+        "title_program": "Скорая и неотложная помощь: актуальные вопросы и инновационные решения",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SbN"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь",
+        "title_program": "Скорая и неотложная помощь: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Sbe"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь",
+        "title_program": "Скорая и неотложная помощь",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Scc"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь",
+        "title_program": "Скорая и неотложная помощь",
+        "hour": "288",
+        "price": "19584",
+        "date": "07.04.2022",
+        "linkNmo": "https://clck.ru/337SdH"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь\n(Стоматология)",
+        "title_program": "Скорая неотложная помощь в стоматологии с использованием дефибриллятора",
+        "hour": "144",
+        "price": "9792",
+        "date": "26.08.2022",
+        "linkNmo": "https://clck.ru/337SeH"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь\n(Лечебное дело, Стоматология)",
+        "title_program": "Скорая неотложная помощь в стоматологии с использованием дефибриллятора",
+        "hour": "74",
+        "price": "5032",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337Sf4"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь\n(Лечебное дело, Стоматология)",
+        "title_program": "Скорая неотложная помощь в стоматологии с использованием дефибриллятора",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SfS"
+    },
+    {
+        "title_spec": "Скорая и неотложная помощь\n(Лечебное дело, Стоматология, Стоматология ортопедическая, Стоматология профилактическая)",
+        "title_program": "Скорая неотложная помощь в стоматологии с использованием дефибриллятора",
+        "hour": "36",
+        "price": "2448",
+        "date": "11.04.2022",
+        "linkNmo": "https://clck.ru/337QMR"
+    },
+    {
+        "title_spec": "Судебно-медицинская экспертиза",
+        "title_program": "Судебно-медицинская экспертиза",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337Sgy"
+    },
+    {
+        "title_spec": "Судебно-медицинская экспертиза",
+        "title_program": "Судебно-медицинская экспертиза",
+        "hour": "144",
+        "price": "9792",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337ShH"
+    },
+    {
+        "title_spec": "Судебно-медицинская экспертиза",
+        "title_program": "Судебно-медицинская экспертиза",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337She"
+    },
+    {
+        "title_spec": "Судебно-медицинская экспертиза",
+        "title_program": "Судебно-медицинская экспертиза: актуальные вопросы и инновационные вопросы",
+        "hour": "74",
+        "price": "5032",
+        "date": "06.09.2022",
+        "linkNmo": "https://clck.ru/337Si8"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Безрецептурный отпуск лекарственных средств и техника продаж",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Sio"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Фармация",
+        "hour": "36",
+        "price": "2448",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337SjU"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Фармация: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "21.02.22",
+        "linkNmo": "https://clck.ru/337Sjy"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Безрецептурный отпуск лекарственных средств и техника продаж",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SmD"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Отпуск лекарственных средств",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SmU"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Фармация",
+        "hour": "144",
+        "price": "9792",
+        "date": "21.02.22",
+        "linkNmo": "https://clck.ru/337Smu"
+    },
+    {
+        "title_spec": "Фармация",
+        "title_program": "Фармация",
+        "hour": "288",
+        "price": "19584",
+        "date": "06.04.2022",
+        "linkNmo": "https://clck.ru/337Sn8"
+    },
+    {
+        "title_spec": "Физиотерапия\n(Сестринское дело)",
+        "title_program": "Физиотерапия",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SnU"
+    },
+    {
+        "title_spec": "Физиотерапия",
+        "title_program": "Физиотерапия",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Sne"
+    },
+    {
+        "title_spec": "Физиотерапия",
+        "title_program": "Физиотерапия: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "18.04.2022",
+        "linkNmo": "https://clck.ru/337Sns"
+    },
+    {
+        "title_spec": "Физиотерапия",
+        "title_program": "Физиотерапия",
+        "hour": "288",
+        "price": "19584",
+        "date": "18.04.2022",
+        "linkNmo": "https://clck.ru/337SoK"
+    },
+    {
+        "title_spec": "Функциональная диагностика",
+        "title_program": "Функциональная диагностика",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SpD"
+    },
+    {
+        "title_spec": "Функциональная диагностика",
+        "title_program": "Функциональная диагностика: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337SpY"
+    },
+    {
+        "title_spec": "Функциональная диагностика",
+        "title_program": "Функциональная диагностика",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Sq3"
+    },
+    {
+        "title_spec": "Функциональная диагностика",
+        "title_program": "Функциональная диагностика",
+        "hour": "288",
+        "price": "19584",
+        "date": "07.07.2022",
+        "linkNmo": "https://clck.ru/337SqM"
+    },
+    {
+        "title_spec": "Энтомология",
+        "title_program": "Современные вопросы энтомологии",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Sqp"
+    },
+    {
+        "title_spec": "Энтомология",
+        "title_program": "Современные вопросы энтомологии",
+        "hour": "144",
+        "price": "9792",
+        "date": "",
+        "linkNmo": "https://clck.ru/337Sqw"
+    },
+    {
+        "title_spec": "Энтомология",
+        "title_program": "Энтомология",
+        "hour": "288",
+        "price": "19584",
+        "date": "26.05.2022",
+        "linkNmo": "https://clck.ru/337SrJ"
+    },
+    {
+        "title_spec": "Энтомология",
+        "title_program": "Энтомология",
+        "hour": "144",
+        "price": "9792",
+        "date": "03.06.2022",
+        "linkNmo": "https://clck.ru/337SrY"
+    },
+    {
+        "title_spec": "Энтомология",
+        "title_program": "Энтомология",
+        "hour": "36",
+        "price": "2448",
+        "date": "31.08.2022",
+        "linkNmo": "https://clck.ru/337Sro"
+    },
+    {
+        "title_spec": "Энтомология",
+        "title_program": "Энтомология: актуальные проблемы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "01.09.2022",
+        "linkNmo": "https://clck.ru/337Sry"
+    },
+    {
+        "title_spec": "Эпидемиология (паразитология)",
+        "title_program": "Эпидемиология",
+        "hour": "36",
+        "price": "2448",
+        "date": "19.04.2022",
+        "linkNmo": "https://clck.ru/337StR"
+    },
+    {
+        "title_spec": "Эпидемиология (паразитология)",
+        "title_program": "Современные аспекты эпиднадзора",
+        "hour": "36",
+        "price": "2448",
+        "date": "",
+        "linkNmo": "https://clck.ru/337SuK"
+    },
+    {
+        "title_spec": "Эпидемиология (паразитология)",
+        "title_program": "Эпидемиология: актуальные вопросы и инновационные решения",
+        "hour": "74",
+        "price": "5032",
+        "date": "17.08.2022",
+        "linkNmo": "https://clck.ru/337Sti"
+    },
+    {
+        "title_spec": "Эпидемиология (паразитология)",
+        "title_program": "Эпидемиология",
+        "hour": "144",
+        "price": "9792",
+        "date": "19.04.2022",
+        "linkNmo": "https://clck.ru/337Ssz"
+    },
+    {
+        "title_spec": "Эпидемиология (паразитология)",
+        "title_program": "Эпидемиология",
+        "hour": "288",
+        "price": "19584",
+        "date": "19.04.2022",
+        "linkNmo": "https://clck.ru/337Sts"
+    }
+]

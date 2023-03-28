@@ -23,7 +23,7 @@ def main():
 	before: ~ 1 min
 	after: ???
 	"""
-	return search("Лечебная физкультура",20000,"ПП",mail_service="mindbox")
+	return search("Современные аспекты акушерской помощи в родовспомогательных учреждениях",9792,"НМО",mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()

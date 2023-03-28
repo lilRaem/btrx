@@ -12,38 +12,37 @@ printed = False
 # First step:
 Use to extract NMO tables data from docx
 Before extract data press "CTRL+SHIFT+F9" in docx file to remove hyperlinks
+
+# TODO wrong count json programm convert (ex.: SPO=272 but coverted to json 135 )
 """
 
 def csv_to_json(csv_file, json_file):
 	global printed
 	jsonArray = []
 	try:
-		os.makedirs(f'{os.getcwd()}\\data\\json')
+		os.makedirs(f'{os.getcwd()}\\data\\json\\docx_converted\\nmofile')
 	except:
 		if printed == False and not printed:
 			print(f'Сохранено в: {json_file}')
 			printed = True
 	with open(csv_file, "r", encoding='utf-8') as csvf:
-		# print(f"\n{csvf}\n")
 		csvReaader = csv.DictReader(csvf)
 		for row in csvReaader:
 			jsonArray.append(row)
 
-		for k, v in enumerate(jsonArray):
-			jsonArray.pop(k)
-			# print(jsonArray)
 		#convert python jsonArray to JSON String and write to file
 		with open(json_file, 'w', encoding='utf-8') as jsonf:
 			jsonString = json.dumps(jsonArray, ensure_ascii=False, indent=4)
 			jsonf.write(jsonString)
-			print("json save")
 
 
 def docx2csv(filename):
 	global printed
 	document = Document(filename)
 	type_name = ''
-
+	count_vo = 0
+	count_spo = 0
+	count_nmp = 0
 	for index, table in enumerate(document.tables):
 		df = [['' for i in range(len(table.columns))] for j in range(len(table.rows))]
 		if index == 0:
@@ -58,9 +57,9 @@ def docx2csv(filename):
 		else:
 			type_name = 'none'
 			print(f'Current index:{index} type:{type_name}')
-		count_vo = 0
-		count_spo = 0
-		count_nmp = 0
+		# count_vo = 0
+		# count_spo = 0
+		# count_nmp = 0
 		for i, row in enumerate(table.rows):
 
 			for j, cell in enumerate(row.cells):
@@ -79,8 +78,8 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				# csv_to_json(program_path, f'{os.getcwd()}\\data\\json\\program_{type_name}.json')
-				count_vo = count_vo + 1
+				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\docx_converted\\nmofile\\program_{type_name}.json')
+				count_vo += 1
 
 			if index == 1:
 				type_name = 'СПО'
@@ -92,8 +91,8 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
-				count_spo = count_spo + 1
+				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\docx_converted\\nmofile\\program_{type_name}.json')
+				count_spo += 1
 			if index == 2:
 				type_name = 'НМП'
 				program_path = f"{os.getcwd()}\data\\csv\\program_{type_name}.csv"
@@ -104,10 +103,12 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				# csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
-				count_nmp = count_nmp + 1
+				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\docx_converted\\nmofile\\program_{type_name}.json')
+				count_nmp += 1
 
-		print(f"VO_items: {count_vo}, SPO_items: {count_spo}, NMP_items: {count_nmp}")
+	print(f"VO_items: {count_vo-1}, SPO_items: {count_spo-1}, NMP_items: {count_nmp-1}")
 if __name__ == "__main__":
+
+	# csv_to_json(f'{os.getcwd()}\\data\\csv\\program_СПО.csv', f'{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_СПО.json')
 	docx2csv(filename)
 	# os.makedirs(f'{os.getcwd()}\\data\\csv')

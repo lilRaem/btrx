@@ -35,7 +35,6 @@ def main():
 		main.spec = tables[0][i][1]
 		main.job = tables[0][i][2:-1][0].split(", ")
 		main.pp = tables[0][i][-1].split("\n")
-		# print(main.dict())
 		f.append(main.dict())
 	return f
 
@@ -44,5 +43,5 @@ if __name__ == "__main__":
 	f = main()
 	p =f'{os.getcwd()}'
 	os.chdir(p)
-	with open(f"{p}\\module\\docx\\docxtojson.json",'w',encoding='utf-8') as file:
+	with open(f"{p}\\data\\json\\docx_converted\\docxtojson.json",'w',encoding='utf-8') as file:
 		json.dump(f[1:],file,ensure_ascii=False,indent=4)
