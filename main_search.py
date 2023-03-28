@@ -8,13 +8,12 @@ from module.parsersearchsite import searchInSite, getProgramUrl
 from module.html_pars.parserhtml import parseSiteUrl
 """
 #TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
-[ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
-[ ] ошибка При поиске несуществующей программы final_data.id = json_check_data['id'] TypeError: list indices must be integers or slices, not str line 80
+- [ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
 """
 
 datalist = []
 
-def search(search_name:str, search_price:int) -> list|None:
+def search(search_name:str, search_price:int, type_programm:str,mail_service:str="mindbox") -> list|None:
 	if type(search_price) != int:
 		TypeError(f"Type of search_price == int\n now: {type(search_price)}")
 	fdata: list[dict[str,str|int|None]] = list()
@@ -62,11 +61,16 @@ def search(search_name:str, search_price:int) -> list|None:
 							for data in progUrl_data:
 								if final_data.name.lower() == data.get("name").replace("Курс ","").lower():
 									if data.get('price'):
-										if int(data.get('price')) == final_data.price: final_data.url = data.get('url')
-										if data.get('spec'): final_data.spec = data.get('spec')
+										if int(data.get('price')) == final_data.price:
+											final_data.url = data.get('url')
 
-									if not final_data.hour: final_data.hour = int(data.get('hour'))
-
+											# final_data.spec = data.get('spec') # без цены подставляет spec из последнего элемента списка progUrl_data
+										if data.get('spec'):
+											if int(data.get('price')) == final_data.price:
+												final_data.spec = data.get('spec')
+										if not final_data.hour:
+											if int(data.get('price')) == final_data.price:
+												final_data.hour = int(data.get('hour'))
 			print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
 			fdata.append(final_data.dict())
 		else:
@@ -97,7 +101,7 @@ def search(search_name:str, search_price:int) -> list|None:
 							if v.get('spec'): final_data.spec = v.get('spec')
 							if v.get('price'): final_data.url = v.get('url')
 							if int(v.get('hour')) == final_data.hour:
-								pass
+								final_data.hour = int(v.get('hour'))
 							else:
 								if final_data.hour == None and final_data.price == v.get('price'):
 									final_data.hour = int(v.get('hour'))
@@ -105,12 +109,37 @@ def search(search_name:str, search_price:int) -> list|None:
 					fdata.append(final_data.dict())
 		if fdata:
 			for vv in fdata:
-				if vv.get('price') == search_price:
-					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
+
+				if mail_service == "mindbox":
+					user_email = "${ Recipient.Email }"
+				elif mail_service == "sendsay":
+					user_email = "[% anketa.member.email %]"
 				else:
+					user_email = None
+				if vv.get('price') == search_price:
+
+					if vv.get("spec") == "Профессиональная переподготовка":
+						type_programm = "ПП"
+					elif vv.get("spec") == "Повышение квалификации":
+						type_programm = "ПК"
+					elif vv.get("spec") == "Повышение квалификации (НМО)":
+						type_programm = "НМО"
+					else:
+						type_programm = None
+
+					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				else:
+					if vv.get("spec") == "Профессиональная переподготовка":
+						type_programm = "ПП"
+					elif vv.get("spec") == "Повышение квалификации":
+						type_programm = "ПК"
+					elif vv.get("spec") == "Повышение квалификации (НМО)":
+						type_programm = "НМО"
+					else:
+						type_programm = None
 					print(Fore.WHITE+f"\n{Back.LIGHTGREEN_EX}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
+					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
 			return fdata
 	else:
 		btrx.save_to_json(btrx.get_product_list(), makefileWdateName(path)[1], path)
@@ -127,7 +156,8 @@ if __name__ == "__main__":
 	# path = "data\\json\\btrx_data"
 	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
 	a = 1
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie/kurs-akusherstvo-i-ginekologiya-v-obschej-vrachebnoj-praktike/")
+	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/")
+
 	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
 	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html

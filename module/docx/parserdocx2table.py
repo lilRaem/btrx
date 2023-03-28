@@ -3,11 +3,16 @@ from docx import Document
 import pandas as pd
 import csv, json
 
-type_name = 'ВО'
-filename = 'АПК и ПП программы ПК НМО.docx'
+type_name = 'СПО'
+filename = 'АПК и ПП программы ПК НМО 09.03.2023.docx'
 
 printed = False
 
+"""
+# First step:
+Use to extract NMO tables data from docx
+Before extract data press "CTRL+SHIFT+F9" in docx file to remove hyperlinks
+"""
 
 def csv_to_json(csv_file, json_file):
 	global printed
@@ -18,7 +23,7 @@ def csv_to_json(csv_file, json_file):
 		if printed == False and not printed:
 			print(f'Сохранено в: {json_file}')
 			printed = True
-	with open(csv_file, encoding='utf-8') as csvf:
+	with open(csv_file, "r", encoding='utf-8') as csvf:
 		# print(f"\n{csvf}\n")
 		csvReaader = csv.DictReader(csvf)
 		for row in csvReaader:
@@ -29,9 +34,9 @@ def csv_to_json(csv_file, json_file):
 			# print(jsonArray)
 		#convert python jsonArray to JSON String and write to file
 		with open(json_file, 'w', encoding='utf-8') as jsonf:
-
 			jsonString = json.dumps(jsonArray, ensure_ascii=False, indent=4)
 			jsonf.write(jsonString)
+			print("json save")
 
 
 def docx2csv(filename):
@@ -87,7 +92,7 @@ def docx2csv(filename):
 						print(f'Сохранено в: {program_path}')
 						printed = True
 				pd.DataFrame(df).to_csv(program_path, index=False, header=False)
-				# csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
+				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\program_{type_name}.json')
 				count_spo = count_spo + 1
 			if index == 2:
 				type_name = 'НМП'

@@ -53,10 +53,10 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 			final_data.url = data.get("url")
 			main_url = parse_site_config.link + final_data.url
 			pSiteUrl = phtml.parseSiteUrl(main_url,final_data.price)
-			for data in pSiteUrl:
-				if data.get('spec'): final_data.spec = data.get('spec')
-				find_url_list.append(data)
-				if data.get('price') == price: print(Fore.GREEN+f'{data}'+Style.RESET_ALL)
+			for data_psiteurl in pSiteUrl:
+				if data_psiteurl.get('spec'): final_data.spec = data.get('spec')
+				find_url_list.append(data_psiteurl)
+				if data_psiteurl.get('price') == price: print(Fore.GREEN+f'{data}'+Style.RESET_ALL)
 	if find_url_list:
 		if find_url_list.__len__() == 1:
 			print(Fore.MAGENTA+f'(parsersearchsite.py|getProgramUrl(): count_find_url = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
@@ -65,7 +65,7 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 			for data in find_url_list:
 				if search_key.lower() in data.get("name").lower():
 					if data.get("price"):
-						if final_data.price == int(data.get("price")):
+						if price == int(data.get("price")):
 							print("\n"+Style.BRIGHT+Fore.LIGHTCYAN_EX+f'{data}'+Style.RESET_ALL)
 						else:
 							print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
