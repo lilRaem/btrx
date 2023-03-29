@@ -2,9 +2,11 @@ from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr, StrictInt, StrictBool
 from random import choice
+
 # Main types of search data Program:
 class FinalData(BaseModel):
 	id: Optional[StrictInt] = None
+	type_zdrav: Optional[StrictStr] = None
 	spec: Optional[StrictStr] = None
 	name: str|Optional[StrictStr] = None
 	price: Optional[StrictInt] = None

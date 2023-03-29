@@ -77,6 +77,19 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	else:
 		_spec = None
 
+	type_url = parseurl.replace("https://apkipp.ru/katalog/","").split("/")[0]
+
+	if type_url == "zdravoohranenie":
+		final_data.type_zdrav = "ВО"
+	elif type_url == "zdravoohranenie-srednij-medpersonal":
+		final_data.type_zdrav = "СПО"
+	elif type_url == "zdravoohranenie-mladshij-medpersonal":
+		final_data.type_zdrav = "МП"
+	elif type_url == "zdravoohranenie-nemeditsinskie-spetsialnosti":
+		final_data.type_zdrav = "НМП"
+	else:
+		final_data.type_zdrav = None
+
 	if _spec: final_data.spec = _spec
 	if _price:
 		for i,d in enumerate(_price):

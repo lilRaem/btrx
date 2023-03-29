@@ -46,7 +46,6 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 		raise TypeError(f"price type == int, now: {type(price)}")
 	for data in searchInSite(search_key)[1]:
 		final_data = FinalData()
-
 		if data.get("name"): final_data.name = data.get("name")
 		final_data.price = price
 		if search_key.lower() in final_data.name.lower():
@@ -68,7 +67,8 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 						if price == int(data.get("price")):
 							print("\n"+Style.BRIGHT+Fore.LIGHTCYAN_EX+f'{data}'+Style.RESET_ALL)
 						else:
-							print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
+							# print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
+							pass
 	else:
 		print('Url not found')
 	try:
@@ -85,7 +85,7 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 						if search_key.lower() in data.get("name").lower():
 							if data.get("price"):
 								if price == int(data.get("price")):
-									if find_url_list.__len__() < 5:
+									if find_url_list.__len__() < 7:
 										print(f'4. Найдено {find_url_list.__len__()} страниц:\n{find_url_list}')
 									return find_url_list
 	except Exception as e:

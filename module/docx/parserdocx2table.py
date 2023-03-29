@@ -4,7 +4,7 @@ import pandas as pd
 import csv, json
 
 type_name = 'СПО'
-filename = 'АПК и ПП программы ПК НМО 09.03.2023.docx'
+filename = 'АПК и ПП программы ПК НМО 29.03.2023.docx'
 
 printed = False
 
@@ -13,7 +13,12 @@ printed = False
 Use to extract NMO tables data from docx
 Before extract data press "CTRL+SHIFT+F9" in docx file to remove hyperlinks
 
-# TODO wrong count json programm convert (ex.: SPO=272 but coverted to json 135 )
+to remove hyperlinks in docx:
+CTRL+SHIFT+F9
+
+to restore all linkable text to hyperlinks:
+CTRL+ALT+K
+
 """
 
 def csv_to_json(csv_file, json_file):
@@ -26,15 +31,16 @@ def csv_to_json(csv_file, json_file):
 			print(f'Сохранено в: {json_file}')
 			printed = True
 	with open(csv_file, "r", encoding='utf-8') as csvf:
-		csvReaader = csv.DictReader(csvf)
+		csvReaader = csv.DictReader(csvf,fieldnames=['title_spec','title_program','hour','price','date','linkNmo'])
 		for row in csvReaader:
 			jsonArray.append(row)
-
 		#convert python jsonArray to JSON String and write to file
+		jsonArray.pop(-1)
 		with open(json_file, 'w', encoding='utf-8') as jsonf:
 			jsonString = json.dumps(jsonArray, ensure_ascii=False, indent=4)
 			jsonf.write(jsonString)
 
+		# print(jsonArray)
 
 def docx2csv(filename):
 	global printed
@@ -60,7 +66,7 @@ def docx2csv(filename):
 		# count_vo = 0
 		# count_spo = 0
 		# count_nmp = 0
-		for i, row in enumerate(table.rows):
+		for i, row in enumerate(table.rows[1:]):
 
 			for j, cell in enumerate(row.cells):
 				df[i][j] = cell.text.replace('\n', ' ')
@@ -106,7 +112,7 @@ def docx2csv(filename):
 				csv_to_json(program_path, f'{os.getcwd()}\data\\json\\docx_converted\\nmofile\\program_{type_name}.json')
 				count_nmp += 1
 
-	print(f"VO_items: {count_vo-1}, SPO_items: {count_spo-1}, NMP_items: {count_nmp-1}")
+	print(f"VO_items: {count_vo}, SPO_items: {count_spo}, NMP_items: {count_nmp}")
 if __name__ == "__main__":
 
 	# csv_to_json(f'{os.getcwd()}\\data\\csv\\program_СПО.csv', f'{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_СПО.json')

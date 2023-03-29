@@ -1,12 +1,13 @@
 [
     {
-        "id": 18841,
+        "id": 17945,
+        "type_zdrav": "ВО",
         "spec": "Повышение квалификации (НМО)",
-        "name": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
-        "price": 9792,
+        "name": "Онкология",
+        "price": 9800,
         "hour": 144,
-        "nmoSpec": null,
-        "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/"
+        "nmoSpec": "Онкология",
+        "linkNmo": "https://clck.ru/337Gua",
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
     }
 ]

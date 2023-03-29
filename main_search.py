@@ -53,17 +53,21 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 					else: print(f"Length of progUrl_data: {None}")
 
 					if progUrl_data.__len__() == 1:
-						final_data.url = progUrl_data[0].get('url')
-						if not final_data.spec: final_data.spec = progUrl_data[0].get('spec')
-						if not final_data.hour: final_data.hour = int(progUrl_data[0].get('hour'))
+						for data in progUrl_data:
+							final_data.url = data.get('url')
+							if not final_data.spec: final_data.spec = data.get('spec')
+							if not final_data.type_zdrav: final_data.type_zdrav = data.get('type_zdrav')
+							if not final_data.hour: final_data.hour = int(data.get('hour'))
 					else:
 						if progUrl_data:
 							for data in progUrl_data:
-								if final_data.name.lower() == data.get("name").replace("Курс ","").lower():
+								if final_data.name.lower().strip() == data.get("name").replace("Курс ","").lower().strip():
 									if data.get('price'):
 										if int(data.get('price')) == final_data.price:
 											final_data.url = data.get('url')
-
+										if data.get('type_zdrav'):
+											if int(data.get('price')) == final_data.price:
+												final_data.type_zdrav = data.get('type_zdrav')
 											# final_data.spec = data.get('spec') # без цены подставляет spec из последнего элемента списка progUrl_data
 										if data.get('spec'):
 											if int(data.get('price')) == final_data.price:
@@ -98,14 +102,21 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 						print(Fore.RED+f"val_data.get('hour') error:\n{e}"+Fore.RESET)
 					if progUrl_data:
 						for v in progUrl_data:
+							# if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
 							if v.get('spec'): final_data.spec = v.get('spec')
-							if v.get('price'): final_data.url = v.get('url')
+							# if v.get('price'): final_data.url = v.get('url')
+							# if v.get('url'): final_data.url = v.get('url')
+
 							if int(v.get('hour')) == final_data.hour:
 								final_data.hour = int(v.get('hour'))
 							else:
-								if final_data.hour == None and final_data.price == v.get('price'):
+								if final_data.hour == None and int(final_data.price) == int(v.get('price')):
 									final_data.hour = int(v.get('hour'))
-					print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}' + Fore.RESET)
+							if final_data.name.lower() in v.get('name').lower():
+								if int(final_data.price) == int(v.get('price')):
+									final_data.url = v.get('url')
+									if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
+					print("\n" + Fore.GREEN + f'{final_data.dict()}' + Fore.RESET)
 					fdata.append(final_data.dict())
 		if fdata:
 			for vv in fdata:
@@ -127,7 +138,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 					else:
 						type_programm = None
 
-					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
 					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
 				else:
 					if vv.get("spec") == "Профессиональная переподготовка":
@@ -138,7 +149,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 						type_programm = "НМО"
 					else:
 						type_programm = None
-					print(Fore.WHITE+f"\n{Back.LIGHTGREEN_EX}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					print(Fore.WHITE+f"\n{Back.LIGHTGREEN_EX}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
 					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
 			return fdata
 	else:
