@@ -1,0 +1,107 @@
+[
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4317,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Бактериология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-2/?program=Бактериология&header=Курс ПП Бактериология&cost=20000&tovar=4317&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4321,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Гигиеническое воспитание",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/?program=Гигиеническое воспитание&header=Курс ПП Гигиеническое воспитание&cost=20000&tovar=4321&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4327,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Дезинфекционное дело",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dezinfektsionnoe-delo/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dezinfektsionnoe-delo/?program=Дезинфекционное дело&header=Курс ПП Дезинфекционное дело&cost=20000&tovar=4327&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4335,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Лабораторное дело",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo/?program=Лабораторное дело&header=Курс ПП Лабораторное дело&cost=20000&tovar=4335&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4339,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медицинская статистика",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/?program=Медицинская статистика&header=Курс ПП Медицинская статистика&cost=20000&tovar=4339&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 18365,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Рентгенология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=20000&tovar=18365&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4379,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Энтомология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/?program=Энтомология&header=Курс ПП Энтомология&cost=20000&tovar=4379&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]

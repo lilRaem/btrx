@@ -2,7 +2,7 @@ import json,os
 from datetime import datetime
 from colorama import Fore,Back,Style
 from time import sleep
-from btrx import btrx
+from btrx import Btrx
 try:
 	from module.config import UserInnerPhoneData,UserEmailData,LastCheckDatetimeData,UserData
 except:
@@ -11,12 +11,17 @@ except:
 
 loop_while = False
 clear = lambda: os.system('cls')
+btrx = Btrx()
+
+def getDateTime(now) -> tuple[str,str]:
+	date = now.strftime("%d-%m-%Y")
+	time = now.strftime("%H:%M:%S")
+	return date, time
 
 def workwithdata():
 	"""
 		Build main data [list] of Pydantic {dict}
 	"""
-
 	if os.path.exists('data/json/btrx_data/companyusers.json'):
 		print('path data/json/btrx_data/companyusers.json exists')
 		with open('data/json/btrx_data/companyusers.json','r',encoding='utf-8') as f:
@@ -30,12 +35,10 @@ def workwithdata():
 			# print(f"{data['NAME']} {data['LAST_NAME']} \ {data['UF_PHONE_INNER']}")
 			# print(user_count,user,id,workposit)
 			now = datetime.now()
-			last_date = now.strftime("%d-%m-%Y")
-			last_time = now.strftime("%H:%M:%S")
 			user_inner_phone_data.inner_phone = data['UF_PHONE_INNER']
 			user_email_data.email = data['EMAIL']
-			last_check_datetime_data.date = last_date
-			last_check_datetime_data.time = last_time
+			last_check_datetime_data.date = getDateTime(now)[0]
+			last_check_datetime_data.time = getDateTime(now)[1]
 
 			"Main Pydantic UserData() model class"
 
@@ -280,7 +283,7 @@ def search_menu():
 
 
 def menu():
-	global loop_while
+	global loop_while6
 	check = 0
 	loop_while = False
 	clear()
@@ -310,7 +313,7 @@ def menu():
 if __name__ == "__main__":
 	# load_users_from_btrx(btrx)
 	# seeallactiveuser()
-	menu()
+	# menu()
 	# workwithdata()
-	# changevaluebyID()
+	changevaluebyID()
 	# searchByName()

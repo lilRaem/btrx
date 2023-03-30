@@ -71,6 +71,16 @@ class Btrx(Bitrix):
 			return list(users)
 		except Exception as e: raise TypeError(f'get_users_with_innerPhone error {e}')
 
+	def get_all_client(self):
+		try:
+			contact = list()
+			contact = self.get_all("crm.contact.list",params={
+				"select": ['*']
+			})
+			return contact
+		except Exception as e:
+			raise TypeError(f"get_all_client error {e}")
+
 	def set_product_price(self,id=str(),price=0):
 		try:
 			params = {"ID": id, "fields":{
@@ -197,7 +207,7 @@ class Btrx(Bitrix):
 
 				try:
 					for data in datalist:
-						if data.get("name"): final_data.name = data.get("name")
+						if data.get("name"): final_data.name = data.get("name").strip()
 						if data.get("price"): final_data.price = data.get("price")
 						if name.lower() in final_data.name.lower() and price == final_data.price and price != 0:
 							count_name_price = count_name_price + 1
@@ -295,4 +305,7 @@ def check_null(variable, iter):
 if __name__ == '__main__':
 	btrx = Btrx()
 	data = []
-	print(btrx.check_product('Онкология',-98, btrx.get_all_data(btrx.get_product_list())))
+	dat = btrx.get_all_client()
+	print(dat)
+	with open("allcontact","w", encoding="utf-8") as file:
+		file.write(dat)

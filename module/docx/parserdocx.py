@@ -1,12 +1,10 @@
 import json
 import os
 from time import sleep
-import zipfile
-import xml.etree.ElementTree
 from docx.api import Document
 from docx.opc.constants import RELATIONSHIP_TYPE as RT
 
-filename = 'АПК и ПП программы ПК НМО.docx'
+filename = 'АПК и ПП программы ПК НМО 09.03.2023.docx'
 document = Document(filename)
 table = document.tables[1]
 data = []
@@ -20,6 +18,15 @@ table.columns[3].cells[0].text = 'price'
 table.columns[4].cells[0].text = 'date'
 table.columns[5].cells[0].text = 'linkNmo'
 
+"""
+# Second step:
+Use to extract data from docx table to json
+
+TODO make rebuild this model for extract automaticaly all tables and data
+- [ ] extract all tables to json
+- [ ] automatic remove hyperlinks
+
+"""
 
 def iter_hyperlink_rels(rels):
 	link_c = 0
@@ -72,7 +79,7 @@ def main():
 			file.write(doc)
 			document.save(filename)
 	except:
-		os.mkdir(f'{os.getcwd()}\\data\\json\\docx.json')
+		os.mkdir(f'{os.getcwd()}\\data\\json\\')
 		with open(f'{os.getcwd()}\\data\\json\\docx.json', 'w', encoding='utf-8') as file:
 			doc = json.dumps(data, ensure_ascii=False, indent=4)
 			file.write(doc)

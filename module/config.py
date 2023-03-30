@@ -2,9 +2,11 @@ from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr, StrictInt, StrictBool
 from random import choice
+
 # Main types of search data Program:
 class FinalData(BaseModel):
 	id: Optional[StrictInt] = None
+	type_zdrav: Optional[StrictStr] = None
 	spec: Optional[StrictStr] = None
 	name: str|Optional[StrictStr] = None
 	price: Optional[StrictInt] = None
@@ -12,7 +14,7 @@ class FinalData(BaseModel):
 	nmoSpec: Optional[StrictStr] = None
 	linkNmo: Optional[StrictStr] = None
 	url: Optional[StrictStr] = None
-
+	final_url: Optional[StrictStr] = None
 
 
 # Main types of search data UserData:
@@ -32,12 +34,12 @@ class LastCheckDatetimeData(BaseModel):
 class UserData(BaseModel):
 	id: Optional[StrictInt] = None
 	name: Optional[StrictStr] = None
-	email: UserEmailData()
+	email: UserEmailData() = None
 	department: Optional[StrictStr] = None
 	position: Optional[StrictStr] = None
-	inner_phone: UserInnerPhoneData()
+	inner_phone: UserInnerPhoneData() = None
 	is_active: Optional[StrictBool] = None
-	last_check_datetime: LastCheckDatetimeData()
+	last_check_datetime: LastCheckDatetimeData() = None
 
 # Main Bitrix config:
 class BtrxConfig():

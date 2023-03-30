@@ -5,7 +5,7 @@ from colorama import Fore
 from main_search import search
 """
 #TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
-[ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
+- [?] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
 """
 
 """
@@ -23,18 +23,22 @@ def main():
 	before: ~ 1 min
 	after: ???
 	"""
-	return search("Онко",0)
+	return search("Нет возможностей для переподготовки!!!",20000,"ПП",mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()
 	start = time()
 	data: list[dict[str,str|int|None]] = main()
-	minute: float = None
+
 	if data != None:
 		with open("data.json","w", encoding="utf-8") as file:
 			x = json.dump(data,file,indent=4,ensure_ascii=False)
-	end: float = round(time()-start,2)
+
 	# print(Fore.MAGENTA+f'Main time: {end} sec'+ Fore.RESET)
+
+
+	end: float = round(time()-start,2)
+	minute: float = None
 	if end < 60.0:
 		print(Fore.MAGENTA+f'Main time: {end} sec'+ Fore.RESET)
 	elif end >= 60.0:

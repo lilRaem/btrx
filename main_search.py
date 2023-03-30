@@ -3,18 +3,18 @@ from time import time
 from module.config import FinalData, makefileWdateName, ParseSiteConfig
 from colorama import Fore, Back, Style
 from module.btrx import Btrx
+import json
 # from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 from module.html_pars.parserhtml import parseSiteUrl
 """
-#TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
-[ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
-[ ] ошибка При поиске несуществующей программы final_data.id = json_check_data['id'] TypeError: list indices must be integers or slices, not str line 80
+# TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
+- [ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
 """
 
 datalist = []
 
-def search(search_name:str, search_price:int, type_c:str) -> list|None:
+def search(search_name:str, search_price:int, type_programm:str,mail_service:str="mindbox") -> list|None:
 	if type(search_price) != int:
 		TypeError(f"Type of search_price == int\n now: {type(search_price)}")
 	fdata: list[dict[str,str|int|None]] = list()
@@ -42,7 +42,7 @@ def search(search_name:str, search_price:int, type_c:str) -> list|None:
 				final_data = FinalData()
 
 				if _final_data.get('id'): final_data.id = int(_final_data.get('id'))
-				if _final_data.get('name'): final_data.name = _final_data.get('name')
+				if _final_data.get('name'): final_data.name = _final_data.get('name').strip()
 
 				if _final_data.get('price'): final_data.price = int(_final_data.get('price'))
 				if _final_data.get('hour'): final_data.hour = int(_final_data.get('hour'))
@@ -54,19 +54,28 @@ def search(search_name:str, search_price:int, type_c:str) -> list|None:
 					else: print(f"Length of progUrl_data: {None}")
 
 					if progUrl_data.__len__() == 1:
-						final_data.url = progUrl_data[0].get('url')
-						if not final_data.spec: final_data.spec = progUrl_data[0].get('spec')
-						if not final_data.hour: final_data.hour = int(progUrl_data[0].get('hour'))
+						for data in progUrl_data:
+							final_data.url = data.get('url')
+							if not final_data.spec: final_data.spec = data.get('spec')
+							if not final_data.type_zdrav: final_data.type_zdrav = data.get('type_zdrav')
+							if not final_data.hour: final_data.hour = int(data.get('hour'))
 					else:
 						if progUrl_data:
 							for data in progUrl_data:
-								if final_data.name.lower() == data.get("name").replace("Курс ","").lower():
+								if final_data.name.lower().strip() == data.get("name").replace("Курс ","").lower().strip():
 									if data.get('price'):
-										if int(data.get('price')) == final_data.price: final_data.url = data.get('url')
-										if data.get('spec'): final_data.spec = data.get('spec')
-
-									if not final_data.hour: final_data.hour = int(data.get('hour'))
-
+										if int(data.get('price')) == final_data.price:
+											final_data.url = data.get('url')
+										if data.get('type_zdrav'):
+											if int(data.get('price')) == final_data.price:
+												final_data.type_zdrav = data.get('type_zdrav')
+											# final_data.spec = data.get('spec') # без цены подставляет spec из последнего элемента списка progUrl_data
+										if data.get('spec'):
+											if int(data.get('price')) == final_data.price:
+												final_data.spec = data.get('spec')
+										if not final_data.hour:
+											if int(data.get('price')) == final_data.price:
+												final_data.hour = int(data.get('hour'))
 			print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
 			fdata.append(final_data.dict())
 		else:
@@ -74,7 +83,7 @@ def search(search_name:str, search_price:int, type_c:str) -> list|None:
 				for val_data in json_check_data:
 					final_data = FinalData()
 					final_data.id = int(val_data.get('id'))
-					final_data.name = val_data.get('name')
+					final_data.name = val_data.get('name').strip()
 					final_data.spec = val_data.get('spec')
 					if val_data.get('price'):
 						final_data.price = int(val_data.get('price'))
@@ -94,17 +103,25 @@ def search(search_name:str, search_price:int, type_c:str) -> list|None:
 						print(Fore.RED+f"val_data.get('hour') error:\n{e}"+Fore.RESET)
 					if progUrl_data:
 						for v in progUrl_data:
+							# if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
 							if v.get('spec'): final_data.spec = v.get('spec')
-							if v.get('price'): final_data.url = v.get('url')
+							# if v.get('price'): final_data.url = v.get('url')
+							# if v.get('url'): final_data.url = v.get('url')
+
 							if int(v.get('hour')) == final_data.hour:
-								pass
+								final_data.hour = int(v.get('hour'))
 							else:
-								if final_data.hour == None and final_data.price == v.get('price'):
+								if final_data.hour == None and int(final_data.price) == int(v.get('price')):
 									final_data.hour = int(v.get('hour'))
-					print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}' + Fore.RESET)
+							if final_data.name.lower() in v.get('name').lower():
+								if int(final_data.price) == int(v.get('price')):
+									final_data.url = v.get('url')
+									if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
+					print("\n" + Fore.GREEN + f'{final_data.dict()}' + Fore.RESET)
 					fdata.append(final_data.dict())
 		if fdata:
 			for vv in fdata:
+<<<<<<< HEAD
 				if vv.get('price') == search_price:
 <<<<<<< HEAD
 					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
@@ -113,15 +130,77 @@ def search(search_name:str, search_price:int, type_c:str) -> list|None:
 					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
 					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
 >>>>>>> 3cb4d867880ba0d7f1e2bb9451b9fae123f32877
+=======
+
+				if mail_service == "mindbox":
+					user_email = "${ Recipient.Email }"
+				elif mail_service == "sendsay":
+					user_email = "[% anketa.member.email %]"
+>>>>>>> c304d20f0928745f6a54cb2532e788be2c743e0e
 				else:
-					print(Fore.WHITE+f"\n{Back.LIGHTGREEN_EX}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
+					user_email = None
+
+				if vv.get("spec") == "Профессиональная переподготовка":
+						type_programm = "ПП"
+				elif vv.get("spec") == "Повышение квалификации":
+					type_programm = "ПК"
+				elif vv.get("spec") == "Повышение квалификации (НМО)":
+					type_programm = "НМО"
+				else:
+					type_programm = None
+
+				if vv.get('price') == search_price:
+					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					if type_programm == "НМО":
+						getLinkNmo(type_programm,user_email,fdata)
+					else:
+						print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				else:
+					print(Fore.WHITE+f"\n{Back.BLUE}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					if type_programm == "НМО":
+						getLinkNmo(type_programm,user_email,fdata)
+					else:
+						print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				if vv.get('price') == search_price:
+					if not vv.get('final_url'):
+						if type_programm == "НМО":
+							getLinkNmo(type_programm,user_email,fdata)
+						else:
+							vv['final_url'] = f"{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"
 			return fdata
 	else:
 		btrx.save_to_json(btrx.get_product_list(), makefileWdateName(path)[1], path)
 		data = btrx.load_from_jsonFile(makefileWdateName(path)[1],path)
 		btrx.check_product(search_name, search_price, btrx.get_all_data(data))
+
+
 	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {round(time()-start,2)} sec"+ Fore.RESET)
+
+def getLinkNmo(type_programm:str,user_email:str,listdata:list):
+	# Берем ссылки НМО
+	list_data: list[dict[str,str|int|None]] = list()
+	for link_data in listdata:
+		with open(f"{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_{link_data.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
+			nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
+		if link_data.get("spec") == "Повышение квалификации (НМО)":
+			for i,nmo_d in enumerate(nmo_data):
+				# final_data =a
+				# print(i,f"price {nmo_d.get('price')}")
+				nmo_price = int(nmo_d.get('price').strip())
+				nmo_hour = int(nmo_d.get('hour'.strip()))
+
+				if nmo_d.get('title_program').lower() == link_data.get('name').lower():
+					if int(link_data.get('price')) == nmo_price and link_data.get('price') and int(link_data.get('hour')) == nmo_hour:
+						if not link_data.get('linkNmo'): link_data['linkNmo'] = nmo_d.get('linkNmo')
+						if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
+			list_data.append(link_data)
+
+			# print(f"\n{link_data}")
+
+	if list_data:
+		for link_d in list_data:
+			print(Fore.CYAN+f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"+Fore.RESET)
+			return f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"
 
 if __name__ == "__main__":
 	start = time()
@@ -132,7 +211,8 @@ if __name__ == "__main__":
 	# path = "data\\json\\btrx_data"
 	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
 	a = 1
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie/kurs-akusherstvo-i-ginekologiya-v-obschej-vrachebnoj-praktike/")
+	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/")
+
 	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
 	# buildjsondata()
 	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html

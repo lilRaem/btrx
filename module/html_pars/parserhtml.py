@@ -61,11 +61,12 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	req = requests.get(parseurl, headers=header,timeout=None)
 	print(f"\n{Fore.LIGHTYELLOW_EX}request time: {round(time()-start,2)} sec{Fore.RESET}")
 	soup = BeautifulSoup(req.content,'lxml')
-	final_data.url = parseurl
 	final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 	final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 	_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
 	_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
+
+	print(_spec)
 
 	if "профессиональной переподготовки" in _spec or "профессиональной переподготовке" in _spec:
 		_spec = "Профессиональная переподготовка"
@@ -75,6 +76,20 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		_spec = "Повышение квалификации (НМО)"
 	else:
 		_spec = None
+
+	type_url = parseurl.replace("https://apkipp.ru/katalog/","").split("/")[0]
+
+	if type_url == "zdravoohranenie":
+		final_data.type_zdrav = "ВО"
+	elif type_url == "zdravoohranenie-srednij-medpersonal":
+		final_data.type_zdrav = "СПО"
+	elif type_url == "zdravoohranenie-mladshij-medpersonal":
+		final_data.type_zdrav = "МП"
+	elif type_url == "zdravoohranenie-nemeditsinskie-spetsialnosti":
+		final_data.type_zdrav = "НМП"
+	else:
+		final_data.type_zdrav = None
+
 	if _spec: final_data.spec = _spec
 	if _price:
 		for i,d in enumerate(_price):
@@ -92,6 +107,7 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 			print(f"(except) Price without oldprice: {final_data.price}")
 
 	if final_data.price == price:
+		final_data.url = parseurl
 		site_data_list.append(final_data.dict())
 		print(Fore.GREEN+f"Found price: {site_data_list[0].get('price')}"+Fore.RESET)
 	else: site_data_list.append(final_data.dict())
@@ -109,4 +125,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	print(parseSiteUrl(price='0'))
+	print(parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/",price='9792'))

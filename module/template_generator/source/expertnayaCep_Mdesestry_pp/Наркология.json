@@ -1,0 +1,287 @@
+[
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4313,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Акушерское дело",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-akusherskoe-delo/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-akusherskoe-delo/?program=Акушерское дело&header=Курс ПП Акушерское дело&cost=20000&tovar=4313&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 15519,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Анестезиология и реаниматология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-anesteziologiya-i-reanimatologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-anesteziologiya-i-reanimatologiya/?program=Анестезиология и реаниматология&header=Курс ПП Анестезиология и реаниматология&cost=20000&tovar=15519&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4321,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Гигиеническое воспитание",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/?program=Гигиеническое воспитание&header=Курс ПП Гигиеническое воспитание&cost=20000&tovar=4321&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 15985,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Диетология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-3/?program=Диетология&header=Курс ПП Диетология&cost=20000&tovar=15985&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4331,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Лечебная физкультура",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnaya-fizkultura/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnaya-fizkultura/?program=Лечебная физкультура&header=Курс ПП Лечебная физкультура&cost=20000&tovar=4331&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4341,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медицинский массаж",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskij-massazh-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskij-massazh-2/?program=Медицинский массаж&header=Курс ПП Медицинский массаж&cost=20000&tovar=4341&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4339,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медицинская статистика",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/?program=Медицинская статистика&header=Курс ПП Медицинская статистика&cost=20000&tovar=4339&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4337,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медико-социальная помощь",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-sotsialnaya-pomosch/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-sotsialnaya-pomosch/?program=Медико-социальная помощь&header=Курс ПП Медико-социальная помощь&cost=20000&tovar=4337&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4345,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Общая практика",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-obschaya-praktika/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-obschaya-praktika/?program=Общая практика&header=Курс ПП Общая практика&cost=20000&tovar=4345&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4347,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Операционное дело",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-operatsionnoe-delo/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-operatsionnoe-delo/?program=Операционное дело&header=Курс ПП Операционное дело&cost=20000&tovar=4347&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4349,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Организация сестринского дела",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela/?program=Организация сестринского дела&header=Курс ПП Организация сестринского дела&cost=20000&tovar=4349&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4351,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Реабилитационное сестринское дело",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-reabilitatsionnoe-sestrinskoe-delo/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-reabilitatsionnoe-sestrinskoe-delo/?program=Реабилитационное сестринское дело&header=Курс ПП Реабилитационное сестринское дело&cost=20000&tovar=4351&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 18365,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Рентгенология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=20000&tovar=18365&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 16569,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Сестринское дело",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-2/?program=Сестринское дело&header=Курс ПП Сестринское дело&cost=20000&tovar=16569&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 16589,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Сестринское дело в педиатрии",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-pediatrii/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-pediatrii/?program=Сестринское дело в педиатрии&header=Курс ПП Сестринское дело в педиатрии&cost=20000&tovar=16589&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4357,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Сестринское дело в косметологии",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-kosmetologii/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-kosmetologii/?program=Сестринское дело в косметологии&header=Курс ПП Сестринское дело в косметологии&cost=20000&tovar=4357&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 16609,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Скорая и неотложная помощь",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch/?program=Скорая и неотложная помощь&header=Курс ПП Скорая и неотложная помощь&cost=20000&tovar=16609&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4375,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Физиотерапия",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-fizioterapiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-fizioterapiya-2/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=20000&tovar=4375&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 4377,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Функциональная диагностика",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=20000&tovar=4377&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]
