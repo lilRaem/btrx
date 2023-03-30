@@ -14,7 +14,7 @@ class FinalData(BaseModel):
 	nmoSpec: Optional[StrictStr] = None
 	linkNmo: Optional[StrictStr] = None
 	url: Optional[StrictStr] = None
-
+	final_url: Optional[StrictStr] = None
 
 
 # Main types of search data UserData:

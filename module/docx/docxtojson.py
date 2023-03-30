@@ -33,7 +33,7 @@ def main():
 	for i,row in enumerate(tables[0]):
 		main = Data()
 		main.spec = tables[0][i][1]
-		main.job = tables[0][i][2:-1][0].split(", ")
+		main.job = tables[0][i][2:-1][0].split("\n")
 		main.pp = tables[0][i][-1].split("\n")
 		f.append(main.dict())
 	return f
