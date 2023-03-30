@@ -23,18 +23,18 @@ def main():
 	before: ~ 1 min
 	after: ???
 	"""
-	return search("Онкология",9800)
+	return search("Онко",0)
 
 if __name__ == "__main__":
 	clear()
 	start = time()
-	data: list = main()
+	data: list[dict[str,str|int|None]] = main()
 	minute: float = None
 	if data != None:
 		with open("data.json","w", encoding="utf-8") as file:
-			x = json.dump(data,file,indent=4,ensure_ascii=False,sort_keys=True)
+			x = json.dump(data,file,indent=4,ensure_ascii=False)
 	end: float = round(time()-start,2)
-	print(Fore.MAGENTA+f'Main time: {end} sec'+ Fore.RESET)
+	# print(Fore.MAGENTA+f'Main time: {end} sec'+ Fore.RESET)
 	if end < 60.0:
 		print(Fore.MAGENTA+f'Main time: {end} sec'+ Fore.RESET)
 	elif end >= 60.0:

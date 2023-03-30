@@ -54,6 +54,7 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 			main_url = parse_site_config.link + final_data.url
 			pSiteUrl = phtml.parseSiteUrl(main_url,final_data.price)
 			for data in pSiteUrl:
+				if data.get('spec'): final_data.spec = data.get('spec')
 				find_url_list.append(data)
 				if data.get('price') == price: print(Fore.GREEN+f'{data}'+Style.RESET_ALL)
 	if find_url_list:
