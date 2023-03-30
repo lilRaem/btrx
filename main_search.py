@@ -3,6 +3,7 @@ from time import time
 from module.config import FinalData, makefileWdateName, ParseSiteConfig
 from colorama import Fore, Back, Style
 from module.btrx import Btrx
+import json
 # from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 from module.html_pars.parserhtml import parseSiteUrl
@@ -127,36 +128,68 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 					user_email = "[% anketa.member.email %]"
 				else:
 					user_email = None
-				if vv.get('price') == search_price:
 
-					if vv.get("spec") == "Профессиональная переподготовка":
+				if vv.get("spec") == "Профессиональная переподготовка":
 						type_programm = "ПП"
-					elif vv.get("spec") == "Повышение квалификации":
-						type_programm = "ПК"
-					elif vv.get("spec") == "Повышение квалификации (НМО)":
-						type_programm = "НМО"
-					else:
-						type_programm = None
-
-					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				elif vv.get("spec") == "Повышение квалификации":
+					type_programm = "ПК"
+				elif vv.get("spec") == "Повышение квалификации (НМО)":
+					type_programm = "НМО"
 				else:
-					if vv.get("spec") == "Профессиональная переподготовка":
-						type_programm = "ПП"
-					elif vv.get("spec") == "Повышение квалификации":
-						type_programm = "ПК"
-					elif vv.get("spec") == "Повышение квалификации (НМО)":
-						type_programm = "НМО"
+					type_programm = None
+
+				if vv.get('price') == search_price:
+					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					if type_programm == "НМО":
+						getLinkNmo(type_programm,user_email,fdata)
 					else:
-						type_programm = None
-					print(Fore.WHITE+f"\n{Back.LIGHTGREEN_EX}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+						print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				else:
+					print(Fore.WHITE+f"\n{Back.BLUE}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+					if type_programm == "НМО":
+						getLinkNmo(type_programm,user_email,fdata)
+					else:
+						print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				if vv.get('price') == search_price:
+					if not vv.get('final_url'):
+						if type_programm == "НМО":
+							getLinkNmo(type_programm,user_email,fdata)
+						else:
+							vv['final_url'] = f"{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"
 			return fdata
 	else:
 		btrx.save_to_json(btrx.get_product_list(), makefileWdateName(path)[1], path)
 		data = btrx.load_from_jsonFile(makefileWdateName(path)[1],path)
 		btrx.check_product(search_name, search_price, btrx.get_all_data(data))
+
+
 	print('\n'+Fore.MAGENTA+f"(main.py) Search time: {round(time()-start,2)} sec"+ Fore.RESET)
+
+def getLinkNmo(type_programm:str,user_email:str,listdata:list):
+	# Берем ссылки НМО
+	list_data: list[dict[str,str|int|None]] = list()
+	for link_data in listdata:
+		with open(f"{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_{link_data.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
+			nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
+		if link_data.get("spec") == "Повышение квалификации (НМО)":
+			for i,nmo_d in enumerate(nmo_data):
+				# final_data =a
+				# print(i,f"price {nmo_d.get('price')}")
+				nmo_price = int(nmo_d.get('price').strip())
+				nmo_hour = int(nmo_d.get('hour'.strip()))
+
+				if nmo_d.get('title_program').lower() == link_data.get('name').lower():
+					if int(link_data.get('price')) == nmo_price and link_data.get('price') and int(link_data.get('hour')) == nmo_hour:
+						if not link_data.get('linkNmo'): link_data['linkNmo'] = nmo_d.get('linkNmo')
+						if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
+			list_data.append(link_data)
+
+			# print(f"\n{link_data}")
+
+	if list_data:
+		for link_d in list_data:
+			print(Fore.CYAN+f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"+Fore.RESET)
+			return f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"
 
 if __name__ == "__main__":
 	start = time()
