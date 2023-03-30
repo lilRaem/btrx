@@ -1,13 +1,13 @@
 [
     {
-        "id": 17945,
-        "type_zdrav": "ВО",
+        "id": 4823,
+        "type_zdrav": "СПО",
         "spec": "Повышение квалификации (НМО)",
-        "name": "Онкология",
-        "price": 9800,
+        "name": "Бактериология: актуальные проблемы и инновационные решения",
+        "price": 9792,
         "hour": 144,
-        "nmoSpec": "Онкология",
-        "linkNmo": "https://clck.ru/337Gua",
-        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-4/"
+        "nmoSpec": "Бактериология\n(Лабораторная диагностика)",
+        "linkNmo": "https://clck.ru/337PgH",
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-aktualnyie-problemyi-i-innovatsionnyie-resheniya-2/"
     }
 ]
