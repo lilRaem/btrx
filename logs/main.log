@@ -1,0 +1,12 @@
+2023-03-31 01:47:07,906 :: DEBUG :: btrx:17 ->
+[ ***Logger INITIALIZED*** ]
+2023-03-31 01:47:07,921 :: INFO :: btrx.main_search:33 ->
+[ [33m Path exists?: True, data\json\btrx_data\31.03.2023_file.json [39m ]
+2023-03-31 01:47:53,951 :: DEBUG :: btrx:17 ->
+[ ***Logger INITIALIZED*** ]
+2023-03-31 01:47:53,964 :: INFO :: btrx.main_search:33 ->
+[ [33m Path exists?: True, data\json\btrx_data\31.03.2023_file.json [39m ]
+2023-03-31 01:49:23,783 :: DEBUG :: btrx:17 =>
+[ ***Logger INITIALIZED*** ]
+2023-03-31 01:49:23,799 :: INFO :: btrx.main_search:33 =>
+[ [33m Path exists?: True, data\json\btrx_data\31.03.2023_file.json [39m ]

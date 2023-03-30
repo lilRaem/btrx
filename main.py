@@ -3,6 +3,7 @@ import os
 from time import time
 from colorama import Fore
 from main_search import search
+from module.logger import init_logger
 """
 #TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
 - [?] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
@@ -16,7 +17,7 @@ TypeError: price type == int, now: <class 'NoneType'>
 
 datalist = []
 clear = lambda: os.system('cls')
-
+init_logger('btrx')
 def main():
 	"""
 	search time for "Онко" with price = 0:

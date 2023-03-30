@@ -2,7 +2,8 @@ from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr, StrictInt, StrictBool
 from random import choice
-
+import time
+import os
 # Main types of search data Program:
 class FinalData(BaseModel):
 	id: Optional[StrictInt] = None
@@ -91,3 +92,24 @@ def makefileWdateName(path:str) -> tuple[str,str]:
 	filename = f'{cur_date}_file.json'
 	filenameWcurDate = f"{filename}"
 	return str(path+"\\"+filenameWcurDate), str(filename)
+
+def timing_decorator(func):
+	def wrapper(*args, **kwargs):
+		start_time = time.time()
+		result = func(*args, **kwargs)
+		end_time = time.time()
+		print(f"Function {func.__name__}() took {round(end_time - start_time,2)} seconds to run.")
+		return result
+	return wrapper
+
+def memoize(func):
+	cache = {}
+	def wrapper(*args):
+		if args in cache:
+			print(cache[args])
+			return cache[args]
+		else:
+			result = func(*args)
+			cache[args] = result
+			return result
+	return wrapper

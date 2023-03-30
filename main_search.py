@@ -1,12 +1,13 @@
 import os
 from time import time
-from module.config import FinalData, makefileWdateName, ParseSiteConfig
+from module.config import FinalData, makefileWdateName, ParseSiteConfig,timing_decorator, memoize
 from colorama import Fore, Back, Style
 from module.btrx import Btrx
 import json
 # from module.build_btrx_data import buildjsondata
 from module.parsersearchsite import searchInSite, getProgramUrl
 from module.html_pars.parserhtml import parseSiteUrl
+from module.logger import init_logger, logging
 """
 # TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
 - [ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
@@ -14,19 +15,22 @@ from module.html_pars.parserhtml import parseSiteUrl
 
 datalist = []
 
+
+
+
+log=logging.getLogger('btrx.main_search')
 def search(search_name:str, search_price:int, type_programm:str,mail_service:str="mindbox") -> list|None:
 	if type(search_price) != int:
 		TypeError(f"Type of search_price == int\n now: {type(search_price)}")
+		log.error(f"Type of search_price == int now: {type(search_price)}")
 	fdata: list[dict[str,str|int|None]] = list()
 	start = time()
 	btrx = Btrx()
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', ' ')
 	search_name = search_name.replace('  ', ' ')
-	# name = input('Введите название программы: ')
 	path = "data\\json\\btrx_data"
-	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName(path)[0]),
-		makefileWdateName(path)[0] + Back.RESET)
+	log.info(f"{Fore.YELLOW} Path exists?: {os.path.exists(makefileWdateName(path)[0])}, {makefileWdateName(path)[0]} {Fore.RESET}")
 	if (os.path.exists(makefileWdateName(path)[0])):
 		data = btrx.load_from_jsonFile(makefileWdateName(path)[1], path)
 		json_check_data = btrx.check_product(search_name, search_price, btrx.get_all_data(data))
@@ -51,7 +55,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 					progUrl_data = getProgramUrl(final_data.name, final_data.price)
 
 					if progUrl_data: print(f"Length of progUrl_data: {progUrl_data.__len__()}")
-					else: print(f"Length of progUrl_data: {None}")
+					else: log.warn(f"Length of progUrl_data: {None}")
 
 					if progUrl_data.__len__() == 1:
 						for data in progUrl_data:
@@ -94,19 +98,16 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 						progUrl_data = getProgramUrl(final_data.name, final_data.price)
 					except Exception as e:
 						progUrl_data = None
-						print(Fore.RED+f"get progUrl_data() error:\n{e}"+Fore.RESET)
+						log.error(f"{Fore.RED} get progUrl_data() error:\n{e} {Fore.RESET}")
 					try:
 						final_data.hour = val_data.get('hour')
 					except Exception as e:
 						if progUrl_data:
 							final_data.hour = progUrl_data[0].get('hour')
-						print(Fore.RED+f"val_data.get('hour') error:\n{e}"+Fore.RESET)
+						log.error(f"{Fore.RED} val_data.get('hour') error:\n{e} {Fore.RESET}")
 					if progUrl_data:
 						for v in progUrl_data:
-							# if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
 							if v.get('spec'): final_data.spec = v.get('spec')
-							# if v.get('price'): final_data.url = v.get('url')
-							# if v.get('url'): final_data.url = v.get('url')
 
 							if int(v.get('hour')) == final_data.hour:
 								final_data.hour = int(v.get('hour'))
@@ -121,22 +122,11 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 					fdata.append(final_data.dict())
 		if fdata:
 			for vv in fdata:
-<<<<<<< HEAD
-				if vv.get('price') == search_price:
-<<<<<<< HEAD
-					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_c} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
-=======
-					print(Fore.WHITE+f"\n{Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
-					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+"${ Recipient.Email }"+Fore.RESET)
->>>>>>> 3cb4d867880ba0d7f1e2bb9451b9fae123f32877
-=======
 
 				if mail_service == "mindbox":
 					user_email = "${ Recipient.Email }"
 				elif mail_service == "sendsay":
 					user_email = "[% anketa.member.email %]"
->>>>>>> c304d20f0928745f6a54cb2532e788be2c743e0e
 				else:
 					user_email = None
 
@@ -184,8 +174,6 @@ def getLinkNmo(type_programm:str,user_email:str,listdata:list):
 			nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
 		if link_data.get("spec") == "Повышение квалификации (НМО)":
 			for i,nmo_d in enumerate(nmo_data):
-				# final_data =a
-				# print(i,f"price {nmo_d.get('price')}")
 				nmo_price = int(nmo_d.get('price').strip())
 				nmo_hour = int(nmo_d.get('hour'.strip()))
 
@@ -195,30 +183,13 @@ def getLinkNmo(type_programm:str,user_email:str,listdata:list):
 						if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
 			list_data.append(link_data)
 
-			# print(f"\n{link_data}")
-
 	if list_data:
 		for link_d in list_data:
 			print(Fore.CYAN+f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"+Fore.RESET)
 			return f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"
 
-if __name__ == "__main__":
-	start = time()
-	# data = search("Онкология",0)
-	# with open("data.json","w", encoding="utf-8") as file:
-	# 	file.write(json.dump(data,file,indent=4,ensure_ascii=False,sort_keys=True,default=list[dict]))
-	# p = Btrx()
-	# path = "data\\json\\btrx_data"
-	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
-	a = 1
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/")
+def main():
+	search("Онкология",9800,"НМо")
 
-	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
-	# buildjsondata()
-	# print(datalist)d:\Program\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.html
-	# class DataData(BaseModel):
-	# 	id: Optional[StrictStr] = None
-	# data_data = DataData()
-	# id = data_data.id
-	# id = 'ss'
-	# print(data_data)
+if __name__ == "__main__":
+	main()
