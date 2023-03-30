@@ -23,35 +23,12 @@ def main():
 	before: ~ 1 min
 	after: ???
 	"""
-	return search("онкология",9800,"НМО",mail_service="mindbox")
+	return search("Нет возможностей для переподготовки!!!",20000,"ПП",mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()
 	start = time()
 	data: list[dict[str,str|int|None]] = main()
-
-	# Берем ссылки НМО
-	list_data = list()
-	for link_data in data:
-
-		with open(f"{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_{link_data.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
-			nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
-		if link_data.get("spec") == "Повышение квалификации (НМО)":
-			for i,nmo_d in enumerate(nmo_data):
-				# final_data =a
-				# print(i,f"price {nmo_d.get('price')}")
-				nmo_price = int(nmo_d.get('price').strip())
-				nmo_hour = int(nmo_d.get('hour'.strip()))
-
-				if nmo_d.get('title_program').lower() == link_data.get('name').lower():
-					if int(link_data.get('price')) == nmo_price and link_data.get('price') and int(link_data.get('hour')) == nmo_hour:
-						if not link_data.get('linkNmo'): link_data['linkNmo'] = nmo_d.get('linkNmo')
-						if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
-			list_data.append(link_data)
-
-			print(f"\n{link_data}")
-
-
 
 	if data != None:
 		with open("data.json","w", encoding="utf-8") as file:
