@@ -105,11 +105,12 @@ def timing_decorator(func):
 def memoize(func):
 	cache = {}
 	def wrapper(*args):
+		print(**map(args))
 		if args in cache:
-			print(cache[args])
+			print(cache)
 			return cache[args]
 		else:
 			result = func(*args)
-			cache[args] = result
-			return result
+			# cache[args] = result
+			return cache[args]
 	return wrapper

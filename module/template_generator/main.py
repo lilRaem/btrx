@@ -1,8 +1,10 @@
 import sys
+import os
 from time import sleep
 from random import uniform
 from jinja2 import Environment, select_autoescape, FileSystemLoader
-import os
+from jinja2.environment import Template
+
 from bs4 import BeautifulSoup
 import json
 from colorama import Fore,Back,Style
@@ -16,14 +18,18 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 sys.path.insert(0,os.getcwd())
 from main_search import search
+from module.logger import init_logger , logging
+def save_html_with_template(path:str,file_name:str,template:Template,context):
+	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as result:
+		result.write(template.render(context).replace('amp;',''))
 
 def save_json(data:list[dict],path: str,file_name: str):
 	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as f:
 		json.dump(data,f,ensure_ascii=False,indent=4)
 
-def load_json(path: str,file: str) -> list[dict[str,str|int|list[str]]]:
-	with open(os.path.join(f"{os.getcwd()}\\{path}",file),'r',encoding='utf-8') as f:
-		data: list[dict[str,str|int|list[str]]] = json.loads(f.read())
+def load_json(path: str,file_name: str) -> list[dict[str,str|int|list[str]]]:
+	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'r',encoding='utf-8') as f:
+		data: list[dict[str,str|int|list[str]|dict[str,str|int|None]]] = json.loads(f.read())
 	return data
 
 def load_template(template_name:str,ext:str):
@@ -31,7 +37,7 @@ def load_template(template_name:str,ext:str):
 	autoescape=select_autoescape([f'{ext}']))
 	return env.get_template(f"{template_name}.{ext}")
 
-def build():
+def build_json():
 	source_json = load_json(f"data\\json\\docx_converted","docxtojson.json")
 	# ###
 	class SourceData(BaseModel):
@@ -63,14 +69,41 @@ def build():
 		save_json(list_data,"module\\template_generator\\source\\expertnayaCep_Mdesestry_pp",f"{source_data.spec}.json")
 
 def build_jina_template():
-	source_json = load_json(f"data\\json\\docx_converted","docxtojson.json")
+	init_logger("template_generator","template_generator")
+	log = logging.getLogger("template_generator.main.build_jina_template")
+	main_json = load_json(f"data\\json\\docx_converted","docxtojson.json")
+
+	template = load_template("expertnayaCep_Mdesestry_pp","html")
+	context = None
+	for data in main_json:
+
+		if data.get("spec") != "Медицинская оптика" and data.get("spec") != "Фармация":
+			# print(data.get('pp'))
+			source_json = load_json(f"module\\template_generator\\source\\expertnayaCep_Medesestry_pp",f"{data.get('spec')}.json")
+			li = list()
+			for s_data in source_json:
+				if data.get("spec") == s_data.get('specname'):
+					# print(s_data.get("name"))
+					if s_data.get('program_data').get("hour") == 0:
+						log.propagate=True
+						log.warning(f"hour = {s_data.get('program_data').get('hour')}| main_spec: {data.get('spec')} and in prog specname: {s_data.get('program_data').get('name')} id: {s_data.get('program_data').get('id')} {s_data.get('program_data').get('final_url')}")
+					li.append(s_data)
+					context = {
+						"specname": data.get("spec"),
+						"progs": li
+					}
+					save_html_with_template("module\\template_generator\\ready\\expertnayaCep_MedSestry\\pp",f"[ПП] [Медсестры] {data.get('spec')}.html",template,context)
+	if context:
+		log.debug("Build templates successfully")
+	else:
+		log.error("Error build templates")
 
 def main():
 	# load_json(f"data\\json\\docx_converted","docxtojson.json")
 	# print(load_template("expertnayaCep_Mdesestry_pp","html"))
 	# print(sys.path)
 	# search()
-	build()
-
+	# build()
+	build_jina_template()
 if __name__ == "__main__":
 	main()

@@ -1,0 +1,12 @@
+2023-03-31 17:03:54,503 :: DEBUG :: template_generator:17 =>
+[ ***Logger INITIALIZED*** ]
+
+2023-03-31 17:03:55,577 :: WARNING :: template_generator.main.build_jina_template:89 =>
+[ hour = 0| main_spec: Физиотерапия and in prog specname: Наркология id: 4343 https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/?program=Наркология&header=Курс ПП Наркология&cost=20000&tovar=4343&sendsay_email=${ Recipient.Email } ]
+
+2023-03-31 17:03:55,630 :: WARNING :: template_generator.main.build_jina_template:89 =>
+[ hour = 0| main_spec: Функциональная диагностика and in prog specname: Наркология id: 4343 https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/?program=Наркология&header=Курс ПП Наркология&cost=20000&tovar=4343&sendsay_email=${ Recipient.Email } ]
+
+2023-03-31 17:03:55,679 :: DEBUG :: template_generator.main.build_jina_template:97 =>
+[ Build templates successfully ]
+
