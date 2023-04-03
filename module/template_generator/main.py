@@ -19,6 +19,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 sys.path.insert(0,os.getcwd())
 from main_search import search
 from module.logger import init_logger , logging
+
+
 def save_html_with_template(path:str,file_name:str,template:Template,context):
 	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as result:
 		result.write(template.render(context).replace('amp;',''))
@@ -39,6 +41,7 @@ def load_template(template_name:str,ext:str):
 
 def build_json():
 	source_json = load_json(f"data\\json\\docx_converted","docxtojson.json")
+
 	# ###
 	class SourceData(BaseModel):
 		spec: Optional[StrictStr] = None
@@ -52,21 +55,22 @@ def build_json():
 		source_data.spec = source_jdata.get('spec')
 		source_data.job = source_jdata.get('job')
 		source_data.pp = source_jdata.get('pp')
-		for jobs in source_data.job:
-			print(jobs)
+		# for jobs in source_data.job:
+		# 	print(jobs)
+		dict_data = dict()
+		finder=search(source_data.spec,9792,"НМО")
+		if finder:
+			print(f"title: {source_data.spec} finder_items: {finder.__len__()}")
+		else:
+			print("Finder is none")
 
-		for pps in source_data.pp:
-			dict_data = dict()
-			finder=search(pps,20000,"ПП")
-			print(f"title: {pps} finder_items: {finder.__len__()}")
-
-			if finder:
-				dict_data ={
-				"specname": source_data.spec,
-				"program_data": finder[0]
-				}
-				list_data.append(dict_data)
-		save_json(list_data,"module\\template_generator\\source\\expertnayaCep_Mdesestry_pp",f"{source_data.spec}.json")
+		if finder:
+			dict_data ={
+			"specname": source_data.spec,
+			"program_data": finder[0]
+			}
+			list_data.append(dict_data)
+		save_json(list_data,"module\\template_generator\\source\\expertnayaCep_Medsestry_nmo_144",f"{source_data.spec}.json")
 
 def build_jina_template():
 	init_logger("template_generator","template_generator")
@@ -104,6 +108,7 @@ def main():
 	# print(sys.path)
 	# search()
 	# build()
-	build_jina_template()
+	# build_jina_template()
+	build_json()
 if __name__ == "__main__":
 	main()

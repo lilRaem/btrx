@@ -15,9 +15,6 @@ from module.logger import init_logger, logging
 
 datalist = []
 
-
-
-
 log=logging.getLogger('btrx.main_search')
 def search(search_name:str, search_price:int, type_programm:str,mail_service:str="mindbox") -> list|None:
 	if type(search_price) != int:
@@ -34,10 +31,10 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 	if (os.path.exists(makefileWdateName(path)[0])):
 		data = btrx.load_from_jsonFile(makefileWdateName(path)[1], path)
 		json_check_data = btrx.check_product(search_name, search_price, btrx.get_all_data(data))
-		searchInSite(search_name)
 		count_check_data = 0
 		if json_check_data:
 			count_check_data = json_check_data.__len__()
+			log.debug(f"COUNT CHECK DATA: {count_check_data}")
 		else:
 			log.error('item not exist')
 		if count_check_data == 1:
@@ -80,8 +77,9 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 										if not final_data.hour:
 											if int(data.get('price')) == final_data.price:
 												final_data.hour = int(data.get('hour'))
-			log.debug(f"{Fore.GREEN} {final_data.dict()} {Fore.RESET}")
-			fdata.append(final_data.dict())
+									if int(data.get('price')) == final_data.price:
+										log.debug(f"{Fore.GREEN} {final_data.dict()} {Fore.RESET}")
+										fdata.append(final_data.dict())
 		else:
 			if json_check_data != None:
 				for val_data in json_check_data:
@@ -98,36 +96,43 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 						progUrl_data = getProgramUrl(final_data.name, final_data.price)
 					except Exception as e:
 						progUrl_data = None
-						log.error(f"{Fore.RED} get progUrl_data() error:\n{e} {Fore.RESET}")
+						log.exception(f"get progUrl_data() error:\n{e}")
 					try:
 						final_data.hour = val_data.get('hour')
 					except Exception as e:
 						if progUrl_data:
 							final_data.hour = progUrl_data[0].get('hour')
-						log.error(f"{Fore.RED} val_data.get('hour') error:\n{e} {Fore.RESET}")
+						log.exception(f"val_data.get('hour') error:\n{e}")
 					if progUrl_data:
 						for v in progUrl_data:
-							if v.get('spec'): final_data.spec = v.get('spec')
-
-							if int(v.get('hour')) == final_data.hour:
-								final_data.hour = int(v.get('hour'))
-							else:
-								if final_data.hour == None and int(final_data.price) == int(v.get('price')):
-									final_data.hour = int(v.get('hour'))
 							if final_data.name.lower() in v.get('name').lower():
 								if int(final_data.price) == int(v.get('price')):
-									final_data.url = v.get('url')
-									if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
-					log.debug(f"{Fore.GREEN} {final_data.dict()} {Fore.RESET}")
+									if int(v.get('hour')) == int(final_data.hour):
+										if v.get("url"):
+											if v.get('spec'): final_data.spec = v.get('spec')
+											print(f"{final_data.hour}")
+											if int(v.get('hour')) == int(final_data.hour):
+												final_data.hour = int(v.get('hour'))
+											else:
+												if final_data.hour == None and int(final_data.price) == int(v.get('price')):
+													final_data.hour = int(v.get('hour'))
+
+											final_data.url = v.get('url')
+											if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
+											log.debug(f"{Fore.GREEN} count: {json_check_data.__len__()} {final_data.dict()} {Fore.RESET}")
+											print(f"+1 {v}")
 					fdata.append(final_data.dict())
+		print(f"Counts:\njson_check_data: {count_check_data}\n\
+	progurl: {progUrl_data.__len__()}\n\
+	fdata: {fdata.__len__()}\
+")
 		if fdata:
-			final_data_check(fdata,mail_service,search_price)
+			log.debug(f"Return list of data: {fdata}")
+			return final_data_check(fdata,mail_service,search_price)
 	else:
 		btrx.save_to_json(btrx.get_product_list(), makefileWdateName(path)[1], path)
 		data = btrx.load_from_jsonFile(makefileWdateName(path)[1],path)
 		btrx.check_product(search_name, search_price, btrx.get_all_data(data))
-
-
 	log.info(f'{Fore.MAGENTA} (main_search.py) Search time: {round(time()-start,2)} sec {Fore.RESET}')
 
 
@@ -150,17 +155,19 @@ def final_data_check(fdata:list[dict[str,str|int|None]],mail_service:str,search_
 			type_programm = None
 
 		if vv.get('price') == search_price:
-			print(f"{Fore.WHITE} {Back.GREEN}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}{Fore.RESET+Back.RESET}")
+			log.info(f"{Fore.WHITE+Back.GREEN} [id: {vv.get('id')}]\n[type_zdrav: {vv.get('type_zdrav')}]\n[name: {vv.get('name')}]\n[spec: {vv.get('spec')}]\n[price: {vv.get('price')}]\n[hour: {vv.get('hour')}]\n[{vv.get('url')}] {Fore.RESET+Back.RESET}")
 			if type_programm == "НМО":
-				getLinkNmo(type_programm,user_email,fdata)
+				vv['final_url'] = getLinkNmo(type_programm,user_email,fdata)
 			else:
 				print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				vv['final_url'] = f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"
 		else:
-			print(Fore.WHITE+f"\n{Back.BLUE}*****\n{Style.DIM}id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')}"+Fore.RESET+Back.RESET)
+			log.debug(f"{Fore.WHITE+Back.BLUE} id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')} {Fore.RESET+Back.RESET}")
 			if type_programm == "НМО":
 				getLinkNmo(type_programm,user_email,fdata)
 			else:
-				print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+				pass
+				# print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
 		# if vv.get('price') == search_price:
 		# 	if not vv.get('final_url'):
 		# 		if type_programm == "НМО":
@@ -174,18 +181,20 @@ def getLinkNmo(type_programm:str,user_email:str,listdata:list):
 	# Берем ссылки НМО
 	list_data: list[dict[str,str|int|None]] = list()
 	for link_data in listdata:
-		with open(f"{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_{link_data.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
-			nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
-		if link_data.get("spec") == "Повышение квалификации (НМО)":
-			for i,nmo_d in enumerate(nmo_data):
-				nmo_price = int(nmo_d.get('price').strip())
-				nmo_hour = int(nmo_d.get('hour'.strip()))
 
-				if nmo_d.get('title_program').lower() == link_data.get('name').lower():
-					if int(link_data.get('price')) == nmo_price and link_data.get('price') and int(link_data.get('hour')) == nmo_hour:
-						if not link_data.get('linkNmo'): link_data['linkNmo'] = nmo_d.get('linkNmo')
-						if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
-			list_data.append(link_data)
+		if link_data.get('type_zdrav'):
+			with open(f"{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_{link_data.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
+				nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
+			if link_data.get("spec") == "Повышение квалификации (НМО)":
+				for i,nmo_d in enumerate(nmo_data):
+					nmo_price = int(nmo_d.get('price').strip())
+					nmo_hour = int(nmo_d.get('hour'.strip()))
+
+					if nmo_d.get('title_program').lower() == link_data.get('name').lower():
+						if int(link_data.get('price')) == nmo_price and link_data.get('price') and int(link_data.get('hour')) == nmo_hour:
+							if not link_data.get('linkNmo'): link_data['linkNmo'] = nmo_d.get('linkNmo')
+							if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
+				list_data.append(link_data)
 
 	if list_data:
 		for link_d in list_data:

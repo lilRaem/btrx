@@ -1,0 +1,32 @@
+[
+    {
+        "specname": "Стоматология ортопедическая",
+        "program_data": {
+            "id": 4339,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медицинская статистика",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/?program=Медицинская статистика&header=Курс ПП Медицинская статистика&cost=20000&tovar=4339&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Стоматология ортопедическая",
+        "program_data": {
+            "id": 18365,
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Рентгенология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=20000&tovar=18365&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]

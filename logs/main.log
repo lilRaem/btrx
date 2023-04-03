@@ -1,0 +1,510 @@
+2023-04-02 03:34:10,471 :: DEBUG :: btrx:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-02 03:34:10,488 :: INFO :: btrx.main_search:30 =>
+[ [33m Path exists?: True, data\json\btrx_data\02.04.2023_file.json [39m ]
+
+2023-04-02 03:34:10,620 :: DEBUG :: btrx.main_search:37 =>
+[ COUNT CHECK DATA: 3 ]
+
+2023-04-02 03:34:11,084 :: INFO :: btrx.module.parsersearchsite:39 =>
+[ Всего на сайте (https://apkipp.ru) найдено: 21 программ. Фактически по точному содержанию слова "Функциональная диагностика" в программе: 14 ]
+
+2023-04-02 03:34:11,682 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/
+name: Курс функциональная диагностика hour: 300 price: [<span>20000</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:12,301 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-10/
+name: Курс функциональная диагностика hour: 288 price: [<span>19600</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:13,004 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/
+name: Курс функциональная диагностика hour: 144 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:13,004 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:13,006 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:13,006 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 144 9800
+https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/ [39m ]
+
+2023-04-02 03:34:13,704 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/
+name: Курс функциональная диагностика hour: 600 price: [<span>49800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:14,450 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-11/
+name: Курс функциональная диагностика hour: 600 price: [<span>99000</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:15,069 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-9/
+name: Курс функциональная диагностика hour: 288 price: [<span>19584</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:15,705 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/
+name: Курс функциональная диагностика hour: 152 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:15,707 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:15,708 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:15,708 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 152 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/ [39m ]
+
+2023-04-02 03:34:16,527 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-2/
+name: Курс функциональная диагностика hour: 152 price: [<span>18800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:17,167 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-6/
+name: Курс функциональная диагностика hour: 36 price: [<span>2448</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:17,878 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-7/
+name: Курс функциональная диагностика hour: 144 price: [<span>5800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:18,572 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/
+name: Курс функциональная диагностика hour: 144 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:18,573 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:18,574 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:18,574 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 144 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/ [39m ]
+
+2023-04-02 03:34:19,135 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/
+name: Курс функциональная диагностика: актуальные вопросы и инновационные решения hour: 74 price: [<span>5032</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:19,642 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya-2/
+name: Курс функциональная диагностика: актуальные вопросы и инновационные решения hour: 74 price: [<span>6400</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:20,174 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/
+name: Курс функциональная диагностика: актуальные проблемы и инновационные решения hour: 152 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:20,175 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:20,176 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:20,176 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика: актуальные проблемы и инновационные решения 152 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/ [39m ]
+
+2023-04-02 03:34:20,178 :: INFO :: btrx.module.parsersearchsite:66 =>
+[ 1. Найдено 14 страниц с названием: Функциональная диагностика ]
+
+2023-04-02 03:34:20,178 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '144', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None} ]
+
+2023-04-02 03:34:20,179 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '152', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None} ]
+
+2023-04-02 03:34:20,180 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '144', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None} ]
+
+2023-04-02 03:34:20,181 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика: актуальные проблемы и инновационные решения', 'price': 9800, 'hour': '152', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None} ]
+
+2023-04-02 03:34:20,182 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 17183, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:20,183 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 17183, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:20,184 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 17183, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:20,185 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 17183, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:20,645 :: INFO :: btrx.module.parsersearchsite:39 =>
+[ Всего на сайте (https://apkipp.ru) найдено: 21 программ. Фактически по точному содержанию слова "Функциональная диагностика" в программе: 14 ]
+
+2023-04-02 03:34:21,381 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/
+name: Курс функциональная диагностика hour: 300 price: [<span>20000</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:22,023 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-10/
+name: Курс функциональная диагностика hour: 288 price: [<span>19600</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:22,806 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/
+name: Курс функциональная диагностика hour: 144 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:22,807 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:22,808 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:22,809 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 144 9800
+https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/ [39m ]
+
+2023-04-02 03:34:23,505 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/
+name: Курс функциональная диагностика hour: 600 price: [<span>49800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:24,325 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-11/
+name: Курс функциональная диагностика hour: 600 price: [<span>99000</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:24,930 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-9/
+name: Курс функциональная диагностика hour: 288 price: [<span>19584</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:25,574 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/
+name: Курс функциональная диагностика hour: 152 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:25,575 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:25,575 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:25,576 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 152 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/ [39m ]
+
+2023-04-02 03:34:26,212 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-2/
+name: Курс функциональная диагностика hour: 152 price: [<span>18800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:26,828 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-6/
+name: Курс функциональная диагностика hour: 36 price: [<span>2448</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:27,575 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-7/
+name: Курс функциональная диагностика hour: 144 price: [<span>5800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:28,174 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/
+name: Курс функциональная диагностика hour: 144 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:28,175 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:28,176 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:28,176 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 144 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/ [39m ]
+
+2023-04-02 03:34:28,815 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/
+name: Курс функциональная диагностика: актуальные вопросы и инновационные решения hour: 74 price: [<span>5032</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:29,386 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya-2/
+name: Курс функциональная диагностика: актуальные вопросы и инновационные решения hour: 74 price: [<span>6400</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:29,890 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/
+name: Курс функциональная диагностика: актуальные проблемы и инновационные решения hour: 152 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:29,891 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:29,892 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:29,892 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика: актуальные проблемы и инновационные решения 152 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/ [39m ]
+
+2023-04-02 03:34:29,893 :: INFO :: btrx.module.parsersearchsite:66 =>
+[ 1. Найдено 14 страниц с названием: Функциональная диагностика ]
+
+2023-04-02 03:34:29,893 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '144', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None} ]
+
+2023-04-02 03:34:29,894 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '152', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None} ]
+
+2023-04-02 03:34:29,895 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '144', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None} ]
+
+2023-04-02 03:34:29,896 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика: актуальные проблемы и инновационные решения', 'price': 9800, 'hour': '152', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None} ]
+
+2023-04-02 03:34:29,897 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4465, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:29,898 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4465, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:29,898 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4465, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:29,900 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4465, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:30,390 :: INFO :: btrx.module.parsersearchsite:39 =>
+[ Всего на сайте (https://apkipp.ru) найдено: 21 программ. Фактически по точному содержанию слова "Функциональная диагностика" в программе: 14 ]
+
+2023-04-02 03:34:31,004 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/
+name: Курс функциональная диагностика hour: 300 price: [<span>20000</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:31,623 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-10/
+name: Курс функциональная диагностика hour: 288 price: [<span>19600</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:32,294 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/
+name: Курс функциональная диагностика hour: 144 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:32,295 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:32,296 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:32,297 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 144 9800
+https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/ [39m ]
+
+2023-04-02 03:34:33,163 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/
+name: Курс функциональная диагностика hour: 600 price: [<span>49800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:33,783 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-11/
+name: Курс функциональная диагностика hour: 600 price: [<span>99000</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:34,340 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-9/
+name: Курс функциональная диагностика hour: 288 price: [<span>19584</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:34,933 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/
+name: Курс функциональная диагностика hour: 152 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:34,934 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:34,935 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:34,935 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 152 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/ [39m ]
+
+2023-04-02 03:34:35,640 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-2/
+name: Курс функциональная диагностика hour: 152 price: [<span>18800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:36,394 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-6/
+name: Курс функциональная диагностика hour: 36 price: [<span>2448</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:37,069 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-7/
+name: Курс функциональная диагностика hour: 144 price: [<span>5800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:37,650 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/
+name: Курс функциональная диагностика hour: 144 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:37,650 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:37,651 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:37,652 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика 144 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/ [39m ]
+
+2023-04-02 03:34:38,192 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/
+name: Курс функциональная диагностика: актуальные вопросы и инновационные решения hour: 74 price: [<span>5032</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:38,756 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya-2/
+name: Курс функциональная диагностика: актуальные вопросы и инновационные решения hour: 74 price: [<span>6400</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:39,274 :: INFO :: btrx.module.html_pars.parserhtml:32 =>
+[ Parsed url: https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/
+name: Курс функциональная диагностика: актуальные проблемы и инновационные решения hour: 152 price: [<span>9800</span>, <span>₽</span>] ]
+
+2023-04-02 03:34:39,275 :: DEBUG :: btrx.module.html_pars.parserhtml:102 =>
+[ Price without oldprice: 9800 ]
+
+2023-04-02 03:34:39,277 :: DEBUG :: btrx.module.html_pars.parserhtml:114 =>
+[ [32mFound price: 9800[39m ]
+
+2023-04-02 03:34:39,277 :: INFO :: btrx.module.parsersearchsite:61 =>
+[ [32m Курс функциональная диагностика: актуальные проблемы и инновационные решения 152 9800
+https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/ [39m ]
+
+2023-04-02 03:34:39,278 :: INFO :: btrx.module.parsersearchsite:66 =>
+[ 1. Найдено 14 страниц с названием: Функциональная диагностика ]
+
+2023-04-02 03:34:39,278 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '144', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None} ]
+
+2023-04-02 03:34:39,279 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '152', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None} ]
+
+2023-04-02 03:34:39,280 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика', 'price': 9800, 'hour': '144', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None} ]
+
+2023-04-02 03:34:39,281 :: DEBUG :: btrx.module.parsersearchsite:71 =>
+[ By search price: 9800 and in find price: 9800
+{'id': None, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Курс функциональная диагностика: актуальные проблемы и инновационные решения', 'price': 9800, 'hour': '152', 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None} ]
+
+2023-04-02 03:34:39,282 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4261, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:39,282 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4261, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:39,283 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4261, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:39,284 :: DEBUG :: btrx.main_search:120 =>
+[ [32m count: 3 {'id': 4261, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None} [39m ]
+
+2023-04-02 03:34:39,285 :: DEBUG :: btrx.main_search:123 =>
+[ Return list of data: [{'id': 17183, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None}, {'id': 17183, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None}, {'id': 17183, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None}, {'id': 17183, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None}, {'id': 4465, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None}, {'id': 4465, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None}, {'id': 4465, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None}, {'id': 4465, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 152, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None}, {'id': 4261, 'type_zdrav': 'СПО', 'spec': 'Повышение квалификации', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/', 'final_url': None}, {'id': 4261, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/', 'final_url': None}, {'id': 4261, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/', 'final_url': None}, {'id': 4261, 'type_zdrav': 'ВО', 'spec': 'Повышение квалификации (НМО)', 'name': 'Функциональная диагностика', 'price': 9800, 'hour': 144, 'nmoSpec': None, 'linkNmo': None, 'url': 'https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/', 'final_url': None}] ]
+
+2023-04-02 03:34:39,288 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 17183]
+[type_zdrav: СПО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/] [39m[49m ]
+
+2023-04-02 03:34:39,290 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 17183]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/] [39m[49m ]
+
+2023-04-02 03:34:39,319 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 17183]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/] [39m[49m ]
+
+2023-04-02 03:34:39,347 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 17183]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/] [39m[49m ]
+
+2023-04-02 03:34:39,378 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4465]
+[type_zdrav: СПО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации]
+[price: 9800]
+[hour: 152]
+[https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/] [39m[49m ]
+
+2023-04-02 03:34:39,380 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4465]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 152]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/] [39m[49m ]
+
+2023-04-02 03:34:39,409 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4465]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 152]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/] [39m[49m ]
+
+2023-04-02 03:34:39,450 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4465]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 152]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/] [39m[49m ]
+
+2023-04-02 03:34:39,482 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4261]
+[type_zdrav: СПО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-4/] [39m[49m ]
+
+2023-04-02 03:34:39,484 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4261]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-5/] [39m[49m ]
+
+2023-04-02 03:34:39,512 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4261]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-8/] [39m[49m ]
+
+2023-04-02 03:34:39,542 :: INFO :: btrx.main_search:151 =>
+[ [37m[42m [id: 4261]
+[type_zdrav: ВО]
+[name: Функциональная диагностика]
+[spec: Повышение квалификации (НМО)]
+[price: 9800]
+[hour: 144]
+[https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika-aktualnyie-problemyi-i-innovatsionnyie-resheniya/] [39m[49m ]
+

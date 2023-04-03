@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Операционное дело",
+        "program_data": {
+            "id": 14717,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Сестринское операционное дело",
+            "price": 9792,
+            "hour": 144,
+            "nmoSpec": "Операционное дело",
+            "linkNmo": "https://clck.ru/337RS2",
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-operatsionnoe-delo-/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-operatsionnoe-delo-/?program=Сестринское операционное дело&header=Курс НМО Сестринское операционное дело&cost=9792&tovar=14717&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337RS2"
+        }
+    }
+]

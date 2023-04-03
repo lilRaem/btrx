@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Функциональная диагностика",
+        "program_data": {
+            "id": 17181,
+            "type_zdrav": null,
+            "spec": null,
+            "name": "Функциональная диагностика",
+            "price": 9792,
+            "hour": 144,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": null,
+            "final_url": "\nNone?program=Функциональная диагностика&header=Курс None Функциональная диагностика&cost=9792&tovar=17181&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]

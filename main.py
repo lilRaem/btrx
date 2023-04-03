@@ -17,14 +17,14 @@ TypeError: price type == int, now: <class 'NoneType'>
 
 datalist = []
 clear = lambda: os.system('cls')
-init_logger('btrx')
+init_logger('btrx',"main")
 def main():
 	"""
 	search time for "Онко" with price = 0:
 	before: ~ 1 min
 	after: ???
 	"""
-	return search("Нет возможностей для переподготовки!!!",20000,"ПП",mail_service="mindbox")
+	return search("Функциональная диагностика",9800,"НМО",mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()

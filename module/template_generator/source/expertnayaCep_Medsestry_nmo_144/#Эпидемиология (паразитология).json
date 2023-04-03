@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Эпидемиология (паразитология)",
+        "program_data": {
+            "id": 4467,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации",
+            "name": "Эпидемиология (паразитология)",
+            "price": 9800,
+            "hour": 144,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-epidemiologiya-parazitologiya-2/",
+            "final_url": null
+        }
+    }
+]

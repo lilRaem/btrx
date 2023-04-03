@@ -13,8 +13,10 @@ try:
 	import html_pars.parserhtml as phtml
 except:
 	import module.html_pars.parserhtml as phtml
-
+from module.logger import logging
 parse_site_config = ParseSiteConfig()
+
+log = logging.getLogger("btrx.module.parsersearchsite")
 
 def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]]:
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
@@ -34,8 +36,8 @@ def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]
 			item_list.append(dict(k))
 			count_word_programm = count_word_programm + 1
 		count = count + 1
-	print(
-		f'Всего на сайте ({parse_site_config.link}) найдено: {count} программ. Фактически по точному содержанию слова "{search_key}" в программе: {count_word_programm}\n'
+	log.info(
+		f'Всего на сайте ({parse_site_config.link}) найдено: {count} программ. Фактически по точному содержанию слова "{search_key}" в программе: {count_word_programm}'
 	)
 	return count_word_programm, item_list
 
@@ -55,22 +57,21 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 			for data_psiteurl in pSiteUrl:
 				if data_psiteurl.get('spec'): final_data.spec = data.get('spec')
 				find_url_list.append(data_psiteurl)
-				if data_psiteurl.get('price') == price: print(Fore.GREEN+f'{data}'+Style.RESET_ALL)
+				if data_psiteurl.get('price') == price:
+					log.info(Fore.GREEN+f' {data["name"]} {data_psiteurl["hour"]} {data_psiteurl["price"]}\n{data_psiteurl["url"]} '+Fore.RESET)
 	if find_url_list:
 		if find_url_list.__len__() == 1:
-			print(Fore.MAGENTA+f'(parsersearchsite.py|getProgramUrl(): count_find_url = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
+			log.info(f"Find one LINK: {find_url_list[0]}")
 		else:
-			print(f'1. Найдено {find_url_list.__len__()} страниц с названием: {search_key}')
+			log.info(f'1. Найдено {find_url_list.__len__()} страниц с названием: {search_key}')
 			for data in find_url_list:
 				if search_key.lower() in data.get("name").lower():
 					if data.get("price"):
 						if price == int(data.get("price")):
-							print("\n"+Style.BRIGHT+Fore.LIGHTCYAN_EX+f'{data}'+Style.RESET_ALL)
-						else:
-							# print("\n"+Fore.CYAN+f'{data}'+Fore.RESET)
-							pass
+							log.debug(f"By search price: {price} and in find price: {int(data.get('price'))}\n{data}")
+
 	else:
-		print('Url not found')
+		log.warning('Url not found')
 	try:
 		if find_url_list:
 			if find_url_list.__len__() == 1:
@@ -78,7 +79,8 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 						if search_key.lower() in data.get("name").lower():
 							if data.get("price"):
 								if price == int(data.get("price")):
-									print(f'3. Найдена {find_url_list.__len__()} страница:\n{data.get("name")}|{data.get("hour")}|{data.get("price")}')
+									log.info(f'3. Найдена {find_url_list.__len__()} страница:\n{data.get("name")}|{data.get("hour")}|{data.get("price")}')
+									log.debug(f"parsersearchsite find list: {find_url_list}")
 									return find_url_list
 			else:
 				for data in find_url_list:
@@ -86,11 +88,11 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 							if data.get("price"):
 								if price == int(data.get("price")):
 									if find_url_list.__len__() < 7:
-										print(f'4. Найдено {find_url_list.__len__()} страниц:\n{find_url_list}')
+										log.info(f'4. Найдено {find_url_list.__len__()} страниц:\n{find_url_list}')
 									return find_url_list
 	except Exception as e:
-		print(Fore.RED+e+Fore.RESET)
-	print("\nReturn without parsed data")
+		log.exception(e)
+	log.debug("\nReturn without parsed data")
 	return find_url_list
 
 if __name__ == "__main__":

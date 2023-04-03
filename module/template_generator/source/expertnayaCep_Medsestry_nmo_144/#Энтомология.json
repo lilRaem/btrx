@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Энтомология",
+        "program_data": {
+            "id": 4379,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Энтомология",
+            "price": 20000,
+            "hour": 300,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/",
+            "final_url": null
+        }
+    }
+]
