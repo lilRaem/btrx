@@ -1,0 +1,71 @@
+[
+    {
+        "specname": "Стоматология",
+        "programs": [
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Сестринское дело в стоматологии",
+                "price": "2448",
+                "hour": "36",
+                "date": "",
+                "linkNmo": "https://clck.ru/337SMR"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Стоматология",
+                "price": "2448",
+                "hour": "36",
+                "date": "06.04.2022",
+                "linkNmo": "https://clck.ru/337SNa"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Стоматология: актуальные вопросы и инновационные решения",
+                "price": "5032",
+                "hour": "74",
+                "date": "07.04.2022",
+                "linkNmo": "https://clck.ru/337SNq"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Стоматология",
+                "price": "9792",
+                "hour": "144",
+                "date": "06.04.2022",
+                "linkNmo": "https://clck.ru/337SPG"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Стоматология",
+                "price": "19584",
+                "hour": "288",
+                "date": "12.05.2022",
+                "linkNmo": "https://clck.ru/337SPS"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Стоматологическая помощь населению",
+                "price": "5800",
+                "hour": "144",
+                "date": "",
+                "linkNmo": "https://clck.ru/hcSSu"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Зубной врач: актуальные вопросы и инновационные решения",
+                "price": "5032",
+                "hour": "74",
+                "date": "01.09.2022",
+                "linkNmo": "https://clck.ru/337SRD"
+            },
+            {
+                "nmo_spec": "Стоматология",
+                "nmo_prog": "Зубной врач",
+                "price": "9792",
+                "hour": "144",
+                "date": "01.09.2022",
+                "linkNmo": "https://clck.ru/337SRV"
+            }
+        ]
+    }
+]

@@ -10,3 +10,15 @@
 2023-03-31 17:03:55,679 :: DEBUG :: template_generator.main.build_jina_template:97 =>
 [ Build templates successfully ]
 
+2023-04-03 15:22:59,922 :: DEBUG :: template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-03 15:23:00,560 :: DEBUG :: template_generator.main.build_jina_template:104 =>
+[ Build templates successfully ]
+
+2023-04-04 10:15:21,126 :: DEBUG :: template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-04 10:15:21,183 :: DEBUG :: template_generator.main.build_jina_template:113 =>
+[ Build templates successfully ]
+

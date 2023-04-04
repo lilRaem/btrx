@@ -1,0 +1,31 @@
+[
+    {
+        "specname": "Физиотерапия",
+        "programs": [
+            {
+                "nmo_spec": "Физиотерапия",
+                "nmo_prog": "Физиотерапия",
+                "price": "2448",
+                "hour": "36",
+                "date": "",
+                "linkNmo": "https://clck.ru/337Sne"
+            },
+            {
+                "nmo_spec": "Физиотерапия",
+                "nmo_prog": "Физиотерапия: актуальные вопросы и инновационные решения",
+                "price": "5032",
+                "hour": "74",
+                "date": "18.04.2022",
+                "linkNmo": "https://clck.ru/337Sns"
+            },
+            {
+                "nmo_spec": "Физиотерапия",
+                "nmo_prog": "Физиотерапия",
+                "price": "19584",
+                "hour": "288",
+                "date": "18.04.2022",
+                "linkNmo": "https://clck.ru/337SoK"
+            }
+        ]
+    }
+]

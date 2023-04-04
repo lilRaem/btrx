@@ -10,7 +10,7 @@ from module.html_pars.parserhtml import parseSiteUrl
 from module.logger import init_logger, logging
 """
 # TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
-- [ ] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
+- [x] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
 """
 
 datalist = []
@@ -107,27 +107,26 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 						for v in progUrl_data:
 							if final_data.name.lower() in v.get('name').lower():
 								if int(final_data.price) == int(v.get('price')):
-									if int(v.get('hour')) == int(final_data.hour):
-										if v.get("url"):
-											if v.get('spec'): final_data.spec = v.get('spec')
-											print(f"{final_data.hour}")
-											if int(v.get('hour')) == int(final_data.hour):
-												final_data.hour = int(v.get('hour'))
-											else:
-												if final_data.hour == None and int(final_data.price) == int(v.get('price')):
+									if v.get('hour') and final_data.hour:
+										if int(v.get('hour')) == int(final_data.hour):
+											if v.get("url"):
+												val_data['name'] = v.get('name').replace("Курс ","").strip().capitalize()
+												final_data.name = val_data.get("name")
+												if v.get('spec'): final_data.spec = v.get('spec')
+												if int(v.get('hour')) == int(final_data.hour):
 													final_data.hour = int(v.get('hour'))
-
-											final_data.url = v.get('url')
-											if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
-											log.debug(f"{Fore.GREEN} count: {json_check_data.__len__()} {final_data.dict()} {Fore.RESET}")
-											print(f"+1 {v}")
+												else:
+													if final_data.hour == None and int(final_data.price) == int(v.get('price')):
+														final_data.hour = int(v.get('hour'))
+												print("ШАВКА")
+												val_data['url'] = v.get('url')
+												final_data.url = val_data.get("url")
+												if v.get('type_zdrav'): final_data.type_zdrav = v.get('type_zdrav')
+												log.debug(f"{Fore.GREEN} count: {json_check_data.__len__()} {final_data.dict()} {Fore.RESET}")
 					fdata.append(final_data.dict())
-		print(f"Counts:\njson_check_data: {count_check_data}\n\
-	progurl: {progUrl_data.__len__()}\n\
-	fdata: {fdata.__len__()}\
-")
+		print(f"Counts:\njson_check_data: {count_check_data}\nprogurl: {progUrl_data.__len__()}\nfdata: {fdata.__len__()}")
 		if fdata:
-			log.debug(f"Return list of data: {fdata}")
+			log.warn(f"Return list of data: {fdata}")
 			return final_data_check(fdata,mail_service,search_price)
 	else:
 		btrx.save_to_json(btrx.get_product_list(), makefileWdateName(path)[1], path)
@@ -146,27 +145,25 @@ def final_data_check(fdata:list[dict[str,str|int|None]],mail_service:str,search_
 			user_email = None
 
 		if vv.get("spec") == "Профессиональная переподготовка":
-				type_programm = "ПП"
+			type_programm = "ПП"
 		elif vv.get("spec") == "Повышение квалификации":
 			type_programm = "ПК"
 		elif vv.get("spec") == "Повышение квалификации (НМО)":
 			type_programm = "НМО"
 		else:
 			type_programm = None
-
 		if vv.get('price') == search_price:
-			log.info(f"{Fore.WHITE+Back.GREEN} [id: {vv.get('id')}]\n[type_zdrav: {vv.get('type_zdrav')}]\n[name: {vv.get('name')}]\n[spec: {vv.get('spec')}]\n[price: {vv.get('price')}]\n[hour: {vv.get('hour')}]\n[{vv.get('url')}] {Fore.RESET+Back.RESET}")
-			if type_programm == "НМО":
-				vv['final_url'] = getLinkNmo(type_programm,user_email,fdata)
+			if vv.get('price') == search_price:
+				log.info(f"{Fore.WHITE+Back.GREEN} [id: {vv.get('id')}]\n[type_zdrav: {vv.get('type_zdrav')}]\n[name: {vv.get('name')}]\n[spec: {vv.get('spec')}]\n[price: {vv.get('price')}]\n[hour: {vv.get('hour')}]\n[{vv.get('url')}] {Fore.RESET+Back.RESET}")
+				if type_programm == "НМО":
+					vv['final_url'] = getLinkNmo(type_programm,user_email,fdata)
+				else:
+					print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
+					vv['final_url'] = f"{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"
 			else:
-				print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
-				vv['final_url'] = f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"
-		else:
-			log.debug(f"{Fore.WHITE+Back.BLUE} id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')} {Fore.RESET+Back.RESET}")
-			if type_programm == "НМО":
-				getLinkNmo(type_programm,user_email,fdata)
-			else:
-				pass
+				log.debug(f"{Fore.WHITE+Back.BLUE} id: {vv.get('id')}\ntype_zdrav: {vv.get('type_zdrav')}\nname: {vv.get('name')}\nspec: {vv.get('spec')}\nprice: {vv.get('price')}\nhour: {vv.get('hour')}\n{vv.get('url')} {Fore.RESET+Back.RESET}")
+				# if type_programm == "НМО":
+				# 	getLinkNmo(type_programm,user_email,fdata)
 				# print(Fore.CYAN+f"\n{vv.get('url')}?program={vv.get('name')}&header=Курс {type_programm} {vv.get('name')}&cost={vv.get('price')}&tovar={vv.get('id')}&sendsay_email="+f"{user_email}"+Fore.RESET)
 		# if vv.get('price') == search_price:
 		# 	if not vv.get('final_url'):
@@ -192,13 +189,17 @@ def getLinkNmo(type_programm:str,user_email:str,listdata:list):
 
 					if nmo_d.get('title_program').lower() == link_data.get('name').lower():
 						if int(link_data.get('price')) == nmo_price and link_data.get('price') and int(link_data.get('hour')) == nmo_hour:
-							if not link_data.get('linkNmo'): link_data['linkNmo'] = nmo_d.get('linkNmo')
-							if not link_data.get('nmoSpec'): link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
-				list_data.append(link_data)
-
+							# link_data['linkNmo'] = nmo_d.get('linkNmo')
+							# link_data['url'] = link_data.get("url")
+							link_data['linkNmo'] = nmo_d.get('linkNmo')
+							link_data['nmoSpec'] = nmo_d.get('title_spec').strip()
+							list_data.append(link_data)
+# TODO Доработать. return прерывает for loop и изза этого при несольких элементах в списке возвращает самый первый вариант
 	if list_data:
+
 		for link_d in list_data:
-			print(Fore.CYAN+f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"+Fore.RESET)
+
+			print(Fore.LIGHTBLUE_EX+f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"+Fore.RESET)
 			return f"{link_d.get('url')}?program={link_d.get('name')}&header=Курс {type_programm} {link_d.get('name')}&cost={link_d.get('price')}&tovar={link_d.get('id')}&sendsay_email="+f"{user_email}&linkNmo={link_d.get('linkNmo')}"
 
 def main():
