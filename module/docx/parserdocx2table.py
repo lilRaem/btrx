@@ -4,7 +4,7 @@ import pandas as pd
 import csv, json
 
 type_name = 'СПО'
-filename = 'АПК и ПП программы ПК НМО 29.03.2023.docx'
+filename = 'АПК и ПП программы ПК НМО 29.03.2023 испр.docx'
 
 printed = False
 
