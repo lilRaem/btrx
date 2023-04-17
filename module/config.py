@@ -7,6 +7,7 @@ import os
 # Main types of search data Program:
 class FinalData(BaseModel):
 	id: Optional[StrictInt] = None
+	katalog: Optional[StrictStr] = None
 	type_zdrav: Optional[StrictStr] = None
 	spec: Optional[StrictStr] = None
 	name: str|Optional[StrictStr] = None
@@ -54,6 +55,7 @@ class ParseSiteConfig():
 	soupMainBlock = "courses-block"
 	soupName = ("h1", "main-title")
 	soupHour = ("div", "items-box-block__element-type-item")
+	soupAltHour = ("span","course-info-block__action-buy-box-bold")
 	soupPrice = ("div", "course-info-block__action-buy-price")
 
 	headers = [
