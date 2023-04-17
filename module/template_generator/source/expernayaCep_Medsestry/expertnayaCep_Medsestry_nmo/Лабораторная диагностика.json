@@ -1,0 +1,151 @@
+[
+    {
+        "specname": "Лабораторная диагностика",
+        "programs": [
+            {
+                "id": 17903,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторная диагностика",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Pxt",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika-3/",
+                "final_url": null
+            },
+            {
+                "id": 15065,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные методы клинических исследований в лабораторной диагностике",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Pzh",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-metodyi-klinicheskih-issledovanij-v-laboratornoj-diagnostike-2/",
+                "final_url": null
+            },
+            {
+                "id": 17909,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторная диагностика: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Q2N",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 15335,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело в гигиене труда",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Q37",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-v-gigiene-truda/",
+                "final_url": null
+            },
+            {
+                "id": 17707,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные физико-химические методы",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Q6Q",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-fiziko-himicheskie-metodyi/",
+                "final_url": null
+            },
+            {
+                "id": 15269,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные методы клинических исследований в лабораторной диагностике",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Q7n",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-metodyi-klinicheskih-issledovanij-v-laboratornoj-diagnostike-/",
+                "final_url": null
+            },
+            {
+                "id": 15611,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гистологические методы исследований в патологоанатомических отделениях и прозекторских",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Q8Y",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologicheskie-metodyi-issledovanij-v-patologoanatomicheskih-otdeleniyah-i-prozekto/",
+                "final_url": null
+            },
+            {
+                "id": 17905,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторная диагностика",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/343w3y",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika-4/",
+                "final_url": null
+            },
+            {
+                "id": 17907,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторная диагностика",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337QAA",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika-5/",
+                "final_url": null
+            },
+            {
+                "id": 18705,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторная диагностика особо опасных инфекций: чума, холера, брюшной тиф",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337Pz8",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika-osobo-opasnyih-infektsij-chuma-holera-bryushnoj-tif/",
+                "final_url": null
+            },
+            {
+                "id": 18843,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Методология отбора проб в санитарно-химических исследованиях",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337QBB",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-metodologiya-otbora-prob-v-sanitarno-himicheskih-issledovaniyah/",
+                "final_url": null
+            },
+            {
+                "id": 18839,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Методы микробиологической диагностики острых кишечных инфекций",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторная диагностика",
+                "linkNmo": "https://clck.ru/337QBx",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-metodyi-mikrobiologicheskoj-diagnostiki-ostryih-kishechnyih-infektsij/",
+                "final_url": null
+            }
+        ]
+    }
+]

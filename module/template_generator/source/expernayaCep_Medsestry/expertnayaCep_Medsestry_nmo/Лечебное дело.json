@@ -1,0 +1,115 @@
+[
+    {
+        "specname": "Лечебное дело",
+        "programs": [
+            {
+                "id": 16623,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные аспекты управления экономики здравоохранения",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QQW",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-upravleniya-ekonomiki-zdravoohraneniya/",
+                "final_url": null
+            },
+            {
+                "id": 16613,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Скорая и неотложная помощь",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/343vxH",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch-4/",
+                "final_url": null
+            },
+            {
+                "id": 17775,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лечебное дело",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QPA",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-6/",
+                "final_url": null
+            },
+            {
+                "id": 17847,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лечебное дело: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QPx",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-aktualnyie-voprosyi-i-innovatsionnyie-resheniya-2/",
+                "final_url": null
+            },
+            {
+                "id": 16623,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные аспекты управления экономики здравоохранения",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QQW",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-upravleniya-ekonomiki-zdravoohraneniya/",
+                "final_url": null
+            },
+            {
+                "id": 17777,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лечебное дело",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QR2",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-7/",
+                "final_url": null
+            },
+            {
+                "id": 17779,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лечебное дело",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QRE",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-8/",
+                "final_url": null
+            },
+            {
+                "id": 18769,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Организационно-правовые основы работы фельдшерских здравпунктов на предприятиях",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QRa",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsionno-pravovyie-osnovyi-rabotyi-feldsherskih-zdravpunktov-na-predpriyatiyah/",
+                "final_url": null
+            },
+            {
+                "id": 19149,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные аспекты акушерской помощи в родовспомогательных учреждениях",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Лечебное дело",
+                "linkNmo": "https://clck.ru/337QS9",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah-4/",
+                "final_url": null
+            }
+        ]
+    }
+]

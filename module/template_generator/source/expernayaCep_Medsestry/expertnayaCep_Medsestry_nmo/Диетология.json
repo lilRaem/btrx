@@ -1,0 +1,43 @@
+[
+    {
+        "specname": "Диетология",
+        "programs": [
+            {
+                "id": 15989,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Диетология",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Диетология",
+                "linkNmo": "https://clck.ru/337Pvj",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-6/",
+                "final_url": null
+            },
+            {
+                "id": 18993,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Диетология: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Диетология",
+                "linkNmo": "https://clck.ru/337Px4",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+			{
+                "id": 18997,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Диетология",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Диетология",
+                "linkNmo": "https://clck.ru/337PwS",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-10/",
+                "final_url": null
+            }
+        ]
+    }
+]

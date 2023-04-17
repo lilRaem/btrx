@@ -1,0 +1,103 @@
+[
+    {
+        "specname": "Рентгенология",
+        "programs": [
+            {
+                "id": 17819,
+                "type_zdrav": "СПО",
+                "spec": "Профессиональная переподготовка",
+                "name": "Рентгенология",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": null,
+                "linkNmo": null,
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=2448&tovar=17819&sendsay_email=${ Recipient.Email }"
+            },
+            {
+                "id": 16113,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело в рентгенологии",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Рентгенология",
+                "linkNmo": "https://clck.ru/337RZY",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-v-rentgenologii-3/",
+                "final_url": null
+            },
+            {
+                "id": 17697,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Рентгенология: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Рентгенология",
+                "linkNmo": "https://clck.ru/337RYC",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 16233,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Монтаж, ремонт и техническое обслуживание рентгеновской аппаратуры",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Рентгенология",
+                "linkNmo": "https://clck.ru/337RaE",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-montazh-remont-i-tehnicheskoe-obsluzhivanie-rentgenovskoj-apparaturyi/",
+                "final_url": null
+            },
+            {
+                "id": 4827,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело в рентгенологии",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Рентгенология",
+                "linkNmo": "https://clck.ru/337RbA",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-v-rentgenologii/",
+                "final_url": null
+            },
+            {
+                "id": 16539,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Рентгенология",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Рентгенология",
+                "linkNmo": "https://clck.ru/337RYU",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-5/",
+                "final_url": null
+            },
+            {
+                "id": 17817,
+                "type_zdrav": "СПО",
+                "spec": "Профессиональная переподготовка",
+                "name": "Рентгенология",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": null,
+                "linkNmo": null,
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=19584&tovar=17817&sendsay_email=${ Recipient.Email }"
+            },
+            {
+                "id": 18517,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Выполнение рентгенологических снимков, исследований КТ и МРТ",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Рентгенология",
+                "linkNmo": "https://clck.ru/337RcD",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-vyipolnenie-rentgenologicheskih-snimkov-issledovanij-kt-i-mrt/",
+                "final_url": null
+            }
+        ]
+    }
+]

@@ -25,8 +25,9 @@ def main():
 	after: ???
 	"""
 	#TODO не работает
-	#return search("Организационно - методическое сопровождение подачи документов для первичной специализированной аккредитации (квота)",25000,"ПК",mail_service="mindbox")
-	return search("актуальные вопросы диагностики и лечения травм",5900,"ПК",mail_service="mindbox")
+	# return search("Инструктор-проводник по альпинизму и горному туризму",15000,"ПП",mail_service="sendsay")
+	return search("Антидопинговая",0,"ПП",mail_service="mindbox")
+	# return search("актуальные вопросы диагностики и лечения травм",5900,"ПК",mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()
@@ -35,7 +36,7 @@ if __name__ == "__main__":
 
 	if data != None:
 		with open("data.json","w", encoding="utf-8") as file:
-			x = json.dump(data,file,indent=4,ensure_ascii=False)
+			json.dump(data,file,indent=4,ensure_ascii=False)
 
 	# print(Fore.MAGENTA+f'Main time: {end} sec'+ Fore.RESET)
 

@@ -1,0 +1,91 @@
+[
+    {
+        "specname": "Фармация",
+        "programs": [
+            {
+                "id": 4811,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Безрецептурный отпуск лекарственных средств и техника продаж",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337Sio",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bezretsepturnyij-otpusk-lekarstvennyih-sredstv-i-tehnika-prodazh-2/",
+                "final_url": null
+            },
+            {
+                "id": 17827,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Фармация",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337SjU",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-farmatsiya-7/",
+                "final_url": null
+            },
+            {
+                "id": 17721,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Фармация: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337Sjy",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-farmatsiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 14799,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Безрецептурный отпуск лекарственных средств и техника продаж",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337SmD",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bezretsepturnyij-otpusk-lekarstvennyih-sredstv-i-tehnika-prodazh/",
+                "final_url": null
+            },
+            {
+                "id": 16367,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Отпуск лекарственных средств",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337SmU",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-otpusk-lekarstvennyih-sredstv/",
+                "final_url": null
+            },
+            {
+                "id": 17153,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Фармация",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337Smu",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-farmatsiya-5/",
+                "final_url": null
+            },
+            {
+                "id": 17825,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Фармация",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Фармация",
+                "linkNmo": "https://clck.ru/337Sn8",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-farmatsiya-6/",
+                "final_url": null
+            }
+        ]
+    }
+]

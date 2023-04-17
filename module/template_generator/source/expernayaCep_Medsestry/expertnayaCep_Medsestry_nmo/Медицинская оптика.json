@@ -1,0 +1,91 @@
+[
+    {
+        "specname": "Медицинская оптика",
+        "programs": [
+            {
+                "id": 17255,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медицинская оптика: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337Qyp",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 18511,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медицинская оптика",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337R29",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-4/",
+                "final_url": null
+            },
+			{
+                "id": 16327,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Организация работы предприятий \"Оптика\"",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337Qxw",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-rabotyi-predpriyatij-optika-2",
+                "final_url": null
+            },
+			{
+                "id": 15109,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Организация работы предприятий \"Оптика\"",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337QyF",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-rabotyi-predpriyatij-optika",
+                "final_url": null
+            },
+            {
+                "id": 4423,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медицинская оптика",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337R3B",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/",
+                "final_url": null
+            },
+            {
+                "id": 18767,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медицинская оптика",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337R58",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-5/",
+                "final_url": null
+            },
+            {
+                "id": 20009,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Алгоритм подбора очков и коррекция зрения",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медицинская оптика",
+                "linkNmo": "https://clck.ru/337R5g",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-algoritm-podbora-ochkov-i-korrektsiya-zreniya/",
+                "final_url": null
+            }
+        ]
+    }
+]
