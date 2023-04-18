@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Судебно-медицинская экспертиза",
+        "programs": [
+            {
+                "id": 18401,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Судебно-медицинская экспертиза",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Судебно-медицинская экспертиза",
+                "linkNmo": "https://clck.ru/337Sgy",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-8/",
+                "final_url": null
+            },
+			{
+                "id": 18413,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Судебно-медицинская экспертиза: актуальные вопросы и инновационные вопросы",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Судебно-медицинская экспертиза",
+                "linkNmo": "https://clck.ru/337Si8",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-aktualnyie-voprosyi-i-innovatsionnyie-voprosyi/",
+                "final_url": null
+            },
+            {
+                "id": 18403,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Судебно-медицинская экспертиза",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Судебно-медицинская экспертиза",
+                "linkNmo": "https://clck.ru/337ShH",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-9/",
+                "final_url": null
+            },
+            {
+                "id": 18405,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Судебно-медицинская экспертиза",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Судебно-медицинская экспертиза",
+                "linkNmo": "https://clck.ru/337She",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-10/",
+                "final_url": null
+            }
+        ]
+    }
+]

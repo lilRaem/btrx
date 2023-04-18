@@ -1,0 +1,151 @@
+[
+    {
+        "specname": "Медико-профилактическое дело",
+        "programs": [
+            {
+                "id": 17911,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медико-профилактическое дело",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337QYb",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-profilakticheskoe-delo-5/",
+                "final_url": null
+            },
+            {
+                "id": 15487,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Актуальные аспекты профилактики инфекционных заболеваний в медицинских учреждениях",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qcg",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-aktualnyie-aspektyi-profilaktiki-infektsionnyih-zabolevanij-v-meditsinskih-uchrezhden/",
+                "final_url": null
+            },
+            {
+                "id": 17917,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медико-профилактическое дело: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337QZh",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-profilakticheskoe-delo-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 18019,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Организация санитарного просвещения",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337QdR",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sanitarnogo-prosvescheniya/",
+                "final_url": null
+            },
+            {
+                "id": 16625,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные аспекты эпиднадзора",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qe6",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-epidnadzora-3/",
+                "final_url": null
+            },
+            {
+                "id": 16629,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные вопросы гигиены труда",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qfq",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-voprosyi-gigienyi-truda/",
+                "final_url": null
+            },
+            {
+                "id": 16625,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные аспекты эпиднадзора",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qe6",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-epidnadzora-3/",
+                "final_url": null
+            },
+            {
+                "id": 16303,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Организация дезинфекционного дела",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qph",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-dezinfektsionnogo-dela/",
+                "final_url": null
+            },
+            {
+                "id": 16017,
+                "type_zdrav": "СПО",
+                "spec": null,
+                "name": "Иммунопрофилактика инфекционных заболеваний",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": null,
+                "linkNmo": "https://clck.ru/337Qqc",
+                "url": null,
+                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-immunoprofilaktika-infektsionnyih-zabolevanij?program=Иммунопрофилактика инфекционных заболеваний&header=Курс None Иммунопрофилактика инфекционных заболеваний&cost=9792&tovar=16017&sendsay_email=${ Recipient.Email }"
+            },
+            {
+                "id": 17913,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медико-профилактическое дело",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337QbE",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-profilakticheskoe-delo-6/",
+                "final_url": null
+            },
+            {
+                "id": 17915,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Медико-профилактическое дело",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qay",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-profilakticheskoe-delo-7/",
+                "final_url": null
+            },
+            {
+                "id": 18773,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Инфекционная безопасность. Профилактика ИСМП",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Медико-профилактическое дело",
+                "linkNmo": "https://clck.ru/337Qr6",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-infektsionnaya-bezopasnost-profilaktika-ismp-2/",
+                "final_url": null
+            }
+        ]
+    }
+]

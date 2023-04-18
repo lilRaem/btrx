@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Гистология",
+        "programs": [
+            {
+                "id": 18961,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гистология",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Гистология",
+                "linkNmo": "https://clck.ru/337Ppr",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-3/",
+                "final_url": null
+            },
+			{
+                "id": 15615,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гистология",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Гистология",
+                "linkNmo": "https://clck.ru/337PqC",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-4/",
+                "final_url": null
+            },
+            {
+                "id": 18969,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гистология",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Гистология",
+                "linkNmo": "https://clck.ru/337PqV",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-5/",
+                "final_url": null
+            },
+            {
+                "id": 18973,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гистология: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Гистология",
+                "linkNmo": "https://clck.ru/337PrG",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            }
+        ]
+    }
+]

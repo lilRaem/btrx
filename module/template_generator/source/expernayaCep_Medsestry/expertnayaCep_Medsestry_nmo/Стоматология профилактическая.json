@@ -1,0 +1,67 @@
+[
+    {
+        "specname": "Стоматология профилактическая",
+        "programs": [
+            {
+                "id": 17785,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология профилактическая",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Стоматология профилактическая",
+                "linkNmo": "https://clck.ru/337SWV",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-2/",
+                "final_url": null
+            },
+            {
+                "id": 17839,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология профилактическая: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Стоматология профилактическая",
+                "linkNmo": "https://clck.ru/337SXz",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 17835,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология профилактическая",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Стоматология профилактическая",
+                "linkNmo": "https://clck.ru/337SYR",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-3/",
+                "final_url": null
+            },
+            {
+                "id": 15107,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные аспекты профилактической стоматологии",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Стоматология профилактическая",
+                "linkNmo": "https://clck.ru/337SZ5",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-profilakticheskoj-stomatologii/",
+                "final_url": null
+            },
+            {
+                "id": 17837,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология профилактическая",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Стоматология профилактическая",
+                "linkNmo": "https://clck.ru/337SaT",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-4/",
+                "final_url": null
+            }
+        ]
+    }
+]

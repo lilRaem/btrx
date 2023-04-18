@@ -4,7 +4,7 @@ import pandas as pd
 import csv, json
 
 type_name = 'СПО'
-filename = 'АПК и ПП программы ПК НМО 29.03.2023.docx'
+filename = 'АПК и ПП программы ПК НМО 29.03.2023 испр.docx'
 
 printed = False
 
@@ -54,14 +54,11 @@ def docx2csv(filename):
 		if index == 0:
 			type_name = 'ВО'
 			print(f'Current index:{index} type:{type_name}')
-		elif index == 1:
+		if index == 1:
 			type_name = 'СПО'
 			print(f'Current index:{index} type:{type_name}')
-		elif index == 2:
+		if index == 2:
 			type_name = 'НМП'
-			print(f'Current index:{index} type:{type_name}')
-		else:
-			type_name = 'none'
 			print(f'Current index:{index} type:{type_name}')
 		# count_vo = 0
 		# count_spo = 0

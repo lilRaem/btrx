@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Лабораторное дело",
+        "programs": [
+            {
+                "id": 18977,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Лабораторное дело (Медико-профилактическое дело)",
+                "linkNmo": "https://clck.ru/337QEk",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-3/",
+                "final_url": null
+            },
+            {
+                "id": 18981,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Лабораторное дело (Медико-профилактическое дело)",
+                "linkNmo": "https://clck.ru/337QFb",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-4/",
+                "final_url": null
+            },
+            {
+                "id": 18985,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Лабораторное дело (Медико-профилактическое дело)",
+                "linkNmo": "https://clck.ru/337QJV",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 18989,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Лабораторное дело",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Лабораторное дело (Медико-профилактическое дело)",
+                "linkNmo": "https://clck.ru/337QK3",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo-5/",
+                "final_url": null
+            }
+        ]
+    }
+]

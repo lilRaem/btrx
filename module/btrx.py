@@ -186,8 +186,8 @@ class Btrx(Bitrix):
 
 	def check_product(self, name: str, price: int, datalist: list[dict[str,str|int|None]]) -> list[dict[str,str|int|None]]:
 
-		if type(name) != str or type(price) != int: raise TypeError(f"Type name == {type(name)}\n\
-							      Type price == {type(price)}\n except (str,int)")
+		if type(name) != str or type(price) != int:
+			raise TypeError(f"Type name == {type(name)}\nType price == {type(price)}\n except (str,int)")
 		try:
 			final_data = FinalData()
 			if name:

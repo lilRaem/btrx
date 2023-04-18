@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Наркология",
+        "programs": [
+            {
+                "id": 18053,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Наркология",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Наркология\n(Лечебное дело)",
+                "linkNmo": "https://clck.ru/337RM9",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-2/",
+                "final_url": null
+            },
+            {
+                "id": 18057,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Наркология: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Наркология\n(Лечебное дело)",
+                "linkNmo": "https://clck.ru/337RMp",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 18055,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Наркология",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Наркология\n(Лечебное дело)",
+                "linkNmo": "https://clck.ru/337RNK",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/",
+                "final_url": null
+            },
+            {
+                "id": 18039,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Наркология",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Наркология\n(Лечебное дело)",
+                "linkNmo": "https://clck.ru/337RNa",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya/",
+                "final_url": null
+            }
+        ]
+    }
+]

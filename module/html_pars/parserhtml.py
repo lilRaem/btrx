@@ -4,11 +4,15 @@ from random import choice
 from bs4 import BeautifulSoup
 import requests
 import os, json
+import sys
+sys.path.insert(0,os.getcwd())
 try:
 	from module.config import FinalData, ParseSiteConfig
 except:
 	from config import FinalData, ParseSiteConfig
 from module.logger import logging
+import lxml.etree as etree
+import lxml.html
 
 log = logging.getLogger("btrx.module.html_pars.parserhtml")
 def bs4pars():
@@ -60,17 +64,27 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	final_data = FinalData()
 	site_data_list: list[dict[str,str|int|None]] = list()
 	header = choice(psUrlconf.headers)
+
 	req = requests.get(parseurl, headers=header,timeout=None)
 	# print(f"\n{Fore.LIGHTYELLOW_EX}request time: {round(time()-start,2)} sec{Fore.RESET}")
 	soup = BeautifulSoup(req.content,'lxml')
-	final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
-	final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
-	_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
-	_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
+	if parseurl == "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/":
+		final_data.name = soup.find(f'h2',f'color-pink sets_banner-title').text.strip()
 
+		final_data.hour = 600
+
+		_price = 99000
+		_spec = soup.find("div","sets_banner-suptitle").text.strip()
+	else:
+		final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}')
+		if final_data.name: final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
+		final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
+
+		_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
+		_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
 	log.info(f"Parsed url: {parseurl}\nname: {final_data.name} hour: {final_data.hour} price: {_price}",stacklevel=200)
 
-	if "профессиональной переподготовки" in _spec or "профессиональной переподготовке" in _spec:
+	if "профессиональной переподготовки" in _spec or "профессиональной переподготовке" in _spec or "Первичная переподготовка" in _spec:
 		_spec = "Профессиональная переподготовка"
 	elif "повышения квалификации" in _spec or "повышении квалификации" in _spec and "НМО" not in _spec:
 		_spec = "Повышение квалификации"
@@ -82,37 +96,72 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	type_url = parseurl.replace("https://apkipp.ru/katalog/","").split("/")[0]
 
 	if type_url == "zdravoohranenie":
+		final_data.katalog = f"Здравоохранение/{type_url}"
 		final_data.type_zdrav = "ВО"
 	elif type_url == "zdravoohranenie-srednij-medpersonal":
+		final_data.katalog = f"Здравоохранение - Средний медперсонал/{type_url}"
 		final_data.type_zdrav = "СПО"
 	elif type_url == "zdravoohranenie-mladshij-medpersonal":
+		final_data.katalog = f"Здравоохранение - Младший медперсонал/{type_url}"
 		final_data.type_zdrav = "МП"
 	elif type_url == "zdravoohranenie-nemeditsinskie-spetsialnosti":
+		final_data.katalog = f"Здравоохранение - Немедицинские специальности/{type_url}"
 		final_data.type_zdrav = "НМП"
+	elif type_url == "menedzhment":
+		final_data.katalog = f"Менеджмент/{type_url}"
+	elif type_url == "doshkolnoe-obrazovanie":
+		final_data.katalog = f"Дошкольное образование/{type_url}"
+	elif type_url == "sudebnyie-pristavyi":
+		final_data.katalog = f"Судебные приставы/{type_url}"
+	elif type_url == "servis-i-turizm":
+		final_data.katalog = f"Сервис и туризм/{type_url}"
+	elif type_url == "fizicheskaya-kultura-i-sport":
+		final_data.katalog = f"Физическая культура и спорт/{type_url}"
+	elif type_url == "pedagogicheskoe-obrazovanie":
+		final_data.katalog = f"Педагогическое образование/{type_url}"
+	elif type_url == "tsentryi-zanyatosti-naseleniya":
+		final_data.katalog = f"Центры занятости населения/{type_url}"
+	elif type_url == "avtoshkolam":
+		final_data.katalog = f"Автошколам/{type_url}"
+	elif type_url == "nalogovoe-delo":
+		final_data.katalog = f"Налоговое дело/{type_url}"
+	elif type_url == "kultura-i-iskusstvo":
+		final_data.katalog = f"Культура и искусство/{type_url}"
+	elif type_url == "sotsialnaya-zaschita-naseleniya":
+		final_data.katalog = f"Социальная защита населения/{type_url}"
+	elif type_url == "dopolnitelnoe-obrazovanie":
+		final_data.katalog = f"Дополнительное образование/{type_url}"
+	elif type_url == "notariat":
+		final_data.katalog = f"Нотариат/{type_url}"
+	elif type_url == "otsenka-i-sudebnaya-ekspertiza":
+		final_data.katalog = f"Оценка и судебная экспертиза/{type_url}"
+	elif type_url == "stroitelstvo":
+		final_data.katalog = f"Строительство/{type_url}"
 	else:
 		final_data.type_zdrav = None
-
+	# print(soup.find("div","banner-box__info-title"))
 	if _spec: final_data.spec = _spec
-	if _price:
-		for i,d in enumerate(_price):
-			if d.get("class") != None and "old-price"in d.get("class")[i]: log.debug(f"Price with oldprice in site: {d.get('class')[i]}")
-			else:
-				if d.text != "₽":
-					final_data.price = int(d.text)
-					if price == int(d.text): log.debug(f"Price without oldprice: {final_data.price}")
-	else:
-		try:
-			final_data.price = int(soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.strip())
-			log.debug(f"(try) Price without oldprice: {final_data.price}")
-		except:
-			final_data.price = price
-			log.debug(f"(except) Price without oldprice: {final_data.price}")
+	if parseurl != "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/":
+		if _price:
+			for i,d in enumerate(_price):
+				if d.get("class") != None and "old-price"in d.get("class")[i]: log.debug(f"Price with oldprice in site: {d.get('class')[i]}")
+				else:
+					if d.text != "₽":
+						final_data.price = int(d.text.replace(" ₽",""))
+						if price == int(d.text.replace(" ₽","")): log.debug(f"Price without oldprice: {final_data.price}")
+		else:
+			try:
+				final_data.price = int(soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.strip())
+				log.debug(f"(try) Price without oldprice: {final_data.price}")
+			except:
+				final_data.price = price
+				log.debug(f"(except) Price without oldprice: {final_data.price}")
 
-	if final_data.price == price:
-		final_data.url = parseurl
-		site_data_list.append(final_data.dict())
-		log.debug(Fore.GREEN+f"Found price: {site_data_list[0].get('price')}"+Fore.RESET)
-	else: site_data_list.append(final_data.dict())
+		if final_data.price == price:
+			final_data.url = parseurl
+			site_data_list.append(final_data.dict())
+			log.debug(Fore.GREEN+f"Found price: {site_data_list[0].get('price')}"+Fore.RESET)
+		else: site_data_list.append(final_data.dict())
 
 	if site_data_list.__len__() == 1:
 		# print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
@@ -127,4 +176,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	print(parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/",price='9792'))
+	print(parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-ultrazvukovaya-diagnostika/",price=9792))

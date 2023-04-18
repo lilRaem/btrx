@@ -1,12 +1,156 @@
-2023-03-31 17:03:54,503 :: DEBUG :: template_generator:17 =>
-[ ***Logger INITIALIZED*** ]
+2023-04-11 09:33:53,646 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
 
-2023-03-31 17:03:55,577 :: WARNING :: template_generator.main.build_jina_template:89 =>
-[ hour = 0| main_spec: Физиотерапия and in prog specname: Наркология id: 4343 https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/?program=Наркология&header=Курс ПП Наркология&cost=20000&tovar=4343&sendsay_email=${ Recipient.Email } ]
+2023-04-11 09:33:53,720 | ERROR | template_generator.main.build_jina_template:181 =>
+[ Error build templates ]
 
-2023-03-31 17:03:55,630 :: WARNING :: template_generator.main.build_jina_template:89 =>
-[ hour = 0| main_spec: Функциональная диагностика and in prog specname: Наркология id: 4343 https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/?program=Наркология&header=Курс ПП Наркология&cost=20000&tovar=4343&sendsay_email=${ Recipient.Email } ]
+2023-04-11 09:37:12,336 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
 
-2023-03-31 17:03:55,679 :: DEBUG :: template_generator.main.build_jina_template:97 =>
+2023-04-11 09:37:12,456 | ERROR | template_generator.main.build_jina_template:184 =>
+[ Error build templates ]
+
+2023-04-11 09:37:28,525 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:37:28,584 | ERROR | template_generator.main.build_jina_template:184 =>
+[ Error build templates ]
+
+2023-04-11 09:39:14,793 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:39:14,845 | ERROR | template_generator.main.build_jina_template:181 =>
+[ Error build templates ]
+
+2023-04-11 09:40:50,541 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:40:50,687 | ERROR | template_generator.main.build_jina_template:182 =>
+[ Error build templates ]
+
+2023-04-11 09:41:12,192 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:41:12,561 | ERROR | template_generator.main.build_jina_template:182 =>
+[ Error build templates ]
+
+2023-04-11 09:42:24,379 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:42:24,846 | ERROR | template_generator.main.build_jina_template:182 =>
+[ Error build templates ]
+
+2023-04-11 09:50:18,854 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:50:18,939 | DEBUG | template_generator.main.build_jina_template:179 =>
+[ Build templates successfully ]
+
+2023-04-11 09:52:42,586 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:52:42,672 | DEBUG | template_generator.main.build_jina_template:179 =>
+[ Build templates successfully ]
+
+2023-04-11 09:53:33,416 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:53:33,483 | DEBUG | template_generator.main.build_jina_template:179 =>
+[ Build templates successfully ]
+
+2023-04-11 09:59:56,076 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 09:59:56,107 | DEBUG | template_generator.main.build_jina_template:179 =>
+[ Build templates successfully ]
+
+2023-04-11 10:01:37,070 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:01:37,111 | DEBUG | template_generator.main.build_jina_template:179 =>
+[ Build templates successfully ]
+
+2023-04-11 10:05:42,078 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:05:42,505 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:06:54,639 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:06:55,018 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:08:15,163 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:08:15,296 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:12:47,235 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:12:48,037 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:17:10,308 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:17:11,018 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:18:10,741 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:18:10,805 | ERROR | template_generator.main.build_jina_template:182 =>
+[ Error build templates ]
+
+2023-04-11 10:18:40,698 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:18:40,735 | ERROR | template_generator.main.build_jina_template:182 =>
+[ Error build templates ]
+
+2023-04-11 10:19:09,423 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:19:09,463 | ERROR | template_generator.main.build_jina_template:182 =>
+[ Error build templates ]
+
+2023-04-11 10:21:35,081 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:21:35,507 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:22:37,578 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:22:37,972 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:32:16,228 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:33:15,805 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:33:33,711 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:33:34,317 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 10:34:13,002 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 10:34:13,493 | DEBUG | template_generator.main.build_jina_template:180 =>
+[ Build templates successfully ]
+
+2023-04-11 14:15:45,320 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-11 14:15:46,156 | DEBUG | template_generator.main.build_jina_template:180 =>
 [ Build templates successfully ]
 
