@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Гигиеническое воспитание",
+        "programs": [
+            {
+                "id": 18017,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Организация санитарного просвещения",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Гигиеническое воспитание",
+                "linkNmo": "https://clck.ru/337PiS",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sanitarnogo-prosvescheniya-2/",
+                "final_url": null
+            },
+            {
+                "id": 17757,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гигиеническое воспитание",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Гигиеническое воспитание",
+                "linkNmo": "https://clck.ru/337Pj9",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-5/",
+                "final_url": null
+            },
+            {
+                "id": 17759,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гигиеническое воспитание: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Гигиеническое воспитание",
+                "linkNmo": "https://clck.ru/337Pjj",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 17761,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гигиеническое воспитание",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Гигиеническое воспитание",
+                "linkNmo": "https://clck.ru/337Pkj",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-6/",
+                "final_url": null
+            }
+        ]
+    }
+]

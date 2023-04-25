@@ -1,0 +1,15 @@
+[
+    {
+        "id": 3219,
+        "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+        "type_zdrav": null,
+        "spec": "Повышение квалификации",
+        "name": "Организация учебно-тренировочного процесса с детьми ОВЗ в спортивной школе",
+        "price": 3000,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-uchebno-trenirovochnogo-protsessa-s-detmi-ovz-v-sportivnoj-shkole/",
+        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-uchebno-trenirovochnogo-protsessa-s-detmi-ovz-v-sportivnoj-shkole/?program=Организация учебно-тренировочного процесса с детьми ОВЗ в спортивной школе&header=Курс ПК Организация учебно-тренировочного процесса с детьми ОВЗ в спортивной школе&cost=3000&tovar=3219&sendsay_email=${ Recipient.Email }"
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "specname": "Стоматология",
+        "programs": [
+            {
+                "id": 16599,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Сестринское дело в стоматологии",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SMR",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-stomatologii/",
+                "final_url": null
+            },
+            {
+                "id": 17829,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SNa",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-3/",
+                "final_url": null
+            },
+            {
+                "id": 18151,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SNq",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 17831,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SPG",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-4/",
+                "final_url": null
+            },
+            {
+                "id": 18293,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Стоматология",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SPS",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-5/",
+                "final_url": null
+            },
+            {
+                "id": 16671,
+                "type_zdrav": null,
+                "spec": null,
+                "name": "Стоматологическая помощь населению",
+                "price": 5800,
+                "hour": 144,
+                "nmoSpec": null,
+                "linkNmo": null,
+                "url": null,
+                "final_url": "None?program=Стоматологическая помощь населению&header=Курс None Стоматологическая помощь населению&cost=5800&tovar=16671&sendsay_email=${ Recipient.Email }"
+            },
+            {
+                "id": 18905,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Зубной врач: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SRD",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-zubnoj-vrach-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 18907,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Зубной врач",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Стоматология",
+                "linkNmo": "https://clck.ru/337SRV",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-zubnoj-vrach-2/",
+                "final_url": null
+            }
+        ]
+    }
+]

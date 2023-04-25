@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Фармация",
+        "program_data": {
+            "id": 17153,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Фармация",
+            "price": 9792,
+            "hour": 144,
+            "nmoSpec": "Фармация",
+            "linkNmo": "https://clck.ru/337Smu",
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-farmatsiya-5/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-farmatsiya-5/?program=Фармация&header=Курс НМО Фармация&cost=9792&tovar=17153&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337Smu"
+        }
+    }
+]

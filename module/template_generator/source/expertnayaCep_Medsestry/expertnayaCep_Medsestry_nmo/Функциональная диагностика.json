@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Функциональная диагностика",
+        "programs": [
+            {
+                "id": 17185,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Функциональная диагностика",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Функциональная диагностика",
+                "linkNmo": "https://clck.ru/337SpD",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-6/",
+                "final_url": null
+            },
+            {
+                "id": 18521,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Функциональная диагностика: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Функциональная диагностика",
+                "linkNmo": "https://clck.ru/337SpY",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 17181,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Функциональная диагностика",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Функциональная диагностика",
+                "linkNmo": "https://clck.ru/337Sq3",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-7/",
+                "final_url": null
+            },
+            {
+                "id": 18523,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Функциональная диагностика",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Функциональная диагностика",
+                "linkNmo": "https://clck.ru/337SqM",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-9/",
+                "final_url": null
+            }
+        ]
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "specname": "Гигиена и санитария",
+        "programs": [
+            {
+                "id": 16631,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Современные вопросы гигиены труда",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Гигиена и санитария",
+                "linkNmo": "https://clck.ru/337Pmo",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-voprosyi-gigienyi-truda-2/",
+                "final_url": null
+            },
+            {
+                "id": 18775,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Пищевые токсикоинфекции и их профилактика",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Гигиена и санитария",
+                "linkNmo": "https://clck.ru/337PnN",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-pischevyie-toksikoinfektsii-i-ih-profilaktika/",
+                "final_url": null
+            },
+            {
+                "id": 17735,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гигиена и санитария: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Гигиена и санитария",
+                "linkNmo": "https://clck.ru/337Pnw",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 15603,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гигиена и санитария",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Гигиена и санитария",
+                "linkNmo": "https://clck.ru/337PoY",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya-3/",
+                "final_url": null
+            },
+            {
+                "id": 18525,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Гигиена и санитария",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Гигиена и санитария",
+                "linkNmo": "https://clck.ru/337Pok",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya-4/",
+                "final_url": null
+            }
+        ]
+    }
+]

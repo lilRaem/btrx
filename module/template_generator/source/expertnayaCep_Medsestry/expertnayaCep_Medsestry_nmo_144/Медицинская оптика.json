@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Медицинская оптика",
+        "program_data": {
+            "id": 4423,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Медицинская оптика",
+            "price": 9792,
+            "hour": 144,
+            "nmoSpec": "Медицинская оптика",
+            "linkNmo": "https://clck.ru/337R3B",
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/?program=Медицинская оптика&header=Курс НМО Медицинская оптика&cost=9792&tovar=4423&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337R3B"
+        }
+    }
+]

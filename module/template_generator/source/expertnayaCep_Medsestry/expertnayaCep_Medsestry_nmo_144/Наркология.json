@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Наркология",
+        "program_data": {
+            "id": 18055,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Наркология",
+            "price": 9792,
+            "hour": 144,
+            "nmoSpec": "Наркология\n(Лечебное дело)",
+            "linkNmo": "https://clck.ru/337RNK",
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/?program=Наркология&header=Курс НМО Наркология&cost=9792&tovar=18055&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337RNK"
+        }
+    }
+]

@@ -1,0 +1,55 @@
+[
+    {
+        "specname": "Скорая и неотложная помощь",
+        "programs": [
+            {
+                "id": 17973,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Скорая и неотложная помощь: актуальные вопросы и инновационные решения",
+                "price": 2448,
+                "hour": 36,
+                "nmoSpec": "Скорая и неотложная помощь",
+                "linkNmo": "https://clck.ru/337SbN",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch-aktualnyie-voprosyi-i-innovatsionnyie-resheniya-2/",
+                "final_url": null
+            },
+            {
+                "id": 17703,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Скорая и неотложная помощь: актуальные вопросы и инновационные решения",
+                "price": 5032,
+                "hour": 74,
+                "nmoSpec": "Скорая и неотложная помощь",
+                "linkNmo": "https://clck.ru/337Sbe",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+                "final_url": null
+            },
+            {
+                "id": 4451,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Скорая и неотложная помощь",
+                "price": 9792,
+                "hour": 144,
+                "nmoSpec": "Скорая и неотложная помощь",
+                "linkNmo": "https://clck.ru/337Scc",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch-5/",
+                "final_url": null
+            },
+            {
+                "id": 17849,
+                "type_zdrav": "СПО",
+                "spec": "Повышение квалификации (НМО)",
+                "name": "Скорая и неотложная помощь",
+                "price": 19584,
+                "hour": 288,
+                "nmoSpec": "Скорая и неотложная помощь",
+                "linkNmo": "https://clck.ru/337SdH",
+                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch-8/",
+                "final_url": null
+            }
+        ]
+    }
+]

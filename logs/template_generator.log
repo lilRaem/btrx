@@ -154,3 +154,222 @@
 2023-04-11 14:15:46,156 | DEBUG | template_generator.main.build_jina_template:180 =>
 [ Build templates successfully ]
 
+2023-04-19 12:30:46,480 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:31:21,713 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:31:48,769 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:31:48,794 | DEBUG | template_generator.main.build_jina_template:174 =>
+[ Build templates successfully ]
+
+2023-04-19 12:35:42,891 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:35:42,906 | DEBUG | template_generator.main.build_jina_template:176 =>
+[ Build templates successfully ]
+
+2023-04-19 12:51:21,947 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:51:21,979 | DEBUG | template_generator.main.build_jina_template:176 =>
+[ Build templates successfully ]
+
+2023-04-19 12:52:13,483 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:52:13,512 | DEBUG | template_generator.main.build_jina_template:176 =>
+[ Build templates successfully ]
+
+2023-04-19 12:52:54,330 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-19 12:52:54,413 | DEBUG | template_generator.main.build_jina_template:176 =>
+[ Build templates successfully ]
+
+2023-04-20 14:30:30,295 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 14:32:25,229 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 14:36:03,904 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:11:08,165 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:12:10,965 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:12:42,162 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:13:01,797 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:14:15,408 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:18:35,170 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:18:59,397 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:22:01,124 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:22:32,676 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:23:17,150 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:25:23,720 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:26:39,218 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:27:36,716 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:28:45,921 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:29:06,849 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:29:29,131 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:30:17,109 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:31:28,817 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:32:25,279 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:33:19,916 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:34:59,954 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:36:33,895 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:37:59,807 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:38:26,730 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:38:56,363 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:39:22,014 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:39:55,254 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:44:03,311 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:44:24,674 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:45:27,818 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:45:52,683 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:46:04,951 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:46:45,835 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:48:38,293 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:49:59,127 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:52:09,853 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:52:36,231 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:54:09,456 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:54:29,461 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:54:43,991 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:55:11,175 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:56:37,030 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:56:48,969 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:58:56,169 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 15:59:45,498 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:01:03,525 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:01:32,119 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:02:16,137 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:02:31,905 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:03:21,000 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:04:03,092 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:04:56,906 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:07:54,813 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-20 16:08:42,616 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-25 15:34:40,516 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-25 15:35:36,174 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-25 15:50:48,736 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+
+2023-04-25 16:02:52,064 | DEBUG | template_generator:17 =>
+[ [***] | Logger INITIALIZED | [***] ]
+

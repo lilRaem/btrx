@@ -11,5 +11,6 @@
 	],
 	"python.testing.pytestEnabled": false,
 	"python.testing.unittestEnabled": true,
-	"todo-tree.tree.showBadges": true
+	"todo-tree.tree.showBadges": true,
+	"prettier.quoteProps": "consistent"
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Медицинская статистика",
+        "program_data": {
+            "id": 16183,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Медицинская статистика",
+            "price": 9792,
+            "hour": 144,
+            "nmoSpec": "Медицинская статистика",
+            "linkNmo": "https://clck.ru/337RCa",
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika/?program=Медицинская статистика&header=Курс НМО Медицинская статистика&cost=9792&tovar=16183&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337RCa"
+        }
+    }
+]

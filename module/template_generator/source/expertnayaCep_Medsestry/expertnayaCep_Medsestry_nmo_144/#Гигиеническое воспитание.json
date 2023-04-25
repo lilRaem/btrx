@@ -1,0 +1,17 @@
+[
+    {
+        "specname": "Гигиеническое воспитание",
+        "program_data": {
+            "id": 17761,
+            "type_zdrav": "СПО",
+            "spec": "Повышение квалификации (НМО)",
+            "name": "Гигиеническое воспитание",
+            "price": 19584,
+            "hour": 288,
+            "nmoSpec": "Гигиеническое воспитание",
+            "linkNmo": "https://clck.ru/337Pkj",
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-6/",
+            "final_url": null
+        }
+    }
+]
