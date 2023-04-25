@@ -11,8 +11,6 @@ try:
 except:
 	from config import FinalData, ParseSiteConfig
 from module.logger import logging
-import lxml.etree as etree
-import lxml.html
 
 log = logging.getLogger("btrx.module.html_pars.parserhtml")
 def bs4pars():

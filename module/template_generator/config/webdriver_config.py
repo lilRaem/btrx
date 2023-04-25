@@ -22,7 +22,7 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 chrome_options.add_experimental_option("detach", True)
 chrome_options.add_argument("--log-level=OFF")
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')
 chrome_options.add_argument(f"user-agent={user_agent}")
 capabilities = DesiredCapabilities.CHROME
 capabilities['goog:loggingPrefs'] = {'browser': 'ALL',
