@@ -14,7 +14,7 @@ from module.html_pars.parserhtml import parseSiteUrl
 
 datalist = []
 
-def search(search_name:str, search_price:int, type_programm:str,mail_service:str="mindbox") -> list|None:
+def search(search_name:str, search_price:int, type_programm:str = None,mail_service:str="mindbox") -> list|None:
 	if type(search_price) != int:
 		TypeError(f"Type of search_price == int\n now: {type(search_price)}")
 	fdata: list[dict[str,str|int|None]] = list()
@@ -23,7 +23,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', ' ')
 	search_name = search_name.replace('  ', ' ')
-	type_programm = type_programm.upper()
+	if type_programm: type_programm = type_programm.upper()
 	# name = input('Введите название программы: ')
 	path = "data\\json\\btrx_data"
 	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName(path)[0]),

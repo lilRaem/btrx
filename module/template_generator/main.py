@@ -21,21 +21,27 @@ sys.path.insert(0,os.getcwd())
 from main_search import search
 from module.logger import init_logger , logging
 from module.config import ParseSiteConfig
+# склонение слов по падежам
+import pymorphy3
+
 def bs4parser(url:str):
 	parsConf = ParseSiteConfig()
-	# req = requests.get(url, headers=parsConf.get_headers(),timeout=30,allow_redirects=True)
+
 	webdrv = selenium_start()
 	# if "custom-select__option" in req.text:
 	# 	print(req.text)
 	webdrv.get(url)
 	html = webdrv.page_source
-	print(html)
+
 	soup = BeautifulSoup(html,'lxml')
 
-	opt = soup.find(class_="custom-select__dropdown").find_all(class_="custom-select_option")
-	# print(opt)
+	opt = soup.find(class_="custom-select__dropdown").children
+	sport_list = list()
+	for d in opt:
+		print(d['title'])
+		sport_list.append(d['title'])
 	with open("parse_data.json","w",encoding="utf-8") as f:
-		json.dump(opt,f,ensure_ascii=False,indent=4)
+		json.dump(sport_list,f,ensure_ascii=False,indent=4)
 
 def save_html_with_template(path:str,file_name:str,template:Template,context):
 	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as result:
@@ -56,7 +62,8 @@ def load_template(template_name:str,ext:str):
 	return env.get_template(f"{template_name}.{ext}")
 
 def build_json():
-	# source_json = load_json(f"data\\json\\docx_converted","docxtojson.json")
+	source_json = load_json(f"module\\template_generator\\source\\Sport","sport_all.json")
+	source_json_ = load_json(f"module\\template_generator\\source\\Sport","fizProg_list_from_docx.json")
 	source_ppjson = load_json(f"data\\json\\docx_converted\\nmofile","program_СПО.json")
 
 	# ###
@@ -66,53 +73,14 @@ def build_json():
 		pp: Optional[list[str]] = None
 	# ###
 
-
 	dict_data: dict = dict()
 	fail_list_nmo_prog: list[dict] = list()
 	list_data: list[dict[str,str|int]] = list()
-	for source_jdata in source_ppjson:
-		source_data = SourceData()
-		source_data.spec = source_jdata.get('spec')
-		source_data.job = source_jdata.get('job')
-		source_data.pp = source_jdata.get('pp')
-		list_prog_data: list[dict[str,str|int]] = list()
-
-		prog_search = search(source_data.spec,int(20000),"ПП")
-
-		list_prog_data.append(prog_search[0])
-
-		# try:
-		# 	prog = search(source__nmo_data.nmo_prog,9792,"НМО")
-		# except:
-		# 	fail_list_nmo_prog.append(data)
-		# 	save_json(list_data,"module\\template_generator\\source\\expertnayaCep_Medsestry_nmo",f"fail.json")
-		# list_nmo_prog.append(prog)
-		dict_data = {
-			"specname": source_data.spec,
-			"programs": list_prog_data
-		}
-
-		# save_json(fail_list_nmo_prog,"module\\template_generator\\source\\expertnayaCep_Medsestry_nmo",f"fail.json")
-
-		print(dict_data)
-		list_data.append(dict_data)
-	save_json(list_data,"module\\template_generator\\source\\expertnayaCep_Medsestry",f"[Письмо 3] Переподготовка с аккредитацией или 6 причин, почему не стоит бояться аккредитации.json")
-	# print(list_data)
-		# for jobs in source_data.job:
-		# 	print(jobs)
-
-		# finder=search(source_data.spec,9792,"НМО")
-		# if finder:
-		# 	print(f"title: {source_data.spec} finder_items: {finder.__len__()}")
-		# else:
-		# 	print("Finder is none")
-		# dict_data = dict()
-		# if finder:
-		# 	dict_data ={
-		# 	"specname": source_data.spec,
-		# 	"program_data": finder[0]
-		# 	}
-		# 	list_data.append(dict_data)
+	for d in source_json:
+		if d.get("specname") == "":
+			print(d)
+	# list_data.append(dict_data)
+	# save_json(list_data,"module\\template_generator\\source\\Sport",f"sport_all.json")
 
 def findNMO(prog:str,nmolist:list[dict]):
 	class SourceNmoData(BaseModel):
@@ -144,8 +112,8 @@ def findNMO(prog:str,nmolist:list[dict]):
 def build_jina_template():
 	init_logger("template_generator","template_generator")
 	log = logging.getLogger("template_generator.main.build_jina_template")
-	main_json: list[dict] = load_json(f"module\\template_generator\\source\\Sport","pk_not_all.json")
-	template = load_template("sport/sport_pk_not_all","html")
+	main_json: list[dict] = load_json(f"module\\template_generator\\source\\Sport","sport_all_pp_pk.json")
+	template = load_template("sport/sport_pp_all_sport","html")
 
 	li:list[dict] = list()
 	for data in main_json:
@@ -156,7 +124,7 @@ def build_jina_template():
 			"progs": li
 		}
 	print(context)
-	save_html_with_template("module\\template_generator\\ready\\sport",f"ПК общего профиля без вида спорта по должностям.html",template, context)
+	save_html_with_template("module\\template_generator\\ready\\sport\\Sport_all\\PP",f"ПП по всем видам спорта.html",template, context)
 
 def main():
 	# load_json(f"data\\json\\docx_converted","docxtojson.json")
@@ -164,9 +132,9 @@ def main():
 	# print(sys.path)
 	# search()
 	# build()
-	# build_jina_template()
+	build_jina_template()
 	# build_json()
-	bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
+	# bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
 
 if __name__ == "__main__":
 	main()

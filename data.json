@@ -1,15 +1,54 @@
 [
     {
-        "id": 3219,
+        "id": 17031,
+        "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+        "type_zdrav": null,
+        "spec": "Профессиональная переподготовка",
+        "name": "Тренер-преподаватель по городошному спорту",
+        "price": 15000,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-gorodoshnomu-sportu/",
+        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-gorodoshnomu-sportu/?program=Тренер-преподаватель по городошному спорту&header=Курс ПП Тренер-преподаватель по городошному спорту&cost=15000&tovar=17031&sendsay_email=${ Recipient.Email }"
+    },
+    {
+        "id": 17603,
         "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
         "type_zdrav": null,
         "spec": "Повышение квалификации",
-        "name": "Организация учебно-тренировочного процесса с детьми ОВЗ в спортивной школе",
+        "name": "Деятельность тренера-преподавателя по городошному спорту",
         "price": 3000,
         "hour": 144,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-uchebno-trenirovochnogo-protsessa-s-detmi-ovz-v-sportivnoj-shkole/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-uchebno-trenirovochnogo-protsessa-s-detmi-ovz-v-sportivnoj-shkole/?program=Организация учебно-тренировочного процесса с детьми ОВЗ в спортивной школе&header=Курс ПК Организация учебно-тренировочного процесса с детьми ОВЗ в спортивной школе&cost=3000&tovar=3219&sendsay_email=${ Recipient.Email }"
+        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-prepodavatelya-po-gorodoshnomu-sportu/",
+        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-prepodavatelya-po-gorodoshnomu-sportu/?program=Деятельность тренера-преподавателя по городошному спорту&header=Курс ПП Деятельность тренера-преподавателя по городошному спорту&cost=3000&tovar=17603&sendsay_email=${ Recipient.Email }"
+    },
+    {
+        "id": 15741,
+        "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+        "type_zdrav": null,
+        "spec": "Повышение квалификации",
+        "name": "Деятельность тренера по городошному спорту в условиях реализации требований ФССП",
+        "price": 3000,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-po-gorodoshnomu-sportu-v-usloviyah-realizatsii-trebovanij-fssp/",
+        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-po-gorodoshnomu-sportu-v-usloviyah-realizatsii-trebovanij-fssp/?program=Деятельность тренера по городошному спорту в условиях реализации требований ФССП&header=Курс ПП Деятельность тренера по городошному спорту в условиях реализации требований ФССП&cost=3000&tovar=15741&sendsay_email=${ Recipient.Email }"
+    },
+    {
+        "id": 16797,
+        "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+        "type_zdrav": null,
+        "spec": "Профессиональная переподготовка",
+        "name": "Тренер по городошному спорту",
+        "price": 15000,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-gorodoshnomu-sportu/",
+        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-gorodoshnomu-sportu/?program=Тренер по городошному спорту&header=Курс ПП Тренер по городошному спорту&cost=15000&tovar=16797&sendsay_email=${ Recipient.Email }"
     }
 ]

@@ -1,0 +1,54 @@
+[
+	{
+	  "id": 17027,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Профессиональная переподготовка",
+	  "name": "Тренер-преподаватель по го",
+	  "price": 15000,
+	  "hour": 600,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-go/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-go/?program=Тренер-преподаватель по го&header=Курс ПК Тренер-преподаватель по го&cost=15000&tovar=17027&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 15733,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Повышение квалификации",
+	  "name": "Деятельность тренера по го в условиях реализации требований ФССП",
+	  "price": 3000,
+	  "hour": 144,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-po-go-v-usloviyah-realizatsii-trebovanij-fssp/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-po-go-v-usloviyah-realizatsii-trebovanij-fssp/?program=Деятельность тренера по го в условиях реализации требований ФССП&header=Курс ПК Деятельность тренера по го в условиях реализации требований ФССП&cost=3000&tovar=15733&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 16789,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Профессиональная переподготовка",
+	  "name": "Тренер по го",
+	  "price": 15000,
+	  "hour": 600,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-go/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-go/?program=Тренер по го&header=Курс ПК Тренер по го&cost=15000&tovar=16789&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 17597,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Повышение квалификации",
+	  "name": "Деятельность тренера-преподавателя по го",
+	  "price": 3000,
+	  "hour": 144,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-prepodavatelya-po-go/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/deyatelnost-trenera-prepodavatelya-po-go/?program=Деятельность тренера-преподавателя по го&header=Курс ПК Деятельность тренера-преподавателя по го&cost=3000&tovar=17597&sendsay_email=${ Recipient.Email }"
+	}
+  ]
