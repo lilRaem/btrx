@@ -1,50 +1,93 @@
 [
-    {
-        "id": 2373,
-        "type_zdrav": null,
-        "spec": "Повышение квалификации",
-        "name": "Современные подходы и технологии применения адаптивной физической культуры в работе с детьми дошкольного возраста",
-        "price": 2500,
-        "hour": 144,
-        "nmoSpec": null,
-        "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/doshkolnoe-obrazovanie/sovremennyie-podhodyi-i-tehnologii-primeneniya-adaptivnoj-fizicheskoj-kulturyi-v-rabote--2/",
-        "final_url": "https://apkipp.ru/katalog/doshkolnoe-obrazovanie/sovremennyie-podhodyi-i-tehnologii-primeneniya-adaptivnoj-fizicheskoj-kulturyi-v-rabote--2/?program=Современные подходы и технологии применения адаптивной физической культуры в работе с детьми дошкольного возраста&header=Курс ПК Современные подходы и технологии применения адаптивной физической культуры в работе с детьми дошкольного возраста&cost=2500&tovar=2373&sendsay_email=[% anketa.member.email %]"
-    },
-    {
-        "id": 2361,
-        "type_zdrav": null,
-        "spec": "Повышение квалификации",
-        "name": "Современные подходы и технологии применения адаптивной физической культуры в работе с детьми с ОВЗ",
-        "price": 3000,
-        "hour": 144,
-        "nmoSpec": null,
-        "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/sovremennyie-podhodyi-i-tehnologii-primeneniya-adaptivnoj-fizicheskoj-kulturyi-v-rabote-s-/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/sovremennyie-podhodyi-i-tehnologii-primeneniya-adaptivnoj-fizicheskoj-kulturyi-v-rabote-s-/?program=Современные подходы и технологии применения адаптивной физической культуры в работе с детьми с ОВЗ&header=Курс ПК Современные подходы и технологии применения адаптивной физической культуры в работе с детьми с ОВЗ&cost=3000&tovar=2361&sendsay_email=[% anketa.member.email %]"
-    },
-    {
-        "id": 1507,
-        "type_zdrav": null,
-        "spec": "Профессиональная переподготовка",
-        "name": "Инструктор-методист по адаптивной физической культуре",
-        "price": 15000,
-        "hour": 600,
-        "nmoSpec": null,
-        "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-po-adaptivnoj-fizicheskoj-kulture/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-po-adaptivnoj-fizicheskoj-kulture/?program=Инструктор-методист по адаптивной физической культуре&header=Курс ПП Инструктор-методист по адаптивной физической культуре&cost=15000&tovar=1507&sendsay_email=[% anketa.member.email %]"
-    },
-    {
-        "id": 19373,
-        "type_zdrav": null,
-        "spec": "Профессиональная переподготовка",
-        "name": "Тренер по адаптивной физической культуре и спорту",
-        "price": 18800,
-        "hour": 600,
-        "nmoSpec": null,
-        "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/?program=Тренер по адаптивной физической культуре и спорту&header=Курс ПП Тренер по адаптивной физической культуре и спорту&cost=18800&tovar=19373&sendsay_email=[% anketa.member.email %]"
-    }
-]
+	{
+	  "id": 20257,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Повышение квалификации",
+	  "name": "Организация и содержание деятельности инструктора-методиста по адаптивной физической культуре и адаптивному спорту",
+	  "price": 3000,
+	  "hour": 144,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-i-soderzhanie-deyatelnosti-instruktora-metodista-po-adaptivnoj-fizicheskoj-k/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-i-soderzhanie-deyatelnosti-instruktora-metodista-po-adaptivnoj-fizicheskoj-k/?program=Организация и содержание деятельности инструктора-методиста по адаптивной физической культуре и адаптивному спорту&header=Курс ПК Организация и содержание деятельности инструктора-методиста по адаптивной физической культуре и адаптивному спорту&cost=3000&tovar=20257&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 1507,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Профессиональная переподготовка",
+	  "name": "Инструктор-методист по адаптивной физической культуре и адаптивному спорту",
+	  "price": 15000,
+	  "hour": 600,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-po-adaptivnoj-fizicheskoj-kulture-i-adaptivnomu-sportu/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-po-adaptivnoj-fizicheskoj-kulture-i-adaptivnomu-sportu/?program=Инструктор-методист по адаптивной физической культуре и адаптивному спорту&header=Курс ПП Инструктор-методист по адаптивной физической культуре и адаптивному спорту&cost=15000&tovar=1507&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 20249,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Повышение квалификации",
+	  "name": "Организация и содержание деятельности тренера-преподавателя по адаптивной физической культуре и спорту",
+	  "price": 3000,
+	  "hour": 144,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-i-soderzhanie-deyatelnosti-trenera-prepodavatelya-po-adaptivnoj-fizicheskoj-/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-i-soderzhanie-deyatelnosti-trenera-prepodavatelya-po-adaptivnoj-fizicheskoj-/?program=Организация и содержание деятельности тренера-преподавателя по адаптивной физической культуре и спорту&header=Курс ПК Организация и содержание деятельности тренера-преподавателя по адаптивной физической культуре и спорту&cost=3000&tovar=20249&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 20253,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Повышение квалификации",
+	  "name": "Организация и содержание деятельности тренера по адаптивной физической культуре и адаптивному спорту",
+	  "price": 3000,
+	  "hour": 144,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-i-soderzhanie-deyatelnosti-trenera-po-adaptivnoj-fizicheskoj-kulture-i-adapt/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/organizatsiya-i-soderzhanie-deyatelnosti-trenera-po-adaptivnoj-fizicheskoj-kulture-i-adapt/?program=Организация и содержание деятельности тренера по адаптивной физической культуре и адаптивному спорту&header=Курс ПК Организация и содержание деятельности тренера по адаптивной физической культуре и адаптивному спорту&cost=3000&tovar=20253&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 2361,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Повышение квалификации",
+	  "name": "Современные подходы и технологии применения адаптивной физической культуры в работе с детьми с ОВЗ",
+	  "price": 3000,
+	  "hour": 144,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/sovremennyie-podhodyi-i-tehnologii-primeneniya-adaptivnoj-fizicheskoj-kulturyi-v-rabote-s-/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/sovremennyie-podhodyi-i-tehnologii-primeneniya-adaptivnoj-fizicheskoj-kulturyi-v-rabote-s-/?program=Современные подходы и технологии применения адаптивной физической культуры в работе с детьми с ОВЗ&header=Курс ПК Современные подходы и технологии применения адаптивной физической культуры в работе с детьми с ОВЗ&cost=3000&tovar=2361&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 19373,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Профессиональная переподготовка",
+	  "name": "Тренер по адаптивной физической культуре и спорту",
+	  "price": 18800,
+	  "hour": 600,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/?program=Тренер по адаптивной физической культуре и спорту&header=Курс ПП Тренер по адаптивной физической культуре и спорту&cost=18800&tovar=19373&sendsay_email=${ Recipient.Email }"
+	},
+	{
+	  "id": 20245,
+	  "katalog": "Физическая культура и спорт/fizicheskaya-kultura-i-sport",
+	  "type_zdrav": null,
+	  "spec": "Профессиональная переподготовка",
+	  "name": "Тренер-преподаватель по адаптивной физической культуре и спорту .",
+	  "price": 18800,
+	  "hour": 600,
+	  "nmoSpec": null,
+	  "linkNmo": null,
+	  "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-adaptivnoj-fizicheskoj-kulture-i-sportu-/",
+	  "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-adaptivnoj-fizicheskoj-kulture-i-sportu-/?program=Тренер-преподаватель по адаптивной физической культуре и спорту&header=Тренер-преподаватель по адаптивной физической культуре и спорту&cost=18800&tovar=20245&sendsay_email=${ Recipient.Email }"
+	}
+  ]

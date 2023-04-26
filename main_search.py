@@ -14,7 +14,7 @@ from module.html_pars.parserhtml import parseSiteUrl
 
 datalist = []
 
-def search(search_name:str, search_price:int, type_programm:str,mail_service:str="mindbox") -> list|None:
+def search(search_name:str, search_price:int, type_programm:str = None,mail_service:str="mindbox") -> list|None:
 	if type(search_price) != int:
 		TypeError(f"Type of search_price == int\n now: {type(search_price)}")
 	fdata: list[dict[str,str|int|None]] = list()
@@ -23,6 +23,7 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 	search_name = search_name.strip()
 	search_name = search_name.replace('\n', ' ')
 	search_name = search_name.replace('  ', ' ')
+	if type_programm: type_programm = type_programm.upper()
 	# name = input('Введите название программы: ')
 	path = "data\\json\\btrx_data"
 	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName(path)[0]),
@@ -131,15 +132,15 @@ def search(search_name:str, search_price:int, type_programm:str,mail_service:str
 					user_email = "[% anketa.member.email %]"
 				else:
 					user_email = None
-
-				if vv.get("spec") == "Профессиональная переподготовка":
-						type_programm = "ПП"
-				elif vv.get("spec") == "Повышение квалификации":
-					type_programm = "ПК"
-				elif vv.get("spec") == "Повышение квалификации (НМО)":
-					type_programm = "НМО"
-				else:
-					type_programm = None
+				if not type_programm:
+					if vv.get("spec") == "Профессиональная переподготовка":
+							type_programm = "ПП"
+					elif vv.get("spec") == "Повышение квалификации":
+						type_programm = "ПК"
+					elif vv.get("spec") == "Повышение квалификации (НМО)":
+						type_programm = "НМО"
+					else:
+						type_programm = None
 				if vv.get("type_zdrav") == None or vv.get("type_zdrav") == "None": vv['type_zdrav'] = None
 				if vv.get("katalog") == None or vv.get("katalog") == "None": vv['katalog'] = None
 				if vv.get('price') == search_price:
