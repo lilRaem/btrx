@@ -113,18 +113,53 @@ def build_jina_template():
 	init_logger("template_generator","template_generator")
 	log = logging.getLogger("template_generator.main.build_jina_template")
 	main_json: list[dict] = load_json(f"module\\template_generator\\source\\Sport","sport_all_pp_pk.json")
-	template = load_template("sport/sport_pp_all_sport","html")
+	template = load_template("sport/sport_pk_pp_one_sport","html")
 
 	li:list[dict] = list()
 	for data in main_json:
-		# source_json = load_json(f"module\\template_generator\\source\\expertnayaCep_Medsestry",f"[Письмо 3] Переподготовка с аккредитацией или 6 причин, почему не стоит бояться аккредитации.json")
-		li.append(data)
-	context = {
-			"specname": "None",
-			"progs": li
+		progs: list[dict] = data.get("programs")
+		for prog in progs:
+			id = prog.get("id")
+			spec = prog.get("spec")
+			name = prog.get("name")
+			price = prog.get("price")
+			hour = prog.get("hour")
+			url = prog.get("url")
+
+			if spec == "Профессиональная переподготовка":
+				type_prog = "ПП"
+			elif spec == "Повышение квалификации":
+				type_prog = "ПК"
+			elif spec == "Повышение квалификации (НМО)":
+				type_prog = "НМО"
+			else:
+				type_prog = None
+
+			prog["final_url"] = f"{url}?program={name}&header=Курс {type_prog} {name}&cost={price}&tovar={id}{'&sendsay_email=${ Recipient.Email }'}"
+			# print(prog.get("final_url"),f"\n{type_prog}")
+			# source_json = load_json(f"module\\template_generator\\source\\expertnayaCep_Medsestry",f"[Письмо 3] Переподготовка с аккредитацией или 6 причин, почему не стоит бояться аккредитации.json")
+			# if data.get("spec") == "Профессиональная переподготовка":
+			# 	data['final_url'] = f"{data.get()}"
+
+
+		context = {
+			"specname": data.get("specname"),
+			"progs": data.get("programs")
 		}
-	print(context)
-	save_html_with_template("module\\template_generator\\ready\\sport\\Sport_all\\PP",f"ПП по всем видам спорта.html",template, context)
+		morph = pymorphy3.MorphAnalyzer()
+
+
+		with open("file.txt",'a',encoding='utf-8') as f:
+			try:
+				print(context.get("specname").split())
+				result = ' '.join(morph.parse(word)[0].inflect({'datv'}).word for word in context.get("specname").split())
+				to_write = f"\n\n---\n{context.get('specname')}\n\n\"Тренер по {result}? Получите диплом или удостоверение по {result}. Дистанционно. Диплом с правом ведения деятельности\""
+				f.write(to_write)
+			except:
+				to_write = f"\n\n!!!\n{context.get('specname').lower()}\n\n\"Тренер по {context.get('specname').lower()}? Получите диплом или удостоверение по {context.get('specname')}. Дистанционно. Диплом с правом ведения деятельности\""
+				print(Fore.RED+f'{context.get("specname").split()}'+Fore.RESET)
+				f.write(to_write)
+		save_html_with_template("module\\template_generator\\ready\\sport\\Sport_all",f"[ПП+ПК] {data.get('specname')}.html",template, context)
 
 def main():
 	# load_json(f"data\\json\\docx_converted","docxtojson.json")

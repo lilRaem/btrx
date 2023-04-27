@@ -132,15 +132,14 @@ def search(search_name:str, search_price:int, type_programm:str = None,mail_serv
 					user_email = "[% anketa.member.email %]"
 				else:
 					user_email = None
-				if not type_programm:
-					if vv.get("spec") == "Профессиональная переподготовка":
-							type_programm = "ПП"
-					elif vv.get("spec") == "Повышение квалификации":
-						type_programm = "ПК"
-					elif vv.get("spec") == "Повышение квалификации (НМО)":
-						type_programm = "НМО"
-					else:
-						type_programm = None
+				if vv.get("spec") == "Профессиональная переподготовка":
+						type_programm = "ПП"
+				elif vv.get("spec") == "Повышение квалификации":
+					type_programm = "ПК"
+				elif vv.get("spec") == "Повышение квалификации (НМО)":
+					type_programm = "НМО"
+				else:
+					type_programm = None
 				if vv.get("type_zdrav") == None or vv.get("type_zdrav") == "None": vv['type_zdrav'] = None
 				if vv.get("katalog") == None or vv.get("katalog") == "None": vv['katalog'] = None
 				if vv.get('price') == search_price:
