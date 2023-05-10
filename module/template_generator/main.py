@@ -4,14 +4,11 @@ from time import sleep
 from random import uniform
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 from jinja2.environment import Template
-
 from bs4 import BeautifulSoup
 import json
 from colorama import Fore,Back,Style
-import requests
 from pydantic import BaseModel,StrictInt,StrictStr
 from typing import Optional
-from config.webdriver_config import selenium_start
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
@@ -46,6 +43,7 @@ def bs4parser(url:str):
 def save_html_with_template(path:str,file_name:str,template:Template,context):
 	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as result:
 		result.write(template.render(context).replace('amp;',''))
+	return path,file_name
 
 def save_json(data:list[dict],path: str,file_name: str):
 	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as f:
@@ -113,10 +111,12 @@ def build_jina_template():
 	init_logger("template_generator","template_generator")
 	log = logging.getLogger("template_generator.main.build_jina_template")
 	main_json: list[dict] = load_json(f"module\\template_generator\\source\\Sport","sport_all_pp_pk.json")
-	template = load_template("sport/sport_pk_pp_one_sport","html")
+	template = load_template("sport/sport_pk_one_sport","html")
 
 	li:list[dict] = list()
-	for data in main_json:
+	theme_list: list = list()
+
+	for i,data in enumerate(main_json):
 		progs: list[dict] = data.get("programs")
 		for prog in progs:
 			id = prog.get("id")
@@ -141,25 +141,49 @@ def build_jina_template():
 			# if data.get("spec") == "Профессиональная переподготовка":
 			# 	data['final_url'] = f"{data.get()}"
 
-
-		context = {
-			"specname": data.get("specname"),
-			"progs": data.get("programs")
-		}
 		morph = pymorphy3.MorphAnalyzer()
+		try:
+			result = ' '.join(morph.parse(word)[0].inflect({'datv'}).word for word in data.get("specname").split())
+			context = {
+				"specname": result,
+				"progs": data.get("programs")
+			}
+		except:
+			context = {
+				"specname": data.get("specname"),
+				"progs": data.get("programs")
+			}
 
+		with open("theme_text.json",'w',encoding='utf-8') as f:
 
-		with open("file.txt",'a',encoding='utf-8') as f:
+			js_data = {
+					"id": i,
+					"specname": data.get('specname'),
+					"text": None,
+					"valid": None
+			}
 			try:
-				print(context.get("specname").split())
+				print(Fore.GREEN+f'{context.get("specname")}'+Fore.RESET)
 				result = ' '.join(morph.parse(word)[0].inflect({'datv'}).word for word in context.get("specname").split())
-				to_write = f"\n\n---\n{context.get('specname')}\n\n\"Тренер по {result}? Получите диплом или удостоверение по {result}. Дистанционно. Диплом с правом ведения деятельности\""
-				f.write(to_write)
+				to_write = f"{data.get('specname')}: пройдите Обязательные курсы для тренеров и тренеров-преподавателей"
+				js_data["text"] = to_write
+				js_data["valid"] = True
+				theme_list.append(js_data)
+
 			except:
-				to_write = f"\n\n!!!\n{context.get('specname').lower()}\n\n\"Тренер по {context.get('specname').lower()}? Получите диплом или удостоверение по {context.get('specname')}. Дистанционно. Диплом с правом ведения деятельности\""
-				print(Fore.RED+f'{context.get("specname").split()}'+Fore.RESET)
-				f.write(to_write)
-		save_html_with_template("module\\template_generator\\ready\\sport\\Sport_all",f"[ПП+ПК] {data.get('specname')}.html",template, context)
+				to_write = f"{data.get('specname')}: пройдите Обязательные курсы для тренеров и тренеров-преподавателей"
+				print(Fore.RED+f'{context.get("specname")}'+Fore.RESET)
+				js_data["text"] = to_write
+				js_data["valid"] = False
+				theme_list.append(js_data)
+			json.dump(theme_list,f,ensure_ascii=False,indent=4)
+		html_path,html_name = save_html_with_template("module\\template_generator\\ready\\sport\\Sport_all\\pk",f"[ПК] [ОС] {data.get('specname')}.html",template, context)
+
+
+def checkTemplatesTags(html_path:str,html_name:str):
+	with open(os.path.join(f"{os.getcwd()}\\{html_path}",html_name),'w',encoding='utf-8') as f:
+		html_data = f.read()
+	print(html_data)
 
 def main():
 	# load_json(f"data\\json\\docx_converted","docxtojson.json")
