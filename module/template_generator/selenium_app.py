@@ -150,7 +150,6 @@ def load_file():
 						"content": f.read()
 					}
 
-
 if __name__ == "__main__":
     main()
 	# load_file()

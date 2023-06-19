@@ -8,7 +8,6 @@ from random import randint
 from bs4 import BeautifulSoup
 import json
 from colorama import Fore,Back,Style
-import requests
 from pydantic import BaseModel,StrictInt,StrictStr
 from typing import Optional
 from selenium.webdriver.common.by import By
