@@ -26,7 +26,7 @@ def main():
 	"""
 	#TODO не работает
 	# return search("Инструктор-проводник по альпинизму и горному туризму",15000,"ПП",mail_service="sendsay")
-	return search("Эндокринология",type_programm="ПП",search_price=49800,mail_service="mindbox")
+	return search("ультразвук",type_programm="ПП",search_price=150000,mail_service="mindbox")
 	# return search("актуальные вопросы диагностики и лечения травм",5900,"ПК",mail_service="mindbox")
 
 if __name__ == "__main__":
