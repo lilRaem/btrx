@@ -62,8 +62,8 @@ def load_template(template_name:str,ext:str):
 	return env.get_template(f"{template_name}.{ext}")
 
 def build_json():
-	source_json = load_json(f"module\\template_generator\\source\\Sport","sport_all.json")
-	source_json_ = load_json(f"module\\template_generator\\source\\Sport","fizProg_list_from_docx.json")
+	source_json = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Квалификационные возможности врачей и провизоров и пути их изменения 2023.json")
+	source_json_ = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Лечебное дело, Педиатрия.json")
 	source_ppjson = load_json(f"data\\json\\docx_converted\\nmofile","program_СПО.json")
 
 	# ###
@@ -76,11 +76,60 @@ def build_json():
 	dict_data: dict = dict()
 	fail_list_nmo_prog: list[dict] = list()
 	list_data: list[dict[str,str|int]] = list()
-	for d in source_json:
-		if d.get("specname") == "":
-			print(d)
+	
+	tag_HIT_prog_list = [
+		"Ультразвуковая диагностика",
+		"физическая и реабилитационная медицина",
+		"эндокринология",
+		"психотерапия",
+		"психиатрия",
+		"неврология",
+		"урология",
+		"остеопатия",
+		"мануальная терапия",
+		"организация здравоохранения и общественное здоровье"
+	]
+
+	"""
+		специальность: Психиатрия ==>
+		✓ будет добавлено: ['Сексология (до 1 сентября 2023)'];
+
+		доавить в карточку дату
+	"""
+	"""
+		специальность: Детская онкология ==>
+		✓ будет добавлено: ['Радиология', 'Медико-социальная экспертиза', 'Гематология (аккредитация по Детской онкологии-гематологии)'];
+
+		Гематология - остается в Детской онкологии
+	"""
+
+	## Очень важная Информация снизу
+	countKVAL = 0
+	for data in source_json:
+		countKVAL += 1
+		countACC = 0
+		for data_ in source_json_:
+			countACC += 1
+			# if d.get("specname") == "":
+			if data['spec'][0].lower() == data_["spec"].lower():
+				# print(data_['spec'])
+				different_in_dataKVAL = list(set(data['pp']) - set(data_['pp']))
+				if different_in_dataKVAL:
+					listWnewprog = data_['pp']+different_in_dataKVAL
+					# print(f"{data['spec'][0]}\n:==:\n{different_in_dataKVAL}\n==>\n{listWnewprog}")
+					# print("\n===\n")
+					# print(Fore.GREEN+f"специальность: {data['spec'][0]} ==>\n✓ будет добавлено: {different_in_dataKVAL};\n"+Fore.RESET)
+				
+				different_in_dataACC = list(set(data_['pp']) - set(data['pp']))
+
+				if different_in_dataACC:
+					listWnewprogACC = data['pp']+different_in_dataACC
+					# print(f"{data['spec'][0]}\n:==:\n{different_in_dataACC}\n==>\n{listWnewprogACC}")
+					# print(Fore.RED+f"специальность: {data['spec'][0]} ==>\nX будет удалено: {different_in_dataACC};\n"+Fore.RESET)
+					# print("\n===\n")
+	print(f"Квал 2023: {countKVAL} В аккедит 2021: {countACC}")
 	# list_data.append(dict_data)
-	# save_json(list_data,"module\\template_generator\\source\\Sport",f"sport_all.json")
+	# save_json(list_data,"module\\template_generator\\source\\expertnayaCep_VO_pp",f"expertnayaCep_VO_pp.json")
 
 def findNMO(prog:str,nmolist:list[dict]):
 	class SourceNmoData(BaseModel):
@@ -192,8 +241,8 @@ def main():
 	# print(sys.path)
 	# search()
 	# build()
-	build_jina_template()
-	# build_json()
+	# build_jina_template()
+	build_json()
 	# bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
 
 if __name__ == "__main__":
