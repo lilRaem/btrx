@@ -4,9 +4,9 @@ from time import sleep
 from docx.api import Document
 from docx.opc.constants import RELATIONSHIP_TYPE as RT
 
-filename = 'АПК и ПП программы ПК НМО 09.03.2023.docx'
+filename = 'docForparse\\Квалификационные возможности врачей и провизоров и пути их изменения 2023.docx'
 document = Document(filename)
-table = document.tables[1]
+table = document.tables[0]
 data = []
 keys = None
 rels = document.part.rels
