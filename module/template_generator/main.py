@@ -3,6 +3,7 @@ import os
 from time import sleep
 from random import uniform
 from jinja2 import Environment, select_autoescape, FileSystemLoader
+from config_generator.webdriver_config import selenium_start, webdriver
 from jinja2.environment import Template
 from random import randint
 from bs4 import BeautifulSoup
@@ -179,8 +180,7 @@ def build_jina_template():
 				theme_list.append(js_data)
 			json.dump(theme_list,f,ensure_ascii=False,indent=4)
 		html_path,html_name = save_html_with_template("module\\template_generator\\ready\\sport\\Sport_all\\pk",f"[ПК] [ОС] {data.get('specname')}.html",template, context)
-
-
+		
 def checkTemplatesTags(html_path:str,html_name:str):
 	with open(os.path.join(f"{os.getcwd()}\\{html_path}",html_name),'w',encoding='utf-8') as f:
 		html_data = f.read()
