@@ -17,7 +17,10 @@ class Data(BaseModel):
 	pp: Optional[list] = None
 
 def main():
-	filename = 'Квалификационные возможности среднего мед пресонала и пути их изменения.docx'
+	global name
+	path="docForparse"
+	name="АККРЕДИТАЦИЯ ВРАЧЕЙ_ot_11_01_2021"
+	filename = f'{path}\\{name}.docx'
 	document = Document(filename)
 	data = {}
 	tables = []
@@ -32,10 +35,17 @@ def main():
 	f = []
 	for i,row in enumerate(tables[0]):
 		main = Data()
-		main.spec = tables[0][i][1]
-		main.job = tables[0][i][2:-1][0].split("\n")
-		main.pp = tables[0][i][-1].split("\n")
+		main.spec = tables[0][i][0].strip().split(";")
+		main.job = tables[0][i][1].strip().replace(" \n","").replace("\n","").strip().split(";")
+		if tables[0][i][2].strip().replace("\n","").strip().split(";") != "" or tables[0][i][2].strip().replace("\n","").strip().split(";") != None: 
+			main.pp = tables[0][i][2].strip().replace(" \n","").replace("\n","").strip().split(";")
+		pp_list=list()
+		# for d in main.pp:
+		# 	if d != "":
+		# 		pp_list.append(d.strip())
+		# main.pp = pp_list
 		f.append(main.dict())
+
 	return f
 
 
@@ -43,5 +53,5 @@ if __name__ == "__main__":
 	f = main()
 	p =f'{os.getcwd()}'
 	os.chdir(p)
-	with open(f"{p}\\data\\json\\docx_converted\\docxtojson.json",'w',encoding='utf-8') as file:
+	with open(f"{p}\\data\\json\\docx_converted\\{name}.json",'w',encoding='utf-8') as file:
 		json.dump(f[1:],file,ensure_ascii=False,indent=4)
