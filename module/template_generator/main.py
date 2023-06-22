@@ -29,18 +29,24 @@ def bs4parser(url:str):
 	webdrv = selenium_start()
 	# if "custom-select__option" in req.text:
 	# 	print(req.text)
-	webdrv.get(url)
-	html = webdrv.page_source
+	# webdrv.get(url)
+	with open("module\\template_generator\\source\\expertnayaCep_VO\\listFromMindbox.html","r",encoding='utf-8') as f:
+		html = f.read()
 
 	soup = BeautifulSoup(html,'lxml')
+	opt = soup.find_all("span",{"data-testid":"HighlighterRoot.tableTitle"})
+	li = list()
+	for o in opt:
+		li.append(o.text.strip().replace("\n","").strip())
 
-	opt = soup.find(class_="custom-select__dropdown").children
-	sport_list = list()
-	for d in opt:
-		print(d['title'])
-		sport_list.append(d['title'])
+	# print(opt)
+	# sport_list = list()
+	# for d in opt:
+	# 	print(d['title'])
+	# 	sport_list.append(d['title'])
 	with open("parse_data.json","w",encoding="utf-8") as f:
-		json.dump(sport_list,f,ensure_ascii=False,indent=4)
+		if li:
+			json.dump(li,f,ensure_ascii=False,indent=4)
 
 def save_html_with_template(path:str,file_name:str,template:Template,context):
 	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as result:
@@ -63,22 +69,26 @@ def load_template(template_name:str,ext:str):
 
 def build_json():
 	source_json = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Квалификационные возможности врачей и провизоров и пути их изменения 2023.json")
-	source_json_ = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Лечебное дело, Педиатрия.json")
+	source_json_ = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Аккред ОТ 2021 ОБЩЕЕedit.json")
 	source_ppjson = load_json(f"data\\json\\docx_converted\\nmofile","program_СПО.json")
 
 	# ###
 	class SourceData(BaseModel):
 		spec: Optional[StrictStr] = None
-		job: Optional[list[str]] = None
-		pp: Optional[list[str]] = None
+		job: Optional[list[StrictStr]] = None
+		pp: Optional[dict[StrictStr,StrictStr]] = None 
 	# ###
-
+	class SourcePPdata(BaseModel):
+		new: Optional[list] = None
+		delete: Optional[list] = None
+		progs: Optional[list] = None
+		orig: Optional[list] = None
 	dict_data: dict = dict()
 	fail_list_nmo_prog: list[dict] = list()
-	list_data: list[dict[str,str|int]] = list()
+	list_data: dict[str,str|int] = list()
 	
 	tag_HIT_prog_list = [
-		"Ультразвуковая диагностика",
+		"ультразвуковая диагностика",
 		"физическая и реабилитационная медицина",
 		"эндокринология",
 		"психотерапия",
@@ -102,34 +112,108 @@ def build_json():
 
 		Гематология - остается в Детской онкологии
 	"""
-
-	## Очень важная Информация снизу
+	
+	# Очень важная Информация снизу
 	countKVAL = 0
-	for data in source_json:
+	countACC = 0
+	for i,data in enumerate(source_json):
+		
 		countKVAL += 1
-		countACC = 0
+		
+		item = SourceData()
+		item_pp = SourcePPdata()
+		item.spec = data['spec'][0]
+		item.job = data['job']
+		if data['pp']:
+			item_pp.progs = data['pp']
+		item.pp = item_pp.dict()
 		for data_ in source_json_:
-			countACC += 1
-			# if d.get("specname") == "":
-			if data['spec'][0].lower() == data_["spec"].lower():
-				# print(data_['spec'])
-				different_in_dataKVAL = list(set(data['pp']) - set(data_['pp']))
-				if different_in_dataKVAL:
-					listWnewprog = data_['pp']+different_in_dataKVAL
-					# print(f"{data['spec'][0]}\n:==:\n{different_in_dataKVAL}\n==>\n{listWnewprog}")
-					# print("\n===\n")
-					# print(Fore.GREEN+f"специальность: {data['spec'][0]} ==>\n✓ будет добавлено: {different_in_dataKVAL};\n"+Fore.RESET)
-				
-				different_in_dataACC = list(set(data_['pp']) - set(data['pp']))
+			if data['spec'][0].lower() == data_['spec'].lower():
 
-				if different_in_dataACC:
-					listWnewprogACC = data['pp']+different_in_dataACC
-					# print(f"{data['spec'][0]}\n:==:\n{different_in_dataACC}\n==>\n{listWnewprogACC}")
-					# print(Fore.RED+f"специальность: {data['spec'][0]} ==>\nX будет удалено: {different_in_dataACC};\n"+Fore.RESET)
-					# print("\n===\n")
-	print(f"Квал 2023: {countKVAL} В аккедит 2021: {countACC}")
-	# list_data.append(dict_data)
-	# save_json(list_data,"module\\template_generator\\source\\expertnayaCep_VO_pp",f"expertnayaCep_VO_pp.json")
+					different_in_dataKVAL = list(set(data['pp']) - set(data_['pp']))
+					different_in_dataACC = list(set(data_['pp']) - set(data['pp']))
+					
+					# if d.get("specname") == "":
+					if data['spec'][0].lower() == data_["spec"].lower():
+						
+						item.spec = data['spec'][0]
+						item.job = data['job']
+						if different_in_dataKVAL != []:
+							item_pp.new = different_in_dataKVAL
+						if different_in_dataACC != []:
+							item_pp.delete = different_in_dataACC
+						item_pp.progs = list(set(data_['pp']) - set(different_in_dataACC)) + different_in_dataKVAL
+						item_pp.orig = data_['pp']
+						item.pp = item_pp.dict()
+		# if item.pp:
+		# 	print(item.spec,item.pp.get('progs'))
+		list_data.append(item.dict())
+	
+	
+	for fin_data in list_data[:2]:
+		data_list_search = list()
+		# print(fin_data.get("pp").get("new"))
+		# print("=>")
+		# print(fin_data.get("pp").get("progs"))
+
+		print(f"\n| {fin_data.get('spec')} | ==>")
+		
+		if fin_data.get("pp").get("progs"):
+			list_of_new_progs = list()
+			for kpd,fin_progs_data in enumerate(fin_data.get("pp").get("progs")):
+				countACC += 1
+				new_name_prog = str()
+				tags = None
+				if fin_data.get("pp").get("new"):
+					if fin_progs_data in fin_data.get("pp").get("new") and fin_progs_data.lower() in tag_HIT_prog_list:
+						tags={"tag": "#HIT# #NEW#"}
+					elif fin_progs_data in fin_data.get("pp").get("new"):
+						tags={"tag": "#NEW#"}
+					elif fin_progs_data.lower() in tag_HIT_prog_list:
+						tags={"tag": "#HIT#"}
+					else:
+						print(f"{kpd+1} {fin_progs_data}")
+						list_of_new_progs.append(fin_progs_data)
+				elif fin_progs_data.lower() in tag_HIT_prog_list:
+						print(f"{kpd+1} {fin_progs_data} #HIT#")
+						list_of_new_progs.append(new_name_prog)
+				else:
+					print(f"{kpd+1} {fin_progs_data}")
+					list_of_new_progs.append(fin_progs_data)
+				fin_data['pp']['progs'] = list_of_new_progs
+
+				# if fin_progs_data == 'Рентгенология': hour = 990
+				# if fin_progs_data == 'Остеопатия':
+				# 	hour = 3504
+				# 	price = 124500
+				# if fin_progs_data == 'Физическая и реабилитационная медицина': hour = 1008
+
+				if fin_progs_data == 'Остеопатия':
+					finded_data = search(fin_progs_data,124500,"ВО")
+				elif fin_progs_data == 'Анестезиология-реаниматология':
+					finded_data = search(fin_progs_data,99000,"ВО")
+				else:
+					finded_data = search(fin_progs_data,49800,"ВО")
+
+
+				if len(finded_data) >= 2:
+					print(Fore.RED+f"\
+	   				Че за х????\n\
+	   				spec: {fin_data.get('spec')}\n\
+					prog: {fin_progs_data}"+Fore.RESET)
+					pass
+				else:
+					for f_data in finded_data:
+						f_data['name']
+						f_data['price']
+				dict_data = {
+					"specname": fin_data.get('spec'),
+					"tags": tags,
+					"programs": finded_data[0]
+				}
+				print(f"\nin {fin_data.get('spec')} search i found this:\n{finded_data}")
+				data_list_search.append(dict_data)
+		save_json(data_list_search,"module\\template_generator\\source\\expertnayaCep_VO\\expertnayaCep_VO_pp",f"[ПП] {fin_data.get('spec')}.json")
 
 def findNMO(prog:str,nmolist:list[dict]):
 	class SourceNmoData(BaseModel):
