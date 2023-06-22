@@ -7,7 +7,7 @@ import json
 def iter():
     d = 0
     l = list()
-    with open('docForparse\\Лечебное дело, Педиатрия (1).json','r',encoding="utf-8") as f:
+    with open('docForparse\\Аккред ОТ 2021 ОБЩЕЕ.json','r',encoding="utf-8") as f:
         data: list[dict] = json.loads(f.read())
     for dor in data:
         try:
@@ -26,7 +26,7 @@ def iter():
 
 
         print(dor)
-    with open('docForparse\\Лечебное дело, Педиатрия.json','w',encoding="utf-8") as f:
+    with open('docForparse\\Аккред ОТ 2021 ОБЩЕЕedit.json','w',encoding="utf-8") as f:
         json.dump(l,f,ensure_ascii=False,indent=4)
 
     return l
