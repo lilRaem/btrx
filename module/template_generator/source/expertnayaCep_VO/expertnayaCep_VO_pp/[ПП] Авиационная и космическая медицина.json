@@ -3,57 +3,6 @@
         "specname": "Авиационная и космическая медицина",
         "tags": null,
         "programs": {
-            "id": 2855,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Физиотерапия",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=49800&tovar=2855&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Авиационная и космическая медицина",
-        "tags": null,
-        "programs": {
-            "id": 16067,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Клиническая лабораторная диагностика",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Авиационная и космическая медицина",
-        "tags": null,
-        "programs": {
-            "id": 14785,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Функциональная диагностика",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=49800&tovar=14785&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Авиационная и космическая медицина",
-        "tags": null,
-        "programs": {
             "id": 16177,
             "katalog": "Здравоохранение/zdravoohranenie",
             "type_zdrav": "ВО",
@@ -65,25 +14,6 @@
             "linkNmo": null,
             "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
             "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Авиационная и космическая медицина",
-        "tags": {
-            "tag": "#HIT#"
-        },
-        "programs": {
-            "id": 2843,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Ультразвуковая диагностика",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/?program=Ультразвуковая диагностика&header=Курс ПП Ультразвуковая диагностика&cost=49800&tovar=2843&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -120,6 +50,76 @@
             "linkNmo": null,
             "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/",
             "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/?program=Лечебная физкультура и спортивная медицина&header=Курс ПП Лечебная физкультура и спортивная медицина&cost=49800&tovar=1545&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Авиационная и космическая медицина",
+        "tags": {
+            "tag": "#HIT#"
+        },
+        "programs": {
+            "id": 2843,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Ультразвуковая диагностика",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/?program=Ультразвуковая диагностика&header=Курс ПП Ультразвуковая диагностика&cost=49800&tovar=2843&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Авиационная и космическая медицина",
+        "tags": null,
+        "programs": {
+            "id": 2855,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Физиотерапия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=49800&tovar=2855&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Авиационная и космическая медицина",
+        "tags": null,
+        "programs": {
+            "id": 14785,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Функциональная диагностика",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=49800&tovar=14785&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Авиационная и космическая медицина",
+        "tags": null,
+        "programs": {
+            "id": 16067,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Клиническая лабораторная диагностика",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
         }
     },
     {

@@ -1,6 +1,6 @@
 [
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 4749,
@@ -17,7 +17,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 16177,
@@ -34,7 +34,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": {
             "tag": "#HIT#"
         },
@@ -53,7 +53,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 1545,
@@ -70,24 +70,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
-        "tags": null,
-        "programs": {
-            "id": 2833,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Судебно-медицинская экспертиза",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-sudebno-meditsinskaya-ekspertiza/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-sudebno-meditsinskaya-ekspertiza/?program=Судебно-медицинская экспертиза&header=Курс ПП Судебно-медицинская экспертиза&cost=49800&tovar=2833&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 2823,
@@ -104,7 +87,24 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
+        "tags": null,
+        "programs": {
+            "id": 16245,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Неонатология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-neonatologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-neonatologiya-2/?program=Неонатология&header=Курс ПП Неонатология&cost=49800&tovar=16245&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 2855,
@@ -121,7 +121,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 14785,
@@ -138,24 +138,41 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
-            "id": 4673,
+            "id": 16713,
             "katalog": "Здравоохранение/zdravoohranenie",
             "type_zdrav": "ВО",
             "spec": "Профессиональная переподготовка",
-            "name": "Онкология",
+            "name": "Трансфузиология",
             "price": 49800,
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-2/?program=Онкология&header=Курс ПП Онкология&cost=49800&tovar=4673&sendsay_email=${ Recipient.Email }"
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-transfuziologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-transfuziologiya-2/?program=Трансфузиология&header=Курс ПП Трансфузиология&cost=49800&tovar=16713&sendsay_email=${ Recipient.Email }"
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
+        "tags": null,
+        "programs": {
+            "id": 4669,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Нефрология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nefrologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nefrologiya-2/?program=Нефрология&header=Курс ПП Нефрология&cost=49800&tovar=4669&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 4601,
@@ -172,7 +189,41 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
+        "tags": null,
+        "programs": {
+            "id": 18505,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Скорая медицинская помощь",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-skoraya-meditsinskaya-pomosch/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-skoraya-meditsinskaya-pomosch/?program=Скорая медицинская помощь&header=Курс ПП Скорая медицинская помощь&cost=49800&tovar=18505&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Анестезиология-реаниматология",
+        "tags": null,
+        "programs": {
+            "id": 18861,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Токсикология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-toksikologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-toksikologiya/?program=Токсикология&header=Курс ПП Токсикология&cost=49800&tovar=18861&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Анестезиология-реаниматология",
         "tags": {
             "tag": "#HIT#"
         },
@@ -191,24 +242,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
-        "tags": null,
-        "programs": {
-            "id": 2821,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Рентгенэндоваскулярные диагностика и лечение",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-rentgenendovaskulyarnyie-diagnostika-i-lechenie/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-rentgenendovaskulyarnyie-diagnostika-i-lechenie/?program=Рентгенэндоваскулярные диагностика и лечение&header=Курс ПП Рентгенэндоваскулярные диагностика и лечение&cost=49800&tovar=2821&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": {
             "tag": "#HIT#"
         },
@@ -227,7 +261,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": {
             "tag": "#HIT#"
         },
@@ -246,7 +280,7 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": null,
         "programs": {
             "id": 16067,
@@ -263,26 +297,26 @@
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": {
             "tag": "#NEW#"
         },
         "programs": {
-            "id": 20053,
+            "id": 2747,
             "katalog": "Здравоохранение/zdravoohranenie",
             "type_zdrav": "ВО",
             "spec": "Профессиональная переподготовка",
-            "name": "Анестезиология-реаниматология",
-            "price": 99000,
-            "hour": 1296,
+            "name": "Водолазная медицина",
+            "price": 49800,
+            "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/?program=Анестезиология-реаниматология&header=Курс ПП Анестезиология-реаниматология&cost=99000&tovar=20053&sendsay_email=${ Recipient.Email }"
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-vodolaznaya-meditsina/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-vodolaznaya-meditsina/?program=Водолазная медицина&header=Курс ПП Водолазная медицина&cost=49800&tovar=2747&sendsay_email=${ Recipient.Email }"
         }
     },
     {
-        "specname": "Акушерство и гинекология",
+        "specname": "Анестезиология-реаниматология",
         "tags": {
             "tag": "#NEW#"
         },
@@ -298,25 +332,6 @@
             "linkNmo": null,
             "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/",
             "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/?program=Патологическая анатомия&header=Курс ПП Патологическая анатомия&cost=49800&tovar=2805&sendsay_email=${ Recipient.Email }"
-        }
-    },
-    {
-        "specname": "Акушерство и гинекология",
-        "tags": {
-            "tag": "#HIT# #NEW#"
-        },
-        "programs": {
-            "id": 2849,
-            "katalog": "Здравоохранение/zdravoohranenie",
-            "type_zdrav": "ВО",
-            "spec": "Профессиональная переподготовка",
-            "name": "Урология",
-            "price": 49800,
-            "hour": 600,
-            "nmoSpec": null,
-            "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-urologiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-urologiya/?program=Урология&header=Курс ПП Урология&cost=49800&tovar=2849&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

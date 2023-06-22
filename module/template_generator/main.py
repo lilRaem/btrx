@@ -150,7 +150,7 @@ def build_json():
 		list_data.append(item.dict())
 	
 	
-	for fin_data in list_data[:2]:
+	for fin_data in list_data[8:]:
 		data_list_search = list()
 		# print(fin_data.get("pp").get("new"))
 		# print("=>")
@@ -204,7 +204,7 @@ def build_json():
 					pass
 				else:
 					for f_data in finded_data:
-						f_data['name']
+						
 						f_data['price']
 				dict_data = {
 					"specname": fin_data.get('spec'),
