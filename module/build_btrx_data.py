@@ -36,8 +36,8 @@ def makefileWdateName() -> str:
 	today = date.today()
 	cur_date = today.strftime("%d.%m.%Y")
 	filename = f'{cur_date}_file.json'
-	path = os.getcwd() + "\\data\\json\\btrx_data"
-	filenameWcurDate = f"{path}\\{filename}"
+	path = os.getcwd() + "/data/json/btrx_data"
+	filenameWcurDate = f"{path}/{filename}"
 	return str(filenameWcurDate), str(filename)
 
 def getBtrxData():
@@ -45,7 +45,7 @@ def getBtrxData():
 	product_name,product_price,product_hour,\
 	product_linkNmo,product_url
 	btrx_list = []
-	path = os.getcwd() + "\\data\\json\\btrx_data"
+	path = os.getcwd() + "/data/json/btrx_data"
 	if os.path.exists(makefileWdateName()[0]):
 		loaded_data = load_from_jsonFile(makefileWdateName()[0],path)
 		loaded_hour = None
@@ -250,5 +250,5 @@ if __name__ == "__main__":
 	for d in data:
 		cont = cont + 1
 	print(f'Всего найдено {cont} программ')
-	with open('G:\\Web-Develop\\projects\\my\\python_project\\btrx\\data\\json\\btrxUrl_builder_data.json','w',encoding='utf-8') as f:
+	with open('G:/Web-Develop/projects/my/python_project/btrx/data/json/btrxUrl_builder_data.json','w',encoding='utf-8') as f:
 		json.dump(data,f,indent=4,ensure_ascii=False)

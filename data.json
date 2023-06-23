@@ -1,15 +1,15 @@
 [
     {
-        "id": 2757,
-        "katalog": "Здравоохранение/zdravoohranenie",
-        "type_zdrav": "ВО",
-        "spec": "Профессиональная переподготовка",
-        "name": "Гигиена детей и подростков",
-        "price": 49800,
+        "id": 19349,
+        "katalog": null,
+        "type_zdrav": null,
+        "spec": null,
+        "name": "Ультразвуковая диагностика",
+        "price": 99000,
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-2/",
-        "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-2/?program=Гигиена детей и подростков&header=Курс ПП Гигиена детей и подростков&cost=49800&tovar=2757&sendsay_email=${ Recipient.Email }"
+        "url": null,
+        "final_url": "None?program=Ультразвуковая диагностика&header=Курс None Ультразвуковая диагностика&cost=99000&tovar=19349&sendsay_email=${ Recipient.Email }"
     }
 ]

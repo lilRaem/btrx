@@ -1,0 +1,704 @@
+[
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2799,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Общая врачебная практика (семейная медицина)",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-obschaya-vrachebnaya-praktika-semejnaya-meditsina/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-obschaya-vrachebnaya-praktika-semejnaya-meditsina/?program=Общая врачебная практика (семейная медицина)&header=Курс ПП Общая врачебная практика (семейная медицина)&cost=49800&tovar=2799&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 4669,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Нефрология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nefrologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nefrologiya-2/?program=Нефрология&header=Курс ПП Нефрология&cost=49800&tovar=4669&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 4673,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Онкология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-2/?program=Онкология&header=Курс ПП Онкология&cost=49800&tovar=4673&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2807,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Профпатология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-profpatologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-profpatologiya/?program=Профпатология&header=Курс ПП Профпатология&cost=49800&tovar=2807&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT#"
+        },
+        "programs": {
+            "id": 15055,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Физическая и реабилитационная медицина",
+            "price": 49800,
+            "hour": 1008,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizicheskaya-i-reabilitatsionnaya-meditsina/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizicheskaya-i-reabilitatsionnaya-meditsina/?program=Физическая и реабилитационная медицина&header=Курс ПП Физическая и реабилитационная медицина&cost=49800&tovar=15055&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 16177,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медицинская микробиология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 16713,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Трансфузиология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-transfuziologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-transfuziologiya-2/?program=Трансфузиология&header=Курс ПП Трансфузиология&cost=49800&tovar=16713&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2771,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Инфекционные болезни",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-infektsionnyie-bolezni/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-infektsionnyie-bolezni/?program=Инфекционные болезни&header=Курс ПП Инфекционные болезни&cost=49800&tovar=2771&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2789,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Медико-социальная экспертиза",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-mediko-sotsialnaya-ekspertiza/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-mediko-sotsialnaya-ekspertiza/?program=Медико-социальная экспертиза&header=Курс ПП Медико-социальная экспертиза&cost=49800&tovar=2789&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2855,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Физиотерапия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=49800&tovar=2855&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 4785,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Кардиология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-kardiologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-kardiologiya-2/?program=Кардиология&header=Курс ПП Кардиология&cost=49800&tovar=4785&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 18505,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Скорая медицинская помощь",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-skoraya-meditsinskaya-pomosch/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-skoraya-meditsinskaya-pomosch/?program=Скорая медицинская помощь&header=Курс ПП Скорая медицинская помощь&cost=49800&tovar=18505&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 15111,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Фтизиатрия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ftiziatriya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ftiziatriya/?program=Фтизиатрия&header=Курс ПП Фтизиатрия&cost=49800&tovar=15111&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2747,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Водолазная медицина",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-vodolaznaya-meditsina/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-vodolaznaya-meditsina/?program=Водолазная медицина&header=Курс ПП Водолазная медицина&cost=49800&tovar=2747&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT#"
+        },
+        "programs": {
+            "id": 16153,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Мануальная терапия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-manualnaya-terapiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-manualnaya-terapiya/?program=Мануальная терапия&header=Курс ПП Мануальная терапия&cost=49800&tovar=16153&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 14785,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Функциональная диагностика",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=49800&tovar=14785&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2749,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Гастроэнтерология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gastroenterologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gastroenterologiya/?program=Гастроэнтерология&header=Курс ПП Гастроэнтерология&cost=49800&tovar=2749&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 1545,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Лечебная физкультура и спортивная медицина",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/?program=Лечебная физкультура и спортивная медицина&header=Курс ПП Лечебная физкультура и спортивная медицина&cost=49800&tovar=1545&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 15479,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Авиационная и космическая медицина",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-aviatsionnaya-i-kosmicheskaya-meditsina/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-aviatsionnaya-i-kosmicheskaya-meditsina/?program=Авиационная и космическая медицина&header=Курс ПП Авиационная и космическая медицина&cost=49800&tovar=15479&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 4749,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Эндоскопия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-endoskopiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-endoskopiya-2/?program=Эндоскопия&header=Курс ПП Эндоскопия&cost=49800&tovar=4749&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 4601,
+            "katalog": "Здравоохранение - Средний медперсонал/zdravoohranenie-srednij-medpersonal",
+            "type_zdrav": "СПО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Рентгенология",
+            "price": 49800,
+            "hour": 990,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=49800&tovar=4601&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT#"
+        },
+        "programs": {
+            "id": 2843,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Ультразвуковая диагностика",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/?program=Ультразвуковая диагностика&header=Курс ПП Ультразвуковая диагностика&cost=49800&tovar=2843&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2769,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Диетология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-dietologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-dietologiya/?program=Диетология&header=Курс ПП Диетология&cost=49800&tovar=2769&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2755,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Гериатрия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-geriatriya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-geriatriya/?program=Гериатрия&header=Курс ПП Гериатрия&cost=49800&tovar=2755&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2817,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Ревматология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-revmatologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-revmatologiya/?program=Ревматология&header=Курс ПП Ревматология&cost=49800&tovar=2817&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 16067,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Клиническая лабораторная диагностика",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2751,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Гематология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gematologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gematologiya/?program=Гематология&header=Курс ПП Гематология&cost=49800&tovar=2751&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2739,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Аллергология и иммунология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-allergologiya-i-immunologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-allergologiya-i-immunologiya/?program=Аллергология и иммунология&header=Курс ПП Аллергология и иммунология&cost=49800&tovar=2739&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 18861,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Токсикология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-toksikologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-toksikologiya/?program=Токсикология&header=Курс ПП Токсикология&cost=49800&tovar=18861&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT#"
+        },
+        "programs": {
+            "id": 16359,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Остеопатия",
+            "price": 124500,
+            "hour": 3504,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/?program=Остеопатия&header=Курс ПП Остеопатия&cost=124500&tovar=16359&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2773,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Клиническая фармакология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-farmakologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-farmakologiya/?program=Клиническая фармакология&header=Курс ПП Клиническая фармакология&cost=49800&tovar=2773&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT#"
+        },
+        "programs": {
+            "id": 1531,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Организация здравоохранения и общественное здоровье",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 15399,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Пульмонология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-pulmonologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-pulmonologiya/?program=Пульмонология&header=Курс ПП Пульмонология&cost=49800&tovar=15399&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": null,
+        "programs": {
+            "id": 2823,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Рефлексотерапия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/?program=Рефлексотерапия&header=Курс ПП Рефлексотерапия&cost=49800&tovar=2823&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT# #NEW#"
+        },
+        "programs": {
+            "id": 20281,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Психиатрия",
+            "price": 49800,
+            "hour": 432,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-psihiatriya-6/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-psihiatriya-6/?program=Психиатрия&header=Курс ПП Психиатрия&cost=49800&tovar=20281&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#NEW#"
+        },
+        "programs": {
+            "id": 2837,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Сурдология-оториноларингология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-surdologiya-otorinolaringologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-surdologiya-otorinolaringologiya/?program=Сурдология-оториноларингология&header=Курс ПП Сурдология-оториноларингология&cost=49800&tovar=2837&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#NEW#"
+        },
+        "programs": {
+            "id": 2805,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Патологическая анатомия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/?program=Патологическая анатомия&header=Курс ПП Патологическая анатомия&cost=49800&tovar=2805&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT# #NEW#"
+        },
+        "programs": {
+            "id": 17233,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Эндокринология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-endokrinologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-endokrinologiya-2/?program=Эндокринология&header=Курс ПП Эндокринология&cost=49800&tovar=17233&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#HIT# #NEW#"
+        },
+        "programs": {
+            "id": 2797,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Неврология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nevrologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nevrologiya/?program=Неврология&header=Курс ПП Неврология&cost=49800&tovar=2797&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Терапия",
+        "tags": {
+            "tag": "#NEW#"
+        },
+        "programs": {
+            "id": 20053,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Анестезиология-реаниматология",
+            "price": 99000,
+            "hour": 1296,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/?program=Анестезиология-реаниматология&header=Курс ПП Анестезиология-реаниматология&cost=99000&tovar=20053&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "specname": "Детская онкология-гематология",
+        "tags": null,
+        "programs": {
+            "id": 2751,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Гематология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gematologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gematologiya/?program=Гематология&header=Курс ПП Гематология&cost=49800&tovar=2751&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Детская онкология-гематология",
+        "tags": null,
+        "programs": {
+            "id": 15641,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Детская онкология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-detskaya-onkologiya/?program=Детская онкология&header=Курс ПП Детская онкология&cost=49800&tovar=15641&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Детская онкология-гематология",
+        "tags": null,
+        "programs": {
+            "id": 2805,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Патологическая анатомия",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/?program=Патологическая анатомия&header=Курс ПП Патологическая анатомия&cost=49800&tovar=2805&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Детская онкология-гематология",
+        "tags": null,
+        "programs": {
+            "id": 16713,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Трансфузиология",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-transfuziologiya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-transfuziologiya-2/?program=Трансфузиология&header=Курс ПП Трансфузиология&cost=49800&tovar=16713&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]

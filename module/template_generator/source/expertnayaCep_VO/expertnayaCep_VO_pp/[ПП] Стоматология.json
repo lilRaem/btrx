@@ -1,0 +1,70 @@
+[
+    {
+        "specname": "Стоматология",
+        "tags": null,
+        "programs": {
+            "id": 4289,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Стоматология детская",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-detskaya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-detskaya-2/?program=Стоматология детская&header=Курс ПП Стоматология детская&cost=49800&tovar=4289&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Стоматология",
+        "tags": null,
+        "programs": {
+            "id": 4283,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Стоматология ортопедическая",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-ortopedicheskaya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-ortopedicheskaya-2/?program=Стоматология ортопедическая&header=Курс ПП Стоматология ортопедическая&cost=49800&tovar=4283&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Стоматология",
+        "tags": null,
+        "programs": {
+            "id": 4285,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Стоматология терапевтическая",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-terapevticheskaya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-terapevticheskaya-2/?program=Стоматология терапевтическая&header=Курс ПП Стоматология терапевтическая&cost=49800&tovar=4285&sendsay_email=${ Recipient.Email }"
+        }
+    },
+    {
+        "specname": "Стоматология",
+        "tags": null,
+        "programs": {
+            "id": 4287,
+            "katalog": "Здравоохранение/zdravoohranenie",
+            "type_zdrav": "ВО",
+            "spec": "Профессиональная переподготовка",
+            "name": "Стоматология хирургическая",
+            "price": 49800,
+            "hour": 600,
+            "nmoSpec": null,
+            "linkNmo": null,
+            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-hirurgicheskaya-2/",
+            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-hirurgicheskaya-2/?program=Стоматология хирургическая&header=Курс ПП Стоматология хирургическая&cost=49800&tovar=4287&sendsay_email=${ Recipient.Email }"
+        }
+    }
+]
