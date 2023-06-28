@@ -150,37 +150,48 @@ def build_json():
 		list_data.append(item.dict())
 	
 	
-	for fin_data in list_data[8:]:
+	for fin_data in list_data:
 		data_list_search = list()
 		# print(fin_data.get("pp").get("new"))
 		# print("=>")
 		# print(fin_data.get("pp").get("progs"))
 
-		print(f"\n| {fin_data.get('spec')} | ==>")
 		
-		if fin_data.get("pp").get("progs"):
-			list_of_new_progs = list()
-			for kpd,fin_progs_data in enumerate(fin_data.get("pp").get("progs")):
-				countACC += 1
-				new_name_prog = str()
-				tags = None
-				if fin_data.get("pp").get("new"):
-					if fin_progs_data in fin_data.get("pp").get("new") and fin_progs_data.lower() in tag_HIT_prog_list:
-						tags={"tag": "#HIT# #NEW#"}
-					elif fin_progs_data in fin_data.get("pp").get("new"):
-						tags={"tag": "#NEW#"}
+		with open("listnewandhitby spec.txt",'a',encoding="utf-8") as f:
+			print(f"| \"{fin_data.get('spec')}\" | ==>")
+			f.write(f"\n\n| \"{fin_data.get('spec')}\" | ==>")
+			if fin_data.get("pp").get("progs"):
+				list_of_new_progs = list()
+				for kpd,fin_progs_data in enumerate(fin_data.get("pp").get("progs")):
+					countACC += 1
+					new_name_prog = str()
+					tags = None
+					if fin_data.get("pp").get("new"):
+						if fin_progs_data in fin_data.get("pp").get("new") and fin_progs_data.lower() in tag_HIT_prog_list:
+							tags={"tag": "#HIT# #NEW#"}
+							print(f"{kpd+1} {fin_progs_data} #NEW#")
+							f.write(f"\n{kpd+1} {fin_progs_data} #HIT# #NEW#")
+						elif fin_progs_data in fin_data.get("pp").get("new"):
+							tags={"tag": "#NEW#"}
+							print(f"{kpd+1} {fin_progs_data} #NEW#")
+							f.write(f"\n{kpd+1} {fin_progs_data} #NEW#")
+						elif fin_progs_data.lower() in tag_HIT_prog_list:
+							print(f"{kpd+1} {fin_progs_data} #HIT#")
+							tags={"tag": "#HIT#"}
+							f.write(f"\n{kpd+1} {fin_progs_data} #HIT#")
+						else:
+							print(f"{kpd+1} {fin_progs_data}")
+							f.write(f"\n{kpd+1} {fin_progs_data}")
+							list_of_new_progs.append(fin_progs_data)
 					elif fin_progs_data.lower() in tag_HIT_prog_list:
-						tags={"tag": "#HIT#"}
+							print(f"{kpd+1} {fin_progs_data} #HIT#")
+							list_of_new_progs.append(new_name_prog)
+							f.write(f"\n{kpd+1} {fin_progs_data} #HIT#")
 					else:
 						print(f"{kpd+1} {fin_progs_data}")
 						list_of_new_progs.append(fin_progs_data)
-				elif fin_progs_data.lower() in tag_HIT_prog_list:
-						print(f"{kpd+1} {fin_progs_data} #HIT#")
-						list_of_new_progs.append(new_name_prog)
-				else:
-					print(f"{kpd+1} {fin_progs_data}")
-					list_of_new_progs.append(fin_progs_data)
-				fin_data['pp']['progs'] = list_of_new_progs
+						f.write(f"\n{kpd+1} {fin_progs_data}")
+					fin_data['pp']['progs'] = list_of_new_progs
 
 				# if fin_progs_data == 'Рентгенология': hour = 990
 				# if fin_progs_data == 'Остеопатия':
@@ -188,35 +199,35 @@ def build_json():
 				# 	price = 124500
 				# if fin_progs_data == 'Физическая и реабилитационная медицина': hour = 1008
 
-				if fin_progs_data == 'Остеопатия':
-					finded_data = search(fin_progs_data,124500,"ВО")
-				elif fin_progs_data == 'Анестезиология-реаниматология':
-					finded_data = search(fin_progs_data,99000,"ВО")
-				else:
-					finded_data = search(fin_progs_data,49800,"ВО")
+				# if fin_progs_data == 'Остеопатия':
+				# 	finded_data = search(fin_progs_data,124500,"ВО")
+				# elif fin_progs_data == 'Анестезиология-реаниматология':
+				# 	finded_data = search(fin_progs_data,99000,"ВО")
+				# else:
+				# 	finded_data = search(fin_progs_data,49800,"ВО")
 
-				try:
-					if len(finded_data) >= 2:
-						print(Fore.RED+f"\
-						Че за х????\n\
-						spec: {fin_data.get('spec')}\n\
-						prog: {fin_progs_data}"+Fore.RESET)
-						pass
+				# try:
+				# 	if len(finded_data) >= 2:
+				# 		print(Fore.RED+f"\
+				# 		Че за х????\n\
+				# 		spec: {fin_data.get('spec')}\n\
+				# 		prog: {fin_progs_data}"+Fore.RESET)
+				# 		pass
 
-					dict_data = {
-						"specname": fin_data.get('spec'),
-						"tags": tags,
-						"programs": finded_data[0]
-					}
-				except:
-					dict_data = {
-						"specname": fin_data.get('spec'),
-						"tags": tags,
-						"programs": finded_data
-					}
-				print(f"\nin {fin_data.get('spec')} search i found this:\n{finded_data}")
+				# 	dict_data = {
+				# 		"specname": fin_data.get('spec'),
+				# 		"tags": tags,
+				# 		"programs": finded_data[0]
+				# 	}
+				# except:
+				# 	dict_data = {
+				# 		"specname": fin_data.get('spec'),
+				# 		"tags": tags,
+				# 		"programs": finded_data
+				# 	}
+				# print(f"\nin {fin_data.get('spec')} search i found this:\n{finded_data}")
 				data_list_search.append(dict_data)
-		save_json(data_list_search,"module/template_generator/source/expertnayaCep_VO/expertnayaCep_VO_pp",f"[ПП] {fin_data.get('spec')}.json")
+		# save_json(data_list_search,"module/template_generator/source/expertnayaCep_VO/expertnayaCep_VO_pp",f"[ПП] {fin_data.get('spec')}.json")
 
 def findNMO(prog:str,nmolist:list[dict]):
 	class SourceNmoData(BaseModel):
@@ -263,6 +274,18 @@ def build_jina_template():
 		hour: Optional[StrictInt] = None
 		url: Optional[StrictStr] = None
 
+	tag_HIT_prog_list = [
+		"ультразвуковая диагностика",
+		"физическая и реабилитационная медицина",
+		"эндокринология",
+		"психотерапия",
+		"психиатрия",
+		"неврология",
+		"урология",
+		"остеопатия",
+		"мануальная терапия",
+		"организация здравоохранения и общественное здоровье"
+	]
 
 
 	for file_name in os.listdir("module/template_generator/source/expertnayaCep_VO/expertnayaCep_VO_pp"):
@@ -285,8 +308,18 @@ def build_jina_template():
 					item.price = progs.get("price")
 					item.hour = progs.get("hour")
 					item.url = progs.get("final_url")
-					if data['tags']:
-						item.tag = data['tags']['tag']
+					
+					if item.name.lower() in tag_HIT_prog_list:
+						item.tag = "#HIT#"
+						if data['tags']:
+							if data['tags']['tag'] == "#HIT# #NEW#":
+								item.tag = "#HIT# #NEW#"
+					else:
+						
+						if data['tags']:
+							item.tag = data['tags']['tag']
+						else:
+							item.tag = data['tags']
 					# print("\n"+f"{item.name}"+"\n")
 					li.append(item.dict())
 
@@ -315,8 +348,8 @@ def main():
 	# print(sys.path)
 	# search()
 	# build()
-	build_jina_template()
-	# build_json()
+	# build_jina_template()
+	build_json()
 	# bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
 
 if __name__ == "__main__":
