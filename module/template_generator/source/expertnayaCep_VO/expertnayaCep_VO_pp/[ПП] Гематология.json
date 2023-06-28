@@ -250,13 +250,6 @@
         "tags": {
             "tag": "#NEW#"
         },
-        "programs": null
-    },
-    {
-        "specname": "Гематология",
-        "tags": {
-            "tag": "#NEW#"
-        },
         "programs": {
             "id": 4673,
             "katalog": "Здравоохранение/zdravoohranenie",
