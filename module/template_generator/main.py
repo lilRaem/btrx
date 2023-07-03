@@ -26,7 +26,7 @@ import pymorphy3
 def bs4parser(url:str):
 	parsConf = ParseSiteConfig()
 
-	webdrv = selenium_start()
+	# webdrv = selenium_start()
 	# if "custom-select__option" in req.text:
 	# 	print(req.text)
 	# webdrv.get(url)
@@ -349,8 +349,8 @@ def main():
 	# search()
 	# build()
 	# build_jina_template()
-	build_json()
-	# bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
+	# build_json()
+	bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
 
 if __name__ == "__main__":
 	main()
