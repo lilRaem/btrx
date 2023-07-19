@@ -106,6 +106,8 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		_spec = "Повышение квалификации"
 	elif "НМО" in _spec and "повышении квалификации" in _spec or "цикл НМО" in _spec:
 		_spec = "Повышение квалификации (НМО)"
+	elif "ПОЛУЧЕНИЕ КАТЕГОРИИ" in _spec or "получение категории" in _spec or "Получение категории" in _spec:
+		_spec = "Категория медработника"
 	else:
 		_spec = None
 
