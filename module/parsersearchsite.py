@@ -96,4 +96,4 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 	return find_url_list
 
 if __name__ == "__main__":
-	getProgramUrl(search_key="Современные аспекты акушерской помощи в родовспомогательных учреждениях",price=9792)
+	getProgramUrl(search_key="Тренер-преподаватель по планерному спорту",price=9792)
