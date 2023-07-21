@@ -43,7 +43,7 @@ def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]
 	return count_word_programm, item_list
 
 def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list[dict[str,str|int|None]]|None:
-	search_key = search_key.strip()
+	# search_key = search_key.strip()
 	find_url_list: list[dict[str,str|int|None]] = list()
 	start = time()
 	if type(price) != int:
@@ -74,7 +74,8 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 							log.debug(f"By search price: {price} and in find price: {int(data.get('price'))}\n{data}")
 
 	else:
-		log.warning(f'Url not found {search_key}')
+		log.warning(Fore.RED+f'[Url not found]: {search_key.replace(" ",".")} price: {price}'+Fore.RESET)
+		# return False
 	try:
 		if find_url_list:
 			if find_url_list.__len__() == 1:
@@ -99,4 +100,4 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 	return find_url_list
 
 if __name__ == "__main__":
-	print(getProgramUrl(search_key="Рентгенэндоваскулярная диагностика и лечение ",price=19600))
+	print(getProgramUrl(search_key="кат",price=29600))
