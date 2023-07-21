@@ -50,7 +50,6 @@ def main():
 			course.price = int(prog.get("PRICE").replace(".00",""))
 
 
-		fullname = f"Курс {prog.get('NAME').lower()}"
 		course.price = int(prog.get("PRICE").replace('.00',''))
 		if prog:
 			prog_url: list[dict] = list()
@@ -70,9 +69,9 @@ def main():
 				print(f"search {course.name} price: {course.price} {course.id} {course.hour}")
 				print(str(course.name).strip().replace(" ","."),-1)
 				print(str(course.name).replace(" ","."))
-				prog_url = getProgramUrl(str(course.fullname).replace(" "," "),course.price)
+				prog_url = getProgramUrl(str(course.fullname),course.price)
 				if not prog_url:
-					prog_url = getProgramUrl(str(course.name).replace(" ","",),course.price)
+					prog_url = getProgramUrl(str(course.name),course.price)
 			if prog_url:
 
 				for p_url in prog_url:

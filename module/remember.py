@@ -46,6 +46,7 @@ class Remember():
 				obj: list = json.loads(file.read())
 			except:
 				obj = file.read()
+			file.close()
 		# print(f"upd load {name}")
 		return obj
 
@@ -56,6 +57,7 @@ class Remember():
 				obj: list = json.loads(file.read())
 			except:
 				obj = file.read()
+			file.close()
 		print(f"load {name}")
 		return obj
 
