@@ -1,6 +1,7 @@
 import json,sys,os
 from time import sleep
 from pydantic import BaseModel,StrictStr,StrictInt
+from colorama import Fore,Back
 from typing import Optional
 from params import list_course,check_600,check_300,forCheck600,forCheck300,already_600_300,types_prog,types_check
 sys.path.insert(0,os.getcwd())
@@ -24,7 +25,7 @@ class Course(BaseModel):
 	url: Optional[list[StrictStr]] = None
 
 def load_json() -> list[dict]:
-	with open("data/json/btrx_data/19.07.2023_file.json","r",encoding="utf-8") as f:
+	with open("data/json/btrx_data/21.07.2023_file.json","r",encoding="utf-8") as f:
 		data = json.load(f)
 	return data
 
@@ -34,7 +35,7 @@ def main():
 	rem = Remember()
 	list_treb_prog:list[Course] = list()
 
-	for prog in load_json()[:-1]:
+	for prog in load_json():
 
 		course = Course()
 		course.id = int(prog.get("ID"))
@@ -49,8 +50,6 @@ def main():
 		if prog.get("PRICE"):
 			course.price = int(prog.get("PRICE").replace(".00",""))
 
-
-		course.price = int(prog.get("PRICE").replace('.00',''))
 		if prog:
 			prog_url: list[dict] = list()
 			if prog.get("PROPERTY_213"):
@@ -62,26 +61,34 @@ def main():
 					if int(course.price) == int(l_prog.get("price")):
 						if not course.hour: course.hour = int(l_prog.get("hour"))
 						if course.hour == l_prog.get("hour"):
-							# print(course.name,f"price: {course.price}","\n-*-\n")
+							print(course.name,f"price: {course.price}","\n-*-\n")
 							prog_url.append(l_prog)
 
-			if not prog_url or prog_url == []:
-				print(f"search {course.name} price: {course.price} {course.id} {course.hour}")
-				print(str(course.name).strip().replace(" ","."),-1)
-				print(str(course.name).replace(" ","."))
-				prog_url = getProgramUrl(str(course.fullname),course.price)
-				if not prog_url:
-					prog_url = getProgramUrl(str(course.name),course.price)
+			if not prog_url:
+				course.name = course.name.strip()
+				course.fullname = course.fullname.strip()
+				# print(Back.LIGHTYELLOW_EX+f"[search]: {course.name} price: {course.price} {course.id} {course.hour}"+Back.RESET)
+				if course.price:
+					prog_url_1 = getProgramUrl(search_key=str(course.fullname).lower(),price=int(course.price))
+					if not prog_url_1:
+						prog_url = getProgramUrl(search_key=str(course.name).lower(),price=int(prog.get("PRICE").replace(".00","")))
+					else:
+						prog_url = prog_url_1
+					prog_url_2 = getProgramUrl(search_key=str(course.name).lower(),price=int(course.price))
+					if not prog_url_2:
+						prog_url = getProgramUrl(search_key=str(course.fullname).lower(),price=int(prog.get("PRICE").replace(".00","")))
+					else:
+						prog_url = prog_url_2
+
 			if prog_url:
-
 				for p_url in prog_url:
-					if course.fullname == p_url.get("name") or course.name == p_url.get("name"):
-
+					if course.fullname.lower() == p_url.get("name").lower() or course.name.lower() == p_url.get("name").lower():
 						if int(course.price) == int(p_url.get("price")):
 							if not course.hour: course.hour = int(p_url.get("hour"))
 							if course.hour == p_url.get("hour"):
-								# print(course.name)
+								print(Fore.GREEN+course.name+Fore.RESET)
 								p_url['id'] = int(prog.get('ID'))
+								# print(p_url)
 								programm_url.append(p_url)
 								rem.remember(programm_url,'listurl')
 
@@ -136,6 +143,7 @@ def main():
 
 def build(data: list[Course]):
 	main_title = "У этой программы есть требования к поступающим:"
+	privileges_box__item_title = "для зачисления необходимо наличие одного из документов:"
 	for d in data:
 		if d.name and d.price:
 			print(d.id)
@@ -173,7 +181,8 @@ def build(data: list[Course]):
 
 if __name__ == "__main__":
 	# try:
-	main()
+	build(main())
+
 	# rem = Remember()
 	# remember_obj: list[dict[str,str]] = [{"title": "test1"},{"title": "test2"},{"title": "test3"},{"id":3,"title": "test6"}]
 	# print(rem.update(remember_obj,"test"))
