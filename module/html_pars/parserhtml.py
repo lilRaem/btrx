@@ -80,20 +80,23 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		else: final_data.name: final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 
 		try:
-			final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
+			final_data.hour = int(soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
 		except:
-			final_data.hour = soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
+			final_data.hour = int(soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
 		try:
 			_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
 		except:
-			_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
+			try:
+				_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
+			except:
+				_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[0].text.replace("₽","").replace(" ","").strip()
 		try:
 			_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
 		except:
 			_spec = soup.find("div","intro__suptitle").text.strip()
 	else:
 		final_data.name = soup.find('h1').text
-		final_data.hour = soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
+		final_data.hour = int(soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
 		_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
 		_spec = soup.find("div","intro__suptitle").text.strip()
 		print(final_data)

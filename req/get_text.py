@@ -1,10 +1,11 @@
 import json,sys,os
+from time import sleep
 from pydantic import BaseModel,StrictStr,StrictInt
 from typing import Optional
 from params import list_course,check_600,check_300,forCheck600,forCheck300,already_600_300,types_prog,types_check
 sys.path.insert(0,os.getcwd())
 from module.parsersearchsite import getProgramUrl
-
+from module.remember import Remember
 class Course(BaseModel):
 	id: Optional[int] = None
 	hour: Optional[StrictInt] = None
@@ -27,68 +28,18 @@ def load_json() -> list[dict]:
 		data = json.load(f)
 	return data
 
-class Remember():
-	def __init__(self) -> None:
-		super().__init__()
-
-	def remember(self,obj,name):
-		# print(obj)
-		# print(type(obj))
-		new: list = obj
-		if os.path.exists(f"data/cached_items/{name}"):
-			obj = self.load(name)
-			old = obj
-
-			temp3 = []
-			for element in new:
-				if element not in old:
-					temp3.append(element)
-					# print(element)
-					old.append(element)
-			if temp3 != []:
-				print("not equal")
-				obj = old
-				obj = self.save(obj,name)
-		else:
-			obj = self.save(obj,name)
-		return obj
-
-	def save(self,obj,name):
-		with open(f"data/cached_items/{name}","w", encoding="utf-8") as file:
-			if type(obj) == list:
-				json.dump(obj,file,ensure_ascii=False,indent=4)
-			else:
-				file.write(obj)
-			file.close()
-		print(f"save {name}")
-		return obj
-
-	def load(self,name):
-		obj = None
-		with open(f"data/cached_items/{name}","r", encoding="utf-8") as file:
-			try:
-				obj: list = json.loads(file.read())
-			except:
-				obj = file.read()
-		print(f"load {name}")
-		return obj
-
-	def update(self,obj,name):
-		print("update and")
-		obj = self.save(obj,name)
-		return obj
 
 def main():
 	print("start main")
-	remem = Remember()
+	rem = Remember()
 	list_treb_prog:list[Course] = list()
-	programm_url = list()
-	for prog in load_json():
+
+	for prog in load_json()[:-1]:
 
 		course = Course()
 		course.id = int(prog.get("ID"))
 
-
+		programm_url = list()
 		prog_fullname = "Курс "+prog.get("NAME").lower()
 		course.fullname = prog_fullname
 		course.name = course.fullname.replace("Курс ", "").capitalize()
@@ -99,39 +50,41 @@ def main():
 			course.price = int(prog.get("PRICE").replace(".00",""))
 
 
-		try:
-			programm_url_ = None
-			load_prog = remem.load("listurl")
-			for mem_prog in load_prog:
-				if course.fullname == mem_prog.get('name'):
-					print(course.fullname,"==",mem_prog.get('name'))
-					if int(course.price) == int(mem_prog.get('price')):
-						mem_prog['price'] = course.price
-						if mem_prog.get("url"):
-							programm_url_.append(mem_prog)
-							print(programm_url_)
+		fullname = f"Курс {prog.get('NAME').lower()}"
+		course.price = int(prog.get("PRICE").replace('.00',''))
+		if prog:
+			prog_url: list[dict] = list()
+			if prog.get("PROPERTY_213"):
+				course.hour = int(prog['PROPERTY_213']['value'])
+			rem.remember(programm_url,'listurl')
+			print("\n***")
+			for l_prog in rem.load("listurl"):
+				if course.fullname == l_prog.get("name") or course.name == l_prog.get("name"):
+					if int(course.price) == int(l_prog.get("price")):
+						if not course.hour: course.hour = int(l_prog.get("hour"))
+						if course.hour == l_prog.get("hour"):
+							# print(course.name,f"price: {course.price}","\n-*-\n")
+							prog_url.append(l_prog)
 
-			# if programm_url == None:
-			if not programm_url_:
-				programm_url = getProgramUrl(course.name,course.price)
-			print("try")
-			for i,d in enumerate(programm_url):
-				if course.fullname == programm_url[i].get('name'):
-					print(course.fullname,"==",programm_url[i].get('name'))
+			if not prog_url or prog_url == []:
+				print(f"search {course.name} price: {course.price} {course.id} {course.hour}")
+				print(str(course.name).strip().replace(" ","."),-1)
+				print(str(course.name).replace(" ","."))
+				prog_url = getProgramUrl(str(course.fullname).replace(" "," "),course.price)
+				if not prog_url:
+					prog_url = getProgramUrl(str(course.name).replace(" ","",),course.price)
+			if prog_url:
 
+				for p_url in prog_url:
+					if course.fullname == p_url.get("name") or course.name == p_url.get("name"):
 
-					if int(course.price) == int(programm_url[i].get('price')):
-						d['price'] = int(course.price)
-						if d.get("url"):
-							remem.remember(programm_url,"listurl")
-		except Exception as e:
-			print(e)
-			try:
-				programm_url = getProgramUrl(course.name,course.price)
-			except:
-				pass
-			print("except")
-			remem.remember(programm_url,"listurl")
+						if int(course.price) == int(p_url.get("price")):
+							if not course.hour: course.hour = int(p_url.get("hour"))
+							if course.hour == p_url.get("hour"):
+								# print(course.name)
+								p_url['id'] = int(prog.get('ID'))
+								programm_url.append(p_url)
+								rem.remember(programm_url,'listurl')
 
 
 		if course.fullname.lower() in list_course or course.fullname in list_course:
