@@ -34,8 +34,8 @@ def main():
 	print("start main")
 	rem = Remember()
 	list_treb_prog:list[Course] = list()
-
-	for prog in load_json():
+	list_fail_urlprog: list[Course] = list()
+	for i_p,prog in enumerate(load_json()[3000:]):
 
 		course = Course()
 		course.id = int(prog.get("ID"))
@@ -64,33 +64,41 @@ def main():
 							print(course.name,f"price: {course.price}","\n-*-\n")
 							prog_url.append(l_prog)
 
-			if not prog_url:
-				course.name = course.name.strip()
-				course.fullname = course.fullname.strip()
-				# print(Back.LIGHTYELLOW_EX+f"[search]: {course.name} price: {course.price} {course.id} {course.hour}"+Back.RESET)
-				if course.price:
-					prog_url_1 = getProgramUrl(search_key=str(course.fullname).lower(),price=int(course.price))
-					if not prog_url_1:
-						prog_url = getProgramUrl(search_key=str(course.name).lower(),price=int(prog.get("PRICE").replace(".00","")))
-					else:
-						prog_url = prog_url_1
-					prog_url_2 = getProgramUrl(search_key=str(course.name).lower(),price=int(course.price))
-					if not prog_url_2:
-						prog_url = getProgramUrl(search_key=str(course.fullname).lower(),price=int(prog.get("PRICE").replace(".00","")))
-					else:
-						prog_url = prog_url_2
+			# if not prog_url:
+			# 	print(f"index of prog: {i_p}")
+			# 	course.name = course.name.strip()
+			# 	course.fullname = course.fullname.strip()
+			# 	# print(Back.LIGHTYELLOW_EX+f"[search]: {course.name} price: {course.price} {course.id} {course.hour}"+Back.RESET)
+			# 	if course.price:
+			# 		prog_url_1 = getProgramUrl(search_key=str(course.fullname).lower(),price=int(course.price))
+			# 		if not prog_url_1:
+			# 			prog_url = getProgramUrl(search_key=str(course.name).lower(),price=int(prog.get("PRICE").replace(".00","")))
+			# 		else:
+			# 			prog_url = prog_url_1
+			# 		prog_url_2 = getProgramUrl(search_key=str(course.name).lower(),price=int(course.price))
+			# 		if not prog_url_2:
+			# 			prog_url = getProgramUrl(search_key=str(course.fullname).lower(),price=int(prog.get("PRICE").replace(".00","")))
+			# 		else:
+			# 			prog_url = prog_url_2
+			# 		if not prog_url:
+			# 			if not os.path.exists("data/cached_items/errors/didntfind_Prog.json"):
+			# 				os.mkdir('data/cached_items/errors')
+			# 			with open("data/cached_items/errors/didntfind_Prog.json", "w",encoding="utf8") as f:
+			# 				list_fail_urlprog.append(course.model_dump(include=['id','name',"price","hour","url"]))
+			# 				json.dump(list_fail_urlprog, f, ensure_ascii=False,indent=4)
+			# 				f.close()
 
-			if prog_url:
-				for p_url in prog_url:
-					if course.fullname.lower() == p_url.get("name").lower() or course.name.lower() == p_url.get("name").lower():
-						if int(course.price) == int(p_url.get("price")):
-							if not course.hour: course.hour = int(p_url.get("hour"))
-							if course.hour == p_url.get("hour"):
-								print(Fore.GREEN+course.name+Fore.RESET)
-								p_url['id'] = int(prog.get('ID'))
-								# print(p_url)
-								programm_url.append(p_url)
-								rem.remember(programm_url,'listurl')
+			# if prog_url:
+			# 	for p_url in prog_url:
+			# 		if course.fullname.lower() == p_url.get("name").lower() or course.name.lower() == p_url.get("name").lower():
+			# 			if int(course.price) == int(p_url.get("price")):
+			# 				if not course.hour: course.hour = int(p_url.get("hour"))
+			# 				if course.hour == p_url.get("hour"):
+			# 					print(Fore.GREEN+f"{course.name} {course.price}"+Fore.RESET)
+			# 					p_url['id'] = int(prog.get('ID'))
+			# 					# print(p_url)
+			# 					programm_url.append(p_url)
+			# 					rem.remember(programm_url,'listurl')
 
 
 		if course.fullname.lower() in list_course or course.fullname in list_course:
@@ -135,7 +143,7 @@ def main():
 						course.type_text = types_check(course_type)
 			except:
 				continue
-		# print(course.dict())
+		# print(course.model_dump_json())
 
 		list_treb_prog.append(course)
 	print("end main")
