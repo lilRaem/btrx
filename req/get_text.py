@@ -49,7 +49,6 @@ def main():
 		# print(course.name)
 		if prog.get("PRICE"):
 			course.price = int(prog.get("PRICE").replace(".00",""))
-
 		if prog:
 			prog_url: list[dict] = list()
 			if prog.get("PROPERTY_213"):
@@ -158,38 +157,8 @@ def build(data: list[Course]):
 	privileges_box__item_title = "для зачисления необходимо наличие одного из документов:"
 	for d in data:
 		if d.name and d.price:
-			print(d.id)
-			print(d.name, d.hour, f"price: {d.price}")
-			print(d.fullname)
-			if d.type:
-				print(d.type)
-			print(main_title)
-			if d.hour == 600:
-				d.text_600 = "в соответствии с приказом Минздрава России №206н от 02.05.2023 «Об утверждении Квалификационных требований к медицинским и фармацевтическим работникам с высшим образованием» необходимо наличие подготовки в ординатуре или интернатуре по одной из специальностей:"
-				if d.text_600:
-					print("\n"+d.text_600)
-				if d.spec_600:
-					for x in d.spec_600:
-						print(x+";")
-					print("ИЛИ")
-			if d.hour == 300:
-				if d.text_300:
-					print("\n"+d.text_300)
+			print(d.id,d.hour)
 
-				if d.spec_300:
-					for x in d.spec_300:
-						print(x+";")
-					print("ИЛИ")
-			if d.text:
-				print("\n"+d.text)
-			if d.all_600_300:
-				for x in d.all_600_300:
-					print(x+";")
-			if d.type_text:
-				print("\n"+d.type_text)
-			print("***")
-			print(d.url)
-			print("\n---\n")
 
 if __name__ == "__main__":
 	# try:
