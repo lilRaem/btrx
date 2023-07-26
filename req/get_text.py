@@ -35,7 +35,7 @@ def main():
 	rem = Remember()
 	list_treb_prog:list[Course] = list()
 	list_fail_urlprog: list[Course] = list()
-	for i_p,prog in enumerate(load_json()[3000:]):
+	for i_p,prog in enumerate(load_json()[2400:2410]):
 
 		course = Course()
 		course.id = int(prog.get("ID"))
@@ -62,7 +62,10 @@ def main():
 						if not course.hour: course.hour = int(l_prog.get("hour"))
 						if course.hour == l_prog.get("hour"):
 							print(course.name,f"price: {course.price}","\n-*-\n")
+							course.url = l_prog.get("url")
 							prog_url.append(l_prog)
+						else:
+							print(course.name,f"price: {course.price}","\n-*-\n")
 
 			# if not prog_url:
 			# 	print(f"index of prog: {i_p}")
@@ -125,7 +128,7 @@ def main():
 				if programm_url:
 					for d_url in programm_url:
 						course.url = str(d_url['url'])
-						if course.fullname == d_url.get('name'):
+						if course.fullname.lower() == d_url.get('name').lower():
 							if course.price == d_url.get('price'):
 								if not course.hour: course.hour = d_url['hour']
 								if int(course.hour) == int(d_url['hour']):
@@ -140,6 +143,7 @@ def main():
 										course_type = 6
 									else:
 										course_type = None
+
 						course.type_text = types_check(course_type)
 			except:
 				continue
