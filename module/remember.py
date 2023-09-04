@@ -36,7 +36,7 @@ class Remember():
 			else:
 				file.write(obj)
 			file.close()
-		print(f"save {name}")
+		# print(f"save {name}")
 		return obj
 
 	def load_(self,name):
@@ -50,7 +50,7 @@ class Remember():
 		# print(f"upd load {name}")
 		return obj
 
-	def load(self,name):
+	def load(self,name:str) -> list[any]:
 		obj = None
 		with open(f"data/cached_items/{name}","r", encoding="utf-8") as file:
 			try:
@@ -58,7 +58,7 @@ class Remember():
 			except:
 				obj = file.read()
 			file.close()
-		print(f"load {name}")
+		# print(f"load {name}")
 		return obj
 
 	def update(self,obj,name):
@@ -67,7 +67,7 @@ class Remember():
 		return obj
 
 def load_json() -> list[dict]:
-	with open("data/json/btrx_data/19.07.2023_file.json","r",encoding="utf-8") as f:
+	with open("data/json/btrx_data/08.08.2023_file.json","r",encoding="utf-8") as f:
 		data = json.load(f)
 	return data
 

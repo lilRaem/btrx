@@ -81,8 +81,8 @@ def search(search_name:str, search_price:int, type_programm:str = None,mail_serv
 										if not final_data.hour:
 											if int(data.get('price')) == final_data.price:
 												final_data.hour = int(data.get('hour'))
-				print("\n" + Fore.GREEN + f'{final_data.json(encoder="utf-8",ensure_ascii=False)}')
-				fdata.append(final_data.dict())
+				print("\n" + Fore.GREEN + f'{final_data.model_dump()}')
+				fdata.append(final_data.model_dump())
 		else:
 			if json_check_data != None:
 				for val_data in json_check_data:
@@ -122,8 +122,8 @@ def search(search_name:str, search_price:int, type_programm:str = None,mail_serv
 												print(Fore.RED+f"warn: {final_data.hour} != site: {int(v.get('hour'))}")
 											final_data.spec = str(v.get("spec"))
 											final_data.url = str(v.get("url"))
-											print("\n" + Fore.GREEN + f'{final_data.dict()}' + Fore.RESET)
-											fdata.append(final_data.dict())
+											print("\n" + Fore.GREEN + f'{final_data.model_dump()}' + Fore.RESET)
+											fdata.append(final_data.model_dump())
 	if fdata:
 			for vv in fdata:
 				if mail_service == "mindbox":

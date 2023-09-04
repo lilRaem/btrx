@@ -26,7 +26,7 @@ def main():
 	"""
 	#TODO не работает
 	# return search("Инструктор-проводник по альпинизму и горному туризму",15000,"ПП",mail_service="sendsay")
-	return search("ультразвук",type_programm="ПП",search_price=99000,mail_service="mindbox")
+	return search("эхокардиография",type_programm="НМО",search_price=29600,mail_service="mindbox")
 	# return search("актуальные вопросы диагностики и лечения травм",5900,"ПК",mail_service="mindbox")
 
 if __name__ == "__main__":
@@ -49,4 +49,4 @@ if __name__ == "__main__":
 		print(Fore.MAGENTA+f'Main time: {minute} min'+ Fore.RESET)
 	else:
 		hour = minute
-		print(Fore.MAGENTA+f'Main time: {round(minute)} min'+ Fore.RESET)
+		print(Fore.MAGENTA+f'Main time: {round(hour)} min'+ Fore.RESET)

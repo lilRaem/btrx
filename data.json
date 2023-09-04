@@ -1,15 +1,16 @@
 [
     {
-        "id": 19349,
-        "katalog": null,
-        "type_zdrav": null,
-        "spec": null,
-        "name": "Ультразвуковая диагностика",
-        "price": 99000,
-        "hour": 600,
+        "id": 19865,
+        "katalog": "Здравоохранение/zdravoohranenie",
+        "type_zdrav": "ВО",
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Эхокардиография",
+        "fullname": null,
+        "price": 29600,
+        "hour": 36,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": null,
-        "final_url": "None?program=Ультразвуковая диагностика&header=Курс None Ультразвуковая диагностика&cost=99000&tovar=19349&sendsay_email=${ Recipient.Email }"
+        "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ehokardiografiya/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ehokardiografiya/?program=Эхокардиография&header=Курс НМО Эхокардиография&cost=29600&tovar=19865"
     }
 ]

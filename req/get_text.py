@@ -25,7 +25,7 @@ class Course(BaseModel):
 	url: Optional[list[StrictStr]] = None
 
 def load_json() -> list[dict]:
-	with open("data/json/btrx_data/21.07.2023_file.json","r",encoding="utf-8") as f:
+	with open("data/json/btrx_data/08.08.2023_file.json","r",encoding="utf-8") as f:
 		data = json.load(f)
 	return data
 
@@ -35,7 +35,7 @@ def main():
 	rem = Remember()
 	list_treb_prog:list[Course] = list()
 	list_fail_urlprog: list[Course] = list()
-	for i_p,prog in enumerate(load_json()[2390:2410]):
+	for i_p,prog in enumerate(load_json()):
 
 		course = Course()
 		course.id = int(prog.get("ID"))
@@ -60,16 +60,17 @@ def main():
 				if course.fullname == l_prog.get("name") or course.name == l_prog.get("name"):
 					course.type =l_prog.get("spec")
 					course.url = l_prog.get("url")
-					if int(course.price) == int(l_prog.get("price")):
-						course.url = l_prog.get("url")
-						if not course.hour: course.hour = int(l_prog.get("hour"))
-						if course.hour == l_prog.get("hour"):
-							print(course.name,f"price: {course.price}","\n-*-\n")
+					if course.price:
+						if int(course.price) == int(l_prog.get("price")):
 							course.url = l_prog.get("url")
-							course.type = l_prog.get("spec")
-							prog_url.append(l_prog)
-						else:
-							print(course.name,f"price: {course.price}","\n-*-\n")
+							if not course.hour: course.hour = int(l_prog.get("hour"))
+							if course.hour == l_prog.get("hour"):
+								print(course.name,f"price: {course.price}","\n-*-\n")
+								course.url = l_prog.get("url")
+								course.type = l_prog.get("spec")
+								prog_url.append(l_prog)
+							else:
+								print(course.name,f"price: {course.price}","\n-*-\n")
 
 			# if not prog_url:
 			# 	print(f"index of prog: {i_p}")
@@ -264,11 +265,13 @@ def build(data: list[Course]):
 		if type_text_2:
 			type_text_2 = type_text_2.replace("\n"," ")
 
+		d.name = d.name.replace('"',"'")
 
-
-		with open(f"data\\trebov\\{d.name}.txt","w",encoding="utf-8") as f:
+		with open(f"data\\trebov\\[{d.id}] {d.name}.txt","w",encoding="utf-8") as f:
 # 			fin = f"{prog.text}\n{prog.text_600_300}\n\nИЛИ\n{prog.text_2}\n{prog.text_all}\n\
-# {prog.type_text}\n{prog.type_text_1}\n{prog.type_text_2}\n[{prog.id}] {prog.url}"
+# 			{prog.type_text}\n{prog.type_text_1}\n{prog.type_text_2}\n[{prog.id}] {prog.url}"
+			if "Эпилептология".lower() == d.name.lower():
+				print("sdsssssssssssssssssssssssssssssssssssssssssssssssssssss")
 			if prog.text:
 				f.writelines(prog.text)
 			if prog.text_600_300:
@@ -283,7 +286,7 @@ def build(data: list[Course]):
 			if prog.text_all:
 				for i,x in enumerate(prog.text_all):
 					if i != prog.text_all.__len__()-1:
-						f.writelines(x+";\n")
+						f.writelines(x+";<br>\n")
 					else:
 						f.writelines(x+"\n")
 			if prog.type_text_1:
@@ -292,12 +295,14 @@ def build(data: list[Course]):
 				f.writelines(prog.type_text_2)
 			if prog.id or prog.url:
 				f.writelines(f"\n[{prog.id}]: {prog.url}")
+			f.close()
 
 		# print("\n")
 
 if __name__ == "__main__":
 	# try:
-	build(main())
+	# build()
+	main()
 
 	# rem = Remember()
 	# remember_obj: list[dict[str,str]] = [{"title": "test1"},{"title": "test2"},{"title": "test3"},{"id":3,"title": "test6"}]

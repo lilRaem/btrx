@@ -11,6 +11,7 @@ class FinalData(BaseModel):
 	type_zdrav: Optional[StrictStr] = None
 	spec: Optional[StrictStr] = None
 	name: str|Optional[StrictStr] = None
+	fullname: str|Optional[StrictStr] = None
 	price: Optional[StrictInt] = None
 	hour: Optional[StrictInt] = None
 	nmoSpec: Optional[StrictStr] = None

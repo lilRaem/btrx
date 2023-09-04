@@ -1,0 +1,156 @@
+[
+    {
+        "id": 20293,
+        "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+        "type_zdrav": "НМП",
+        "spec": "Профессиональная переподготовка",
+        "name": "Биолог",
+        "fullname": null,
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-biolog-2/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-biolog-2/?program=Биолог&header=Курс ПП Биолог&cost=49800&tovar=20293&sendsay_email=${ Recipient.Email }"
+    }
+][
+    {
+        "id": 20297,
+        "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+        "type_zdrav": "НМП",
+        "spec": "Профессиональная переподготовка",
+        "name": "Зоолог",
+        "fullname": null,
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-zoolog/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-zoolog/?program=Зоолог&header=Курс ПП Зоолог&cost=49800&tovar=20297&sendsay_email=${ Recipient.Email }"
+    }
+]{
+    "id": 16041,
+    "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+    "type_zdrav": "НМП",
+    "spec": "Профессиональная переподготовка",
+    "name": "Инструктор-методист по лечебной физкультуре",
+    "fullname": "Курс инструктор-методист по лечебной физкультуре",
+    "price": 49800,
+    "hour": 600,
+    "nmoSpec": null,
+    "linkNmo": null,
+    "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-instruktor-metodist-po-lechebnoj-fizkulture/",
+    "final_url": null
+}[
+    {
+        "id": 20301,
+        "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+        "type_zdrav": "НМП",
+        "spec": "Профессиональная переподготовка",
+        "name": "Медицинская логопедия",
+        "fullname": null,
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-meditsinskaya-logopediya/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-meditsinskaya-logopediya/?program=Медицинская логопедия&header=Курс ПП Медицинская логопедия&cost=49800&tovar=20301&sendsay_email=${ Recipient.Email }"
+    }
+]{
+    "id": 1547,
+    "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+    "type_zdrav": "НМП",
+    "spec": "Профессиональная переподготовка",
+    "name": "Медицинская психология",
+    "fullname": "Курс медицинская психология",
+    "price": 49800,
+    "hour": 600,
+    "nmoSpec": null,
+    "linkNmo": null,
+    "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-meditsinskaya-psihologiya/",
+    "final_url": null
+}{
+    "id": 19201,
+    "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+    "type_zdrav": "НМП",
+    "spec": "Профессиональная переподготовка",
+    "name": "Медицинский физик",
+    "fullname": "Курс медицинский физик",
+    "price": 49800,
+    "hour": 600,
+    "nmoSpec": null,
+    "linkNmo": null,
+    "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-meditsinskij-fizik/",
+    "final_url": null
+}[
+    {
+        "id": 20305,
+        "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+        "type_zdrav": "НМП",
+        "spec": "Профессиональная переподготовка",
+        "name": "Физическая реабилитация (физическая терапия)",
+        "fullname": null,
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-fizicheskaya-reabilitatsiya-fizicheskaya-terapiya/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-fizicheskaya-reabilitatsiya-fizicheskaya-terapiya/?program=Физическая реабилитация (физическая терапия)&header=Курс ПП Физическая реабилитация (физическая терапия)&cost=49800&tovar=20305&sendsay_email=${ Recipient.Email }"
+    }
+][
+    {
+        "id": 20309,
+        "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+        "type_zdrav": "НМП",
+        "spec": "Профессиональная переподготовка",
+        "name": "Эргореабилитация (эрготерапия)",
+        "fullname": null,
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-ergoreabilitatsiya-ergoterapiya/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-ergoreabilitatsiya-ergoterapiya/?program=Эргореабилитация (эрготерапия)&header=Курс ПП Эргореабилитация (эрготерапия)&cost=49800&tovar=20309&sendsay_email=${ Recipient.Email }"
+    }
+]{
+    "id": 19609,
+    "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+    "type_zdrav": "НМП",
+    "spec": "Профессиональная переподготовка",
+    "name": "Судебный эксперт (эксперт-биохимик, эксперт-генетик, эксперт-химик)",
+    "fullname": "Курс судебный эксперт (эксперт-биохимик, эксперт-генетик, эксперт-химик)",
+    "price": 49800,
+    "hour": 600,
+    "nmoSpec": null,
+    "linkNmo": null,
+    "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-sudebnyij-ekspert-ekspert-biohimik-ekspert-genetik-ekspert-himik/",
+    "final_url": null
+}{
+    "id": 15069,
+    "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+    "type_zdrav": "НМП",
+    "spec": "Профессиональная переподготовка",
+    "name": "Химик-эксперт в клинико-диагностической лаборатории",
+    "fullname": "Курс химик-эксперт в клинико-диагностической лаборатории",
+    "price": 49800,
+    "hour": 600,
+    "nmoSpec": null,
+    "linkNmo": null,
+    "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-himik-ekspert-v-kliniko-diagnosticheskoj-laboratorii/",
+    "final_url": null
+}[
+    {
+        "id": 17229,
+        "katalog": "Здравоохранение - Немедицинские специальности/zdravoohranenie-nemeditsinskie-spetsialnosti",
+        "type_zdrav": "НМП",
+        "spec": "Профессиональная переподготовка",
+        "name": "Эмбриология",
+        "fullname": null,
+        "price": 49800,
+        "hour": 600,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-embriologiya/",
+        "final_url": "https://apkipp.ru/katalog/zdravoohranenie-nemeditsinskie-spetsialnosti/kurs-embriologiya/?program=Эмбриология&header=Курс ПП Эмбриология&cost=49800&tovar=17229&sendsay_email=${ Recipient.Email }"
+    }
+]
