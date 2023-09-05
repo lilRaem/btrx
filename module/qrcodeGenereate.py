@@ -1,8 +1,7 @@
-import base64
-import json
+import json, requests, os
 import requests
 url = "https://api.qrcode-monkey.com//qr/custom"
-data = "https://web-apkipp.ru/newform/assets/docs/NMO/%D0%90%D0%9F%D0%9A%20%D0%B8%20%D0%9F%D0%9F%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B%20%D0%9F%D0%9A%20%D0%9D%D0%9C%D0%9E%20%2021.10.2022.pdf"
+data = "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/"
 
 payload = {
 	"config":{
@@ -43,5 +42,14 @@ response_Fin = requests.request("POST", url, json=payload, headers=headers)
 if response_Fin.status_code == 200:
 	print(f'QR-code generated!')
 
-with open('file.svg', 'w') as f:
-	f.write(response_Fin.text)
+if os.path.exists("data/qrcode"):
+
+	list_dir = os.listdir("data/qrcode")
+
+	with open(f'data/qrcode/file_{list_dir.__len__()+1}.svg', 'w') as f:
+		f.write(response_Fin.text)
+		print(f"file_{list_dir.__len__()+1}.svg saved in data/qrcode!")
+else:
+	os.mkdir("data/qrcode")
+	with open('data/qrcode/file_1.svg', 'w') as f:
+		f.write(response_Fin.text)
