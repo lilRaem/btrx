@@ -1,5 +1,4 @@
-import sys
-import os
+import sys, os, json,re
 from time import sleep
 from random import uniform
 from jinja2 import Environment, select_autoescape, FileSystemLoader
@@ -7,7 +6,6 @@ from config_generator.webdriver_config import selenium_start, webdriver
 from jinja2.environment import Template
 from random import randint
 from bs4 import BeautifulSoup
-import json
 from colorama import Fore,Back,Style
 from pydantic import BaseModel,StrictInt,StrictStr
 from typing import Optional
@@ -19,7 +17,7 @@ from bs4 import BeautifulSoup
 sys.path.insert(0,os.getcwd())
 from main_search import search
 from module.logger import init_logger , logging
-from module.config import ParseSiteConfig
+from module.config import ParseSiteConfig, FinalData
 # склонение слов по падежам
 import pymorphy3
 
@@ -30,15 +28,15 @@ def bs4parser(url:str):
 	# if "custom-select__option" in req.text:
 	# 	print(req.text)
 	# webdrv.get(url)
-	with open("module/template_generator/source/expertnayaCep_VO/listFromMindbox.html","r",encoding='utf-8') as f:
+	with open("module/template_generator/templates/table_kafedra.html","r",encoding='utf-8') as f:
 		html = f.read()
 
 	soup = BeautifulSoup(html,'lxml')
-	opt = soup.find_all("span",{"data-testid":"HighlighterRoot.tableTitle"})
+	opt = soup.find_all("span",{"class":"schedule-uzi-table-item__name schedule-uzi-table-item__name_pass"})
 	li = list()
 	for o in opt:
 		li.append(o.text.strip().replace("\n","").strip())
-
+	print(opt)
 	# print(opt)
 	# sport_list = list()
 	# for d in opt:
@@ -58,7 +56,7 @@ def save_json(data:list[dict],path: str,file_name: str):
 		json.dump(data,f,ensure_ascii=False,indent=4)
 
 def load_json(path: str,file_name: str) -> list[dict[str,str|int|list[dict]|dict[str,str|int|None]]|list[str]]:
-	with open(os.path.join(f"{os.getcwd()}/{path}",file_name),'r',encoding='utf-8') as f:
+	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'r',encoding='utf-8') as f:
 		data: list[dict[str,str|int|list[dict]|dict[str,str|int|None]]|list[str]] = json.loads(f.read())
 	return data
 
@@ -259,83 +257,58 @@ def findNMO(prog:str,nmolist:list[dict]):
 def build_jina_template():
 	init_logger("template_generator","template_generator")
 	log = logging.getLogger("template_generator.main.build_jina_template")
-	# main_json: list[dict] = load_json(f"module/template_generator/source/expertnayaCep_VO","sport_all_pp_pk.json")
-	template = load_template("expertnayaCep_VO/expertnayaCep_VO","html")
+	main_json: list[dict] = load_json(f"module/template_generator/source/sudebnaya_ekspertiza","sudebnaya_ekspertiza.json")
+	template = load_template("sudebnaya_eksp/sudeb","html")
+
+	program = FinalData()
+	program_list = list()
+	desk_list = list()
+	class ProgDesc(BaseModel):
+		id: Optional[int] = None
+		prog: Optional[str] = None
+		desc: Optional[list] = None
 
 
-	theme_list: list = list()
+	progdesc = ProgDesc()
+	jsource_prog = load_json("docForparse","sudeksp.json")
 
-	class Programs(BaseModel):
-		tag: Optional[StrictStr] = None
-		id: Optional[StrictInt] = None
-		spec: Optional[StrictStr] = None
-		name: Optional[StrictStr] = None
-		price: Optional[StrictInt] = None
-		hour: Optional[StrictInt] = None
-		url: Optional[StrictStr] = None
+	for _i,_prog in enumerate(jsource_prog):
+		text_list = _prog.get("desc").split("\n")
+		_prog['desc'] = text_list
+		progdesc.prog = _prog.get("program")
+		progdesc.desc = _prog['desc']
 
-	tag_HIT_prog_list = [
-		"ультразвуковая диагностика",
-		"физическая и реабилитационная медицина",
-		"эндокринология",
-		"психотерапия",
-		"психиатрия",
-		"неврология",
-		"урология",
-		"остеопатия",
-		"мануальная терапия",
-		"организация здравоохранения и общественное здоровье"
-	]
+		for i,prog in enumerate(main_json):
+			program.id:int = main_json[i]['id']
+			program.katalog:str = main_json[i]['katalog']
+			program.type_zdrav:str = main_json[i]['type_zdrav']
+			program.spec:str = main_json[i]['spec']
+			program.name:str = main_json[i]['name']
+			program.fullname:str = main_json[i]['fullname']
+			program.price:int = main_json[i]['price']
+			program.hour:int = main_json[i]['hour']
+			program.nmoSpec:str = main_json[i]['nmoSpec']
+			program.linkNmo:str = main_json[i]['linkNmo']
+			program.url:str = main_json[i]['url']
+			program.final_url:str = main_json[i]['final_url']
 
+			if program.spec == "Профессиональная переподготовка":
+				program.spec = "ПП"
+			program.fullname = f"Курс {program.spec.upper()} {program.name.capitalize()}"
+			program.spec = prog.get("spec")
 
-	for file_name in os.listdir("module/template_generator/source/expertnayaCep_VO/expertnayaCep_VO_pp"):
-
-		main_json: list[dict] = load_json(f"module/template_generator/source/expertnayaCep_VO/expertnayaCep_VO_pp",file_name)
-		context = dict()
-		li:list[dict] = list()
-		for i,data in enumerate(main_json):
-			item = Programs()
-
-			if file_name.replace("[ПП] ","").replace(".json","").strip() == data.get("specname"):
-				if data.get("programs"):
-					progs: list[dict] = data.get("programs")
-
-					# for prog in progs:
-
-					item.id = progs.get("id")
-					item.spec = progs.get("spec")
-					item.name = progs.get("name")
-					item.price = progs.get("price")
-					item.hour = progs.get("hour")
-					item.url = progs.get("final_url")
-					
-					if item.name.lower() in tag_HIT_prog_list:
-						item.tag = "#HIT#"
-						if data['tags']:
-							if data['tags']['tag'] == "#HIT# #NEW#":
-								item.tag = "#HIT# #NEW#"
-					else:
-						
-						if data['tags']:
-							item.tag = data['tags']['tag']
-						else:
-							item.tag = data['tags']
-					# print("\n"+f"{item.name}"+"\n")
-					li.append(item.dict())
-
-					context = {
-						"specname": file_name.replace("[ПП] ","").replace(".json","").strip(),
-						"programs": li
-					}
-					print(context)
-					print("========")
-						# prog["final_url"] = f"{url}?program={name}&header=Курс {type_prog} {name}&cost={price}&tovar={id}{'&sendsay_email=${ Recipient.Email }'}"
-							# print(prog.get("final_url"),f"\n{type_prog}")
-							# source_json = load_json(f"module/template_generator/source/expertnayaCep_Medsestry",f"[Письмо 3] Переподготовка с аккредитацией или 6 причин, почему не стоит бояться аккредитации.json")
-							# if data.get("spec") == "Профессиональная переподготовка":
-							# 	data['final_url'] = f"{data.get()}"
-
-					html_path,html_name = save_html_with_template("module/template_generator/ready/expertnayaCep_VO/expertnayaCep_VO_pp",f"[ПП] {data.get('specname')}.html",template, context)
+			if progdesc.prog in program.name and program.name in progdesc.prog:
+				progdesc.id = program.id
+				print(progdesc.prog,"+_"+program.name)
+				program_list.append(program.model_dump())
+				desk_list.append(progdesc.model_dump())
+		# print(program.model_dump())
+	# print(main_json)
+		context = {
+			"progs": program_list,
+			"descs": desk_list
+		}
+	html_path,html_name = save_html_with_template("module\\template_generator\\ready\\sudebnaya_ekspertiza\\",f"sudeb.html",template, context)
 		
 def checkTemplatesTags(html_path:str,html_name:str):
 	with open(os.path.join(f"{os.getcwd()}/{html_path}",html_name),'w',encoding='utf-8') as f:
