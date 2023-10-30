@@ -1,7 +1,7 @@
 import json, requests, os
 import requests
 url = "https://api.qrcode-monkey.com//qr/custom"
-data = "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/"
+data = "https://clck.ru/35thmi"
 
 payload = {
 	"config":{
@@ -38,15 +38,17 @@ headers = {
 	"content-type": "application/json"
 }
 
-response_Fin = requests.request("POST", url, json=payload, headers=headers)
+response_Fin = requests.request("POST", url, json=payload, headers=headers,timeout=2000)
 if response_Fin.status_code == 200:
-	print(f'QR-code generated!')
+	print('QR-code generated!')
+else:
+	print("QR-code generation fail...")
 
 if os.path.exists("data/qrcode"):
 
 	list_dir = os.listdir("data/qrcode")
 
-	with open(f'data/qrcode/file_{list_dir.__len__()+1}.svg', 'w') as f:
+	with open(f'data/qrcode/file_{list_dir.__len__()+1}.svg', 'w',encoding="utf-8") as f:
 		f.write(response_Fin.text)
 		print(f"file_{list_dir.__len__()+1}.svg saved in data/qrcode!")
 else:
