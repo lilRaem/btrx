@@ -1,15 +1,16 @@
 [
     {
-        "id": 19349,
-        "katalog": null,
-        "type_zdrav": null,
-        "spec": null,
+        "id": 2769,
+        "katalog": "Здравоохранение/zdravoohranenie",
+        "type_zdrav": "ВО",
+        "spec": "Профессиональная переподготовка",
         "name": "Ультразвуковая диагностика",
+        "fullname": null,
         "price": 99000,
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": null,
-        "final_url": "None?program=Ультразвуковая диагностика&header=Курс None Ультразвуковая диагностика&cost=99000&tovar=19349&sendsay_email=${ Recipient.Email }"
+        "url": "https://www.apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",
+        "final_url": "https://www.apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/?program=Ультразвуковая диагностика&header=Курс ПП Ультразвуковая диагностика&cost=99000&tovar=19349&sendsay_email=${ Recipient.Email }"
     }
 ]

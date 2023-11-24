@@ -3,7 +3,7 @@ from time import sleep
 from pydantic import BaseModel,StrictStr,StrictInt
 from colorama import Fore,Back
 from typing import Optional
-from params import list_course,check_600,check_300,forCheck600,forCheck300,already_600_300,types_prog,types_check
+from params import list_course,check_600,check_300,forCheck600,forCheck300,already_600_300,types_prog,types_check,types_check_2,types_check_3
 sys.path.insert(0,os.getcwd())
 from module.parsersearchsite import getProgramUrl
 from module.remember import Remember
@@ -25,7 +25,7 @@ class Course(BaseModel):
 	url: Optional[list[StrictStr]] = None
 
 def load_json() -> list[dict]:
-	with open("data/json/btrx_data/21.07.2023_file.json","r",encoding="utf-8") as f:
+	with open("data/json/btrx_data/08.08.2023_file.json","r",encoding="utf-8") as f:
 		data = json.load(f)
 	return data
 
@@ -35,7 +35,7 @@ def main():
 	rem = Remember()
 	list_treb_prog:list[Course] = list()
 	list_fail_urlprog: list[Course] = list()
-	for i_p,prog in enumerate(load_json()[3000:]):
+	for i_p,prog in enumerate(load_json()):
 
 		course = Course()
 		course.id = int(prog.get("ID"))
@@ -49,7 +49,6 @@ def main():
 		# print(course.name)
 		if prog.get("PRICE"):
 			course.price = int(prog.get("PRICE").replace(".00",""))
-
 		if prog:
 			prog_url: list[dict] = list()
 			if prog.get("PROPERTY_213"):
@@ -57,12 +56,21 @@ def main():
 			rem.remember(programm_url,'listurl')
 			print("\n***")
 			for l_prog in rem.load("listurl"):
+
 				if course.fullname == l_prog.get("name") or course.name == l_prog.get("name"):
-					if int(course.price) == int(l_prog.get("price")):
-						if not course.hour: course.hour = int(l_prog.get("hour"))
-						if course.hour == l_prog.get("hour"):
-							print(course.name,f"price: {course.price}","\n-*-\n")
-							prog_url.append(l_prog)
+					course.type =l_prog.get("spec")
+					course.url = l_prog.get("url")
+					if course.price:
+						if int(course.price) == int(l_prog.get("price")):
+							course.url = l_prog.get("url")
+							if not course.hour: course.hour = int(l_prog.get("hour"))
+							if course.hour == l_prog.get("hour"):
+								print(course.name,f"price: {course.price}","\n-*-\n")
+								course.url = l_prog.get("url")
+								course.type = l_prog.get("spec")
+								prog_url.append(l_prog)
+							else:
+								print(course.name,f"price: {course.price}","\n-*-\n")
 
 			# if not prog_url:
 			# 	print(f"index of prog: {i_p}")
@@ -125,7 +133,7 @@ def main():
 				if programm_url:
 					for d_url in programm_url:
 						course.url = str(d_url['url'])
-						if course.fullname == d_url.get('name'):
+						if course.fullname.lower() == d_url.get('name').lower():
 							if course.price == d_url.get('price'):
 								if not course.hour: course.hour = d_url['hour']
 								if int(course.hour) == int(d_url['hour']):
@@ -140,6 +148,7 @@ def main():
 										course_type = 6
 									else:
 										course_type = None
+
 						course.type_text = types_check(course_type)
 			except:
 				continue
@@ -150,46 +159,150 @@ def main():
 	return list_treb_prog
 
 def build(data: list[Course]):
-	main_title = "У этой программы есть требования к поступающим:"
+	class Program(BaseModel):
+		id: Optional[StrictInt] = None
+		text: Optional[StrictStr] = None
+		text_2: Optional[StrictStr] = None
+		text_600_300: Optional[list[StrictStr]] = None
+		text_all: Optional[list[StrictStr]] = None
+		type_text: Optional[StrictStr] = None
+		type_text_1: Optional[StrictStr] = None
+		type_text_2: Optional[StrictStr] = None
+		url: Optional[StrictStr] = None
 	privileges_box__item_title = "для зачисления необходимо наличие одного из документов:"
 	for d in data:
-		if d.name and d.price:
-			print(d.id)
-			print(d.name, d.hour, f"price: {d.price}")
-			print(d.fullname)
-			if d.type:
-				print(d.type)
-			print(main_title)
-			if d.hour == 600:
-				d.text_600 = "в соответствии с приказом Минздрава России №206н от 02.05.2023 «Об утверждении Квалификационных требований к медицинским и фармацевтическим работникам с высшим образованием» необходимо наличие подготовки в ординатуре или интернатуре по одной из специальностей:"
-				if d.text_600:
-					print("\n"+d.text_600)
-				if d.spec_600:
-					for x in d.spec_600:
-						print(x+";")
-					print("ИЛИ")
-			if d.hour == 300:
-				if d.text_300:
-					print("\n"+d.text_300)
+		# print(d)
+		text = None
+		text_all = None
+		type_text = None
+		type_text_1 = None
+		type_text_2 = None
+		prog = Program()
+		# print(d.id,d.hour,d.name)
+		main_title = f"У этой программы ({d.name},{d.price},{d.hour}) есть требования к поступающим:"
+		prog.id = d.id
+		prog.url = d.url
+		# print(d.url)
+		if d.fullname in list_course:
+			if d.hour == 600 and d.fullname in forCheck600:
+				text = """
+в соответствии с приказом Минздрава России №707н от 08.10.2015
+«Об утверждении Квалификационных требований к медицинским и фармацевтическим
+работникам с высшим образованием по направлению подготовки «Здравоохранение и
+медицинские науки» необходимо наличие подготовки в ординатуре или интернатуре
+по одной из специальностей:
+				"""
+				text_600_300 = check_600(name=d.fullname)
+				prog.text = text
+				prog.text_600_300 = text_600_300
+			elif d.hour == 300 and d.fullname in forCheck300:
+				text = """
+в соответствии с приказом Минздрава России №83н от 10.02.2016
+«Об утверждении Квалификационных требований к медицинским и фармацевтическим
+работникам со средним медицинским и фармацевтическим образованием» необходимо
+наличие среднего профессионального образования по одной из специальностей:
+				"""
+				prog.text = text
+				text_600_300 =check_300(name=d.fullname)
+				prog.text_600_300 = text_600_300
+			text = """
+в соответствии с приказом Минздрава России № 66н от 03.08.2012
+«Об утверждении Порядка и сроков совершенствования медицинскими работниками
+и фармацевтическими работниками профессиональных знаний и навыков путем
+обучения по дополнительным профессиональным образовательным программам в
+образовательных и научных организациях» наличие опыта работы более 5 лет
+по одной из должностей:
+			"""
+			prog.text_2 = text
+			text_all = already_600_300(name=d.fullname,hour=d.hour)
+			prog.text_all = text_all
+		else:
 
-				if d.spec_300:
-					for x in d.spec_300:
-						print(x+";")
-					print("ИЛИ")
-			if d.text:
-				print("\n"+d.text)
-			if d.all_600_300:
-				for x in d.all_600_300:
-					print(x+";")
-			if d.type_text:
-				print("\n"+d.type_text)
-			print("***")
-			print(d.url)
-			print("\n---\n")
+			if "Профессиональная переподготовка" == d.type:
+				course_type = 1
+			elif "Повышение квалификации" == d.type:
+				course_type = 2
+			elif "Повышение квалификации (НМО)" == d.type:
+				course_type = 4
+			elif "Категория медработника" == d.type:
+				course_type = 6
+			else:
+				course_type = None
+			# print("prog type: ",course_type,d.type)
+			if course_type:
+				type_text = types_check(course_type)
+				prog.type_text = type_text
+			if course_type != 7:
+				type_text_1 = "для зачисления необходимо наличие одного из документов:"
+				prog.type_text_1 = type_text_1
+			else:
+				type_text_1 = types_check_2(course_type)
+				prog.type_text_1 = type_text_1
+			type_text_2 = types_check_3(course_type)
+			prog.type_text_2 = type_text_2
+		# print(main_title)
+		# if text:
+		# 	print(text)
+		# if text_600_300:
+		# 	print(text_600_300)
+		# if text_all:
+		# 	print(text_all)
+		# if type_text:
+		# 	print(type_text)
+		# if type_text_1:
+		# 	print(type_text_1)
+		# if type_text_2:
+		# 	print(type_text_2)
+		# print(d.url)
+
+
+		if text:
+			text = text.replace("\n"," ")
+		if type_text:
+			type_text = type_text.replace("\n"," ")
+		if type_text_1:
+			type_text_1 = type_text_1.replace("\n"," ")
+		if type_text_2:
+			type_text_2 = type_text_2.replace("\n"," ")
+
+		d.name = d.name.replace('"',"'")
+
+		with open(f"data\\trebov\\[{d.id}] {d.name}.txt","w",encoding="utf-8") as f:
+# 			fin = f"{prog.text}\n{prog.text_600_300}\n\nИЛИ\n{prog.text_2}\n{prog.text_all}\n\
+# 			{prog.type_text}\n{prog.type_text_1}\n{prog.type_text_2}\n[{prog.id}] {prog.url}"
+			if "Эпилептология".lower() == d.name.lower():
+				print("sdsssssssssssssssssssssssssssssssssssssssssssssssssssss")
+			if prog.text:
+				f.writelines(prog.text)
+			if prog.text_600_300:
+				for i,x in enumerate(prog.text_600_300):
+					if i != prog.text_600_300.__len__()-1:
+						f.writelines(x+";\n")
+					else:
+						f.writelines(x+"\n")
+				f.writelines("ИЛИ")
+			if prog.text_2:
+				f.writelines(prog.text_2)
+			if prog.text_all:
+				for i,x in enumerate(prog.text_all):
+					if i != prog.text_all.__len__()-1:
+						f.writelines(x+";<br>\n")
+					else:
+						f.writelines(x+"\n")
+			if prog.type_text_1:
+				f.writelines(prog.type_text_1)
+			if prog.type_text_2:
+				f.writelines(prog.type_text_2)
+			if prog.id or prog.url:
+				f.writelines(f"\n[{prog.id}]: {prog.url}")
+			f.close()
+
+		# print("\n")
 
 if __name__ == "__main__":
 	# try:
-	build(main())
+	# build()
+	main()
 
 	# rem = Remember()
 	# remember_obj: list[dict[str,str]] = [{"title": "test1"},{"title": "test2"},{"title": "test3"},{"id":3,"title": "test6"}]
