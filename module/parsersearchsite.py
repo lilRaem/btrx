@@ -19,7 +19,6 @@ parse_site_config = ParseSiteConfig()
 log = logging.getLogger("btrx.module.parsersearchsite")
 
 def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]]:
-
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 	url = parse_site_config.get_ApiUrl(search_key)
 	# 'https://apkipp.ru/poisk/?search={data}'
@@ -43,12 +42,10 @@ def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]
 	return count_word_programm, item_list
 
 def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list[dict[str,str|int|None]]|None:
-	# search_key = search_key.strip()
 	find_url_list: list[dict[str,str|int|None]] = list()
 	start = time()
 	if type(price) != int:
 		raise TypeError(f"price type == int, now: {type(price)}")
-
 	for data in searchInSite(search_key)[1]:
 		final_data = FinalData()
 		if data.get("name"): final_data.name = data.get("name")
@@ -74,8 +71,7 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 							log.debug(f"By search price: {price} and in find price: {int(data.get('price'))}\n{data}")
 
 	else:
-		log.warning(Fore.RED+f'[Url not found]: {search_key.replace(" ",".")} price: {price}'+Fore.RESET)
-		# return False
+		log.warning('Url not found')
 	try:
 		if find_url_list:
 			if find_url_list.__len__() == 1:
@@ -100,4 +96,4 @@ def getProgramUrl(search_key:str='Онкология',price: int = 9800) -> list
 	return find_url_list
 
 if __name__ == "__main__":
-	print(getProgramUrl(search_key="кат",price=29600))
+	getProgramUrl(search_key="Современные аспекты акушерской помощи в родовспомогательных учреждениях",price=9792)

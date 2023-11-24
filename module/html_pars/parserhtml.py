@@ -80,23 +80,20 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		else: final_data.name: final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 
 		try:
-			final_data.hour = int(soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
+			final_data.hour = soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 		except:
-			final_data.hour = int(soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').replace('дней', '').strip())
+			final_data.hour = soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 		try:
 			_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
 		except:
-			try:
-				_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
-			except:
-				_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[0].text.replace("₽","").replace(" ","").strip()
+			_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
 		try:
 			_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
 		except:
 			_spec = soup.find("div","intro__suptitle").text.strip()
 	else:
 		final_data.name = soup.find('h1').text
-		final_data.hour = int(soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
+		final_data.hour = soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip()
 		_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
 		_spec = soup.find("div","intro__suptitle").text.strip()
 		print(final_data)
@@ -109,8 +106,6 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		_spec = "Повышение квалификации"
 	elif "НМО" in _spec and "повышении квалификации" in _spec or "цикл НМО" in _spec:
 		_spec = "Повышение квалификации (НМО)"
-	elif "ПОЛУЧЕНИЕ КАТЕГОРИИ" in _spec or "получение категории" in _spec or "Получение категории" in _spec:
-		_spec = "Категория медработника"
 	else:
 		_spec = None
 
@@ -158,28 +153,6 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		final_data.katalog = f"Оценка и судебная экспертиза/{type_url}"
 	elif type_url == "stroitelstvo":
 		final_data.katalog = f"Строительство/{type_url}"
-	elif type_url == "ritualnyie-uslugi":
-		final_data.katalog = f"Ритуальные услуги/{type_url}"
-	elif type_url == "psihologiya":
-		final_data.katalog = f"Психология/{type_url}"
-	elif type_url == "defektologiya":
-		final_data.katalog = f"Дефектология/{type_url}"
-	elif type_url == "servis-i-turizm":
-		final_data.katalog = f"Сервис и туризм/{type_url}"
-	elif type_url == "pensionnyie-fondyi":
-		final_data.katalog = f"Пенсионные фонды/{type_url}"
-	elif type_url == "ekonomika":
-		final_data.katalog = f"Экономика/{type_url}"
-	elif type_url == "promyishlennaya-bezopasnost":
-		final_data.katalog = f"Промышленная безопасность/{type_url}"
-	elif type_url == "avtotransportnyie-predpriyatiya":
-		final_data.katalog = f"Автотранспортные предприятия/{type_url}"
-	elif type_url == "zags":
-		final_data.katalog = f"ЗАГС/{type_url}"
-	elif type_url == "yurisprudentsiya":
-		final_data.katalog = f"Юриспруденция/{type_url}"
-	elif type_url == "obschepit":
-		final_data.katalog = f"Общепит/{type_url}"
 	else:
 		final_data.type_zdrav = None
 	# print(soup.find("div","banner-box__info-title"))

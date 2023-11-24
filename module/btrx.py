@@ -42,7 +42,7 @@ class Btrx(Bitrix):
 			data_from_file = list([dict[str,str|int|None]])
 			if (os.path.exists(path)):
 				print(f"current path: {path}")
-				with open(os.getcwd()+"/"+path+"/"+filename, 'r', encoding='utf-8') as file:
+				with open(os.getcwd()+"\\"+path+"\\"+filename, 'r', encoding='utf-8') as file:
 					data_from_file = json.load(file)
 					print(Style.RESET_ALL + Fore.BLACK + f'\nLoad from {filename}' + Style.RESET_ALL)
 				return data_from_file
@@ -157,7 +157,7 @@ class Btrx(Bitrix):
 									print(Back.RESET + Fore.RESET + Style.DIM + Fore.BLACK + Back.LIGHTGREEN_EX +
 										f"^По слову '{word}' и цене {k_price}(из найденной программы) Сохранено в tmpfile.json^"
 											+Style.RESET_ALL)
-									with open(f'{os.getcwd()}/data/json/btrx_data/tmpfile.json','w', encoding='utf-8') as file:
+									with open(f'{os.getcwd()}\\data\\json\\btrx_data\\tmpfile.json','w', encoding='utf-8') as file:
 										data_list = json.dump(words_data,file, ensure_ascii=False, indent=4)
 									find_name_price_count = find_name_price_count + 1
 									# return list(words_data)

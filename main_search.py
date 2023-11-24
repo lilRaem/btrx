@@ -25,7 +25,7 @@ def search(search_name:str, search_price:int, type_programm:str = None,mail_serv
 	search_name = search_name.replace('  ', ' ')
 	if type_programm: type_programm = type_programm.upper()
 	# name = input('Введите название программы: ')
-	path = "data/json/btrx_data"
+	path = "data\\json\\btrx_data"
 	print(Fore.YELLOW + 'Path exists?: ', os.path.exists(makefileWdateName(path)[0]),
 		makefileWdateName(path)[0] + Back.RESET)
 	if (os.path.exists(makefileWdateName(path)[0])):
@@ -177,7 +177,7 @@ def getLinkNmo(type_programm:str,user_email:str,dictdata:dict):
 	#TODO Доработать поиск НМО по какойто причине
 	# - [ ] берет type_zdrav обходя исключение. дебил?
 	if dictdata.get("type_zdrav") != None or str(dictdata.get("type_zdrav")) != "None":
-		with open(f"{os.getcwd()}/data/json/docx_converted/nmofile/program_{dictdata.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
+		with open(f"{os.getcwd()}\\data\\json\\docx_converted\\nmofile\\program_{dictdata.get('type_zdrav')}.json",'r',encoding="utf-8") as nmo_file:
 			nmo_data: list[dict[str,str|int|None]] = json.loads(nmo_file.read())
 
 		if dictdata.get("spec") == "Повышение квалификации (НМО)":
@@ -209,7 +209,7 @@ if __name__ == "__main__":
 	# with open("data.json","w", encoding="utf-8") as file:
 	# 	file.write(json.dump(data,file,indent=4,ensure_ascii=False,sort_keys=True,default=list[dict]))
 	# p = Btrx()
-	# path = "data/json/btrx_data"
+	# path = "data\\json\\btrx_data"
 	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
 	a = 1
 	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/")
