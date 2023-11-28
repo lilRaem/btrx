@@ -7,6 +7,7 @@ from module.logger import init_logger
 """
 #TODO Был изменен поиск в parserhtml.py, есть ошибки, надо  исправить
 - [?] parser.html: Начал брать цену в зависимости от наличия перечеркнутой (старой) цены
+- [ ] добавить нормальный логгер как в music_bot
 """
 
 """
@@ -27,7 +28,7 @@ def main():
 		prog = elem["program"]
 		prog_array.append(prog.replace("\n"," "))
 	# print(prog_array)
-	return search("Ультразвуковая диагностика",type_programm="ПП",search_price=99000,mail_service="mindbox")
+	return search("Рентгено",type_programm="ПП",search_price=464333,mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()
