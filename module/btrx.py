@@ -113,9 +113,12 @@ class Btrx(Bitrix):
 
 				if item.get('PROPERTY_213'):
 					hour = item.get('PROPERTY_213')
-					final_data.hour = int(hour.get('value'))
+					if "год" in hour.get('value'):
+						final_data.hour = hour.get('value')
+					else:
+						final_data.hour = int(hour.get('value'))
 
-				datalist.append(final_data.dict())
+				datalist.append(final_data.model_dump())
 
 				if final_data.hour: with_hour = with_hour + 1
 				else: without_hour = without_hour + 1
