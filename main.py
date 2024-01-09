@@ -28,7 +28,7 @@ def main():
 		prog = elem["program"]
 		prog_array.append(prog.replace("\n"," "))
 	# print(prog_array)
-	return search("Рентгено",type_programm="ПП",search_price=464333,mail_service="mindbox")
+	return search("эластограф",type_programm="НМО",search_price=0,mail_service="mindbox")
 
 if __name__ == "__main__":
 	clear()
