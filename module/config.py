@@ -13,7 +13,7 @@ class FinalData(BaseModel):
 	name: str|Optional[StrictStr] = None
 	fullname: str|Optional[StrictStr] = None
 	price: Optional[StrictInt] = None
-	hour: Optional[StrictInt] = None
+	hour: Optional[StrictInt]|Optional[StrictStr] = None
 	nmoSpec: Optional[StrictStr] = None
 	linkNmo: Optional[StrictStr] = None
 	url: Optional[StrictStr] = None
