@@ -66,37 +66,50 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 	req = requests.get(parseurl, headers=header,timeout=None)
 	# print(f"\n{Fore.LIGHTYELLOW_EX}request time: {round(time()-start,2)} sec{Fore.RESET}")
 	soup = BeautifulSoup(req.content,'lxml')
-	if parseurl == "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/":
-		final_data.name = soup.find(f'h2',f'color-pink sets_banner-title').text.strip()
 
-		final_data.hour = 600
-
-		_price = 99000
-		_spec = soup.find("div","sets_banner-suptitle").text.strip()
-	elif parseurl:
-		final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}')
-
-		if not final_data.name:
+	if parseurl:
+		def get_finalname() -> str:
 			try:
-				final_data.name = soup.find('h1').text
-			except:
-				final_data.name = soup.find('div','intro__title').findChildren('div')[0].text
-		else: final_data.name: final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
+				final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}')
 
-		try:
-			final_data.hour = int(soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
-		except:
-			try:
-				final_data.hour = int(soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').replace('дней', '').strip())
+				if not final_data.name:
+					try:
+						final_data.name = soup.find('h1').text
+					except:
+						final_data.name = soup.find('div','intro__title').findChildren('div')[0].text
+
+				else:
+					final_data.name = soup.find(f'{psUrlconf.soupName[0]}',f'{psUrlconf.soupName[1]}').text
 			except:
-				final_data.hour = soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').replace('дней', '').strip()
-		try:
-			_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
-		except:
+				final_data.name = soup.find("div","intro__title").text
+			return final_data.name
+		final_data.name = get_finalname()
+
+		print(final_data.name)
+		def get_finalhour() -> int|str:
 			try:
-				_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
+				final_data.hour = int(soup.find(f'{psUrlconf.soupHour[0]}', f'{psUrlconf.soupHour[1]}').findChildren('span')[0].text.replace('часов', '').replace('часа', '').strip())
 			except:
-				_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[0].text.replace("₽","").replace(" ","").strip()
+				try:
+					final_data.hour = int(soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').replace('дней', '').strip())
+				except:
+					final_data.hour = soup.find('div', 'intro__include-item').findChildren('span')[0].text.replace('часов', '').replace('часа', '').replace('дней', '').strip()
+			return final_data.hour
+		final_data.hour = get_finalhour()
+		print(final_data.hour)
+		def get_finalprice() -> int:
+			try:
+				_price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
+			except:
+				try:
+					_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
+				except:
+					_price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[0].text.replace("₽","").replace(" ","").strip()
+				else:
+					_price = soup.find('p','pay__price-full__num').text
+			return _price
+		final_data.price = get_finalprice()
+		print(final_data.price)
 		try:
 			_spec = soup.find("div","course-info-block__text-requirements-title").text.strip()
 		except:
@@ -212,9 +225,9 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 
 		if final_data.price == price:
 			final_data.url = parseurl
-			site_data_list.append(final_data.dict())
+			site_data_list.append(final_data.model_dump())
 			log.debug(Fore.GREEN+f"Found price: {site_data_list[0].get('price')}"+Fore.RESET)
-		else: site_data_list.append(final_data.dict())
+		else: site_data_list.append(final_data.model_dump())
 
 	if site_data_list.__len__() == 1:
 		# print(Fore.MAGENTA+f'(parserhtml.py|parseSiteUrl(): count = 1) Search time: {round(time()-start,2)} sec' + Fore.RESET)
@@ -229,4 +242,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	print(parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-ultrazvukovaya-diagnostika/",price=9792))
+	print(parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price=147000))
