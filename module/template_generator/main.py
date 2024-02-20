@@ -24,7 +24,7 @@ import pymorphy3
 def bs4parser(url:str):
 	parsConf = ParseSiteConfig()
 
-	# webdrv = selenium_start()
+	webdrv = selenium_start()
 	# if "custom-select__option" in req.text:
 	# 	print(req.text)
 	# webdrv.get(url)
@@ -47,12 +47,12 @@ def bs4parser(url:str):
 			json.dump(li,f,ensure_ascii=False,indent=4)
 
 def save_html_with_template(path:str,file_name:str,template:Template,context):
-	with open(os.path.join(f"{os.getcwd()}/{path}",file_name),'w',encoding='utf-8') as result:
+	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as result:
 		result.write(template.render(context).replace('amp;',''))
 	return path,file_name
 
 def save_json(data:list[dict],path: str,file_name: str):
-	with open(os.path.join(f"{os.getcwd()}/{path}",file_name),'w',encoding='utf-8') as f:
+	with open(os.path.join(f"{os.getcwd()}\\{path}",file_name),'w',encoding='utf-8') as f:
 		json.dump(data,f,ensure_ascii=False,indent=4)
 
 def load_json(path: str,file_name: str) -> list[dict[str,str|int|list[dict]|dict[str,str|int|None]]|list[str]]:
@@ -66,9 +66,9 @@ def load_template(template_name:str,ext:str):
 	return env.get_template(f"{template_name}.{ext}")
 
 def build_json():
-	source_json = load_json(f"module/template_generator/source/expertnayaCep_VO","Квалификационные возможности врачей и провизоров и пути их изменения 2023.json")
-	source_json_ = load_json(f"module/template_generator/source/expertnayaCep_VO","Аккред ОТ 2021 ОБЩЕЕedit.json")
-	source_ppjson = load_json(f"data/json/docx_converted/nmofile","program_СПО.json")
+	source_json = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Квалификационные возможности врачей и провизоров и пути их изменения 2023.json")
+	source_json_ = load_json(f"module\\template_generator\\source\\expertnayaCep_VO","Аккред ОТ 2021 ОБЩЕЕedit.json")
+	source_ppjson = load_json(f"data\\json\\docx_converted\\nmofile","program_СПО.json")
 
 	# ###
 	class SourceData(BaseModel):
@@ -148,48 +148,37 @@ def build_json():
 		list_data.append(item.dict())
 	
 	
-	for fin_data in list_data:
+	for fin_data in list_data[8:]:
 		data_list_search = list()
 		# print(fin_data.get("pp").get("new"))
 		# print("=>")
 		# print(fin_data.get("pp").get("progs"))
 
+		print(f"\n| {fin_data.get('spec')} | ==>")
 		
-		with open("listnewandhitby spec.txt",'a',encoding="utf-8") as f:
-			print(f"| \"{fin_data.get('spec')}\" | ==>")
-			f.write(f"\n\n| \"{fin_data.get('spec')}\" | ==>")
-			if fin_data.get("pp").get("progs"):
-				list_of_new_progs = list()
-				for kpd,fin_progs_data in enumerate(fin_data.get("pp").get("progs")):
-					countACC += 1
-					new_name_prog = str()
-					tags = None
-					if fin_data.get("pp").get("new"):
-						if fin_progs_data in fin_data.get("pp").get("new") and fin_progs_data.lower() in tag_HIT_prog_list:
-							tags={"tag": "#HIT# #NEW#"}
-							print(f"{kpd+1} {fin_progs_data} #NEW#")
-							f.write(f"\n{kpd+1} {fin_progs_data} #HIT# #NEW#")
-						elif fin_progs_data in fin_data.get("pp").get("new"):
-							tags={"tag": "#NEW#"}
-							print(f"{kpd+1} {fin_progs_data} #NEW#")
-							f.write(f"\n{kpd+1} {fin_progs_data} #NEW#")
-						elif fin_progs_data.lower() in tag_HIT_prog_list:
-							print(f"{kpd+1} {fin_progs_data} #HIT#")
-							tags={"tag": "#HIT#"}
-							f.write(f"\n{kpd+1} {fin_progs_data} #HIT#")
-						else:
-							print(f"{kpd+1} {fin_progs_data}")
-							f.write(f"\n{kpd+1} {fin_progs_data}")
-							list_of_new_progs.append(fin_progs_data)
+		if fin_data.get("pp").get("progs"):
+			list_of_new_progs = list()
+			for kpd,fin_progs_data in enumerate(fin_data.get("pp").get("progs")):
+				countACC += 1
+				new_name_prog = str()
+				tags = None
+				if fin_data.get("pp").get("new"):
+					if fin_progs_data in fin_data.get("pp").get("new") and fin_progs_data.lower() in tag_HIT_prog_list:
+						tags={"tag": "#HIT# #NEW#"}
+					elif fin_progs_data in fin_data.get("pp").get("new"):
+						tags={"tag": "#NEW#"}
 					elif fin_progs_data.lower() in tag_HIT_prog_list:
-							print(f"{kpd+1} {fin_progs_data} #HIT#")
-							list_of_new_progs.append(new_name_prog)
-							f.write(f"\n{kpd+1} {fin_progs_data} #HIT#")
+						tags={"tag": "#HIT#"}
 					else:
 						print(f"{kpd+1} {fin_progs_data}")
 						list_of_new_progs.append(fin_progs_data)
-						f.write(f"\n{kpd+1} {fin_progs_data}")
-					fin_data['pp']['progs'] = list_of_new_progs
+				elif fin_progs_data.lower() in tag_HIT_prog_list:
+						print(f"{kpd+1} {fin_progs_data} #HIT#")
+						list_of_new_progs.append(new_name_prog)
+				else:
+					print(f"{kpd+1} {fin_progs_data}")
+					list_of_new_progs.append(fin_progs_data)
+				fin_data['pp']['progs'] = list_of_new_progs
 
 				# if fin_progs_data == 'Рентгенология': hour = 990
 				# if fin_progs_data == 'Остеопатия':
@@ -197,35 +186,32 @@ def build_json():
 				# 	price = 124500
 				# if fin_progs_data == 'Физическая и реабилитационная медицина': hour = 1008
 
-				# if fin_progs_data == 'Остеопатия':
-				# 	finded_data = search(fin_progs_data,124500,"ВО")
-				# elif fin_progs_data == 'Анестезиология-реаниматология':
-				# 	finded_data = search(fin_progs_data,99000,"ВО")
-				# else:
-				# 	finded_data = search(fin_progs_data,49800,"ВО")
+				if fin_progs_data == 'Остеопатия':
+					finded_data = search(fin_progs_data,124500,"ВО")
+				elif fin_progs_data == 'Анестезиология-реаниматология':
+					finded_data = search(fin_progs_data,99000,"ВО")
+				else:
+					finded_data = search(fin_progs_data,49800,"ВО")
 
-				# try:
-				# 	if len(finded_data) >= 2:
-				# 		print(Fore.RED+f"\
-				# 		Че за х????\n\
-				# 		spec: {fin_data.get('spec')}\n\
-				# 		prog: {fin_progs_data}"+Fore.RESET)
-				# 		pass
 
-				# 	dict_data = {
-				# 		"specname": fin_data.get('spec'),
-				# 		"tags": tags,
-				# 		"programs": finded_data[0]
-				# 	}
-				# except:
-				# 	dict_data = {
-				# 		"specname": fin_data.get('spec'),
-				# 		"tags": tags,
-				# 		"programs": finded_data
-				# 	}
-				# print(f"\nin {fin_data.get('spec')} search i found this:\n{finded_data}")
+				if len(finded_data) >= 2:
+					print(Fore.RED+f"\
+	   				Че за х????\n\
+	   				spec: {fin_data.get('spec')}\n\
+					prog: {fin_progs_data}"+Fore.RESET)
+					pass
+				else:
+					for f_data in finded_data:
+						
+						f_data['price']
+				dict_data = {
+					"specname": fin_data.get('spec'),
+					"tags": tags,
+					"programs": finded_data[0]
+				}
+				print(f"\nin {fin_data.get('spec')} search i found this:\n{finded_data}")
 				data_list_search.append(dict_data)
-		# save_json(data_list_search,"module/template_generator/source/expertnayaCep_VO/expertnayaCep_VO_pp",f"[ПП] {fin_data.get('spec')}.json")
+		save_json(data_list_search,"module\\template_generator\\source\\expertnayaCep_VO\\expertnayaCep_VO_pp",f"[ПП] {fin_data.get('spec')}.json")
 
 def findNMO(prog:str,nmolist:list[dict]):
 	class SourceNmoData(BaseModel):
@@ -311,19 +297,19 @@ def build_jina_template():
 	html_path,html_name = save_html_with_template("module\\template_generator\\ready\\sudebnaya_ekspertiza\\",f"sudeb.html",template, context)
 		
 def checkTemplatesTags(html_path:str,html_name:str):
-	with open(os.path.join(f"{os.getcwd()}/{html_path}",html_name),'w',encoding='utf-8') as f:
+	with open(os.path.join(f"{os.getcwd()}\\{html_path}",html_name),'w',encoding='utf-8') as f:
 		html_data = f.read()
 	print(html_data)
 
 def main():
-	# load_json(f"data/json/docx_converted","docxtojson.json")
+	# load_json(f"data\\json\\docx_converted","docxtojson.json")
 	# print(load_template("expertnayaCep_Mdesestry_pp","html"))
 	# print(sys.path)
 	# search()
 	# build()
 	# build_jina_template()
-	# build_json()
-	bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
+	build_json()
+	# bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
 
 if __name__ == "__main__":
 	main()

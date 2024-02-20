@@ -11,7 +11,7 @@ from module.logger import init_logger
 """
 
 """
-File "g:/Web-Develop/projects/my/python_project/btrx/module/parsersearchsite.py", line 46, in getProgramUrl
+File "g:\\Web-Develop\\projects\\my\\python_project\\btrx\\module\\parsersearchsite.py", line 46, in getProgramUrl
     raise TypeError(f"price type == int, now: {type(price)}")
 TypeError: price type == int, now: <class 'NoneType'>
 """

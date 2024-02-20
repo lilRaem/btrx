@@ -94,7 +94,7 @@ def makefileWdateName(path:str) -> tuple[str,str]:
 	cur_date = today.strftime("%d.%m.%Y")
 	filename = f'{cur_date}_file.json'
 	filenameWcurDate = f"{filename}"
-	return str(path+"/"+filenameWcurDate), str(filename)
+	return str(path+"\\"+filenameWcurDate), str(filename)
 
 def timing_decorator(func):
 	def wrapper(*args, **kwargs):
