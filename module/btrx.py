@@ -71,15 +71,16 @@ class Btrx(Bitrix):
 			return list(users)
 		except Exception as e: raise TypeError(f'get_users_with_innerPhone error {e}')
 
-	def get_all_client(self):
-		try:
-			contact = list()
-			contact = self.get_all("crm.contact.list",params={
-				"select": ['*']
-			})
-			return contact
-		except Exception as e:
-			raise TypeError(f"get_all_client error {e}")
+# Опасная штука
+	#def get_all_client(self):
+	#	try:
+	#		contact = list()
+	#		contact = self.get_all("crm.contact.list",params={
+	#			"select": ['*']
+	#		})
+	#		return contact
+	#	except Exception as e:
+	#		raise TypeError(f"get_all_client error {e}")
 
 	def set_product_price(self,id=str(),price=0):
 		try:
