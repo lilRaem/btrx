@@ -18,17 +18,16 @@ from module.html_pars.parserhtml import parseSiteUrl
 datalist = []
 
 def search(search_name:str|list[str],search_price:int, type_programm:str = None,mail_service:str="mindbox") -> list|None:
-	print("bacha",type(search_name))
-	if type(search_name) == list:
-		for el in search_name:
-			if type(search_name) == list and type(el) == str:
-				print("bokocacha")
-				if search_name.__len__() <= 1:
-					return search_name
-				else:
-					print(search_name)
-					print(el)
-
+	#print("bacha",type(search_name))
+	#if type(search_name) == list:
+	#	for el in search_name:
+	#		if type(search_name) == list and type(el) == str:
+	#			print("bokocacha")
+	#			if search_name.__len__() <= 1:
+	#				return search_name
+	#			else:
+	#				print(search_name)
+	#				print(el)
 	if type(search_name) == str:
 		if type(search_price) != int:
 			TypeError(f"Type of search_price == int\n now: {type(search_price)}")
@@ -111,9 +110,10 @@ def search(search_name:str|list[str],search_price:int, type_programm:str = None,
 							final_data.price = None
 						final_data.linkNmo = val_data.get('linkNmo')
 						try:
+							print(type(final_data.price))
 							progUrl_data = getProgramUrl(final_data.name, final_data.price)
 						except Exception as e:
-							progUrl_data = None
+							#progUrl_data = None
 							print(Fore.RED+f"get progUrl_data() error:\n{e}"+Fore.RESET)
 						try:
 							final_data.hour = val_data.get('hour')
