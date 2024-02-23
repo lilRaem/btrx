@@ -1,15 +1,44 @@
 [
     {
-        "title": "test1"
+        "id": 20077,
+        "katalog": "Здравоохранение/zdravoohranenie",
+        "type_zdrav": "ВО",
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Курс паразитология: актуальные вопросы и инновационные решения",
+        "fullname": null,
+        "price": 6400,
+        "hour": 74,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog-short/zdravoohranenie/kurs-parazitologiya-aktualnyie-voprosyi-i-innovatsionnyie-resheniya/",
+        "final_url": null
     },
     {
-        "title": "test2"
+        "id": 18103,
+        "katalog": "Здравоохранение/zdravoohranenie",
+        "type_zdrav": "ВО",
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Курс гигиена детей и подростков",
+        "fullname": null,
+        "price": 6400,
+        "hour": 74,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog-short/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-4/",
+        "final_url": null
     },
     {
-        "title": "test3"
-    },
-    {
-        "id": 3,
-        "title": "test6"
+        "id": 17869,
+        "katalog": "Здравоохранение/zdravoohranenie",
+        "type_zdrav": "ВО",
+        "spec": "Повышение квалификации (НМО)",
+        "name": "Курс гериатрия",
+        "fullname": null,
+        "price": 9800,
+        "hour": 144,
+        "nmoSpec": null,
+        "linkNmo": null,
+        "url": "https://apkipp.ru/katalog-short/zdravoohranenie/kurs-geriatriya-3/",
+        "final_url": null
     }
 ]

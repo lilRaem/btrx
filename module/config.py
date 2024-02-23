@@ -37,12 +37,12 @@ class LastCheckDatetimeData(BaseModel):
 class UserData(BaseModel):
 	id: Optional[StrictInt] = None
 	name: Optional[StrictStr] = None
-	email: UserEmailData() = None
+	email: UserEmailData = None
 	department: Optional[StrictStr] = None
 	position: Optional[StrictStr] = None
-	inner_phone: UserInnerPhoneData() = None
+	inner_phone: UserInnerPhoneData = None
 	is_active: Optional[StrictBool] = None
-	last_check_datetime: LastCheckDatetimeData() = None
+	last_check_datetime: LastCheckDatetimeData = None
 
 # Main Bitrix config:
 class BtrxConfig():
