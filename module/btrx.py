@@ -279,8 +279,7 @@ class Btrx(Bitrix):
 						return found_data_by_name
 					else:
 						list_by_name: list[dict[str,str|int|None]] = list()
-						print(f"Найдено {found_data_by_name.__len__()} программ с одинаковым названием\
-						\n(или содержания слова в названии)")
+						print(f"Найдено {found_data_by_name.__len__()} программ с одинаковым названием (или содержания слова в названии)")
 						if found_data_by_name:
 							for data in found_data_by_name:
 								final_data = FinalData()
@@ -288,8 +287,9 @@ class Btrx(Bitrix):
 								if data.get("id"): final_data.id = int(data.get("id"))
 								if data.get("name"): final_data.name = data.get("name")
 								if data.get("price"): final_data.price = int(data.get("price"))
-								if data.get("hour"): final_data.hour = int(data.get("hour"))
-								list_by_name.append(final_data.dict())
+
+								if data.get("hour"): final_data.hour = data.get("hour")
+								list_by_name.append(final_data.model_dump())
 							return list_by_name
 				else:
 					print('Not found')
