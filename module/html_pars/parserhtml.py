@@ -90,10 +90,14 @@ def get_finalprice(soup: BeautifulSoup, psUrlconf: ParseSiteConfig=ParseSiteConf
 	price = None
 	if price == None:
 		try:
-			price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')
+			price = soup.find(f'{psUrlconf.soupPrice[0]}',f'{psUrlconf.soupPrice[1]}').findChildren('span')[0].text.replace("₽","").replace(" ","").strip()
 		except:
 			try:
 				price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[0].text.replace("₽","").replace(" ","").strip()
+				if '/месяц' in price:
+					price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
+				elif '/год' in price:
+					price = soup.find('div','pay__wrapper-prices').findChildren('div','pay__price-new')[1].text.replace("₽","").replace(" ","").strip()
 			except:
 				price = soup.find('p','pay__price-full__num').text.replace("₽","").replace(" ","").strip()
 	return int(price)
@@ -139,16 +143,18 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 
 	log.info(f"Parsed url: {parseurl}\nname: {final_data.name} hour: {final_data.hour} price: {final_data.price}",stacklevel=200)
 
-	if "профессиональной переподготовки" in final_data.spec or "профессиональной переподготовке" in final_data.spec or "Первичная переподготовка" in final_data.spec or "Он-лайн переподготовка" in final_data.spec:
+	if "Переподготовка" in final_data.spec or "профессиональной переподготовке" in final_data.spec or "профессиональной переподготовке" in final_data.spec or "Первичная переподготовка" in final_data.spec or "Он-лайн переподготовка" in final_data.spec:
 		final_data.spec = "Профессиональная переподготовка"
 	elif "повышения квалификации" in final_data.spec or "повышении квалификации" in final_data.spec and "НМО" not in final_data.spec:
 		final_data.spec = "Повышение квалификации"
 	elif "НМО" in final_data.spec and "повышении квалификации" in final_data.spec or "цикл НМО" in final_data.spec:
 		final_data.spec = "Повышение квалификации (НМО)"
+	elif "ОН-ЛАЙН ПОДГОТОВКА" in final_data.spec:
+		final_data.spec = "ОН-ЛАЙН ПОДГОТОВКА"
 	else:
 		final_data.spec = None
-
-	type_url = parseurl.replace("https://apkipp.ru/katalog/","").split("/")[0]
+	#from: https://apkipp.ru/katalog-short/ `zdravoohranenie` /program/ or 'katalog'
+	type_url = parseurl.split("/")[4]
 
 	if type_url == "zdravoohranenie":
 		final_data.katalog = f"Здравоохранение/{type_url}"
@@ -226,4 +232,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price=147000)
+	parseSiteUrl(parseurl="https://apkipp.ru/katalog-short/zdravoohranenie/kurs-esteticheskaya-kosmetologiya/",price=147000)
