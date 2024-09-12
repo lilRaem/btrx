@@ -12,8 +12,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-upravlenie-i-ekonomika-farmatsii/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-upravlenie-i-ekonomika-farmatsii/?program=Управление и экономика фармации&header=Курс ПП Управление и экономика фармации&cost=49800&tovar=18743&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-upravlenie-i-ekonomika-farmatsii/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-upravlenie-i-ekonomika-farmatsii/?program=Управление и экономика фармации&header=Курс ПП Управление и экономика фармации&cost=49800&tovar=18743&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

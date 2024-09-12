@@ -9,8 +9,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener/?program=Тренер&header=Курс ПП Тренер&cost=15000&tovar=1503&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener/?program=Тренер&header=Курс ПП Тренер&cost=15000&tovar=1503&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 1505,
@@ -22,8 +22,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel/?program=Тренер-преподаватель&header=Курс ПП Тренер-преподаватель&cost=15000&tovar=1505&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel/?program=Тренер-преподаватель&header=Курс ПП Тренер-преподаватель&cost=15000&tovar=1505&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 4671,
@@ -35,8 +35,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist/?program=Инструктор-методист&header=Курс ПП Инструктор-методист&cost=15000&tovar=4671&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist/?program=Инструктор-методист&header=Курс ПП Инструктор-методист&cost=15000&tovar=4671&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 1519,
@@ -48,8 +48,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/menedzhment-v-sfere-fizicheskoj-kulturyi-i-sporta/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/menedzhment-v-sfere-fizicheskoj-kulturyi-i-sporta/?program=Менеджмент в сфере физической культуры и спорта&header=Курс ПП Менеджмент в сфере физической культуры и спорта&cost=15000&tovar=1519&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/menedzhment-v-sfere-fizicheskoj-kulturyi-i-sporta/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/menedzhment-v-sfere-fizicheskoj-kulturyi-i-sporta/?program=Менеджмент в сфере физической культуры и спорта&header=Курс ПП Менеджмент в сфере физической культуры и спорта&cost=15000&tovar=1519&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 3161,
@@ -61,8 +61,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/gosudarstvennoe-i-munitsipalnoe-upravlenie-v-sfere-fizicheskoj-kulturyi-i-sporta-2/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/gosudarstvennoe-i-munitsipalnoe-upravlenie-v-sfere-fizicheskoj-kulturyi-i-sporta-2/?program=Государственное и муниципальное управление в сфере физической культуры и спорта&header=Курс ПП Государственное и муниципальное управление в сфере физической культуры и спорта&cost=18800&tovar=3161&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/gosudarstvennoe-i-munitsipalnoe-upravlenie-v-sfere-fizicheskoj-kulturyi-i-sporta-2/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/gosudarstvennoe-i-munitsipalnoe-upravlenie-v-sfere-fizicheskoj-kulturyi-i-sporta-2/?program=Государственное и муниципальное управление в сфере физической культуры и спорта&header=Курс ПП Государственное и муниципальное управление в сфере физической культуры и спорта&cost=18800&tovar=3161&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 1513,
@@ -74,8 +74,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/rukovoditel-organizatsii-osuschestvlyayuschej-deyatelnost-v-oblasti-sporta/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/rukovoditel-organizatsii-osuschestvlyayuschej-deyatelnost-v-oblasti-sporta/?program=Руководитель организации, осуществляющей деятельность в области спорта&header=Курс ПП Руководитель организации, осуществляющей деятельность в области спорта&cost=15000&tovar=1513&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/rukovoditel-organizatsii-osuschestvlyayuschej-deyatelnost-v-oblasti-sporta/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/rukovoditel-organizatsii-osuschestvlyayuschej-deyatelnost-v-oblasti-sporta/?program=Руководитель организации, осуществляющей деятельность в области спорта&header=Курс ПП Руководитель организации, осуществляющей деятельность в области спорта&cost=15000&tovar=1513&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 19373,
@@ -87,8 +87,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/?program=Тренер по адаптивной физической культуре и спорту&header=Курс ПП Тренер по адаптивной физической культуре и спорту&cost=18800&tovar=19373&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-adaptivnoj-fizicheskoj-kulture-i-sportu/?program=Тренер по адаптивной физической культуре и спорту&header=Курс ПП Тренер по адаптивной физической культуре и спорту&cost=18800&tovar=19373&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 20245,
@@ -100,8 +100,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-adaptivnoj-fizicheskoj-kulture-i-sportu-/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-adaptivnoj-fizicheskoj-kulture-i-sportu-/?program=Тренер-преподаватель по адаптивной физической культуре и спорту&header=Курс ПП Тренер-преподаватель по адаптивной физической культуре и спорту&cost=18800&tovar=20245&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-adaptivnoj-fizicheskoj-kulture-i-sportu-/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-prepodavatel-po-adaptivnoj-fizicheskoj-kulture-i-sportu-/?program=Тренер-преподаватель по адаптивной физической культуре и спорту&header=Курс ПП Тренер-преподаватель по адаптивной физической культуре и спорту&cost=18800&tovar=20245&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 1511,
@@ -113,8 +113,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/soprovozhdayuschij-invalidov-lits-s-ogranichennyimi-vozmozhnostyami-zdorovya-i-nesovershen/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/soprovozhdayuschij-invalidov-lits-s-ogranichennyimi-vozmozhnostyami-zdorovya-i-nesovershen/?program=Сопровождающий инвалидов, лиц с ограниченными возможностями здоровья и несовершеннолетних&header=Курс ПП Сопровождающий инвалидов, лиц с ограниченными возможностями здоровья и несовершеннолетних&cost=18800&tovar=1511&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/soprovozhdayuschij-invalidov-lits-s-ogranichennyimi-vozmozhnostyami-zdorovya-i-nesovershen/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/soprovozhdayuschij-invalidov-lits-s-ogranichennyimi-vozmozhnostyami-zdorovya-i-nesovershen/?program=Сопровождающий инвалидов, лиц с ограниченными возможностями здоровья и несовершеннолетних&header=Курс ПП Сопровождающий инвалидов, лиц с ограниченными возможностями здоровья и несовершеннолетних&cost=18800&tovar=1511&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 4777,
@@ -126,8 +126,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-gto/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-gto/?program=Инструктор-методист ГТО&header=Курс ПП Инструктор-методист ГТО&cost=15000&tovar=4777&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-gto/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-metodist-gto/?program=Инструктор-методист ГТО&header=Курс ПП Инструктор-методист ГТО&cost=15000&tovar=4777&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 17171,
@@ -139,8 +139,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-trener/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-trener/?program=Фитнес-тренер&header=Курс ПП Фитнес-тренер&cost=15000&tovar=17171&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-trener/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-trener/?program=Фитнес-тренер&header=Курс ПП Фитнес-тренер&cost=15000&tovar=17171&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 3205,
@@ -152,8 +152,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-instruktor/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-instruktor/?program=Фитнес-инструктор&header=Курс ПП Фитнес-инструктор&cost=15000&tovar=3205&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-instruktor/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/fitnes-instruktor/?program=Фитнес-инструктор&header=Курс ПП Фитнес-инструктор&cost=15000&tovar=3205&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 16815,
@@ -165,8 +165,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-individualnyim-fitnes-programmam/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-individualnyim-fitnes-programmam/?program=Тренер по индивидуальным фитнес-программам&header=Курс ПП Тренер по индивидуальным фитнес-программам&cost=15000&tovar=16815&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-individualnyim-fitnes-programmam/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/trener-po-individualnyim-fitnes-programmam/?program=Тренер по индивидуальным фитнес-программам&header=Курс ПП Тренер по индивидуальным фитнес-программам&cost=15000&tovar=16815&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 3733,
@@ -178,8 +178,8 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-peshehodnomu-turizmu-i-trekingu-2/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-peshehodnomu-turizmu-i-trekingu-2/?program=Инструктор-проводник по пешеходному туризму и трекингу&header=Курс ПП Инструктор-проводник по пешеходному туризму и трекингу&cost=15000&tovar=3733&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-peshehodnomu-turizmu-i-trekingu-2/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-peshehodnomu-turizmu-i-trekingu-2/?program=Инструктор-проводник по пешеходному туризму и трекингу&header=Курс ПП Инструктор-проводник по пешеходному туризму и трекингу&cost=15000&tovar=3733&sendsay_email=${ Recipient.Email }"
     },
 	{
         "id": 3735,
@@ -191,7 +191,7 @@
         "hour": 600,
         "nmoSpec": null,
         "linkNmo": null,
-        "url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-alpinizmu-i-gornomu-turizmu-2/",
-        "final_url": "https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-alpinizmu-i-gornomu-turizmu-2/?program=Инструктор-проводник по альпинизму и горному туризму&header=Курс ПП Инструктор-проводник по альпинизму и горному туризму&cost=15000&tovar=3735&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-alpinizmu-i-gornomu-turizmu-2/",
+        "final_url": "https://company.ru/katalog/fizicheskaya-kultura-i-sport/instruktor-provodnik-po-alpinizmu-i-gornomu-turizmu-2/?program=Инструктор-проводник по альпинизму и горному туризму&header=Курс ПП Инструктор-проводник по альпинизму и горному туризму&cost=15000&tovar=3735&sendsay_email=${ Recipient.Email }"
     }
 ]

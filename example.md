@@ -37,8 +37,8 @@ new_data = {
     "hour": 36,
     "nmoSpec": None,
     "linkNmo": None,
-    "url": "https://apkipp.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/",
-    "final_url": "https://apkipp.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/?program=Женское здоровье: ультразвуковая диагностика&header=Курс НМО Женское здоровье: ультразвуковая диагностика&cost=39600&tovar=20329&sendsay_email=${ Recipient.Email }"
+    "url": "https://company.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/",
+    "final_url": "https://company.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/?program=Женское здоровье: ультразвуковая диагностика&header=Курс НМО Женское здоровье: ультразвуковая диагностика&cost=39600&tovar=20329&sendsay_email=${ Recipient.Email }"
 }
 
 update_dictionary(data_list, new_data)
@@ -92,8 +92,8 @@ def main():
         "hour": 36,
         "nmoSpec": None,
         "linkNmo": None,
-        "url": "https://apkipp.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/",
-        "final_url": "https://apkipp.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/?program=Женское здоровье: ультразвуковая диагностика&header=Курс НМО Женское здоровье: ультразвуковая диагностика&cost=39800&tovar=20329&sendsay_email=${ Recipient.Email }"
+        "url": "https://company.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/",
+        "final_url": "https://company.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/?program=Женское здоровье: ультразвуковая диагностика&header=Курс НМО Женское здоровье: ультразвуковая диагностика&cost=39800&tovar=20329&sendsay_email=${ Recipient.Email }"
     }
     update_dictionary(data_list, new_data)
     save_data_to_file(file_name, data_list)
@@ -140,8 +140,8 @@ example_dict = {
     "hour": 36,
     "nmoSpec": None,
     "linkNmo": None,
-    "url": "https://apkipp.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/",
-    "final_url": "https://apkipp.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/?program=Женское здоровье: ультразвуковая диагностика&header=Курс НМО Женское здоровье: ультразвуковая диагностика&cost=39600&tovar=20329&sendsay_email=${Recipient.Email}"
+    "url": "https://company.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/",
+    "final_url": "https://company.ru/katalog/zdravoohranenie/zhenskoe-zdorove-ultrazvukovaya-diagnostika/?program=Женское здоровье: ультразвуковая диагностика&header=Курс НМО Женское здоровье: ультразвуковая диагностика&cost=39600&tovar=20329&sendsay_email=${Recipient.Email}"
 }
 update_data(example_dict)
 ```

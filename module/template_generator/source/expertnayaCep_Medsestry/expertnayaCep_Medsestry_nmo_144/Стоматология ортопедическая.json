@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Стоматология ортопедическая",
-            "linkNmo": "https://clck.ru/337STp",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-ortopedicheskaya-7/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-ortopedicheskaya-7/?program=Стоматология ортопедическая&header=Курс НМО Стоматология ортопедическая&cost=9792&tovar=17809&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337STp"
+            "linkNmo": "https://shrinkingurl/337STp",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-ortopedicheskaya-7/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-ortopedicheskaya-7/?program=Стоматология ортопедическая&header=Курс НМО Стоматология ортопедическая&cost=9792&tovar=17809&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337STp"
         }
     }
 ]

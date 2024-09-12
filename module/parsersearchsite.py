@@ -21,7 +21,7 @@ log = logging.getLogger("btrx.module.parsersearchsite")
 def searchInSite(search_key: str = 'Онкология') -> tuple[int,list[dict]]:
 	'''Поиск на сайте по слову и сохраяет результат в data/json/site_search.json'''
 	url = parse_site_config.get_ApiUrl(search_key)
-	# 'https://apkipp.ru/poisk/?search={data}'
+	# 'https://company.ru/poisk/?search={data}'
 	data = requests.get(url, headers=parse_site_config.get_headers())
 	jdata: list[dict] = data.json()
 

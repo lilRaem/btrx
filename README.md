@@ -1,4 +1,4 @@
-# Программа для генерации и парсинга товаров, ссылок APKIPP.ru
+# Программа для генерации и парсинга товаров, ссылок company.ru
 
 [Основная бибилиотека](docs/MainReadme.md)
 # TODO
@@ -7,7 +7,7 @@
 
 - [ ] Сделать поиск по фильтру на сайте
 
-      `https://apkipp.ru/katalog/ajax/filter/` и  `https://apkipp.ru/katalog/ajax/`
+      `https://company.ru/katalog/ajax/filter/` и  `https://company.ru/katalog/ajax/`
 
 # TODO что необходимо во время работы
 

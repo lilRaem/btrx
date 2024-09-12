@@ -12,8 +12,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -29,8 +29,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -46,8 +46,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -63,8 +63,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-laboratornaya-genetika/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-laboratornaya-genetika/?program=Лабораторная генетика&header=Курс ПП Лабораторная генетика&cost=49800&tovar=2781&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-laboratornaya-genetika/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-laboratornaya-genetika/?program=Лабораторная генетика&header=Курс ПП Лабораторная генетика&cost=49800&tovar=2781&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

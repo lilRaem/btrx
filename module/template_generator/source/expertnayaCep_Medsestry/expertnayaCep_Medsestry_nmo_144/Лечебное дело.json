@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Лечебное дело",
-            "linkNmo": "https://clck.ru/337QR2",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-7/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-7/?program=Лечебное дело&header=Курс НМО Лечебное дело&cost=9792&tovar=17777&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337QR2"
+            "linkNmo": "https://shrinkingurl/337QR2",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-7/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo-7/?program=Лечебное дело&header=Курс НМО Лечебное дело&cost=9792&tovar=17777&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337QR2"
         }
     }
 ]

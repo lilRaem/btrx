@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Операционное дело",
-            "linkNmo": "https://clck.ru/337RS2",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-operatsionnoe-delo-/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-operatsionnoe-delo-/?program=Сестринское операционное дело&header=Курс НМО Сестринское операционное дело&cost=9792&tovar=14717&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337RS2"
+            "linkNmo": "https://shrinkingurl/337RS2",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-operatsionnoe-delo-/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-operatsionnoe-delo-/?program=Сестринское операционное дело&header=Курс НМО Сестринское операционное дело&cost=9792&tovar=14717&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337RS2"
         }
     }
 ]

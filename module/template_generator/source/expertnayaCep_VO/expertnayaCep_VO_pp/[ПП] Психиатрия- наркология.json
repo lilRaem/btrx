@@ -12,8 +12,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -29,8 +29,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -46,8 +46,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -63,8 +63,8 @@
             "hour": 3504,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/?program=Остеопатия&header=Курс ПП Остеопатия&cost=124500&tovar=16359&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/?program=Остеопатия&header=Курс ПП Остеопатия&cost=124500&tovar=16359&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -80,8 +80,8 @@
             "hour": 432,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-psihiatriya-6/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-psihiatriya-6/?program=Психиатрия&header=Курс ПП Психиатрия&cost=49800&tovar=20281&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-psihiatriya-6/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-psihiatriya-6/?program=Психиатрия&header=Курс ПП Психиатрия&cost=49800&tovar=20281&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -97,8 +97,8 @@
             "hour": 0,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-psihoterapiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-psihoterapiya/?program=Психотерапия&header=Курс ПП Психотерапия&cost=49800&tovar=2813&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-psihoterapiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-psihoterapiya/?program=Психотерапия&header=Курс ПП Психотерапия&cost=49800&tovar=2813&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -114,8 +114,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/?program=Рефлексотерапия&header=Курс ПП Рефлексотерапия&cost=49800&tovar=2823&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/?program=Рефлексотерапия&header=Курс ПП Рефлексотерапия&cost=49800&tovar=2823&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

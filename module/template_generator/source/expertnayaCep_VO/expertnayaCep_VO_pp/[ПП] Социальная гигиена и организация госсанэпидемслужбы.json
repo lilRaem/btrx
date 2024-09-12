@@ -12,8 +12,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-2/?program=Гигиена детей и подростков&header=Курс ПП Гигиена детей и подростков&cost=49800&tovar=2757&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-gigiena-detej-i-podrostkov-2/?program=Гигиена детей и подростков&header=Курс ПП Гигиена детей и подростков&cost=49800&tovar=2757&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -29,8 +29,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-pitaniya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-pitaniya/?program=Гигиена питания&header=Курс ПП Гигиена питания&cost=49800&tovar=2759&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-gigiena-pitaniya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-gigiena-pitaniya/?program=Гигиена питания&header=Курс ПП Гигиена питания&cost=49800&tovar=2759&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -46,8 +46,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-truda/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigiena-truda/?program=Гигиена труда&header=Курс ПП Гигиена труда&cost=49800&tovar=2761&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-gigiena-truda/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-gigiena-truda/?program=Гигиена труда&header=Курс ПП Гигиена труда&cost=49800&tovar=2761&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -63,8 +63,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigienicheskoe-vospitanie-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-gigienicheskoe-vospitanie-2/?program=Гигиеническое воспитание&header=Курс ПП Гигиеническое воспитание&cost=49800&tovar=2763&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-gigienicheskoe-vospitanie-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-gigienicheskoe-vospitanie-2/?program=Гигиеническое воспитание&header=Курс ПП Гигиеническое воспитание&cost=49800&tovar=2763&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -80,8 +80,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -97,8 +97,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-kommunalnaya-gigiena/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-kommunalnaya-gigiena/?program=Коммунальная гигиена&header=Курс ПП Коммунальная гигиена&cost=49800&tovar=2777&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-kommunalnaya-gigiena/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-kommunalnaya-gigiena/?program=Коммунальная гигиена&header=Курс ПП Коммунальная гигиена&cost=49800&tovar=2777&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -114,8 +114,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -131,8 +131,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-obschaya-gigiena/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-obschaya-gigiena/?program=Общая гигиена&header=Курс ПП Общая гигиена&cost=49800&tovar=2801&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-obschaya-gigiena/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-obschaya-gigiena/?program=Общая гигиена&header=Курс ПП Общая гигиена&cost=49800&tovar=2801&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -148,8 +148,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -165,8 +165,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-radiatsionnaya-gigiena/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-radiatsionnaya-gigiena/?program=Радиационная гигиена&header=Курс ПП Радиационная гигиена&cost=49800&tovar=16511&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-radiatsionnaya-gigiena/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-radiatsionnaya-gigiena/?program=Радиационная гигиена&header=Курс ПП Радиационная гигиена&cost=49800&tovar=16511&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -182,8 +182,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-epidemiologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-epidemiologiya-2/?program=Эпидемиология&header=Курс ПП Эпидемиология&cost=49800&tovar=17245&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-epidemiologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-epidemiologiya-2/?program=Эпидемиология&header=Курс ПП Эпидемиология&cost=49800&tovar=17245&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

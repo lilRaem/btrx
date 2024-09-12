@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Медицинская оптика",
-            "linkNmo": "https://clck.ru/337R3B",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/?program=Медицинская оптика&header=Курс НМО Медицинская оптика&cost=9792&tovar=4423&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337R3B"
+            "linkNmo": "https://shrinkingurl/337R3B",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-optika-3/?program=Медицинская оптика&header=Курс НМО Медицинская оптика&cost=9792&tovar=4423&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337R3B"
         }
     }
 ]

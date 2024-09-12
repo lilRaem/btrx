@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Наркология\n(Лечебное дело)",
-            "linkNmo": "https://clck.ru/337RNK",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/?program=Наркология&header=Курс НМО Наркология&cost=9792&tovar=18055&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337RNK"
+            "linkNmo": "https://shrinkingurl/337RNK",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-3/?program=Наркология&header=Курс НМО Наркология&cost=9792&tovar=18055&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337RNK"
         }
     }
 ]

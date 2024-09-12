@@ -11,9 +11,9 @@
             "price": 5900,
             "hour": 36,
             "nmoSpec": "Фармацевтическая химия и фармакогнозия",
-            "linkNmo": "https://clck.ru/337NXq",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-farmatsevticheskaya-himiya-i-farmakognoziya-3/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-farmatsevticheskaya-himiya-i-farmakognoziya-3/?program=Фармацевтическая химия и фармакогнозия&header=Курс НМО Фармацевтическая химия и фармакогнозия&cost=5900&tovar=2853&linkNmo=https://clck.ru/337NXq&sendsay_email=${ Recipient.Email }"
+            "linkNmo": "https://shrinkingurl/337NXq",
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-farmatsevticheskaya-himiya-i-farmakognoziya-3/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-farmatsevticheskaya-himiya-i-farmakognoziya-3/?program=Фармацевтическая химия и фармакогнозия&header=Курс НМО Фармацевтическая химия и фармакогнозия&cost=5900&tovar=2853&linkNmo=https://shrinkingurl/337NXq&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

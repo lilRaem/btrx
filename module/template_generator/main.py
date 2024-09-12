@@ -309,7 +309,7 @@ def main():
 	# build()
 	# build_jina_template()
 	build_json()
-	# bs4parser("https://apkipp.ru/katalog/fizicheskaya-kultura-i-sport/")
+	# bs4parser("https://company.ru/katalog/fizicheskaya-kultura-i-sport/")
 
 if __name__ == "__main__":
 	main()

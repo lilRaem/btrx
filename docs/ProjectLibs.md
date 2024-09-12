@@ -24,7 +24,7 @@
 
 > Наследует класс `Bitrix` с webhook'ом
 > Загружает список товаров с полями: 
-> <span style='color: magenta;'>id</span>, <span style='color: yellow;'>name</span>, <span style='color: lightgreen;'>price</span>, <span style='color: lightblue;'>hour</span> 
+> `<span style='color: magenta;'>id</span>, <span style='color: yellow;'>name</span>, <span style='color: lightgreen;'>price</span>, <span style='color: lightblue;'>hour</span>`
 > возвращает **list(products)**
 
 ###### get_users_with_innerPhone(btrx):

@@ -10,11 +10,11 @@ try:
 except:
 	from config import FinalData, BtrxConfig
 
-# webhook = 'https://b24-vejk6x.bitrix24.ru/rest/1/di28gta836z3xn50/'
+# webhook = 'https://domain.bitrix24.ru/rest/1/key/'
 # btrx = Bitrix(webhook=webhook,respect_velocity_policy=False)
 class Btrx(Bitrix):
 	def __init__(self):
-		self.webhook = f'https://b24-vejk6x.bitrix24.ru/rest/1/{BtrxConfig.id}/'
+		self.webhook = f'https://domain.bitrix24.ru/rest/1/{BtrxConfig.id}/'
 		super().__init__(webhook=self.webhook,respect_velocity_policy=False)
 
 	def save_to_json(self, datalist:list[dict[str,str|int|None]], filename: str, path: str):
@@ -70,17 +70,6 @@ class Btrx(Bitrix):
 			})
 			return list(users)
 		except Exception as e: raise TypeError(f'get_users_with_innerPhone error {e}')
-
-# Опасная штука
-	#def get_all_client(self):
-	#	try:
-	#		contact = list()
-	#		contact = self.get_all("crm.contact.list",params={
-	#			"select": ['*']
-	#		})
-	#		return contact
-	#	except Exception as e:
-	#		raise TypeError(f"get_all_client error {e}")
 
 	def set_product_price(self,id=str(),price=0):
 		try:
@@ -153,10 +142,6 @@ class Btrx(Bitrix):
 							if word in k_name and price in k_price:
 
 								try:
-									# print('find_all_count (word in k_name and price)',find_all_count , datalist[find_all_count])
-									# print(Back.GREEN + Fore.BLACK + Style.DIM +
-									# 	f'=====\nСовпадение части слова "{word}" и цены "{price}" в программе: {datalist[find_all_count]}\n====='
-									# 	+ Back.RESET + Fore.RESET)
 									words_data.append({word: datalist[find_all_count]})
 									print(Back.RESET + Fore.RESET + Style.DIM + Fore.BLACK + Back.LIGHTGREEN_EX +
 										f"^По слову '{word}' и цене {k_price}(из найденной программы) Сохранено в tmpfile.json^"
@@ -164,7 +149,6 @@ class Btrx(Bitrix):
 									with open(f'{os.getcwd()}\\data\\json\\btrx_data\\tmpfile.json','w', encoding='utf-8') as file:
 										data_list = json.dump(words_data,file, ensure_ascii=False, indent=4)
 									find_name_price_count = find_name_price_count + 1
-									# return list(words_data)
 								except Exception as e:
 									raise TypeError(Fore.RED + Style.DIM + f'ошибка check_product-> if word in k_*: {e}')
 
@@ -198,12 +182,6 @@ class Btrx(Bitrix):
 				print(Back.YELLOW + Fore.BLACK + 'Start check')
 
 				name = name.strip()
-				# if ' ' in name:
-				# 	name_space = name.count(' ')
-				# 	if name_space == 1 or name_space >= 2:
-				# 		list_name = name.split(' ')
-						# searched_words = words_search(list_name, name, price, datalist)
-						# find_list_compare_words(searched_words)
 				count_name_price = 0
 				count_name = 0
 				found_data_by_name_price: list[dict[str,str|int|None]] = list()

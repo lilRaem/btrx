@@ -12,8 +12,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizioterapiya/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=49800&tovar=2855&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-fizioterapiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-fizioterapiya/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=49800&tovar=2855&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -29,8 +29,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-klinicheskaya-laboratornaya-diagnostika-2/?program=Клиническая лабораторная диагностика&header=Курс ПП Клиническая лабораторная диагностика&cost=49800&tovar=16067&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -46,8 +46,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-rentgenendovaskulyarnyie-diagnostika-i-lechenie/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-rentgenendovaskulyarnyie-diagnostika-i-lechenie/?program=Рентгенэндоваскулярные диагностика и лечение&header=Курс ПП Рентгенэндоваскулярные диагностика и лечение&cost=49800&tovar=2821&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-rentgenendovaskulyarnyie-diagnostika-i-lechenie/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-rentgenendovaskulyarnyie-diagnostika-i-lechenie/?program=Рентгенэндоваскулярные диагностика и лечение&header=Курс ПП Рентгенэндоваскулярные диагностика и лечение&cost=49800&tovar=2821&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -65,8 +65,8 @@
             "hour": 1008,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizicheskaya-i-reabilitatsionnaya-meditsina/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-fizicheskaya-i-reabilitatsionnaya-meditsina/?program=Физическая и реабилитационная медицина&header=Курс ПП Физическая и реабилитационная медицина&cost=49800&tovar=15055&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-fizicheskaya-i-reabilitatsionnaya-meditsina/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-fizicheskaya-i-reabilitatsionnaya-meditsina/?program=Физическая и реабилитационная медицина&header=Курс ПП Физическая и реабилитационная медицина&cost=49800&tovar=15055&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -82,8 +82,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/?program=Рефлексотерапия&header=Курс ПП Рефлексотерапия&cost=49800&tovar=2823&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-refleksoterapiya/?program=Рефлексотерапия&header=Курс ПП Рефлексотерапия&cost=49800&tovar=2823&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -99,8 +99,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-sudebno-meditsinskaya-ekspertiza/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-sudebno-meditsinskaya-ekspertiza/?program=Судебно-медицинская экспертиза&header=Курс ПП Судебно-медицинская экспертиза&cost=49800&tovar=2833&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-sudebno-meditsinskaya-ekspertiza/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-sudebno-meditsinskaya-ekspertiza/?program=Судебно-медицинская экспертиза&header=Курс ПП Судебно-медицинская экспертиза&cost=49800&tovar=2833&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -116,8 +116,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-endoskopiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-endoskopiya-2/?program=Эндоскопия&header=Курс ПП Эндоскопия&cost=49800&tovar=4749&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-endoskopiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-endoskopiya-2/?program=Эндоскопия&header=Курс ПП Эндоскопия&cost=49800&tovar=4749&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -133,8 +133,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-meditsinskaya-mikrobiologiya-2/?program=Медицинская микробиология&header=Курс ПП Медицинская микробиология&cost=49800&tovar=16177&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -150,8 +150,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/?program=Патологическая анатомия&header=Курс ПП Патологическая анатомия&cost=49800&tovar=2805&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-patologicheskaya-anatomiya/?program=Патологическая анатомия&header=Курс ПП Патологическая анатомия&cost=49800&tovar=2805&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -169,8 +169,8 @@
             "hour": 3504,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/?program=Остеопатия&header=Курс ПП Остеопатия&cost=124500&tovar=16359&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-osteopatiya-2/?program=Остеопатия&header=Курс ПП Остеопатия&cost=124500&tovar=16359&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -186,8 +186,8 @@
             "hour": 990,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=49800&tovar=4601&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=49800&tovar=4601&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -205,8 +205,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/?program=Ультразвуковая диагностика&header=Курс ПП Ультразвуковая диагностика&cost=49800&tovar=2843&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-/?program=Ультразвуковая диагностика&header=Курс ПП Ультразвуковая диагностика&cost=49800&tovar=2843&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -224,8 +224,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-organizatsiya-zdravoohraneniya-i-obschestvennoe-zdorove/?program=Организация здравоохранения и общественное здоровье&header=Курс ПП Организация здравоохранения и общественное здоровье&cost=49800&tovar=1531&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -241,8 +241,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=49800&tovar=14785&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-funktsionalnaya-diagnostika/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=49800&tovar=14785&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -258,8 +258,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/?program=Лечебная физкультура и спортивная медицина&header=Курс ПП Лечебная физкультура и спортивная медицина&cost=49800&tovar=1545&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-lechebnaya-fizkultura-i-sportivnaya-meditsina/?program=Лечебная физкультура и спортивная медицина&header=Курс ПП Лечебная физкультура и спортивная медицина&cost=49800&tovar=1545&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -277,8 +277,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-onkologiya-2/?program=Онкология&header=Курс ПП Онкология&cost=49800&tovar=4673&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-onkologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-onkologiya-2/?program=Онкология&header=Курс ПП Онкология&cost=49800&tovar=4673&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -296,8 +296,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nevrologiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-nevrologiya/?program=Неврология&header=Курс ПП Неврология&cost=49800&tovar=2797&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-nevrologiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-nevrologiya/?program=Неврология&header=Курс ПП Неврология&cost=49800&tovar=2797&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -315,8 +315,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-manualnaya-terapiya/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-manualnaya-terapiya/?program=Мануальная терапия&header=Курс ПП Мануальная терапия&cost=49800&tovar=16153&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-manualnaya-terapiya/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-manualnaya-terapiya/?program=Мануальная терапия&header=Курс ПП Мануальная терапия&cost=49800&tovar=16153&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -334,8 +334,8 @@
             "hour": 1296,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/?program=Анестезиология-реаниматология&header=Курс ПП Анестезиология-реаниматология&cost=99000&tovar=20053&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-anesteziologiya-reanimatologiya-2/?program=Анестезиология-реаниматология&header=Курс ПП Анестезиология-реаниматология&cost=99000&tovar=20053&sendsay_email=${ Recipient.Email }"
         }
     },
     {
@@ -353,8 +353,8 @@
             "hour": 600,
             "nmoSpec": null,
             "linkNmo": null,
-            "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-mediko-sotsialnaya-ekspertiza/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-mediko-sotsialnaya-ekspertiza/?program=Медико-социальная экспертиза&header=Курс ПП Медико-социальная экспертиза&cost=49800&tovar=2789&sendsay_email=${ Recipient.Email }"
+            "url": "https://company.ru/katalog/zdravoohranenie/kurs-mediko-sotsialnaya-ekspertiza/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-mediko-sotsialnaya-ekspertiza/?program=Медико-социальная экспертиза&header=Курс ПП Медико-социальная экспертиза&cost=49800&tovar=2789&sendsay_email=${ Recipient.Email }"
         }
     }
 ]

@@ -46,12 +46,12 @@ class UserData(BaseModel):
 
 # Main Bitrix config:
 class BtrxConfig():
-	id = "di28gta836z3xn50"
+	id = "api_id"
 
 # Parse soup config:
 class ParseSiteConfig():
 
-	link = "https://apkipp.ru"
+	link = "https://company.ru"
 
 	soupMainBlock = "courses-block"
 	soupName = ("h1", "main-title")

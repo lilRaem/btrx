@@ -12,8 +12,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-akusherskoe-delo/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-akusherskoe-delo/?program=Акушерское дело&header=Курс ПП Акушерское дело&cost=20000&tovar=4313&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-akusherskoe-delo/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-akusherskoe-delo/?program=Акушерское дело&header=Курс ПП Акушерское дело&cost=20000&tovar=4313&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -30,8 +30,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-anesteziologiya-i-reanimatologiya/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-anesteziologiya-i-reanimatologiya/?program=Анестезиология и реаниматология&header=Курс ПП Анестезиология и реаниматология&cost=20000&tovar=15519&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-anesteziologiya-i-reanimatologiya/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-anesteziologiya-i-reanimatologiya/?program=Анестезиология и реаниматология&header=Курс ПП Анестезиология и реаниматология&cost=20000&tovar=15519&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -48,8 +48,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-2/?program=Бактериология&header=Курс ПП Бактериология&cost=20000&tovar=4317&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-bakteriologiya-2/?program=Бактериология&header=Курс ПП Бактериология&cost=20000&tovar=4317&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -66,8 +66,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/?program=Гигиеническое воспитание&header=Курс ПП Гигиеническое воспитание&cost=20000&tovar=4321&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigienicheskoe-vospitanie-3/?program=Гигиеническое воспитание&header=Курс ПП Гигиеническое воспитание&cost=20000&tovar=4321&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -84,8 +84,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya/?program=Гигиена и санитария&header=Курс ПП Гигиена и санитария&cost=20000&tovar=15601&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gigiena-i-sanitariya/?program=Гигиена и санитария&header=Курс ПП Гигиена и санитария&cost=20000&tovar=15601&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -102,8 +102,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya/?program=Гистология&header=Курс ПП Гистология&cost=20000&tovar=15613&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya/?program=Гистология&header=Курс ПП Гистология&cost=20000&tovar=15613&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -120,8 +120,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dezinfektsionnoe-delo/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dezinfektsionnoe-delo/?program=Дезинфекционное дело&header=Курс ПП Дезинфекционное дело&cost=20000&tovar=4327&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dezinfektsionnoe-delo/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dezinfektsionnoe-delo/?program=Дезинфекционное дело&header=Курс ПП Дезинфекционное дело&cost=20000&tovar=4327&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -138,8 +138,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-3/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-3/?program=Диетология&header=Курс ПП Диетология&cost=20000&tovar=15985&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-3/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-dietologiya-3/?program=Диетология&header=Курс ПП Диетология&cost=20000&tovar=15985&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -156,8 +156,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo/?program=Лабораторное дело&header=Курс ПП Лабораторное дело&cost=20000&tovar=4335&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornoe-delo/?program=Лабораторное дело&header=Курс ПП Лабораторное дело&cost=20000&tovar=4335&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -174,8 +174,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika/?program=Лабораторная диагностика&header=Курс ПП Лабораторная диагностика&cost=20000&tovar=4329&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-laboratornaya-diagnostika/?program=Лабораторная диагностика&header=Курс ПП Лабораторная диагностика&cost=20000&tovar=4329&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -192,8 +192,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo/?program=Лечебное дело&header=Курс ПП Лечебное дело&cost=20000&tovar=4333&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-lechebnoe-delo/?program=Лечебное дело&header=Курс ПП Лечебное дело&cost=20000&tovar=4333&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -210,8 +210,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskij-massazh-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskij-massazh-2/?program=Медицинский массаж&header=Курс ПП Медицинский массаж&cost=20000&tovar=4341&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskij-massazh-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskij-massazh-2/?program=Медицинский массаж&header=Курс ПП Медицинский массаж&cost=20000&tovar=4341&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -228,8 +228,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/?program=Медицинская статистика&header=Курс ПП Медицинская статистика&cost=20000&tovar=4339&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-meditsinskaya-statistika-3/?program=Медицинская статистика&header=Курс ПП Медицинская статистика&cost=20000&tovar=4339&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -246,8 +246,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-sotsialnaya-pomosch/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-sotsialnaya-pomosch/?program=Медико-социальная помощь&header=Курс ПП Медико-социальная помощь&cost=20000&tovar=4337&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-sotsialnaya-pomosch/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-mediko-sotsialnaya-pomosch/?program=Медико-социальная помощь&header=Курс ПП Медико-социальная помощь&cost=20000&tovar=4337&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -264,8 +264,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/?program=Наркология&header=Курс ПП Наркология&cost=20000&tovar=4343&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-narkologiya-4/?program=Наркология&header=Курс ПП Наркология&cost=20000&tovar=4343&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -282,8 +282,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-obschaya-praktika/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-obschaya-praktika/?program=Общая практика&header=Курс ПП Общая практика&cost=20000&tovar=4345&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-obschaya-praktika/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-obschaya-praktika/?program=Общая практика&header=Курс ПП Общая практика&cost=20000&tovar=4345&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -300,8 +300,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-operatsionnoe-delo/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-operatsionnoe-delo/?program=Операционное дело&header=Курс ПП Операционное дело&cost=20000&tovar=4347&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-operatsionnoe-delo/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-operatsionnoe-delo/?program=Операционное дело&header=Курс ПП Операционное дело&cost=20000&tovar=4347&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -318,8 +318,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela/?program=Организация сестринского дела&header=Курс ПП Организация сестринского дела&cost=20000&tovar=4349&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela/?program=Организация сестринского дела&header=Курс ПП Организация сестринского дела&cost=20000&tovar=4349&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -336,8 +336,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-reabilitatsionnoe-sestrinskoe-delo/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-reabilitatsionnoe-sestrinskoe-delo/?program=Реабилитационное сестринское дело&header=Курс ПП Реабилитационное сестринское дело&cost=20000&tovar=4351&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-reabilitatsionnoe-sestrinskoe-delo/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-reabilitatsionnoe-sestrinskoe-delo/?program=Реабилитационное сестринское дело&header=Курс ПП Реабилитационное сестринское дело&cost=20000&tovar=4351&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -354,8 +354,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=20000&tovar=18365&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-rentgenologiya-2/?program=Рентгенология&header=Курс ПП Рентгенология&cost=20000&tovar=18365&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -372,8 +372,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-2/?program=Сестринское дело&header=Курс ПП Сестринское дело&cost=20000&tovar=16569&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-2/?program=Сестринское дело&header=Курс ПП Сестринское дело&cost=20000&tovar=16569&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -390,8 +390,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-pediatrii/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-pediatrii/?program=Сестринское дело в педиатрии&header=Курс ПП Сестринское дело в педиатрии&cost=20000&tovar=16589&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-pediatrii/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-pediatrii/?program=Сестринское дело в педиатрии&header=Курс ПП Сестринское дело в педиатрии&cost=20000&tovar=16589&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -408,8 +408,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-kosmetologii/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-kosmetologii/?program=Сестринское дело в косметологии&header=Курс ПП Сестринское дело в косметологии&cost=20000&tovar=4357&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-kosmetologii/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sestrinskoe-delo-v-kosmetologii/?program=Сестринское дело в косметологии&header=Курс ПП Сестринское дело в косметологии&cost=20000&tovar=4357&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -426,8 +426,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch/?program=Скорая и неотложная помощь&header=Курс ПП Скорая и неотложная помощь&cost=20000&tovar=16609&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-skoraya-i-neotlozhnaya-pomosch/?program=Скорая и неотложная помощь&header=Курс ПП Скорая и неотложная помощь&cost=20000&tovar=16609&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -444,8 +444,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya/?program=Стоматология&header=Курс ПП Стоматология&cost=20000&tovar=4367&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya/?program=Стоматология&header=Курс ПП Стоматология&cost=20000&tovar=4367&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -462,8 +462,8 @@
                 "hour": 36,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-2/?program=Стоматология профилактическая&header=Курс ПП Стоматология профилактическая&cost=2448&tovar=17785&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-stomatologiya-profilakticheskaya-2/?program=Стоматология профилактическая&header=Курс ПП Стоматология профилактическая&cost=2448&tovar=17785&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -480,8 +480,8 @@
                 "hour": 152,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-ortopedicheskaya-5/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie/kurs-stomatologiya-ortopedicheskaya-5/?program=Стоматология ортопедическая&header=Курс ПП Стоматология ортопедическая&cost=20000&tovar=4657&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie/kurs-stomatologiya-ortopedicheskaya-5/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie/kurs-stomatologiya-ortopedicheskaya-5/?program=Стоматология ортопедическая&header=Курс ПП Стоматология ортопедическая&cost=20000&tovar=4657&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -498,8 +498,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-2/?program=Судебно-медицинская экспертиза&header=Курс ПП Судебно-медицинская экспертиза&cost=20000&tovar=4369&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sudebno-meditsinskaya-ekspertiza-2/?program=Судебно-медицинская экспертиза&header=Курс ПП Судебно-медицинская экспертиза&cost=20000&tovar=4369&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -516,8 +516,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-fizioterapiya-2/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-fizioterapiya-2/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=20000&tovar=4375&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-fizioterapiya-2/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-fizioterapiya-2/?program=Физиотерапия&header=Курс ПП Физиотерапия&cost=20000&tovar=4375&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -534,8 +534,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=20000&tovar=4377&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-funktsionalnaya-diagnostika-3/?program=Функциональная диагностика&header=Курс ПП Функциональная диагностика&cost=20000&tovar=4377&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -552,8 +552,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-epidemiologiya-parazitologiya/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-epidemiologiya-parazitologiya/?program=Эпидемиология (паразитология)&header=Курс ПП Эпидемиология (паразитология)&cost=20000&tovar=4387&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-epidemiologiya-parazitologiya/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-epidemiologiya-parazitologiya/?program=Эпидемиология (паразитология)&header=Курс ПП Эпидемиология (паразитология)&cost=20000&tovar=4387&sendsay_email=${ Recipient.Email }"
             }
         ]
     },
@@ -570,8 +570,8 @@
                 "hour": 300,
                 "nmoSpec": null,
                 "linkNmo": null,
-                "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/",
-                "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/?program=Энтомология&header=Курс ПП Энтомология&cost=20000&tovar=4379&sendsay_email=${ Recipient.Email }"
+                "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/",
+                "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-entomologiya/?program=Энтомология&header=Курс ПП Энтомология&cost=20000&tovar=4379&sendsay_email=${ Recipient.Email }"
             }
         ]
     }

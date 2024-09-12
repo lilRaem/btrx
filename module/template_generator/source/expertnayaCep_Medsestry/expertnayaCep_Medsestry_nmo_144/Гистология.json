@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Гистология",
-            "linkNmo": "https://clck.ru/337PqC",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-4/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-4/?program=Гистология&header=Курс НМО Гистология&cost=9792&tovar=18965&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337PqC"
+            "linkNmo": "https://shrinkingurl/337PqC",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-4/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-gistologiya-4/?program=Гистология&header=Курс НМО Гистология&cost=9792&tovar=18965&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337PqC"
         }
     }
 ]

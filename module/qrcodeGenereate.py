@@ -1,7 +1,7 @@
 import json, requests, os
 import requests
 url = "https://api.qrcode-monkey.com//qr/custom"
-data = "https://clck.ru/35thmi"
+data = "https://shrinkingurl/link"
 
 payload = {
 	"config":{
@@ -26,7 +26,7 @@ payload = {
 	"gradientColor2": "",
 	"gradientType": "linear",
 	"gradientOnEyes": False,
-	"logo": 'a8077b772dea1044706a2646bf7056b07cfad66a.png',
+	"logo": 'logo.png',
 	"logoMode": "default"
 	},
 	"data":data,

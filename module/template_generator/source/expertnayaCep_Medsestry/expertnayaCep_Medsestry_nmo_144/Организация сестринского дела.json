@@ -9,9 +9,9 @@
             "price": 9792,
             "hour": 144,
             "nmoSpec": "Организация сестринского дела",
-            "linkNmo": "https://clck.ru/337RVa",
-            "url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela-4/",
-            "final_url": "https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela-4/?program=Организация сестринского дела&header=Курс НМО Организация сестринского дела&cost=9792&tovar=18043&sendsay_email=${ Recipient.Email }&linkNmo=https://clck.ru/337RVa"
+            "linkNmo": "https://shrinkingurl/337RVa",
+            "url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela-4/",
+            "final_url": "https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-organizatsiya-sestrinskogo-dela-4/?program=Организация сестринского дела&header=Курс НМО Организация сестринского дела&cost=9792&tovar=18043&sendsay_email=${ Recipient.Email }&linkNmo=https://shrinkingurl/337RVa"
         }
     }
 ]

@@ -17,8 +17,8 @@ def get_url(seldrv = start(),url:str=None):
 	return seldrv
 
 def login(elem):
-	elem.find_element(By.XPATH,'//*[@id="UserName"]').send_keys("m.oguenko@apkipp.ru")
-	elem.find_element(By.XPATH,'//*[@id="Password"]').send_keys("M@kstiv4erazavtrabudeshspat")
+	elem.find_element(By.XPATH,'//*[@id="UserName"]').send_keys("login")
+	elem.find_element(By.XPATH,'//*[@id="Password"]').send_keys("pass")
 	elem.find_element(By.XPATH,'//*[@id="SubmitCredentials"]').click()
 
 

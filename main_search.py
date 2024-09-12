@@ -227,7 +227,7 @@ if __name__ == "__main__":
 	# path = "data\\json\\btrx_data"
 	# data = p.load_from_jsonFile(makefileWdateName(path)[1],path)
 	a = 1
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/")
+	parseSiteUrl(parseurl="https://company.ru/katalog/zdravoohranenie-srednij-medpersonal/kurs-sovremennyie-aspektyi-akusherskoj-pomoschi-v-rodovspomogatelnyih-uchrezhdeniyah/")
 
 	print(Fore.MAGENTA+f'Main time: {round(time()-start,2)} sec'+ Fore.RESET)
 	# buildjsondata()

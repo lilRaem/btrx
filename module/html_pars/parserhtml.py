@@ -110,7 +110,7 @@ def get_finalspec(soup: BeautifulSoup, psUrlconf: ParseSiteConfig=ParseSiteConfi
 		spec = soup.find("div","intro__suptitle").text.strip()
 	return spec
 
-def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price: int = 99000) -> list[dict[str,str|int|None]]:
+def parseSiteUrl(parseurl: str="https://company.ru/katalog/zdravoohranenie/kurs-ultrazvukovaya-diagnostika-3/",price: int = 99000) -> list[dict[str,str|int|None]]:
 	start = time()
 	psUrlconf = ParseSiteConfig()
 	final_data = FinalData()
@@ -153,7 +153,7 @@ def parseSiteUrl(parseurl: str="https://apkipp.ru/katalog/zdravoohranenie/kurs-u
 		final_data.spec = "ОН-ЛАЙН ПОДГОТОВКА"
 	else:
 		final_data.spec = None
-	#from: https://apkipp.ru/katalog-short/ `zdravoohranenie` /program/ or 'katalog'
+	#from: https://company.ru/katalog-short/ `zdravoohranenie` /program/ or 'katalog'
 	type_url = parseurl.split("/")[4]
 
 	if type_url == "zdravoohranenie":
@@ -232,4 +232,4 @@ def main():
 
 if __name__ == "__main__":
 	# main()
-	parseSiteUrl(parseurl="https://apkipp.ru/katalog-short/zdravoohranenie/kurs-esteticheskaya-kosmetologiya/",price=147000)
+	parseSiteUrl(parseurl="https://company.ru/katalog-short/zdravoohranenie/kurs-esteticheskaya-kosmetologiya/",price=147000)
